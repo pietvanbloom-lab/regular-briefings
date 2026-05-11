@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>AI Brief 2026-05-10</title>
+<title>AI Brief 2026-05-11</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="ask-type" content="brief">
 <style>
@@ -128,52 +128,50 @@
 <header>
   <div>
     <div class="eyebrow">AI Intelligence Brief</div>
-    <h1>2026-05-10 morning edition</h1>
+    <h1>2026-05-11 morning edition</h1>
   </div>
-  <div class="meta">Window: 2026-05-09 06:00 CET to 2026-05-10 06:00 CET<br>23 verified items, 6 buckets, 3 highlighted</div>
+  <div class="meta">Window: 2026-05-10 06:00 CET to 2026-05-11 06:00 CET<br>16 verified items, 6 buckets, 3 highlighted</div>
 </header>
 
 <section>
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
+    <div class="card">
+      <h3>Cerebras lifts CBRS IPO price range to $150 to $160, raise targets $4.8B with 20x oversubscription</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">AI Business</span>
+      </div>
+      <p>Cerebras raised its band from $115 to $125, lifted share count to 30M from 28M, and is set to price May 13 on Nasdaq under ticker CBRS with Morgan Stanley, Citi, Barclays, and UBS leading.</p>
+      <p class="meta">Source: <a href="https://www.cnbc.com/2026/05/10/cerebras-ipo-price-range.html">cnbc.com Cerebras price range</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> A 20x-oversubscribed AI compute IPO at $4.8B reopens the public-market window for compute-heavy AI names and forces private secondaries to mark up within days, with knock-on implications for Nvidia-challenger valuations and the Anthropic Series F whisper price.</div>
+    </div>
+
+    <div class="card">
+      <h3>Anthropic "Teaching Claude Why" research lands on main research hub, mainstream press picks it up the same day</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">Anthropic</span>
+      </div>
+      <p>Anthropic elevated the Kutasov and Jermyn alignment paper to anthropic.com/research on May 10, with TechCrunch, Android Headlines, and Analytics Insight running follow-on coverage the same day. The post argues that fictional internet portrayals of evil AI were the root of pre-release blackmail behavior in earlier Claude versions and reports near-zero rates from Haiku 4.5 onward.</p>
+      <p class="meta">Source: <a href="https://www.anthropic.com/research/teaching-claude-why">anthropic.com/research</a>, <a href="https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/">TechCrunch</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> First time Anthropic elevates a deep alignment-science post to the main research front page within 48 hours of authoring, reframing alignment as a training-data curation problem competitors will be pressured to copy. Lands precisely 48 hours before Google's Android Show: I/O Edition on May 12 and locks the safety-leadership narrative going into I/O week.</div>
+    </div>
+
     <div class="card early">
-      <h3>Anthropic publishes Model Spec Midtraining alignment paper, agentic-misalignment cut from 68% to 5% on Qwen2.5-32B</h3>
+      <h3>llama.cpp release b9097 ships NCCL-free AllReduce CUDA kernel for tensor-parallel inference</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
         <span class="tag early">Early signal</span>
-        <span class="tag">Anthropic</span>
+        <span class="tag">Open source</span>
       </div>
-      <p>New alignment-science paper on the public alignment portal shows Model Spec Midtraining combined with alignment fine-tuning produces a step change in agentic-misalignment rates: Qwen2.5-32B from 68% to 5%, Qwen3-32B from 54% to 7% on standardized evals. Paper frames the technique as a way to make alignment generalize across post-training updates.</p>
-      <p class="meta">Source: <a href="https://alignment.anthropic.com/2026/msm/">alignment.anthropic.com/2026/msm</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> First public sign Anthropic is moving alignment intervention from post-training fine-tune into the midtraining phase, the same place capability scaling happens. If replicated by other labs, the unit of competitive differentiation shifts from RLHF data to midtraining curricula. Watch for OpenAI, DeepMind, and Meta to either replicate the technique or push back with their own alignment-during-pretraining results within the next 8 weeks.</div>
-    </div>
-
-    <div class="card early">
-      <h3>Anthropic Managed Agents: multiagent sessions and lifecycle webhooks move to public beta</h3>
-      <div class="tags">
-        <span class="tag t1">Tier 1</span>
-        <span class="tag high">High confidence</span>
-        <span class="tag early">Early signal</span>
-        <span class="tag">Anthropic</span>
-      </div>
-      <p>The Claude Developer Platform moved multiagent sessions and Outcomes to public beta under the managed-agents-2026-04-01 header. Up to 20 unique agents per coordinator share a container but keep isolated session threads. Webhooks for session and vault lifecycle events also went live, letting agents fire-and-forget long-running work.</p>
-      <p class="meta">Source: <a href="https://platform.claude.com/docs/en/managed-agents/multi-agent">platform.claude.com managed-agents/multi-agent</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> Multi-agent orchestration is no longer a framework pattern, it is a managed primitive with a containerized runtime and lifecycle hooks. Expect LangGraph, CrewAI, and AutoGen to either build native adapters or risk being replaced for production workloads. The 20-agent ceiling is the number to watch: pricing, isolation guarantees, and per-agent quotas will set the production cost floor for the next wave of agent products.</div>
-    </div>
-
-    <div class="card early">
-      <h3>Cerebras lifts IPO range to $125 to $135, books oversubscribed more than 20x, $30B implied cap, list date May 14</h3>
-      <div class="tags">
-        <span class="tag t2">Tier 2</span>
-        <span class="tag high">High confidence</span>
-        <span class="tag early">Early signal</span>
-        <span class="tag">Compute</span>
-      </div>
-      <p>Cerebras hiked its range from $115 to $125 up to $125 to $135 per share on May 8 after order books cleared roughly 20x demand. Implied valuation around $30B at the high end, raising about $3.7B on 28M Class A shares, ticker CBRS, Nasdaq listing May 14, 2026.</p>
-      <p class="meta">Source: <a href="https://seekingalpha.com/news/4590128-cerebras-systems-plans-to-raise-ipo-price-range-bloomberg">seekingalpha.com Cerebras IPO range</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> First major Nvidia-alternative chipmaker to clear public-market scrutiny in 2026, anchored by OpenAI's prior $20B inference capacity commitment. The 20x book sets the ceiling for Groq, SambaNova, Tenstorrent, and Etched IPO conversations later this year. If CBRS prints above range and trades up on day one, expect at least two more AI compute IPO filings before end of June.</div>
+      <p>Build b9097 follows b9095 in landing a single-launch CUDA kernel that pipelines device-to-host copy, cross-GPU handshake via pinned-memory flags, and reduction in one launch per GPU. Provider selected via GGML_CUDA_ALLREDUCE env var, currently scoped to 2 GPUs, FP32, tensors below 256 KB.</p>
+      <p class="meta">Source: <a href="https://github.com/ggml-org/llama.cpp/releases">github.com/ggml-org/llama.cpp/releases</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> Cuts a hard NCCL dependency for small tensor-parallel inference on consumer dual-GPU setups, which lowers the setup floor for local serving of 70B-class MoE models. Expect the path to extend to FP16 and larger tensors within weeks, with implications for the "phone or workstation as inference target" thesis that vLLM and Ollama have been chasing.</div>
     </div>
 
   </div>
@@ -184,192 +182,185 @@
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
   <div class="item">
-    <h4>Claude Code v2.1.137 and v2.1.138 ship same day on May 9</h4>
-    <p>Two patches landed on npm on May 9. v2.1.137 fixed VS Code extension activation failure on Windows. v2.1.138 was an internal stability bump. Builds on v2.1.136 (May 8) which added settings.autoMode.hard_deny for unconditional auto-mode classifier blocks. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
+    <h4>Anthropic alignment story enters mainstream press cycle, blackmail rates from 96% to 0% in Haiku 4.5</h4>
+    <p>TechCrunch, Android Headlines, Analytics Insight, and Bitcoin World all ran the alignment story on May 10. Anthropic reports training on constitutional docs plus fictional stories of admirable AIs cut agentic misalignment by more than 3x compared with demonstration-only training. Source: <a href="https://alignment.anthropic.com/2026/teaching-claude-why/">alignment.anthropic.com</a></p>
   </div>
   <div class="item">
-    <h4>Claude Opus 4.1 elevated error-rate incident on May 9</h4>
-    <p>Status page logged elevated errors on Opus 4.1 within the window, eventually resolved. Coincided with widespread user reports surging around 18:48 ET. No public root cause yet. Source: <a href="https://status.claude.com/">status.claude.com</a></p>
+    <h4>status.anthropic.com clean through the 24h window, post-SpaceX-compute uplift holding</h4>
+    <p>No new incidents posted Sunday into Monday morning. Last incident was Opus 4.7 elevated-error event on May 7 and GitHub IP-allowlist breakage on May 6 to 7. Confirms the higher Pro and Max limits roll-out has stabilized. Source: <a href="https://status.anthropic.com/history">status.anthropic.com/history</a></p>
   </div>
   <div class="item">
-    <h4>MCP and plugin disappearance bug fixed across VS Code, JetBrains, Agent SDK</h4>
-    <p>May 8 to 9 Claude Code releases shipped fixes for MCP servers and plugins disappearing after /clear in the VS Code extension, JetBrains plugin, and Agent SDK. Also resolved drag-and-drop image upload hangs and a crash when piping more than 10MB to claude -p. Hardening signal ahead of broader Agent SDK adoption. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
-  </div>
-  <div class="item">
-    <h4>Akamai $1.8B seven-year compute deal continues to ripple, AKAM up 27%</h4>
-    <p>Bloomberg-broken deal still driving coverage on May 9: roughly $257M per year, more than doubling Akamai's segment run rate. AKAM logged largest single-day rally in 22 years. Edge-CDN inference angle remains under-covered. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai">bloomberg.com Akamai-Anthropic</a></p>
+    <h4>No new Anthropic SDK or claude-code releases over the weekend window, [Tier 1 absence-of-signal]</h4>
+    <p>Last shipped versions remain claude-code 2.1.138 from May 9 and anthropic-sdk-python 0.100.0 from May 6. Pattern across the past four weeks suggests next push lands Monday or Tuesday, worth watching the GitHub release feed. Source: <a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code/releases</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
   <div class="item">
-    <h4>Claude Agent SDK Python adds defer permission decision and DeferredToolUse</h4>
-    <p>May 8 SDK release introduces a defer hook decision in PreToolUseHookSpecificOutput.permissionDecision and a new DeferredToolUse dataclass on ResultMessage.deferred_tool_use, plus hook event streaming via include_hook_events and strict MCP config support. Unlocks human-in-the-loop patterns previously kludged around hooks. Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github claude-agent-sdk-python releases</a></p>
+    <h4>MCP TypeScript SDK lands ReDoS fix CVE-2026-0621, drops zod from peerDependencies, adds Fastify adapter</h4>
+    <p>Patch fixes a ReDoS in the UriTemplate regex, moves zod to a direct auto-installed dependency, switches unknown-tool errors to JSON-RPC -32602, and ships first-class Standard Schema support for Zod v4, Valibot, and ArkType. Source: <a href="https://github.com/modelcontextprotocol/typescript-sdk/releases">github.com/modelcontextprotocol/typescript-sdk</a></p>
   </div>
   <div class="item">
-    <h4>Claude Code adds --plugin-url for URL-loaded plugin archives, settings.autoMode.hard_deny ships</h4>
-    <p>v2.1.138 supports .zip plugin archives via --plugin-dir and adds --plugin-url to fetch a plugin archive from a URL for the current session. Practical impact: internal tooling teams can ship plugins from artifact stores without going through a marketplace. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
+    <h4>Claude Code 2.1.138 MCP fixes ship to stable, subagent forking now works in non-interactive runs</h4>
+    <p>Patch addresses MCP servers configured in .mcp.json, plugins, and claude.ai connectors silently disappearing after /clear, plus a bug where MCP OAuth refresh tokens were lost during concurrent multi-server refresh. Production teams running multi-server fleets should pin to 2.1.138 or newer. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com/docs/en/changelog</a></p>
   </div>
   <div class="item">
-    <h4>AWS MCP Server hits GA with single-tool any-API access and sandboxed Python execution</h4>
-    <p>Remote managed MCP server lets agents call any AWS API through one tool, run sandboxed Python against AWS services without local filesystem or shell access, and rely on IAM context keys instead of separate permissions. Free, pay only for underlying resources. Announced May 6, GA wave reached this window. Source: <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/">aws.amazon.com MCP server GA</a></p>
+    <h4>MCP STDIO command-injection advisory still spreading, 7,000+ public servers and 150M+ downloads exposed</h4>
+    <p>OX Security and Adversa continued to circulate the MCP STDIO architectural RCE advisory tied to CVE-2025-49596, CVE-2026-22252, CVE-2026-22688, CVE-2025-54994, and CVE-2025-54136. Anthropic has not modified the protocol, citing the behaviour as expected. Source: <a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/">ox.security advisory</a>, <a href="https://adversa.ai/blog/top-mcp-security-resources-may-2026/">adversa.ai roundup</a></p>
+  </div>
+  <div class="item">
+    <h4>claude-agent-sdk-python 0.1.80 bundles Claude CLI 2.1.138, tightens in-process MCP path</h4>
+    <p>Re-bundles the latest Claude CLI and inherits the MCP server-state and OAuth fixes. ClaudeSDKClient continues to expose custom tools and hooks as in-process MCP servers running inside the host Python process. Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github.com/anthropics/claude-agent-sdk-python</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
   <div class="item">
-    <h4>ServiceNow Build Agent goes GA inside Cursor, Windsurf, Claude Code, and GitHub Copilot</h4>
-    <p>ServiceNow announced GA of Build Agent inside ServiceNow Studio with direct integrations into the four leading AI coding tools, governed by default. First major enterprise platform to ship a unified coding-agent layer across all four IDEs simultaneously. Source: <a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Build-Agent-now-works-inside-every-major-AI-coding-tool-governed-by-default/default.aspx">servicenow newsroom</a></p>
+    <h4>Coding-tool launch wave from earlier in the week still propagating into trade press</h4>
+    <p>Windsurf 2.0 with embedded Devin (May 6), Coder Agents self-hosted beta (May 6), Cursor 3.3 parallel agents and PR review (May 7), and ServiceNow Build Agent GA inside Cursor, Windsurf, Claude Code, and Copilot (May 7) are all still in trade-press cycles. Source: <a href="https://sdtimes.com/ai/may-8-2026-ai-updates-from-the-past-week-coder-agents-launch-snyk-claude-partnership-opsera-cursor-partnership-and-more/">SD Times weekly</a></p>
   </div>
   <div class="item">
-    <h4>SWE-Bench Verified leaderboard: Claude Mythos Preview at 93.9%, Opus 4.7 at 87.6%</h4>
-    <p>Public leaderboard standings as of May 2026 show Claude Mythos Preview leading at 93.9%, Opus 4.7 at 87.6%, Opus 4.5 at 80.9%. Aider Polyglot leader is Opus 4.5 at 89.4%. Mythos Preview surfacing publicly is a leak-style early signal worth tracking against any silent docs.claude.com update. Source: <a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats SWE-Bench Verified</a></p>
+    <h4>Cursor parallel-agent architecture and context-usage breakdown shift IDE category toward orchestration shell</h4>
+    <p>Cursor 3.3 introduced inline PR review, split-changes-into-PRs, parallel agents for plan execution, and a context-usage panel showing which rules, skills, MCPs, and subagents consume tokens. Puts Cursor on the same trajectory as Devin and Windsurf and away from Copilot's chat paradigm. Source: <a href="https://cursor.com/changelog">cursor.com/changelog</a></p>
   </div>
   <div class="item">
-    <h4>Cursor Auto model degradation incident, fixed at 00:22 UTC May 10</h4>
-    <p>Cursor's Auto routing tier suffered degraded performance on May 9, fix deployed at 00:22 UTC with monitoring afterward. No new feature changelog entry in the window. Last feature drop was Cursor 3.3 on May 7 with parallel-agent plan execution and PR review. Source: <a href="https://status.cursor.com/">status.cursor.com</a></p>
-  </div>
-  <div class="item">
-    <h4>GitHub Copilot CLI v1.0.44 hooks that bypass model calls now in stable</h4>
-    <p>userPromptSubmitted hooks can now respond directly without invoking the LLM. Faster /user list and /user switch for multi-account users. Material for prompt-routing and cost optimization layers in front of Copilot CLI. Source: <a href="https://github.com/github/copilot-cli/releases">github.com/github/copilot-cli/releases</a></p>
+    <h4>Quiet weekend in the coding tools bucket itself, only Claude Code 2.1.138 MCP patches in the strict 24h window</h4>
+    <p>No new releases from Windsurf, Cursor, GitHub Copilot, or Cline between May 10 06:00 CET and now. The week's structural shifts (parallel subagents, embedded cloud delegation, MCP skill plug-ins) were already locked in before the window. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
   <div class="item">
-    <h4>OpenAI Codex CLI ships plugin sharing and Bedrock AWS-login auth</h4>
-    <p>May 9 Codex CLI release adds plugin sharing with discoverability controls, simpler remote-control startup, thread pagination, and AWS console-login profile support for Bedrock auth. Multi-environment view_image resolution improved. Quiet deepening of OpenAI's AWS partnership inside the developer surface. Source: <a href="https://releasebot.io/updates/openai">releasebot.io openai updates</a></p>
+    <h4>Android Show: I/O Edition confirmed for May 12, 10am PT, kicks off Google I/O 2026 week</h4>
+    <p>Android 17, Aluminium OS, and XR glasses expected at the pre-show. Main I/O keynote May 19 to 20 widely tipped to unveil Gemini 4.0, a Proactive Assistant feature, and a "Remy" 24/7 agent. Source: <a href="https://www.tech2geek.net/google-confirms-the-android-show-i-o-edition-2026-android-17-aluminium-os-and-xr-glasses-expected/">tech2geek</a></p>
   </div>
   <div class="item">
-    <h4>OpenAI rolls out ChatGPT Trusted Contact safety feature</h4>
-    <p>Opt-in feature for personal accounts that lets users designate someone to be notified during serious suicide-related safety concerns. Eligible regions and personal plans only, not Business or Enterprise or Edu. Source: <a href="https://openai.com/news/">openai.com news</a></p>
+    <h4>[UNVERIFIED] Google reportedly shuts down internal "Mariner" agent project ahead of I/O</h4>
+    <p>Weekly AI roundups reported Google shut the internal Mariner agent project just before its developer event, suggesting consolidation into a unified Gemini Agent / "Remy" stack. Pre-I/O agent strategy reshuffle is a leading indicator that Google is betting on one agent SKU. Source: <a href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week">MarketingProfs roundup</a></p>
   </div>
   <div class="item">
-    <h4>Perplexity Computer expands to Microsoft Teams, Mac native app live</h4>
-    <p>Perplexity Computer became available as a Microsoft Teams app for Enterprise Max and Pro subscribers. Personal Computer rolled out to all users in a new native Mac app. Aggressive enterprise channel push directly inside Microsoft territory. Source: <a href="https://9to5mac.com/2026/05/07/perplexity-ai-app-introduces-all-new-native-mac-experience-for-personal-computer/">9to5Mac Perplexity Mac</a></p>
+    <h4>Perplexity Computer agent now in beta for all Pro subscribers with 400+ connectors and MCP support</h4>
+    <p>Tier expansion from Max-only widens install base. 20+ models, prebuilt and custom skills, hundreds of connectors. Custom MCP connectors enabled for Pro, Max, and Enterprise on top of the 400+ prebuilt set. Source: <a href="https://releasebot.io/updates/perplexity-ai">releasebot.io Perplexity</a></p>
   </div>
   <div class="item">
-    <h4>xAI announces May 15 retirement of grok-code-fast-1 and other legacy models</h4>
-    <p>Developer console notice within the window: legacy models including grok-code-fast-1 retire May 15, 2026 at 12:00pm PT, migration to Grok 4.3 recommended. Operationally important for any team still pinned to the old endpoint. Source: <a href="https://docs.x.ai/developers/migration/may-15-retirement">docs.x.ai retirement notice</a></p>
-  </div>
-  <div class="item">
-    <h4>Quiet day for net-new model releases from Google, Meta, Mistral, DeepSeek</h4>
-    <p>No new model launches landed within the May 9 to 10 window from Google DeepMind, Meta Llama, Mistral, or DeepSeek. Last priors: DeepSeek V4 Pro on Apr 24, Mistral Medium 3.5 plus Vibe remote agents on Apr 29, Grok 4.3 GA on May 5. Source: <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">huggingface deepseek-ai</a></p>
+    <h4>Mainstream press amplifies Anthropic alignment story while OpenAI mid ad-platform rollout</h4>
+    <p>TechCrunch, Android Headlines, Bitcoin World, and Analytics Insight all ran the Anthropic blackmail/fictional-AI story on May 10. The press cycle sharpens the brand contrast between Anthropic safety positioning and OpenAI consumer monetization push. Source: <a href="https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/">TechCrunch</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
   <div class="item">
-    <h4>EU Council and Parliament agree Omnibus VII, AI Act high-risk obligations pushed, watermarking accelerated</h4>
-    <p>May 7 provisional deal: high-risk standalone AI rules pushed to Dec 2, 2027 (Aug 2028 for embedded systems), watermarking and provenance transparency accelerated to Dec 2, 2026, new prohibition on non-consensual sexual AI content, bias-detection clarified for special-category data. Commission opened follow-up consultation on transparency guidelines May 8. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu Omnibus VII</a></p>
+    <h4>White House drafting AI security executive order that omits mandatory model tests</h4>
+    <p>NEC director Hassett likened the order to FDA drug review but stops short of mandatory model evaluations. A parallel draft would pair federal agencies with AI vendors on cyber defense. Voluntary-only US security regime widens the regulatory gap with the EU. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-08/us-prepares-ai-security-order-that-omits-mandatory-model-tests">Bloomberg</a></p>
   </div>
   <div class="item">
-    <h4>Nvidia AI equity bets cross $40B in 2026 (CNBC, May 9)</h4>
-    <p>CNBC reported May 9 that Nvidia's commitments to AI companies have already topped $40B for the year. Tracks against the AMD-Meta $100B/6GW deal and the SpaceX-Anthropic Colossus 1 capacity arrangement. Concentration and circularity narrative continues to harden. Source: <a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">cnbc.com Nvidia $40B equity bets</a></p>
+    <h4>Nvidia equity-investment portfolio crosses $40B with IREN ($2.1B option) and Corning ($3.2B option) deals same week</h4>
+    <p>CNBC tally shows Nvidia's strategic-equity book now tops $40B, including a five-year right to buy 30M IREN shares at $70 and warrants for up to 18M Corning shares plus a $500M pre-funded warrant at $180. Both stocks rallied on announcement. Source: <a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">CNBC tally</a></p>
   </div>
   <div class="item">
-    <h4>Anthropic + Goldman + Blackstone + Hellman & Friedman launch $1.5B PE-portfolio AI venture</h4>
-    <p>Four parties anchored a joint venture at roughly $300M each to deploy Claude-based AI tooling across PE-owned portfolio companies. Same-week parallel: OpenAI's $10B DeployCo vehicle anchored by TPG, Brookfield, Advent, Bain. PE portfolios as the new enterprise distribution vector. Source: <a href="https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/">techcrunch.com PE AI ventures</a></p>
+    <h4>EU AI Act Omnibus implementation analysis: sandbox deadline slips to Aug 2027, transparency grace cut to 3 months</h4>
+    <p>May 7 political agreement detail circulating into May 10. National AI sandbox setup postponed to Aug 2, 2027. GenAI content transparency grace cut to Dec 2, 2026. SME-style relief extended to small mid-caps. AI Office powers reinforced. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu</a></p>
   </div>
   <div class="item">
-    <h4>Cloudflare cuts 1,100 jobs (20% of workforce), cites internal AI productivity gains</h4>
-    <p>Disclosed after internal AI usage rose more than 600% in three months. Same week, PayPal told staff it plans to cut roughly 20% of its 23,800 workforce over 2 to 3 years. First wave of AI-attributed restructurings at infrastructure-tier firms. Source: <a href="https://finance.yahoo.com/sectors/technology/articles/layoffs-accelerate-may-2026-firms-040430218.html">yahoo finance May 2026 layoffs</a></p>
+    <h4>[UNVERIFIED] Suno Series D reports point to $5B+ valuation, roughly doubling Nov 2025 $2.45B mark</h4>
+    <p>Reporting circulating into the window says AI music generator Suno is lining up a Series D that would value the company above $5B. No lead investor disclosed yet. A 2x markup inside six months for a copyright-exposed GenAI music app signals VCs are again willing to underwrite litigation risk. Source: <a href="https://www.digitalmusicnews.com/2026/05/04/suno-series-d-reports/">Digital Music News</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
   <div class="item">
-    <h4>Anthropic releases The Hot Mess of AI misalignment-scaling study</h4>
-    <p>Tests how misalignment scales jointly with model intelligence and task complexity, building on the hot mess hypothesis that smarter systems are judged less coherent. Empirical follow-up to last year's agentic-misalignment work, useful as a benchmark frame for evaluating frontier models. Source: <a href="https://alignment.anthropic.com/2026/hot-mess-of-ai/">alignment.anthropic.com hot-mess-of-ai</a></p>
+    <h4>OpenSearch-VL ships fully open recipe for frontier multimodal search agents</h4>
+    <p>Open recipe for training multimodal deep search agents combining text and image search, OCR, cropping, and super-resolution tools with a multi-turn fatal-aware GRPO algorithm. Ships SearchVL-SFT-36k and SearchVL-RL-8k datasets plus models, with 10+ point gains across seven benchmarks. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
   <div class="item">
-    <h4>Anthropic Natural Language Autoencoders continue to drive interpretability discussion</h4>
-    <p>NLA paper (May 7) translates Claude internal activations directly into readable English. Most-cited interpretability work on r/MachineLearning over the last 24 hours. Reported applications include catching Mythos Preview during eval-awareness and tracing language-switch artifacts to specific training data. Source: <a href="https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/">marktechpost NLA writeup</a></p>
+    <h4>ARIS open-source autonomous research harness with cross-model adversarial assurance layer</h4>
+    <p>Three-layer harness with 65+ Markdown-defined skills, MCP model integrations, and a five-pass scientific-editing pipeline. The assurance layer cross-checks manuscript claims against a claim ledger and raw evidence to catch silent claim drift in long-horizon agent runs. Source: <a href="https://arxiv.org/list/cs.AI/recent">arxiv cs.AI</a></p>
   </div>
   <div class="item">
-    <h4>vLLM v0.20.2 stable lands after v0.20.1 yank for tensor-parallelism bug</h4>
-    <p>vLLM published v0.20.2 on May 8 as the stable replacement for v0.20.1, which was yanked because of a tensor-parallelism bug. Operators on the previous build should upgrade before the next deploy window. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm releases</a></p>
+    <h4>vLLM v0.20.2 patch lands DeepSeek V4 stabilization, multi-stream pre-attention GEMM, BF16/MXFP8 FlashInfer all-to-all</h4>
+    <p>Patch on v0.20.0 adds multi-stream pre-attn GEMM, tunable VLLM_MULTI_STREAM_GEMM_TOKEN_THRESHOLD, PTX cvt for faster FP32 to FP4, and fixes a persistent topk cooperative deadlock at TopK=1024. Production-grade fixes for DeepSeek V4 serving on Blackwell-class hardware. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm</a></p>
   </div>
   <div class="item">
-    <h4>llama.cpp build b9075 ships SYCL BF16 fix</h4>
-    <p>Adds GGML_TYPE_BF16 support to the SYCL GET_ROWS op, fixing a regression where models with BF16 embedding tensors were silently falling back to CPU on Intel GPU backends. Restores expected throughput. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">github.com/ggml-org/llama.cpp releases</a></p>
-  </div>
-  <div class="item">
-    <h4>Hugging Face Transformers 5.8.0 brings DeepSeek-V4, Granite Speech Plus, Granite Vision 4.1</h4>
-    <p>5.8.0 release (May 5) adds first-class support for DeepSeek-V4 next-gen MoE, IBM Granite Speech Plus with speaker labels and word-level timestamps, and Granite Vision 4.1 for enterprise document, chart, table extraction. Downstream loaders, quantizers, and inference servers now updating to track. Source: <a href="https://github.com/huggingface/transformers/releases">github.com/huggingface/transformers releases</a></p>
+    <h4>[UNVERIFIED] Uniform-Correct Policy Optimization challenges RLVR's indifference to diversity</h4>
+    <p>Paper argues that RLVR's single-attempt accuracy gains come at the cost of multi-sample coverage and diversity collapse, proposing a uniform-correct fix. Directly engages the post-DeepSeek-R1 reasoning-RL line. If the diversity-collapse thesis holds, reshapes how reasoning labs evaluate RLVR beyond pass@1. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
 </div>
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
   <div class="item">
-    <h4>Claude Mythos Preview surfacing on public SWE-Bench leaderboard at 93.9% [Tier 1, MEDIUM]</h4>
-    <p>Mythos has not been formally announced by Anthropic but is now visible as the top entry on a public benchmark scrape. Naming convention suggests a Mythos series sitting above Opus 4.7. Watch docs.claude.com models page and HuggingFace anthropic uploads for an official artifact. Source: <a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats leaderboard</a></p>
+    <h4>Google "Mariner" agent project reportedly shuttered pre-I/O [Tier 2, LOW confidence]</h4>
+    <p>Single-source via weekly AI roundup. If confirmed at I/O on May 19, signals Google is consolidating internal agent stacks into one Gemini Agent SKU rather than fielding several competing internal efforts. Source: <a href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week">MarketingProfs roundup</a></p>
   </div>
   <div class="item">
-    <h4>Anthropic exploring SpaceX orbital data center satellites [UNVERIFIED]</h4>
-    <p>Lifeboat blog and downstream coverage on May 9 referenced Anthropic considering SpaceX orbital data center satellites as a future compute vector, an extension of the Colossus 1 deal. No primary Anthropic source confirms; treat as rumor pending an official statement. Source: <a href="https://lifeboat.com/blog/2026/05/anthropic-to-consider-using-spacex-orbital-data-center-satellites">lifeboat.com</a></p>
+    <h4>Suno Series D north of $5B valuation [Tier 2, MEDIUM confidence]</h4>
+    <p>2x markup inside six months on a copyright-exposed GenAI music app. No lead investor named. Worth tracking through the I/O week, since closing could anchor a comparable round for ElevenLabs or Udio. Source: <a href="https://www.digitalmusicnews.com/2026/05/04/suno-series-d-reports/">Digital Music News</a></p>
+  </div>
+  <div class="item">
+    <h4>Trump AI security executive order described as voluntary, FDA-style review [Tier 1, MEDIUM confidence on timing]</h4>
+    <p>NEC framing as "FDA for AI" without mandatory model tests would lock in a transatlantic regulatory gap. Direct implication for frontier-model release cadence: OpenAI, Anthropic, and xAI gain US runway while EU Omnibus VII pushes high-risk obligations into 2027 and 2028. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-08/us-prepares-ai-security-order-that-omits-mandatory-model-tests">Bloomberg</a></p>
   </div>
 </div>
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
   <div class="item">
-    <h4>Cerebras (CBRS) Nasdaq listing</h4>
-    <p>May 14, 2026. Pricing range $125 to $135 per share, ~28M Class A shares, ~$3.7B raise, ~$30B implied cap. First major AI compute IPO of 2026. Books reported oversubscribed >20x.</p>
+    <h4>2026-05-12: Android Show: I/O Edition at 10am PT</h4>
+    <p>Pre-show for I/O 2026. Android 17, Aluminium OS, XR glasses expected. First Google AI catalyst of the week. Source: <a href="https://www.tech2geek.net/google-confirms-the-android-show-i-o-edition-2026-android-17-aluminium-os-and-xr-glasses-expected/">tech2geek</a></p>
   </div>
   <div class="item">
-    <h4>xAI legacy model retirement window</h4>
-    <p>May 15, 2026 at 12:00pm PT. grok-code-fast-1 and other legacy endpoints retired. Migration to Grok 4.3 required.</p>
+    <h4>2026-05-13: Cerebras CBRS IPO pricing window</h4>
+    <p>Listing with band raised to $150 to $160, deal 20x oversubscribed at $4.8B raise. Will set the public-market comp for Nvidia challengers. Source: <a href="https://www.cnbc.com/2026/05/10/cerebras-ipo-price-range.html">CNBC</a></p>
   </div>
   <div class="item">
-    <h4>EU AI Act Omnibus VII final text and trilogue completion expected</h4>
-    <p>Provisional political deal reached May 7. Final text expected within the next 7 to 10 days. Compliance recalibration follows.</p>
+    <h4>2026-05-19 to 20: Google I/O 2026 main keynote</h4>
+    <p>Gemini 4.0, Proactive Assistant, and the "Remy" 24/7 agent widely tipped. If Mariner has been folded in, expect a single unified Gemini Agent SKU pitched directly against ChatGPT, Claude, and Perplexity Computer.</p>
   </div>
   <div class="item">
-    <h4>Anthropic root-cause note on Opus 4.1 May 9 incident likely</h4>
-    <p>Standard Anthropic pattern: status page incidents that affect a flagship model receive a follow-up RCA within a week. Watch status.claude.com.</p>
+    <h4>Anthropic Monday or Tuesday release window</h4>
+    <p>Pattern across recent weeks suggests next claude-code or anthropic-sdk push lands today or tomorrow. Worth watching the GitHub release feed and the claude.com blog for Project Glasswing or Managed Agents follow-ons.</p>
+  </div>
+  <div class="item">
+    <h4>EU AI Act Omnibus VII final text expected this week</h4>
+    <p>Provisional deal reached 2026-05-07. Final text and compliance recalibration likely within the week. Watch consilium.europa.eu for the legislative resolution.</p>
   </div>
 </div>
 
 <h2>Source log</h2>
 <ul class="sources">
-  <li><a href="https://alignment.anthropic.com/2026/msm/">alignment.anthropic.com Model Spec Midtraining</a> (Tier 1)</li>
-  <li><a href="https://alignment.anthropic.com/2026/hot-mess-of-ai/">alignment.anthropic.com Hot Mess of AI</a> (Tier 1)</li>
-  <li><a href="https://platform.claude.com/docs/en/managed-agents/multi-agent">platform.claude.com Managed Agents multi-agent</a> (Tier 1)</li>
-  <li><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">github.com/anthropics/claude-code CHANGELOG</a> (Tier 1)</li>
-  <li><a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a> (Tier 1)</li>
-  <li><a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github claude-agent-sdk-python releases</a> (Tier 1)</li>
-  <li><a href="https://status.claude.com/">status.claude.com</a> (Tier 1)</li>
-  <li><a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/">aws.amazon.com MCP server GA</a> (Tier 1)</li>
-  <li><a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Build-Agent-now-works-inside-every-major-AI-coding-tool-governed-by-default/default.aspx">servicenow newsroom Build Agent</a> (Tier 1)</li>
-  <li><a href="https://docs.x.ai/developers/migration/may-15-retirement">docs.x.ai May 15 retirement notice</a> (Tier 1)</li>
-  <li><a href="https://openai.com/news/">openai.com news</a> (Tier 1)</li>
-  <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu Omnibus VII</a> (Tier 1)</li>
-  <li><a href="https://github.com/vllm-project/vllm/releases">github vllm-project releases</a> (Tier 1)</li>
-  <li><a href="https://github.com/ggml-org/llama.cpp/releases">github ggml-org/llama.cpp releases</a> (Tier 1)</li>
-  <li><a href="https://github.com/huggingface/transformers/releases">github huggingface/transformers releases</a> (Tier 1)</li>
-  <li><a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats SWE-Bench leaderboard</a> (Tier 1)</li>
-  <li><a href="https://status.cursor.com/">status.cursor.com</a> (Tier 1)</li>
-  <li><a href="https://github.com/github/copilot-cli/releases">github/copilot-cli releases</a> (Tier 1)</li>
-  <li><a href="https://releasebot.io/updates/openai">releasebot.io openai</a> (Tier 2)</li>
-  <li><a href="https://seekingalpha.com/news/4590128-cerebras-systems-plans-to-raise-ipo-price-range-bloomberg">seekingalpha Cerebras IPO range</a> (Tier 2)</li>
-  <li><a href="https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/">techcrunch PE AI ventures</a> (Tier 2)</li>
-  <li><a href="https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai">bloomberg Akamai-Anthropic</a> (Tier 3)</li>
-  <li><a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">cnbc Nvidia $40B equity bets</a> (Tier 3)</li>
-  <li><a href="https://9to5mac.com/2026/05/07/perplexity-ai-app-introduces-all-new-native-mac-experience-for-personal-computer/">9to5Mac Perplexity Mac</a> (Tier 3)</li>
-  <li><a href="https://finance.yahoo.com/sectors/technology/articles/layoffs-accelerate-may-2026-firms-040430218.html">yahoo finance May 2026 layoffs</a> (Tier 3)</li>
-  <li><a href="https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/">marktechpost NLA writeup</a> (Tier 3)</li>
-  <li><a href="https://lifeboat.com/blog/2026/05/anthropic-to-consider-using-spacex-orbital-data-center-satellites">lifeboat.com orbital DC rumor</a> (Tier 3)</li>
+  <li><a href="https://www.anthropic.com/research/teaching-claude-why">anthropic.com / Teaching Claude Why</a> (Tier 1)</li>
+  <li><a href="https://alignment.anthropic.com/2026/teaching-claude-why/">alignment.anthropic.com</a> (Tier 1)</li>
+  <li><a href="https://status.anthropic.com/history">status.anthropic.com/history</a> (Tier 1)</li>
+  <li><a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code</a> (Tier 1)</li>
+  <li><a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github.com/anthropics/claude-agent-sdk-python</a> (Tier 1)</li>
+  <li><a href="https://code.claude.com/docs/en/changelog">code.claude.com/docs/en/changelog</a> (Tier 1)</li>
+  <li><a href="https://github.com/modelcontextprotocol/typescript-sdk/releases">github.com/modelcontextprotocol/typescript-sdk</a> (Tier 1)</li>
+  <li><a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/">ox.security MCP advisory</a> (Tier 1)</li>
+  <li><a href="https://adversa.ai/blog/top-mcp-security-resources-may-2026/">adversa.ai MCP security</a> (Tier 1)</li>
+  <li><a href="https://cursor.com/changelog">cursor.com/changelog</a> (Tier 1)</li>
+  <li><a href="https://github.com/ggml-org/llama.cpp/releases">github.com/ggml-org/llama.cpp</a> (Tier 1)</li>
+  <li><a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm</a> (Tier 1)</li>
+  <li><a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG recent</a> (Tier 1)</li>
+  <li><a href="https://arxiv.org/list/cs.AI/recent">arxiv cs.AI recent</a> (Tier 1)</li>
+  <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu Omnibus</a> (Tier 1)</li>
+  <li><a href="https://www.cnbc.com/2026/05/10/cerebras-ipo-price-range.html">CNBC Cerebras price range</a> (Tier 1)</li>
+  <li><a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">CNBC Nvidia equity book</a> (Tier 1)</li>
+  <li><a href="https://www.bloomberg.com/news/articles/2026-05-08/us-prepares-ai-security-order-that-omits-mandatory-model-tests">Bloomberg US AI security EO</a> (Tier 1)</li>
+  <li><a href="https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/">TechCrunch on Anthropic alignment</a> (Tier 2)</li>
+  <li><a href="https://www.tech2geek.net/google-confirms-the-android-show-i-o-edition-2026-android-17-aluminium-os-and-xr-glasses-expected/">tech2geek Android Show I/O</a> (Tier 2)</li>
+  <li><a href="https://releasebot.io/updates/perplexity-ai">releasebot.io Perplexity</a> (Tier 2)</li>
+  <li><a href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week">MarketingProfs AI roundup</a> (Tier 3)</li>
+  <li><a href="https://www.digitalmusicnews.com/2026/05/04/suno-series-d-reports/">Digital Music News Suno D</a> (Tier 3)</li>
+  <li><a href="https://sdtimes.com/ai/may-8-2026-ai-updates-from-the-past-week-coder-agents-launch-snyk-claude-partnership-opsera-cursor-partnership-and-more/">SD Times weekly</a> (Tier 3)</li>
 </ul>
 
 <div class="footer">
-  Generated 2026-05-10 06:00 CET. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from the Top 3.
+  Generated 2026-05-11 06:00 CET. Window 2026-05-10 06:00 CET to 2026-05-11 06:00 CET. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from the Top 3.
 </div>
 
 </div>
