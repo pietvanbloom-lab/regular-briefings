@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>AI Brief 2026-05-31</title>
+<title>AI Brief 2026-06-01</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="ask-type" content="brief">
 <style>
@@ -56,7 +56,7 @@
   .twocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
   @media (min-width: 760px) { .twocol { grid-template-columns: 1fr 1fr; } }
 
-  /* ── ask-link component (inline embed) ─────────────────────── */
+  /* ask-link component (inline embed) */
   .ask-btn {
     display: inline-flex; align-items: center; gap: 4px;
     margin-left: 8px; vertical-align: middle;
@@ -128,9 +128,9 @@
 <header>
   <div>
     <div class="eyebrow">AI Intelligence Brief</div>
-    <h1>2026-05-31 morning edition</h1>
+    <h1>2026-06-01 morning edition</h1>
   </div>
-  <div class="meta">Window: 2026-05-30 06:00 CET to 2026-05-31 06:00 CET<br>7 in-window items, 6 buckets, 3 highlighted. Quiet weekend cycle.</div>
+  <div class="meta">Window: 2026-05-31 06:00 CET to 2026-06-01 06:05 CEST<br>6 in-window items, 6 buckets, 3 highlighted. Quiet Sunday-into-Monday cycle. Today's signal is AI economics, not capability.</div>
 </header>
 
 <section>
@@ -138,45 +138,44 @@
   <div class="top3">
 
     <div class="card early">
-      <h3>Gartner projects ~40% of enterprises will demote or decommission autonomous agents by 2027 over governance gaps, prescribes a four-tier proportional control model</h3>
-      <div class="tags">
-        <span class="tag t2">Tier 2</span>
-        <span class="tag high">High confidence</span>
-        <span class="tag early">Early signal</span>
-        <span class="tag">Agentic</span>
-        <span class="tag">Governance</span>
-      </div>
-      <p>CIO published coverage on May 30 of a Gartner finding that one-size-fits-all governance will push roughly 40% of enterprises to demote or decommission autonomous agents by 2027. Gartner's prescription is a four-tier proportional model (observe, advise, act with approval, act autonomously) that scales controls and rollback testing to each agent's autonomy and access scope. The underlying Gartner release dates to May 26; the in-window event is the secondary coverage now amplifying it.</p>
-      <p class="meta">Source: <a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO</a> / <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure">Gartner</a> — May 30, 2026</p>
-      <div class="why"><strong>Why this matters before others see it:</strong> The 2024-2025 story was agent capability. The 2026-2027 story is agent retirement. This is the first hard analyst number putting a failure rate on production agents, and it reframes the buyer conversation from "what can the agent do" to "can we govern, audit, and roll it back." Vendors that ship tiered permissioning and rollback testing now (Anthropic's Auto mode classifier, Cursor Auto-review, ServiceNow's tiered fabric) are positioned for the governance wave. Expect "agent governance" to become a named budget line and a procurement gate within two quarters, separating platforms that treat it as a feature from those that bolt it on after a failure.</div>
-    </div>
-
-    <div class="card early">
-      <h3>Cognizant opens TriZetto Unify to AI agents with agent-ready FHIR APIs, launches Electronic Prior Authorization as the first headless-for-agents healthcare service</h3>
+      <h3>GitHub Copilot moves all monthly plans to usage-based "AI Credits" billing, effective today, June 1</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
         <span class="tag early">Early signal</span>
-        <span class="tag">Agentic</span>
-        <span class="tag">Healthcare</span>
+        <span class="tag">Coding Tools</span>
+        <span class="tag">Pricing</span>
       </div>
-      <p>Cognizant announced a "headless" API model that treats AI agents as first-tier consumers of its TriZetto Unify healthcare platform, with Electronic Prior Authorization live as the first agent-ready service. It exposes three HL7 FHIR-aligned API resources covering the prior-auth workflow (confirm if authorization is required, identify documentation, submit the request) so agents call them directly instead of driving a UI. Cognizant says clinical decisions stay with humans and plans to extend agent-ready access across the broader Unify roadmap over the next year.</p>
-      <p class="meta">Source: <a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">PRNewswire (Cognizant)</a> — May 30, 2026</p>
-      <div class="why"><strong>Why this matters before others see it:</strong> Most "AI agent" healthcare news is a chatbot bolted onto an existing portal. This is the opposite architecture: a core claims platform redesigning its surface so the API, not the UI, is the primary interface for agents. Prior authorization is the most-hated friction point in US healthcare, which makes it the perfect agent wedge. The durable signal is the "headless for agents" pattern itself: incumbents with the workflow data are realizing that exposing FHIR-aligned, agent-callable resources is a defensible moat that a thin agent startup cannot replicate. Watch other claims, EHR, and payer platforms follow with their own agent-ready API tiers.</div>
+      <p>As of June 1, Copilot replaces premium request units with GitHub AI Credits, metered on input, output, and cached tokens at each model's published API rate (1 credit = $0.01). Monthly Pro and Pro+ users auto-migrate today; Pro+ stays $39 and now includes $39 of credits, Business $19, Enterprise $39, with Business and Enterprise getting promotional included usage through August. Code completions and next-edit suggestions stay unlimited and unbilled. Annual plan holders keep request-based pricing until renewal. Developer reaction on May 30-31 was sharply negative on cost predictability for long agentic sessions.</p>
+      <p class="meta">Source: <a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Blog</a> / <a href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/">TechCrunch</a>, effective June 1, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> This is the largest AI coding subscription converting flat-rate seats into metered consumption, and it is the first real test of whether developers accept token billing for everyday tooling. The second-order effect is that long-running agentic loops become cost-unpredictable, which pushes teams to cap agent autonomy, watch token budgets per task, or self-host. It also hands a pricing wedge to rivals: Cursor, Windsurf, and Claude Code can now position on predictable or flat pricing. Watch "tokens per task" become a budgeting metric, and watch GitHub probe how far it can move price before churn shows up, because the May 30-31 backlash signals real elasticity.</div>
     </div>
 
     <div class="card early">
-      <h3>Genesis AI releases Genesis World 1.0 open-source robotics simulation stack under Apache 2.0, reports 0.90 sim-to-real correlation and policy evaluation cut from 200+ hours to under 0.5 hours</h3>
+      <h3>Correction and signal: DeepSeek's 75% V4-Pro price cut is permanent, not an expiring promo, the list price did not revert</h3>
       <div class="tags">
-        <span class="tag t2">Tier 2</span>
-        <span class="tag med">Medium confidence</span>
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
         <span class="tag early">Early signal</span>
-        <span class="tag">Open Source</span>
-        <span class="tag">Robotics</span>
+        <span class="tag">Competitor</span>
+        <span class="tag">Pricing</span>
       </div>
-      <p>The full open-source artifact set for Genesis World 1.0 surfaced May 30: a multi-physics engine plus Nyx (a GPU path-traced renderer targeting noise-free 1080p frames under 4 ms) and Quadrants (a Taichi-fork Python-to-GPU compiler claiming up to 4.6x runtime improvement). The platform reports a 0.8996 Pearson correlation between simulation evaluation and on-hardware rollouts across 14 tasks, cutting policy evaluation time from over 200 hours to under 0.5 hours. The core engine is open source under Apache 2.0 (GitHub: Genesis-Embodied-AI/genesis-world); the underlying launch dates to roughly May 27, with the open-source detail and benchmarks propagating May 30.</p>
-      <p class="meta">Source: <a href="https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/">MarkTechPost</a> / <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a> — May 30, 2026</p>
-      <div class="why"><strong>Why this matters before others see it:</strong> The bottleneck in robotics foundation models is not model size, it is evaluation cost. If a 0.90 sim-to-real correlation holds up independently, teams can screen policies in simulation in minutes instead of burning days of hardware time, which compresses the iteration loop that currently gates physical-AI progress. Doing this in the open under Apache 2.0 lowers the barrier for smaller robotics labs that cannot afford large hardware test fleets. The number to verify is that correlation: if it generalizes beyond the 14 reported tasks, open simulation infrastructure becomes the default evaluation layer for embodied AI. Treat the benchmark as promising, not settled.</div>
+      <p>This brief reported on May 31 that DeepSeek's V4-Pro promotional discount would expire that day and list pricing would return. That was a misread. DeepSeek announced on May 22 that the 75% discount becomes the permanent list price: roughly $0.435 per million input tokens, $0.87 per million output, and $0.003625 per million cached. The cut did not roll back on May 31. By widely cited comparisons, V4-Pro now sits below OpenAI, Anthropic, and Google on token cost, on the order of 11x cheaper than GPT-5.5 on input.</p>
+      <p class="meta">Source: <a href="https://www.engadget.com/2180062/deepseek-permanently-reduces-the-price-of-its-flagship-v4-model-by-75-percent/">Engadget</a> / <a href="https://www.infoworld.com/article/4176709/deepseeks-steep-v4-pro-price-cut-escalates-ai-pricing-war.html">InfoWorld</a>, announced May 22, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> Two things. First, the correction: a scheduled "promo ends" framing circulated across multiple outlets and into this brief, when the real move was the opposite, a permanent reset. Worth flagging because the wrong version is still propagating. Second, the signal: a frontier-tier model holding a permanent sub-$0.50 input price sets a hard floor that squeezes everyone selling inference above it. Pair this with the Copilot item and the same week shows AI cost being repriced from both ends, the model layer and the tooling layer. The pressure lands hardest on mid-tier API resellers and on any product whose margin depends on inference staying expensive.</div>
+    </div>
+
+    <div class="card">
+      <h3>Gemini 2.0 Flash and 2.0 Flash-Lite shut down today, June 1, old model names start returning errors</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">Competitor</span>
+        <span class="tag">Lifecycle</span>
+      </div>
+      <p>Google retires gemini-2.0-flash and gemini-2.0-flash-lite on June 1. After today, API calls using the old model names return errors. Google's recommended path is a name swap to gemini-2.5-flash-lite, which carries identical $0.10 input and $0.40 output per-million pricing, so the migration is mostly a string change rather than a cost change. Teams still pinned to the 2.0 endpoints break today.</p>
+      <p class="meta">Source: <a href="https://ai.google.dev/gemini-api/docs/deprecations">Google Gemini deprecations</a>, effective June 1, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> The story is not this one model, it is the cadence. Frontier labs are now sunsetting last-generation models on tight cycles, which turns "model EOL risk" into a real production concern rather than a footnote. A team that hardcoded a model name a year ago can wake up to 400 errors with little warning. The practical takeaway: pin to model aliases where the provider offers them, keep a migration runbook, and treat model lifecycle like dependency management. Expect more of these forced cutovers across every major API through 2026.</div>
     </div>
 
   </div>
@@ -187,148 +186,159 @@
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
   <div class="item">
-    <h4>Claude Code v2.1.158 extends Auto mode to Bedrock, Vertex, and Foundry for Opus 4.7 and 4.8</h4>
-    <p>The release makes Auto mode (the permission tier between manual approval and full bypass, gated by a separate classifier model) available on AWS Bedrock, Google Vertex, and Microsoft Foundry. Users opt in via the environment variable CLAUDE_CODE_ENABLE_AUTO_MODE=1. This is an enterprise-deployment unlock that lets regulated teams run Auto mode on their existing cloud-hosting paths rather than first-party API only. Source: <a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog</a> — May 30, 2026</p>
+    <h4>Claude Code v2.1.159 ships, internal infrastructure only with no user-facing changes</h4>
+    <p>The single in-window Claude Code release is a maintenance patch. The changelog entry states it contains internal infrastructure improvements and lists no new features, models, or user-facing fixes. Noted only to confirm the release cadence continued over the weekend. Source: <a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog</a>, May 31, 2026</p>
   </div>
   <div class="item">
-    <h4>Anthropic IPO analysis circulates: ~$47B run-rate framing and a possible trillion-dollar listing after the $965B raise</h4>
-    <p>A May 30 Motley Fool breakdown walks through Anthropic's path to a likely trillion-dollar IPO following the May 28 Series H, separating confirmed facts (post-money near $965B, confidential or pre-filing stage) from speculation (an approximate October 2026 listing target, no final decision announced). This is analysis recapping last week's raise, not new corporate disclosure. Source: <a href="https://www.fool.com/investing/2026/05/30/the-next-1-trillion-ai-ipo-anthropic-heres-what-we/">The Motley Fool</a> — May 30, 2026</p>
-  </div>
-  <div class="item">
-    <h4 class="quiet">Quiet day otherwise: no new anthropic.com/news or research post timestamped in-window</h4>
-    <p>The week's headline items (Opus 4.8 on May 28, the $65B Series H, the Mythos wide-release statement) all landed May 28-29, just outside this window, and are not re-run here as fresh. Watch anthropic.com/news for the Mythos release terms.</p>
+    <h4 class="quiet">Quiet day otherwise: no in-window anthropic.com/news or research post</h4>
+    <p>The newsroom's top items remain May 28 (the roughly $65B Series H at about $965B post-money, and Opus 4.8), confirmed via direct fetch, with nothing dated May 31 or June 1. The Mythos wide release is still the May 28 "coming weeks" statement with no new confirmation. Recurring weekend aggregator pieces are restated coverage of last week's raise, not new disclosure. Source: <a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
   <div class="item">
-    <h4>Cognizant opens TriZetto Unify to AI agents, Electronic Prior Authorization first agent-ready service</h4>
-    <p>Full detail in Top 3. Three HL7 FHIR-aligned API resources let agents drive the prior-auth workflow directly rather than through a UI, with humans retaining clinical decisions. First major incumbent claims platform to publicly reframe its API surface as agent-first. Source: <a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">PRNewswire</a> — May 30, 2026</p>
+    <h4>GitHub Copilot usage-based billing reshapes the economics of agentic coding loops</h4>
+    <p>Full detail in Top 3. The agent-relevant angle: metered token billing changes the calculus for code-review agents, CI agent loops, and long multi-step sessions, where cost now scales with autonomy. This is the governance-by-budget lever arriving via pricing rather than policy. Source: <a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Blog</a>, June 1, 2026</p>
   </div>
   <div class="item">
-    <h4>Gartner governance warning amplifies: four-tier proportional control model to avoid mass agent decommissioning</h4>
-    <p>Covered in Top 3. The prescription matches controls (observe, advise, act with approval, act autonomously) and rollback testing to each agent's autonomy and access scope, rather than applying uniform governance across all agents. Source: <a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO</a> — May 30, 2026</p>
+    <h4>Trust3 AI publishes a "continuous agent discovery" field guide framing inventory as the first security control</h4>
+    <p>A May 31 vendor field guide argues you cannot govern agents you cannot see, and defines a three-source discovery model: platform APIs, dev-environment and repo plus CI scans, and runtime egress telemetry. It recommends inspecting egress logs for MCP and tool calls to surface shadow agents spun up inside Cursor or Copilot Studio. Thought-leadership, not a product launch, but it tracks the agent-governance theme. Source: <a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store (aggregator)</a>, May 31, 2026</p>
   </div>
   <div class="item">
-    <h4 class="quiet">No in-window MCP spec movement</h4>
-    <p>The MCP release candidate locked May 21 (stateless core, Extensions, Tasks, MCP Apps, auth hardening), with the final spec targeting July 28. No new server launches from modelcontextprotocol.io or major framework releases inside this 24h window. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP Blog</a></p>
+    <h4 class="quiet">No in-window MCP spec or server movement</h4>
+    <p>modelcontextprotocol.io posted nothing in-window; the most recent blog activity predates the window and the release candidate remains locked for a July 28 final spec (stateless core, Extensions, Tasks, MCP Apps, auth hardening). Watch Microsoft Build 2026 on June 2-3 for a likely Windows Agent Runtime preview and agent-platform news. Source: <a href="https://blog.modelcontextprotocol.io/">MCP Blog</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
   <div class="item">
-    <h4 class="quiet">Quiet day for coding tools: the week's moves landed May 27-29, just outside the window</h4>
-    <p>Cursor 3.6 Auto-review (May 29), GitHub Copilot usage-metrics adoption cohorts (May 29), and Cognition's $1B raise at roughly $26B (May 27) all predate this window. The only confirmed in-window release is Claude Code v2.1.158 (see Anthropic bucket). No new SWE-Bench results posted in-window. Source: <a href="https://cursor.com/changelog/auto-review">Cursor Changelog</a></p>
+    <h4>GitHub Copilot code review begins consuming GitHub Actions minutes on private repos, also today</h4>
+    <p>Separate from the AI Credits switch, Copilot code review starts billing GitHub Actions minutes from plan entitlement on private repositories as of June 1, on top of credit consumption. Public repos remain free. A second cost lever landing the same day for teams that lean on automated review. Source: <a href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/">GitHub Changelog</a>, effective June 1, 2026</p>
   </div>
   <div class="item">
-    <h4>For context: Cursor 3.6 Auto-review Run Mode uses a classifier subagent to gate Shell, MCP, and Fetch calls</h4>
-    <p>Published May 29, just before the window. A new run mode lets the agent allow, redirect, or escalate tool calls automatically so it runs longer with fewer human prompts. Notable as another vendor shipping the tiered-permission pattern that the Gartner governance item rewards. Source: <a href="https://cursor.com/changelog/auto-review">cursor.com</a> — May 29, 2026</p>
+    <h4>OpenAI Codex Pro 2x usage promotion expired May 31</h4>
+    <p>The promotion that doubled Codex usage on the $100 per month tier ended May 31, reverting that tier to its standard allotment. A scheduled expiry announced earlier, not a new release, but a cost change Codex power users feel this week. Source: <a href="https://whatllm.org/blog/new-ai-models-may-2026">whatllm.org</a>, expired May 31, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Otherwise quiet: no new in-window changelog release from Cursor, Windsurf, or Codex</h4>
+    <p>Cursor's changelog top entry is still 3.6 Auto-review (May 29); the OpenAI Codex Computer Use on Windows item (May 29) and Cognition's $1B raise (May 27) all predate the window. No new SWE-bench Verified results posted in-window; the leaderboard's last movement was May 28. Source: <a href="https://cursor.com/changelog">Cursor Changelog</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
   <div class="item">
-    <h4>DeepSeek V4-Pro promotional API discount expires May 31, list price returns</h4>
-    <p>DeepSeek's roughly 40% promotional discount on V4-Pro API pricing ends May 31 (15:59 UTC), reverting from about one-quarter of original list back to full list price. A pricing event teams running V4-Pro on cost-sensitive workloads will feel this weekend. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a> — effective May 31, 2026</p>
+    <h4>DeepSeek V4-Pro permanent 75% price cut continues to ripple through the inference price war</h4>
+    <p>Covered in Top 3. The permanent reset (roughly $0.435 input, $0.87 output per million) keeps DeepSeek positioned as the price leader among frontier-tier models and is the active competitive story this week, not the expired-promo version circulating elsewhere. Source: <a href="https://www.infoworld.com/article/4176709/deepseeks-steep-v4-pro-price-cut-escalates-ai-pricing-war.html">InfoWorld</a>, May 22, 2026</p>
   </div>
   <div class="item">
-    <h4>xAI refreshes developer release notes (May 30), consolidating Grok Speech-to-Text and voice</h4>
-    <p>The xAI developer docs release-notes page carries a May 30 timestamp consolidating the Grok Speech-to-Text API (multi-speaker transcription, 25 languages, batch and streaming, word-level diarization). The underlying STT product first launched April 18, so this is a docs refresh rather than a net-new release. Source: <a href="https://docs.x.ai/developers/release-notes">xAI Docs</a> — May 30, 2026</p>
+    <h4>Gemini 2.0 Flash and Flash-Lite retire today, migrate to 2.5 Flash-Lite</h4>
+    <p>Covered in Top 3. The retirement forces a model-name swap for anyone still on the 2.0 endpoints, with identical pricing on the recommended 2.5 Flash-Lite target. Source: <a href="https://ai.google.dev/gemini-api/docs/deprecations">Google Gemini deprecations</a>, June 1, 2026</p>
   </div>
   <div class="item">
-    <h4 class="quiet">Otherwise quiet: no frontier in-window model launch or pricing change</h4>
-    <p>The late-May cluster (OpenAI Codex for Windows and Rosalind Biodefense on May 29, Mistral's first public chip comments on May 28) all predate the window. Watch for Gemini 3.5 Pro GA, which Google committed to "next month," and the Gemini Interactions API legacy-schema removal on June 8. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+    <h4 class="quiet">No frontier model or feature launch inside the window</h4>
+    <p>A Sunday-into-Monday window with no new model, pricing, or API drop from OpenAI, Google, xAI, Meta, Mistral, DeepSeek, Qwen, or Cohere. The freshest out-of-window anchors: xAI Grok Build 0.1 coding beta (May 29), Mistral Small 4 open weights and Cohere Command A+ under Apache 2.0 (around May 20), Qwen 3.7 Max (May 20). Expect Monday wire flow after this 06:05 cutoff. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
   <div class="item">
-    <h4 class="quiet">Quiet day: no in-window funding, M&A, or exec move with a confirmed primary-source datestamp</h4>
-    <p>A Saturday-into-Sunday window with wire desks dark. The cycle is still echoing the May 28 Anthropic Series H, the roughly May 22 OpenAI confidential IPO filing, and Cognition's May 27 raise, all out of window and covered previously. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value">Bloomberg</a></p>
+    <h4>SpaceX IPO thread goes live this week: roadshow reported to start June 4, valuation cut contested by Musk [contested]</h4>
+    <p>SpaceX is reported to have trimmed its IPO valuation target to at least $1.8 trillion, down from a $2 trillion-plus goal, raising up to about $75B, which would be the largest IPO on record. Marketing is reported to begin as soon as June 4, pricing as early as June 11, and a Nasdaq debut (ticker SPCX) around June 12. Elon Musk replied "False" to the valuation-cut report. The report and denial both landed May 29, just outside the window; what makes it live is the imminent June 4 roadshow. Not an AI-core story, but the largest capital-markets event of the week. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-lowers-ipo-valuation-target-to-at-least-1-8-trillion">Bloomberg</a>, developing, May 29 into June</p>
   </div>
   <div class="item">
-    <h4>Watch item: EU AI Act "Digital Omnibus" formal adoption expected June</h4>
-    <p>The provisional agreement (Annex III high-risk timeline relief to December 2027, new non-consensual intimate image prohibitions) was reached May 7 and awaits formal Council and Parliament adoption, expected in June with publication to follow. No in-window movement, flagged as a near-term regulatory catalyst. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council</a></p>
+    <h4>Watch: Cerebras S-1 on file, AI-chip IPO seen as near-term</h4>
+    <p>Cerebras filed its S-1 earlier in May and is viewed as one of the next AI hardware listings to price. No in-window movement, flagged as a watch item alongside the broader 2026 AI IPO wave. Source: <a href="https://www.renaissancecapital.com/IPO-Center/News">Renaissance Capital</a></p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Correction on a prior watch item: EU AI Act Digital Omnibus adoption now expected end-July, not June</h4>
+    <p>The Council confirms the provisional agreement (May 7) heads to formal adoption, but the targeted window is now between June and end-July rather than June specifically, with compliance dates such as December 2, 2026 for the new prohibitions. No in-window legislative movement. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
   <div class="item">
-    <h4>Genesis World 1.0 ships open-source under Apache 2.0 with Nyx renderer and Quadrants compiler</h4>
-    <p>Full detail in Top 3. Reported 0.8996 sim-to-real Pearson correlation across 14 tasks and policy evaluation cut from 200+ hours to under 0.5 hours. The benchmark is the claim to verify; the open-source robotics-evaluation category is the signal to track. Source: <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a> — May 30, 2026</p>
+    <h4 class="quiet">Quiet window: no in-window open-weight release or notable paper with a confirmed timestamp</h4>
+    <p>Two structural reasons line up: the window spans a Sunday-into-Monday overnight, and arXiv does not announce new cs.CL, cs.LG, or cs.AI submissions on weekends. Monday's batch announces around 01:00 CET but was not yet indexed by the 06:00 cutoff. The llm-stats open-weights tracker explicitly shows no open-source releases this week. Source: <a href="https://llm-stats.com/ai-news">llm-stats research feed</a></p>
   </div>
   <div class="item">
-    <h4 class="quiet">No new arXiv papers in-window: weekend, no Saturday submissions</h4>
-    <p>arXiv does not publish new cs.CL / cs.LG / cs.AI submissions on weekends, confirmed via the llm-stats live research feed showing "no new papers today." No major lab shipped new open weights to Hugging Face inside this 24h window. Source: <a href="https://llm-stats.com/ai-news">llm-stats</a></p>
+    <h4>Most recent notable open-source anchor remains Genesis World 1.0 (May 30)</h4>
+    <p>The Apache 2.0 robotics simulation stack reporting a 0.8996 sim-to-real correlation, covered in the May 31 brief, is still the freshest genuinely notable open-source development and was not superseded in this window. Re-check arXiv and Hugging Face Daily Papers around 07:30-08:00 CET for the first net-new item of the day. Source: <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a></p>
   </div>
 </div>
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
   <div class="item">
-    <h4>Gemini 3.5 Pro GA committed for "next month" (June 2026), still in limited Vertex preview [Tier 1 statement, timing unconfirmed]</h4>
-    <p>Announced at Google I/O on May 19 and still in limited Vertex preview, with Sundar Pichai committing to general availability "next month." Targets roughly 2M-token context and Deep Think. Early signal for the next frontier-model release window. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+    <h4>Microsoft Build 2026 opens June 2-3, Windows Agent Runtime preview expected [Tier 2 expectation]</h4>
+    <p>Build runs June 2-3 in San Francisco, opening just after this window. Industry expectation is a Windows Agent Runtime preview and broader agent-platform announcements. Flagged as the most likely source of the next major agentic news. Treat specifics as expectation, not confirmed. Source: <a href="https://build.microsoft.com/">Microsoft Build</a></p>
   </div>
   <div class="item">
-    <h4>Mistral exploring in-house chips [Tier 1 comment, no partner, architecture, or timeline named]</h4>
-    <p>CEO Arthur Mensch gave his first public comment on in-house silicon ambitions on May 28, alongside the Vibe agent and the Les Ulis inference data center. No partner, architecture, or timeline disclosed. A directional signal that frontier labs beyond the US hyperscalers are weighing vertical integration into compute. Source: <a href="https://www.cnbc.com/2026/05/28/mistral-arthur-mensch-design-chips-ai-data-centers.html">CNBC</a> — May 28, 2026</p>
+    <h4>SpaceX IPO valuation figure contested [Musk denies $1.8T cut]</h4>
+    <p>The $1.8 trillion valuation-cut figure is disputed by Musk on the record, so treat the number as unconfirmed even as the roadshow timing firms up. The directional signal, a mega-IPO marketing as soon as June 4, is the part to track. Source: <a href="https://seekingalpha.com/news/4598223-spacex-lowers-ipo-valuation-target-to-at-least-18t-report">Seeking Alpha</a></p>
   </div>
   <div class="item">
-    <h4>Gemini Interactions API legacy schema removed June 8 [breaking-change watch for builders]</h4>
-    <p>The new outputs-to-steps schema became default May 26; the legacy schema is removed June 8. Builders on the Gemini Interactions API should migrate ahead of that date to avoid breakage. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+    <h4>Gemini 3.5 Pro general availability still targeted for June [Tier 1 statement, timing unconfirmed]</h4>
+    <p>Google committed at I/O (May 19) to a "next month" general availability for its top Gemini tier, putting the release window in June. Still in limited preview, no firm date. Early signal for the next frontier-model GA. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
   </div>
 </div>
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
   <div class="item">
-    <h4>DeepSeek V4-Pro price reversion: May 31, 15:59 UTC</h4>
-    <p>Promotional discount ends and list pricing returns. Watch for any extension or follow-on promo, and for downstream effects on routing platforms that default to lowest-cost models.</p>
+    <h4>GitHub Copilot AI Credits billing: live today, June 1</h4>
+    <p>Monthly Pro and Pro+ auto-migrate; Copilot code review starts consuming Actions minutes on private repos. Watch for credit-burn reports and any mitigation or grace-period adjustment in the first billing week.</p>
   </div>
   <div class="item">
-    <h4>Gemini 3.5 Pro general availability: targeted June 2026</h4>
-    <p>Google committed to GA "next month." Watch ai.google.dev and Vertex for the release and initial pricing and context-window terms.</p>
+    <h4>Gemini 2.0 Flash and Flash-Lite shutdown: today, June 1</h4>
+    <p>Old model names return errors after today. Migrate to gemini-2.5-flash-lite (identical pricing).</p>
+  </div>
+  <div class="item">
+    <h4>Microsoft Build 2026: June 2-3</h4>
+    <p>Expected Windows Agent Runtime preview and agent-platform announcements. The next likely agentic-news catalyst.</p>
+  </div>
+  <div class="item">
+    <h4>SpaceX IPO roadshow: reported to start June 4, pricing as early as June 11</h4>
+    <p>Marketing reported to begin June 4 with a Nasdaq debut (SPCX) around June 12. Valuation figure contested; timing is the part to watch.</p>
   </div>
   <div class="item">
     <h4>Gemini Interactions API legacy schema removal: June 8</h4>
     <p>Breaking change for existing builders. Migration to the outputs-to-steps schema required.</p>
   </div>
   <div class="item">
-    <h4>EU AI Act Digital Omnibus formal adoption: expected June</h4>
-    <p>Council and Parliament formal adoption of the provisional agreement. Watch for the final text and the confirmed timeline relief on Annex III high-risk obligations.</p>
-  </div>
-  <div class="item">
-    <h4>Anthropic Mythos wide release: "coming weeks" from May 28</h4>
-    <p>Stated intent from the Series H announcement. Watch anthropic.com/news for the release and access terms.</p>
+    <h4>Gemini 3.5 Pro general availability: targeted June 2026</h4>
+    <p>Google committed to GA "next month" at I/O. Watch ai.google.dev and Vertex for the release and pricing terms.</p>
   </div>
 </div>
 
 <h2>Source log</h2>
 <ul class="sources">
-  <li><a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO on Gartner agent governance</a> (Tier 2)</li>
-  <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure">Gartner press release</a> (Tier 1)</li>
-  <li><a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">Cognizant TriZetto Unify for AI agents</a> (Tier 1)</li>
-  <li><a href="https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/">MarkTechPost Genesis World 1.0</a> (Tier 2)</li>
-  <li><a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub Genesis-Embodied-AI/genesis-world</a> (Tier 1)</li>
-  <li><a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog v2.1.158</a> (Tier 1)</li>
-  <li><a href="https://www.fool.com/investing/2026/05/30/the-next-1-trillion-ai-ipo-anthropic-heres-what-we/">Motley Fool Anthropic IPO analysis</a> (Tier 3)</li>
-  <li><a href="https://cursor.com/changelog/auto-review">Cursor 3.6 Auto-review</a> (Tier 1)</li>
-  <li><a href="https://llm-stats.com/llm-updates">llm-stats DeepSeek price reversion</a> (Tier 2)</li>
-  <li><a href="https://docs.x.ai/developers/release-notes">xAI developer release notes</a> (Tier 1)</li>
-  <li><a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a> (Tier 1)</li>
-  <li><a href="https://www.cnbc.com/2026/05/28/mistral-arthur-mensch-design-chips-ai-data-centers.html">CNBC Mistral chips</a> (Tier 2)</li>
-  <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council AI Act Omnibus</a> (Tier 1)</li>
-  <li><a href="https://llm-stats.com/ai-news">llm-stats research feed (no new papers)</a> (Tier 2)</li>
-  <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP release candidate</a> (Tier 1)</li>
+  <li><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Blog: Copilot usage-based billing</a> (Tier 1)</li>
+  <li><a href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/">GitHub Changelog: code review consumes Actions minutes June 1</a> (Tier 1)</li>
+  <li><a href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/">TechCrunch: developer backlash on Copilot token billing</a> (Tier 2)</li>
+  <li><a href="https://www.engadget.com/2180062/deepseek-permanently-reduces-the-price-of-its-flagship-v4-model-by-75-percent/">Engadget: DeepSeek V4 permanent 75% cut</a> (Tier 2)</li>
+  <li><a href="https://www.infoworld.com/article/4176709/deepseeks-steep-v4-pro-price-cut-escalates-ai-pricing-war.html">InfoWorld: DeepSeek price war</a> (Tier 2)</li>
+  <li><a href="https://ai.google.dev/gemini-api/docs/deprecations">Google Gemini deprecations (2.0 Flash retirement)</a> (Tier 1)</li>
+  <li><a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog v2.1.159</a> (Tier 1)</li>
+  <li><a href="https://www.anthropic.com/news">anthropic.com/news (no in-window post)</a> (Tier 1)</li>
+  <li><a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store: Trust3 agent-discovery field guide</a> (Tier 3)</li>
+  <li><a href="https://blog.modelcontextprotocol.io/">MCP Blog (no in-window spec movement)</a> (Tier 1)</li>
+  <li><a href="https://cursor.com/changelog">Cursor Changelog (no in-window release)</a> (Tier 1)</li>
+  <li><a href="https://whatllm.org/blog/new-ai-models-may-2026">whatllm.org: OpenAI Codex Pro promo expiry</a> (Tier 2)</li>
+  <li><a href="https://llm-stats.com/llm-updates">llm-stats LLM updates (competitor sweep)</a> (Tier 2)</li>
+  <li><a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-lowers-ipo-valuation-target-to-at-least-1-8-trillion">Bloomberg: SpaceX IPO valuation</a> (Tier 1)</li>
+  <li><a href="https://www.renaissancecapital.com/IPO-Center/News">Renaissance Capital: Cerebras S-1 watch</a> (Tier 2)</li>
+  <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council: AI Act Digital Omnibus</a> (Tier 1)</li>
+  <li><a href="https://llm-stats.com/ai-news">llm-stats research feed (no new open weights)</a> (Tier 2)</li>
+  <li><a href="https://build.microsoft.com/">Microsoft Build 2026 (June 2-3)</a> (Tier 1)</li>
 </ul>
 
 <div class="footer">
-  Generated 2026-05-31 06:00 CET. Quiet weekend window, reported straight with no padding. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from Top 3.
+  Generated 2026-06-01 06:05 CET. Quiet Sunday-into-Monday window, reported straight with no padding. Includes one correction to the May 31 brief (DeepSeek V4-Pro pricing). No em-dashes, no marketing adjectives, every claim sourced. Items marked [contested] or [UNVERIFIED] are excluded from Top 3.
 </div>
 
 </div>
@@ -336,7 +346,7 @@
 
 <script>
 /* ask-link.js v2
-   AI Brief — Ask-LLM prompt builder + provider popover
+   AI Brief, Ask-LLM prompt builder + provider popover
    Self-contained inline version. ensurePopoverDOM() auto-injects
    #ask-popover and #ask-backdrop; do NOT put them in HTML body.
    ---------------------------------------------------------------- */
