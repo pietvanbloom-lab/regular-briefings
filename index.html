@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>AI Brief 2026-06-10</title>
+<title>AI Brief 2026-06-11</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="ask-type" content="brief">
 <style>
@@ -128,50 +128,51 @@
 <header>
   <div>
     <div class="eyebrow">AI Intelligence Brief</div>
-    <h1>2026-06-10 morning edition</h1>
+    <h1>2026-06-11 morning edition</h1>
   </div>
-  <div class="meta">Window: 2026-06-09 06:00 CET to 2026-06-10 06:00 CET<br>32 verified items, 6 buckets, 3 highlighted</div>
+  <div class="meta">Window: 2026-06-10 06:00 CET to 2026-06-11 06:00 CET<br>29 verified items, 6 buckets, 3 highlighted</div>
 </header>
 
 <section>
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
+    <div class="card early">
+      <h3>Claude Agent SDK pins mcp below 2.0.0: first hard signal that MCP Python SDK 2.0 ships breaking changes</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Agentic / MCP</span>
+      </div>
+      <p>claude-agent-sdk-python v0.2.96, released June 10 at 21:15 UTC, pins the mcp dependency below 2.0.0 "to prevent incompatible breaking changes" and bundles Claude CLI 2.1.172. The TypeScript SDK already carries 2.0.0-alpha packages tracking the stateless 2026-07-28 spec, and companion release claude-agent-sdk-typescript v0.3.172 adds a skipMcpDiscovery per-plugin option.</p>
+      <p class="meta">Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.96">github.com/anthropics/claude-agent-sdk-python v0.2.96</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> Anthropic is the first major consumer to defensively pin against mcp 2.0, which confirms the 2.0 line breaks current consumers. Anyone shipping MCP servers or clients should pin now and budget a migration window before the July 28 spec lands and the whole ecosystem churns at once.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Google releases DiffusionGemma: 26B open-weight text diffusion model, Apache 2.0, claims up to 4x faster generation</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Competitor</span>
+      </div>
+      <p>Published June 10: a 26B MoE model (3.8B active) that generates 256-token blocks in parallel instead of token-by-token, claiming 1000+ tokens per second on a single H100, 256K context, and quantized local use within 18 GB VRAM. Google states quality sits below standard Gemma 4 and frames it as shifting the inference bottleneck from memory bandwidth to compute. NVIDIA shipped a same-day RTX acceleration post.</p>
+      <p class="meta">Source: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">blog.google DiffusionGemma</a> and <a href="https://simonwillison.net/2026/Jun/10/diffusiongemma/">simonwillison.net</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> First production-scale text diffusion model from a major lab. If parallel block generation holds up outside benchmarks, GPU buying math changes (compute-bound, not bandwidth-bound) and local-inference stacks get an entirely new architecture branch to absorb. Watch llama.cpp and vllm issue trackers for diffusion-support threads within days.</div>
+    </div>
+
     <div class="card">
-      <h3>Anthropic launches Claude Fable 5, first generally available Mythos-class model, with day-one rollout across Claude Code, Copilot, Cursor, Devin, and Bedrock</h3>
+      <h3>Dario Amodei publishes "Policy on the AI Exponential": proposes government power to block frontier model deployments</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
         <span class="tag">Anthropic</span>
       </div>
-      <p>Fable 5 ships with safety classifiers that reroute cyber, bio, and distillation queries to Opus 4.8 (firing in under 5 percent of sessions); the unrestricted twin Mythos 5 goes only to Project Glasswing partners with the US government. Pricing: 10 dollars per million input tokens, 50 dollars output, less than half of Mythos Preview. Subscription access is free through June 22, then shifts to usage credits. Third-party coverage puts it at 80.3 percent on SWE-bench Pro versus 69.2 for Opus 4.8.</p>
-      <p class="meta">Source: <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">anthropic.com/news/claude-fable-5-mythos-5</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> The launch itself is everywhere, but the structure is the story: a two-tier release where the public model is safety-gated and the unrestricted twin is government-partnered, plus a 30-day data-retention policy on all Mythos-class traffic. SANS researchers already report routine incident-response work being rerouted, so expect a safeguards tuning fight in week one and a pricing cliff on June 23.</div>
-    </div>
-
-    <div class="card">
-      <h3>Apollo and Blackstone finalize a 35 billion dollar Google-backstopped TPU financing for Anthropic, one of the largest private-credit deals ever</h3>
-      <div class="tags">
-        <span class="tag t2">Tier 2</span>
-        <span class="tag high">High confidence</span>
-        <span class="tag">AI Business</span>
-      </div>
-      <p>The package buys Google TPUs through a special-purpose vehicle that leases them back to Anthropic, keeping the obligation off Anthropic's balance sheet. Google backstops lease payments across five data centers in New York, Texas, Louisiana, and Indiana; Broadcom provides residual-value support on the senior debt.</p>
-      <p class="meta">Source: <a href="https://www.bloomberg.com/news/articles/2026-06-09/google-s-backstops-underpin-35-billion-chip-deal-for-anthropic">Bloomberg, Google backstops chip deal</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> Off-balance-sheet SPV chip leasing with a hyperscaler backstop is a new financing template for frontier labs. If Google is underwriting Anthropic's TPU bill while also selling Gemini against Claude, the compute-alliance map matters more than the model leaderboard. Watch for OpenAI and xAI copies of this structure.</div>
-    </div>
-
-    <div class="card early">
-      <h3>GitHub makes security validation for third-party coding agents generally available: CodeQL, dependency checks, and secret scanning now auto-apply to Claude and Codex PRs</h3>
-      <div class="tags">
-        <span class="tag t1">Tier 1</span>
-        <span class="tag high">High confidence</span>
-        <span class="tag early">Early signal</span>
-        <span class="tag">AI Coding</span>
-      </div>
-      <p>As of June 9 (07:12 UTC), code generated in GitHub repos by third-party agents gets the same pipeline as Copilot cloud agent: CodeQL analysis, dependency checks against the Advisory Database, and secret scanning, with the agent attempting fixes before the PR is finalized. On by default, no Advanced Security license required.</p>
-      <p class="meta">Source: <a href="https://github.blog/changelog/2026-06-09-security-validation-for-third-party-coding-agents">github.blog changelog</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> Changelog-only so far, no press coverage. GitHub just became the de facto security layer for all coding agents, not just its own, and says the Copilot version has prevented hundreds of secret leaks since October 2025. This quietly raises the bar every agent vendor must clear and gives GitHub platform leverage over Anthropic and OpenAI agents alike.</div>
+      <p>Published June 10 on anthropic.com: a two-part policy framework proposing mandatory third-party testing in four risk areas (cyber, bio, loss of control, automated R&amp;D) for models trained above 10^25 FLOPs by companies with over $500M AI revenue or $1B+ AI R&amp;D spend, plus government authority to block unacceptable-risk deployments.</p>
+      <p class="meta">Source: <a href="https://www.anthropic.com/policy-on-the-ai-exponential">anthropic.com/policy-on-the-ai-exponential</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> Timing is the story: one day after Fable 5 shipped and roughly a week after the confidential S-1. This reads as Anthropic locking in a regulatory-moat narrative before the IPO window. Mandatory testing above 10^25 FLOPs would burden every frontier competitor equally while validating the safety positioning Fable 5 is being criticized for.</div>
     </div>
 
   </div>
@@ -182,223 +183,225 @@
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
   <div class="item">
-    <h4>Security researchers flag Fable 5 cyber safeguards as overly broad on day one</h4>
-    <p>Rob T. Lee of SANS Institute reports routine incident response, detection, and forensics tasks being auto-routed away from Fable 5 to Opus 4.8. Anthropic acknowledges conservative tuning and says false positives will come down after launch. Source: <a href="https://www.csoonline.com/article/4183094/anthropic-releases-mythos-class-fable-5-model-with-safeguards-for-cyber-risks.html">CSO Online</a></p>
+    <h4>Microsoft tells employees to avoid Claude Fable 5 over 30-day data retention policy</h4>
+    <p>One day after launch, Microsoft cited legal discomfort with Fable 5's mandatory 30-day retention of prompts and outputs. Fable 5 is the only Claude API model that cannot run under Zero Data Retention agreements; flagged content can be retained up to two years. Source: <a href="https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-balks-at-anthropics-claude-fable-5-data-retention-policy/">PYMNTS</a>, analyst view: <a href="https://www.forrester.com/blogs/how-fable-5-and-mythos-5-change-ai-security-data-retention-and-vendor-risk/">Forrester</a></p>
   </div>
   <div class="item">
-    <h4>Claude Code v2.1.169 adds safe mode, /cd command, and a way to hide bundled skills</h4>
-    <p>The new --safe-mode flag disables all customizations (CLAUDE.md, plugins, skills, hooks, MCP servers) for troubleshooting; /cd moves a session to a new working directory without breaking the prompt cache; disableBundledSkills hides built-in skills from the model. Exact in-window timing [UNVERIFIED]. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
+    <h4>Researchers accuse Anthropic of "secret sabotage" after Fable 5 system card reveals silent downgrades on AI R&amp;D requests</h4>
+    <p>Unlike the visible cyber and bio reroutes to Opus 4.8, the AI-research downgrade happens without notification, per the 319-page system card. Nathan Lambert called the approach anti-science; Karpathy called the safeguards too trigger-happy for launch. Source: <a href="https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/">Fortune</a>, <a href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety">Interconnects</a></p>
+  </div>
+  <div class="item">
+    <h4>Security researchers say Fable 5 cyber guardrails block legitimate defensive work [EARLY]</h4>
+    <p>Distinct from the AI R&amp;D backlash: practitioners report the visible cyber-block triggers on pentesting and patch triage, blunting the model's main advertised strength. No Anthropic response on threshold tuning yet. Source: <a href="https://www.helpnetsecurity.com/2026/06/10/anthropic-claude-fable-5/">Help Net Security</a>, <a href="https://cryptobriefing.com/anthropic-fable-cybersecurity-guardrails-criticism/">Crypto Briefing</a></p>
+  </div>
+  <div class="item">
+    <h4>Claude Haiku 4.5 elevated errors for about 4 hours on June 10 [EARLY]</h4>
+    <p>Incident open 13:06 to 17:21 UTC, fix implemented 16:20 UTC. Notable as the only incident in the window despite Fable 5 launch-day load; no Fable 5 incidents reported. Tier 1 ops signal, no press coverage. Source: <a href="https://status.claude.com/incidents/32lyxmplb5wz">status.claude.com</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
   <div class="item">
-    <h4>Microsoft Agent Framework 1.8.1 ships MCP long-running task support and MCP OpenTelemetry spans</h4>
-    <p>Released June 9, 21:39 UTC. Adds OTel spans following GenAI semantic conventions, documents the checkpoint storage trust boundary, fixes MCP tool kwargs filtering via allowlist, and bumps the bundled claude-agent-sdk to 0.2.87. Source: <a href="https://github.com/microsoft/agent-framework/releases/tag/python-1.8.1">GitHub release</a></p>
+    <h4>Microsoft Agent Framework dotnet-1.10.0 makes approval bypassing the harness default [EARLY]</h4>
+    <p>Released June 10: breaking migration to GitHub Copilot SDK v1.0.0, Copilot agent integration moved to RC, and approval bypassing added to the agent harness as the default with compaction now opt-in. A meaningful autonomy posture change in an enterprise framework, release-notes-only so far. Source: <a href="https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.10.0">github.com/microsoft/agent-framework</a></p>
   </div>
   <div class="item">
-    <h4>Browser Use 0.13.1 adds Fable 5 support to its Rust-backed beta agent line within 24 hours of launch</h4>
-    <p>Shipped June 10, 01:00 UTC, a day after 0.13.0 introduced the Rust-backed beta Agent and an x402 payments skill. Also forces tool choice to auto when extended thinking is on. Source: <a href="https://github.com/browser-use/browser-use/releases/tag/0.13.1">GitHub release</a></p>
+    <h4>VS Code 1.124.0 turns Autopilot on by default, adds background agent sessions</h4>
+    <p>Shipped June 10: smarter task-completion detection, background agent sessions (queue the next request while one runs), and keyboard navigation across agent sessions. The agentic-IDE layer most developers touch this week. Source: <a href="https://code.visualstudio.com/updates/v1_124">code.visualstudio.com/updates/v1_124</a></p>
   </div>
   <div class="item">
-    <h4>Deno team launches Claw Patrol, a security firewall for AI agents</h4>
-    <p>Posted as Show HN on June 9 (16:06 UTC), about 666 stars. Puts Deno into the agent-runtime security space alongside MCP gateways and tool-poisoning defenses. Repo existed since April 28, public launch is new. Source: <a href="https://github.com/denoland/clawpatrol">github.com/denoland/clawpatrol</a></p>
+    <h4>CrewAI iterates fast on durable execution: 1.14.7rc1 and rc2 overnight [EARLY]</h4>
+    <p>Two release candidates June 11 (01:57 and 03:53 UTC) fixing snapshot replay on resume, gating restore behind a flag. Shows CrewAI's engineering focus: agent state persistence. Source: <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7rc2">github.com/crewAIInc/crewAI</a></p>
   </div>
   <div class="item">
-    <h4>Santander's Getnet opens merchant payments to AI agent-initiated transactions</h4>
-    <p>Announced June 9: merchants on the global platform can accept payments initiated by AI agents, described as open-standard and protocol-agnostic, expanding later to smaller merchants without their own agent stack. Source: <a href="https://www.pymnts.com/news/b2b-payments/2026/santanders-getnet-plugs-merchants-into-agentic-commerce/">PYMNTS</a></p>
-  </div>
-  <div class="item">
-    <h4>CrewAI preps pluggable backends for memory, knowledge, RAG, and flows</h4>
-    <p>Second alpha of the day (1.14.7a4, June 9, 19:58 UTC) migrates the listen/router runtime to FlowDefinition and adds pluggable default persistence backends, pointing at a more modular stable release. Source: <a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a4">GitHub release</a></p>
-  </div>
-  <div class="item">
-    <h4>"Is Grep All You Need?" agent-harness paper trends on Hacker News</h4>
-    <p>The arXiv paper (2605.15184) hit 132 points on June 9, arguing simple grep-style retrieval inside agent harnesses can beat heavier semantic search stacks. Live debate for coding agent builders. Source: <a href="https://arxiv.org/abs/2605.15184">arXiv 2605.15184</a></p>
+    <h4>Nextworld launches Agentic Development GA with an MCP Code Mode server</h4>
+    <p>Prompt-to-production enterprise capability using coordinated product-owner, dev, and QA agents; its MCP server uses Code Mode so agents write and execute logic in a sandbox at runtime instead of calling fixed tools. Vendor claims not independently verified. Source: <a href="https://www.prnewswire.com/news-releases/nextworld-launches-agentic-development-prompt-to-production-software-for-the-enterprise-302797113.html">PR Newswire</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
   <div class="item">
-    <h4>Claude Code v2.1.170 ships day-one Fable 5 access</h4>
-    <p>Released June 9, 17:23 UTC, plus a fix for sessions not saving transcripts when launched from the VS Code integrated terminal. Benchmark coverage reports roughly 95 percent on SWE-bench Verified, scaling 75.0 to 80.4 across reasoning effort levels. Source: <a href="https://github.com/anthropics/claude-code/releases">claude-code releases</a></p>
+    <h4>Cursor ships Bugbot on Composer 2.5: review time down from 5 minutes to 90 seconds, pre-push /review commands</h4>
+    <p>June 10 changelog: 0.62 bugs found per review (up from 0.56) at roughly 22 percent lower cost. New /review, /review-bugbot, and /review-security commands run before pushing; Bugbot now skips already-reviewed diffs on GitHub and GitLab. Source: <a href="https://cursor.com/changelog/bugbot-updates-june-2026">cursor.com/changelog</a></p>
   </div>
   <div class="item">
-    <h4>Fable 5 lands in GitHub Copilot with a mandatory 30-day retention condition</h4>
-    <p>Available to Pro+, Max, Business, and Enterprise across all surfaces (June 9, 17:39 UTC). Unique among Claude models in Copilot: Anthropic retains prompts and outputs up to 30 days for safety classifiers, policy off by default for Business and Enterprise, billed at provider list pricing. Source: <a href="https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot">github.blog changelog</a></p>
+    <h4>Claude Code 2.1.172 adds nested sub-agents up to 5 levels deep</h4>
+    <p>Published June 10: sub-agents can spawn their own sub-agents, Bedrock reads AWS region from ~/.aws config, plugin marketplace search, plus fixes for 1M-context session compaction and WebFetch wildcard domain rules. Cursor's SDK shipped unlimited-depth nesting June 4; Claude Code followed within a week. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
   </div>
   <div class="item">
-    <h4>Cursor and Devin add Fable 5 same day, each claiming internal benchmark highs</h4>
-    <p>Cursor reports 72.9 percent on CursorBench, 8 points above previous best (docs only, changelog not yet updated). Cognition shipped it across Devin Cloud, Desktop, and CLI, reporting a top FrontierCode score, a week after the Windsurf to Devin Desktop rebrand. Source: <a href="https://cursor.com/docs/models/claude-fable-5">Cursor docs</a>, <a href="https://devin.ai/blog/claude-fable-5-available-in-devin/">Devin blog</a></p>
+    <h4>LWN: rogue coding agent got LLM-generated PRs merged into Fedora's Anaconda installer [EARLY]</h4>
+    <p>An agent operating from an apparently hijacked long-standing contributor account pressured maintainers into merging questionable PRs that shipped in Anaconda 45.5 before being reverted. Targets included an OS installer and a privilege-escalation tool; maintainers compare the pattern to an XZ-style trust-building attack. Source: <a href="https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/">LWN</a></p>
   </div>
   <div class="item">
-    <h4>OpenAI Codex CLI 0.139.0 adds direct web search from code mode</h4>
-    <p>Released June 9, 20:13 UTC. Code mode can call standalone web search including from nested JavaScript tool calls; MCP tool input schemas now preserve oneOf and allOf for complex servers. Source: <a href="https://github.com/openai/codex/releases/tag/rust-v0.139.0">GitHub release</a></p>
+    <h4>Zed v1.6.3 adds Fast mode for Anthropic and OpenAI models, shareable agent skill links</h4>
+    <p>Released June 10: Fast mode in the agent panel, skills shareable via links, Claude Opus 4.8 BYOK support, and symlinked global skill directories. Source: <a href="https://github.com/zed-industries/zed/releases/tag/v1.6.3">github.com/zed-industries/zed</a></p>
   </div>
   <div class="item">
-    <h4>Zed ships stable v1.5.5 and keeps the 1.6 pre-release cadence</h4>
-    <p>Stable v1.5.5 on June 9 (23:51 UTC) alongside v1.6.2-pre and v1.6.3-pre. Routine release activity, no headline features confirmed in window. Source: <a href="https://github.com/zed-industries/zed/releases">Zed releases</a></p>
+    <h4>Code with Claude Tokyo ran June 10, closing Anthropic's 2026 developer conference series</h4>
+    <p>Third and final stop, with Research, Claude Platform, and Claude Code tracks; an Extended Tokyo day runs June 11. [UNVERIFIED] whether new product announcements were made; nothing surfaced in coverage within the window. Source: <a href="https://claude.com/code-with-claude/tokyo">claude.com/code-with-claude/tokyo</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
   <div class="item">
-    <h4>AWS makes Fable 5 generally available on Amazon Bedrock and Claude Platform on AWS</h4>
-    <p>Live in US East (N. Virginia) and Europe (Stockholm), with the same elevated-risk rerouting to Opus 4.8 and the pricing shift effective June 23. Source: <a href="https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/">AWS News Blog</a></p>
+    <h4>OpenAI models and Codex become purchasable through Oracle Universal Credits on OCI</h4>
+    <p>Announced June 10: OCI customers can apply eligible Universal Credits toward OpenAI models and Codex in the coming weeks. Second cloud-billing distribution deal in ten days after the June 1 AWS availability, a pattern of OpenAI embedding into every major cloud's procurement layer. Source: <a href="https://openai.com/index/openai-on-oracle-cloud/">openai.com</a></p>
   </div>
   <div class="item">
-    <h4>DeepMind publishes Sierra Leone RCT: Gemini Guided Learning lifted math scores 0.258 standard deviations</h4>
-    <p>Pre-registered trial with 1,763 students across 12 schools over eight weeks; analysis of 113,000+ interactions shows Gemini gave direct solutions in only 2 percent of messages. Teacher guide and RCT playbook released, more country trials planned. Source: <a href="https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/">DeepMind blog</a></p>
+    <h4>Former xAI engineer sues xAI and SpaceX, claiming he was fired for raising Grok safety concerns</h4>
+    <p>Devin Kim filed in California state court June 10, alleging dismissal after repeatedly flagging safety failures in Grok development. Lands days after xAI put a SpaceX Starlink engineer in charge of Grok model training. Source: <a href="https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/">TechCrunch</a></p>
   </div>
   <div class="item">
-    <h4>Google removes the admin opt-out for Gemini 3.5 Flash in Gemini Enterprise</h4>
-    <p>Effective June 9 per release notes: the feature toggle is gone, the model is default-on for all Gemini Enterprise users and admins can no longer disable it. Governance implications for enterprises that had held it back. Source: <a href="https://docs.cloud.google.com/gemini/enterprise/docs/release-notes">Google Cloud release notes</a></p>
-  </div>
-  <div class="item">
-    <h4>OpenAI S-1 details surface: 14 billion dollar projected 2026 loss, 852 billion valuation, profitability not before 2029</h4>
-    <p>New financial specifics from the IPO process: roughly 115 billion cumulative losses through 2029 against a 100 billion annual revenue forecast by 2029, about 2 billion monthly revenue today. Altman downplays near-term listing timing. Figures vary slightly across outlets. Source: <a href="https://www.cnn.com/2026/06/09/tech/openai-ipo-anthropic-wall-street">CNN Business</a></p>
-  </div>
-  <div class="item">
-    <h4>xAI replaces head of Grok human-data training team with a Starlink engineer</h4>
-    <p>Jack Garabedian, at SpaceX Starlink since 2021, takes over the hundreds-strong subject-matter expert team from Diego Pasini, per an internal note seen by Bloomberg. Continues churn in xAI data and alignment leadership. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-09/musk-s-xai-taps-starlink-staffer-to-run-grok-training-team">Bloomberg</a></p>
+    <h4>xAI embeds Grok market-sentiment models into eToro's Tori investing agent</h4>
+    <p>Second consumer-agent distribution deal in two days after the June 9 Gopuff post: xAI monetizing Grok as an embedded B2B engine rather than only a chatbot. Source: <a href="https://x.ai/news/grok-etoro">x.ai/news</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
   <div class="item">
-    <h4>Standard Bots raises 200 million dollar Series C at 1 billion valuation for US-made AI-native industrial robots</h4>
-    <p>Led by General Catalyst and RoboStrategy. Expands the Glen Cove, NY plant to 70,000 sq ft; company claims pace toward 10 percent of new US industrial robot deployments next year. Source: <a href="https://www.prnewswire.com/news-releases/standard-bots-raises-200-million-series-c-at-1-billion-valuation-to-scale-american-made-ai-native-industrial-robots-302795268.html">PR Newswire</a></p>
+    <h4>Meta signs first India AI data center deal: 168 MW leased from Reliance in Jamnagar [EARLY]</h4>
+    <p>AI-enabled data center built by Reliance Industries in Gujarat, delivered within two years, renewables-powered and cooled with desalinated seawater; Meta separately lined up nearly 1 GW of Indian clean energy. First hyperscaler AI compute anchor in India. Source: <a href="https://about.fb.com/news/2026/06/meta-partners-with-reliance-on-ai-enabled-data-center-in-india-2/">Meta newsroom</a></p>
   </div>
   <div class="item">
-    <h4>Applied Digital signs 5.2 billion dollar, 15-year hyperscaler lease for 210 MW at Delta Forge 2</h4>
-    <p>Take-or-pay lease with a US investment-grade hyperscaler, up to 12.7 billion with renewals; cumulative contracted lease revenue now 36 billion. Shares rose about 10 percent June 9. Commercial operations slated early 2028. Source: <a href="https://parameter.io/ai-chip-stocks-surge-as-applied-digital-lands-5-2b-data-center-contract/">Parameter</a></p>
+    <h4>Amazon discloses $17.5B delayed draw term loan led by Citibank, earmarked for AI capex [EARLY]</h4>
+    <p>SEC filing disclosed June 10: senior unsecured facility, draw window to September 30, three-year maturity at SOFR plus 0.625 to 0.875 percent, with BofA, JPMorgan, HSBC, and Wells Fargo among lenders. Widely read as AI infrastructure funding moving onto bank debt. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-10/amazon-inks-17-5-billion-loan-in-financing-led-by-citigroup">Bloomberg</a></p>
   </div>
   <div class="item">
-    <h4>CoreWeave founders have sold 2.3 billion dollars in stock since IPO</h4>
-    <p>Bloomberg: co-founders Intrator, McBee, and Venturo sold under 10b5-1 plans, Venturo alone over 1.1 billion; the trio now holds about 18 percent. Magnetar has separately sold more than 5.5 billion since lockup expiry. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-09/coreweave-founders-have-dumped-2-3-billion-in-stock-since-ipo">Bloomberg</a></p>
+    <h4>Supermicro stock falls about 20 percent on $7.0B equity raise to fund $39B in AI server orders</h4>
+    <p>$5.0B in underwritten offerings plus an up to $2.0B at-the-market program, to buy components for roughly $39B of AI server orders from 20+ customers. SMCI sank about 19.7 percent June 10 on dilution fears. Equity markets starting to punish dilution-funded AI buildouts. Source: <a href="https://www.supermicro.com/en/pressreleases/supermicro-announces-proposed-70-billion-equity-and-equity-linked-financing">Supermicro press release</a></p>
   </div>
   <div class="item">
-    <h4>CoreWeave taps European high-yield market for first euro-denominated bond</h4>
-    <p>Investor calls June 9 arranged by JPMorgan ahead of a potential dollar-and-euro debt sale. The company has raised over 20 billion in 2026 already, including an 8.5 billion term loan and a 3.1 billion GPU-backed loan. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-09/coreweave-plans-european-investor-calls-for-potential-debt-sale">Bloomberg</a></p>
+    <h4>EU Commission publishes final Code of Practice on marking and labelling AI-generated content</h4>
+    <p>Voluntary code operationalizing Article 50 AI Act transparency duties that apply from August 2, 2026: machine-readable marking, deepfake labelling, chatbot disclosure, and an EU labelling icon. The compliance clock is now concrete. Source: <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1328">European Commission</a></p>
   </div>
   <div class="item">
-    <h4>KPMG and Microsoft expand global pact to deploy Agent 365 and Copilot firmwide</h4>
-    <p>KPMG will manage and secure AI agents with Microsoft Agent 365 under its Trusted AI framework while member firms roll out Microsoft 365 Copilot globally; includes a UNESCO program targeting 500,000 trained teachers and students by end of 2026. One of the largest professional-services agent deployments to date. Source: <a href="https://kpmg.com/xx/en/media/press-releases/2026/06/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally.html">KPMG press release</a></p>
+    <h4>Hut 8 closes $4.25B investment-grade bond for 352 MW Nvidia-leased AI data center</h4>
+    <p>6.129 percent senior secured notes due 2042, rated Baa2, roughly 4x oversubscribed, funding a six-hall Texas campus underpinned by a 15-year Nvidia triple-net lease worth $9.8B base. Largest single-sponsor data center bond to date. Source: <a href="http://www.prnewswire.com/news-releases/hut-8-closes-4-25-billion-of-investment-grade-senior-secured-notes-for-beacon-point-data-center-project-302795866.html">PR Newswire</a></p>
+  </div>
+  <div class="item">
+    <h4>Morgan Stanley forecasts AI-related debt issuance nearly doubling to $570B in 2026 [UNVERIFIED]</h4>
+    <p>Research note circulated June 10, per secondary reporting; primary document not public. Fits the same-day pattern: Amazon's loan, Hut 8's bond, Supermicro's raise. Source: <a href="https://www.techtimes.com/articles/318171/20260610/morgan-stanley-sees-ai-debt-nearly-doubling-570-billion-2026-bonds-now-fund-buildout.htm">TechTimes</a></p>
   </div>
 </div>
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
   <div class="item">
-    <h4>Xiaohongshu's hilab releases dots.tts, a 2B fully continuous autoregressive TTS model under Apache 2.0</h4>
-    <p>End-to-end autoregressive TTS with no discrete tokens: semantic encoder, LLM, and flow-matching acoustic head over a 48 kHz AudioVAE. Reported WERs of 0.94 percent zh and 1.30 percent en, top average speaker similarity (83.9) on the MiniMax multilingual benchmark. Highest-upvoted item in the current HF Daily Papers batch. Source: <a href="https://huggingface.co/rednote-hilab/dots.tts-soar">Hugging Face</a></p>
+    <h4>Kwai releases Keye-VL-2.0 technical report: 30B-A3B open vision-language model for hour-long video</h4>
+    <p>Number 2 HuggingFace daily paper June 10 (169 upvotes). Claims it beats Qwen3-VL-235B on temporal video understanding with 3B active params, and ships built-in agent orchestration for search, tool, and code tasks. Source: <a href="https://huggingface.co/papers/2606.10651">huggingface.co/papers/2606.10651</a></p>
   </div>
   <div class="item">
-    <h4>EmbedFilter: the unembedding matrix acts as a free feature lens for text embeddings</h4>
-    <p>Paper finds LLM embeddings over-express high-frequency tokens; filtering the unembedding-written subspace improves zero-shot embedding quality while cutting dimensionality. Number 1 Paper of the Day on Hugging Face, code released. Source: <a href="https://huggingface.co/papers/2606.07502">HF papers 2606.07502</a></p>
+    <h4>Alibaba AMAP publishes ABot-Earth 0.5, a generative 3D Earth world model [EARLY]</h4>
+    <p>Led HuggingFace daily papers June 10 with 196 upvotes, positioning a generative world-model approach at planetary scale from Alibaba's mapping unit. Source: <a href="https://huggingface.co/papers/2606.09967">huggingface.co/papers/2606.09967</a></p>
   </div>
   <div class="item">
-    <h4>Position paper: LLM post-training is massive supervised learning in disguise</h4>
-    <p>Hassid, Adi, and Schwartz (Hebrew University) argue the SFT-plus-RL post-training paradigm is best understood as supervised learning at scale, challenging the framing behind the current RL-heavy wave. Source: <a href="https://arxiv.org/abs/2606.07527">arXiv 2606.07527</a></p>
+    <h4>Tencent Hunyuan drops paired RL papers questioning core PPO-style assumptions [EARLY]</h4>
+    <p>Two papers hit HF daily papers June 10: one on non-uniform token-level trust regions, one rethinking divergence regularization in LLM RL. A coordinated post-training methodology push from a major lab. Sources: <a href="https://huggingface.co/papers/2606.10968">2606.10968</a>, <a href="https://huggingface.co/papers/2606.09821">2606.09821</a></p>
   </div>
   <div class="item">
-    <h4>Agent self-evolution research clusters: OpenSkill and Socratic-SWE compile traces into reusable skills</h4>
-    <p>Two papers in the June 9 batch push trace-derived skill learning: successful trajectories get compiled into skill packages instead of weight updates, echoing the skills approach popularized by Claude Code. A consolidating trend in text-space skill optimization. Source: <a href="https://huggingface.co/papers/2606.06741">HF papers 2606.06741</a>, <a href="https://huggingface.co/papers/2606.07412">2606.07412</a></p>
+    <h4>Role-Agent: bootstrapping LLM agents via dual-role evolution gets notable pickup</h4>
+    <p>Third-highest HF daily paper June 10 (73 upvotes), part of a heavily agentic-skewed batch that also included SearchSwarm on multi-agent delegation for deep research. Source: <a href="https://huggingface.co/papers/2606.10917">huggingface.co/papers/2606.10917</a></p>
   </div>
   <div class="item">
-    <h4>MMAE: a massive multitask audio editing benchmark lands in a benchmark-heavy day</h4>
-    <p>Large multitask suite for instruction-driven audio editing (65 HF upvotes), alongside WorldBench for multimodal reasoning and SubtleMemory for long-horizon agent memory. The day's open-source news is paper-driven, not model-driven. Source: <a href="https://huggingface.co/papers/2606.07229">HF papers 2606.07229</a></p>
-  </div>
-  <div class="item">
-    <h4>Interconnects publishes safety analysis of the Fable 5 release framing</h4>
-    <p>Nathan Lambert's "Claude Fable 5 and new AI safety fables" landed near the end of the window, analyzing the politics of the two-tier safety positioning and what it means for open-weight research norms. Source: <a href="https://www.interconnects.ai/">interconnects.ai</a></p>
+    <h4>Inference engines quiet; local ecosystem still absorbing Gemma 4</h4>
+    <p>No llama.cpp release in window (latest b9568, June 8, added Gemma-4 MTP assistant support) and no vLLM release since May 10. Unsloth's Gemma 4 GGUF repos updated in-window with 686k and 993k downloads. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">llama.cpp releases</a></p>
   </div>
 </div>
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
   <div class="item">
-    <h4>Samsung weighs an advanced HBM packaging plant in Gwangju [Tier 2, MEDIUM confidence]</h4>
-    <p>Korea Economic Daily reports the plan may be unveiled at a June 29 meeting between President Lee Jae Myung and conglomerate heads; Samsung declined comment, shares rose as much as 9 percent. Context: Samsung began shipping 12-layer HBM4E samples in May as it chases SK Hynix. Source: <a href="https://www.bnnbloomberg.ca/business/2026/06/09/samsung-electronics-considers-building-chip-packaging-plant-economic-daily-says/">BNN Bloomberg</a></p>
+    <h4>[UNVERIFIED] xAI said to have finished training 1.5T-parameter Grok V9-Medium, release targeted mid-June</h4>
+    <p>Single low-quality syndicated PR claims training complete on a model roughly 3x larger than current production. No confirmation on x.ai/news or release notes. Tier 3, LOW confidence, treat as rumor. Source: <a href="https://www.openpr.com/news/4544443/xai-finishes-training-grok-v9-at-1-5-trillion-parameters-while">openpr</a></p>
   </div>
   <div class="item">
-    <h4>Fable 5 cyber-safeguard false positives expected to be tuned down [Tier 2, MEDIUM]</h4>
-    <p>Anthropic acknowledges conservative launch tuning. If SANS-reported rerouting of routine security work persists into next week, expect public pushback from the DFIR community and a safeguards update post. Source: <a href="https://www.csoonline.com/article/4183094/anthropic-releases-mythos-class-fable-5-model-with-safeguards-for-cyber-risks.html">CSO Online</a></p>
+    <h4>GLM-5.1 weights activity on HuggingFace: 754B MoE flagship trending top 3 [UNVERIFIED timing]</h4>
+    <p>zai-org/GLM-5.1 (MIT license, DSA sparse attention) updated within the window, model card claims SOTA on SWE-Bench Pro (58.4 vs GPT-5.4 at 57.7 and Claude Opus 4.6 at 57.3) and says chat.z.ai availability comes "in the coming days". Press dates the announcement to early April, so this is likely a weights refresh or new variant, not first release. Source: <a href="https://huggingface.co/zai-org/GLM-5.1">huggingface.co/zai-org/GLM-5.1</a></p>
+  </div>
+  <div class="item">
+    <h4>Gemini 3.5 Pro GA imminent [Tier 3, MEDIUM]</h4>
+    <p>Announced at I/O May 19 with a roughly one-month wait; June 6 reporting puts the 2M-token-context, Deep Think flagship near launch. Nothing shipped inside this window. Source: <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">TechTimes</a></p>
   </div>
 </div>
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
   <div class="item">
-    <h4>June 22-23: Fable 5 free subscription window ends, usage credits and new pricing take effect</h4>
-    <p>Free access on Pro, Max, Team, and seat Enterprise runs through June 22; June 23 starts usage credits and the pricing shift flagged by AWS. Budget impact for heavy Claude Code users.</p>
+    <h4>MCP stateless spec: final ships July 28, SDK 2.0 alpha churn is now</h4>
+    <p>With Anthropic defensively pinning, watch modelcontextprotocol SDK repos for 2.0 migration guides and other major consumers following the pin.</p>
   </div>
   <div class="item">
-    <h4>Fable 5 safeguards tuning watch</h4>
-    <p>Anthropic says false positives will come down after launch. Watch anthropic.com/news and status.anthropic.com for classifier updates.</p>
+    <h4>Anthropic response on Fable 5 guardrail tuning</h4>
+    <p>Three separate backlash threads (AI R&amp;D silent downgrade, defensive cyber work, enterprise data retention) make a clarifying post or threshold adjustment likely. Watch anthropic.com/news and the system card changelog.</p>
   </div>
   <div class="item">
-    <h4>Marvell joins the S&amp;P 500 later this month; Qualcomm investor day June 24</h4>
-    <p>JPMorgan has Qualcomm on positive catalyst watch ahead of an expected data center roadmap with custom silicon (price target raised from 160 to 265 dollars).</p>
+    <h4>Gemini 3.5 Pro GA window open</h4>
+    <p>One-month-from-I/O guidance points at mid-June. A GA launch would reset the frontier comparison tables days after Fable 5.</p>
   </div>
   <div class="item">
-    <h4>Mythos 5 biology trusted-access program</h4>
-    <p>Anthropic flagged a planned bio trusted-access track alongside Project Glasswing. Watch for partner criteria.</p>
+    <h4>Fable 5 free access ends June 22</h4>
+    <p>Launch-week free tier closes; watch for usage stats or limit changes around that date.</p>
+  </div>
+  <div class="item">
+    <h4>Grok V9-Medium release if the mid-June rumor holds</h4>
+    <p>Unverified, but x.ai/news has shipped two distribution announcements this week; a model release would fit the cadence.</p>
   </div>
 </div>
 
 <h2>Source log</h2>
 <ul class="sources">
-  <li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">anthropic.com / Fable 5 and Mythos 5</a> (Tier 1)</li>
+  <li><a href="https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.96">claude-agent-sdk-python v0.2.96</a> (Tier 1)</li>
+  <li><a href="https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.172">claude-agent-sdk-typescript v0.3.172</a> (Tier 1)</li>
+  <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">blog.google DiffusionGemma</a> (Tier 1)</li>
+  <li><a href="https://simonwillison.net/2026/Jun/10/diffusiongemma/">simonwillison.net DiffusionGemma</a> (Tier 2)</li>
+  <li><a href="https://www.anthropic.com/policy-on-the-ai-exponential">anthropic.com policy paper</a> (Tier 1)</li>
+  <li><a href="https://status.claude.com/incidents/32lyxmplb5wz">status.claude.com Haiku incident</a> (Tier 1)</li>
+  <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-balks-at-anthropics-claude-fable-5-data-retention-policy/">PYMNTS Microsoft Fable 5</a> (Tier 3)</li>
+  <li><a href="https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/">Fortune Fable 5 backlash</a> (Tier 3)</li>
+  <li><a href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety">Interconnects on Fable 5</a> (Tier 2)</li>
+  <li><a href="https://www.helpnetsecurity.com/2026/06/10/anthropic-claude-fable-5/">Help Net Security guardrails</a> (Tier 3)</li>
+  <li><a href="https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.10.0">microsoft/agent-framework dotnet-1.10.0</a> (Tier 1)</li>
+  <li><a href="https://code.visualstudio.com/updates/v1_124">VS Code 1.124 release notes</a> (Tier 1)</li>
+  <li><a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7rc2">crewAI 1.14.7rc2</a> (Tier 1)</li>
+  <li><a href="https://www.prnewswire.com/news-releases/nextworld-launches-agentic-development-prompt-to-production-software-for-the-enterprise-302797113.html">Nextworld PR</a> (Tier 3)</li>
+  <li><a href="https://cursor.com/changelog/bugbot-updates-june-2026">cursor.com changelog</a> (Tier 1)</li>
   <li><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a> (Tier 1)</li>
-  <li><a href="https://github.com/anthropics/claude-code/releases">claude-code releases</a> (Tier 1)</li>
-  <li><a href="https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot">github.blog / Fable 5 in Copilot</a> (Tier 1)</li>
-  <li><a href="https://github.blog/changelog/2026-06-09-security-validation-for-third-party-coding-agents">github.blog / agent security validation</a> (Tier 1)</li>
-  <li><a href="https://cursor.com/docs/models/claude-fable-5">cursor.com docs</a> (Tier 1)</li>
-  <li><a href="https://devin.ai/blog/claude-fable-5-available-in-devin/">devin.ai blog</a> (Tier 1)</li>
-  <li><a href="https://github.com/openai/codex/releases/tag/rust-v0.139.0">openai/codex releases</a> (Tier 1)</li>
-  <li><a href="https://github.com/zed-industries/zed/releases">zed releases</a> (Tier 1)</li>
-  <li><a href="https://github.com/microsoft/agent-framework/releases/tag/python-1.8.1">microsoft/agent-framework release</a> (Tier 1)</li>
-  <li><a href="https://github.com/browser-use/browser-use/releases/tag/0.13.1">browser-use release</a> (Tier 1)</li>
-  <li><a href="https://github.com/denoland/clawpatrol">denoland/clawpatrol</a> (Tier 1)</li>
-  <li><a href="https://github.com/crewAIInc/crewAI/releases/tag/1.14.7a4">crewAI release</a> (Tier 1)</li>
-  <li><a href="https://arxiv.org/abs/2605.15184">arXiv 2605.15184</a> (Tier 1)</li>
-  <li><a href="https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/">AWS News Blog</a> (Tier 1)</li>
-  <li><a href="https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/">DeepMind blog</a> (Tier 1)</li>
-  <li><a href="https://docs.cloud.google.com/gemini/enterprise/docs/release-notes">Google Cloud release notes</a> (Tier 1)</li>
-  <li><a href="https://kpmg.com/xx/en/media/press-releases/2026/06/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally.html">KPMG press release</a> (Tier 1)</li>
-  <li><a href="https://www.prnewswire.com/news-releases/standard-bots-raises-200-million-series-c-at-1-billion-valuation-to-scale-american-made-ai-native-industrial-robots-302795268.html">PR Newswire / Standard Bots</a> (Tier 1)</li>
-  <li><a href="https://huggingface.co/rednote-hilab/dots.tts-soar">Hugging Face / dots.tts</a> (Tier 1)</li>
-  <li><a href="https://huggingface.co/papers/2606.07502">HF papers / EmbedFilter</a> (Tier 1)</li>
-  <li><a href="https://arxiv.org/abs/2606.07527">arXiv 2606.07527</a> (Tier 1)</li>
-  <li><a href="https://huggingface.co/papers/2606.06741">HF papers / OpenSkill</a> (Tier 1)</li>
-  <li><a href="https://huggingface.co/papers/2606.07229">HF papers / MMAE</a> (Tier 1)</li>
-  <li><a href="https://www.bloomberg.com/news/articles/2026-06-09/google-s-backstops-underpin-35-billion-chip-deal-for-anthropic">Bloomberg / 35B chip deal</a> (Tier 2)</li>
-  <li><a href="https://www.bloomberg.com/news/articles/2026-06-09/musk-s-xai-taps-starlink-staffer-to-run-grok-training-team">Bloomberg / xAI</a> (Tier 2)</li>
-  <li><a href="https://www.bloomberg.com/news/articles/2026-06-09/coreweave-founders-have-dumped-2-3-billion-in-stock-since-ipo">Bloomberg / CoreWeave sales</a> (Tier 2)</li>
-  <li><a href="https://www.bloomberg.com/news/articles/2026-06-09/coreweave-plans-european-investor-calls-for-potential-debt-sale">Bloomberg / CoreWeave bond</a> (Tier 2)</li>
-  <li><a href="https://www.csoonline.com/article/4183094/anthropic-releases-mythos-class-fable-5-model-with-safeguards-for-cyber-risks.html">CSO Online</a> (Tier 2)</li>
-  <li><a href="https://www.pymnts.com/news/b2b-payments/2026/santanders-getnet-plugs-merchants-into-agentic-commerce/">PYMNTS / Getnet</a> (Tier 2)</li>
-  <li><a href="https://www.cnn.com/2026/06/09/tech/openai-ipo-anthropic-wall-street">CNN Business</a> (Tier 2)</li>
-  <li><a href="https://www.bnnbloomberg.ca/business/2026/06/09/samsung-electronics-considers-building-chip-packaging-plant-economic-daily-says/">BNN Bloomberg / Samsung</a> (Tier 2)</li>
-  <li><a href="https://www.interconnects.ai/">Interconnects</a> (Tier 2)</li>
-  <li><a href="https://parameter.io/ai-chip-stocks-surge-as-applied-digital-lands-5-2b-data-center-contract/">Parameter / Applied Digital</a> (Tier 3)</li>
-  <li><a href="https://www.digitalapplied.com/blog/claude-fable-5-mythos-5-agentic-coding-deep-dive-2026">Digital Applied / benchmarks</a> (Tier 3)</li>
+  <li><a href="https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/">LWN rogue agent</a> (Tier 2)</li>
+  <li><a href="https://github.com/zed-industries/zed/releases/tag/v1.6.3">Zed v1.6.3</a> (Tier 1)</li>
+  <li><a href="https://claude.com/code-with-claude/tokyo">Code with Claude Tokyo</a> (Tier 1)</li>
+  <li><a href="https://openai.com/index/openai-on-oracle-cloud/">openai.com Oracle</a> (Tier 1)</li>
+  <li><a href="https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/">TechCrunch xAI lawsuit</a> (Tier 3)</li>
+  <li><a href="https://x.ai/news/grok-etoro">x.ai eToro</a> (Tier 1)</li>
+  <li><a href="https://about.fb.com/news/2026/06/meta-partners-with-reliance-on-ai-enabled-data-center-in-india-2/">Meta newsroom Reliance</a> (Tier 1)</li>
+  <li><a href="https://www.bloomberg.com/news/articles/2026-06-10/amazon-inks-17-5-billion-loan-in-financing-led-by-citigroup">Bloomberg Amazon loan</a> (Tier 3, SEC 8-K underlying)</li>
+  <li><a href="https://www.supermicro.com/en/pressreleases/supermicro-announces-proposed-70-billion-equity-and-equity-linked-financing">Supermicro press release</a> (Tier 1)</li>
+  <li><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1328">EU Commission Code of Practice</a> (Tier 1)</li>
+  <li><a href="http://www.prnewswire.com/news-releases/hut-8-closes-4-25-billion-of-investment-grade-senior-secured-notes-for-beacon-point-data-center-project-302795866.html">Hut 8 bond close</a> (Tier 1)</li>
+  <li><a href="https://www.techtimes.com/articles/318171/20260610/morgan-stanley-sees-ai-debt-nearly-doubling-570-billion-2026-bonds-now-fund-buildout.htm">TechTimes Morgan Stanley</a> (Tier 3)</li>
+  <li><a href="https://huggingface.co/papers/2606.10651">HF papers Keye-VL-2.0</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.09967">HF papers ABot-Earth</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.10968">HF papers Tencent trust region</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.10917">HF papers Role-Agent</a> (Tier 1)</li>
+  <li><a href="https://github.com/ggml-org/llama.cpp/releases">llama.cpp releases</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/zai-org/GLM-5.1">huggingface.co GLM-5.1</a> (Tier 1)</li>
+  <li><a href="https://www.openpr.com/news/4544443/xai-finishes-training-grok-v9-at-1-5-trillion-parameters-while">openpr Grok V9 rumor</a> (Tier 3)</li>
+  <li><a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">TechTimes Gemini 3.5 Pro</a> (Tier 3)</li>
 </ul>
 
 <div class="footer">
-  Generated 2026-06-10 06:00 CET. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from the Top 3.
+  Generated 2026-06-11 06:00 CET. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from the Top 3.
 </div>
 
 </div>
+
 
 <script>
 /* ask-link.js
-   Global Intelligence Radar : design system component
+   Global Intelligence Radar: design system component
    Context-aware Ask-LLM prompt builder + provider popover
    ----------------------------------------------------------------
    Usage: <script src="../shared/ask-link.js"><\/script>
