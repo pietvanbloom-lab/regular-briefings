@@ -147,7 +147,7 @@
       </div>
       <p>claude-agent-sdk-python v0.2.96, released June 10 at 21:15 UTC, pins the mcp dependency below 2.0.0 "to prevent incompatible breaking changes" and bundles Claude CLI 2.1.172. The TypeScript SDK already carries 2.0.0-alpha packages tracking the stateless 2026-07-28 spec, and companion release claude-agent-sdk-typescript v0.3.172 adds a skipMcpDiscovery per-plugin option.</p>
       <p class="meta">Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.96">github.com/anthropics/claude-agent-sdk-python v0.2.96</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> Anthropic is the first major consumer to defensively pin against mcp 2.0, which confirms the 2.0 line breaks current consumers. Anyone shipping MCP servers or clients should pin now and budget a migration window before the July 28 spec lands and the whole ecosystem churns at once.</div>
+      <div class="why"><strong>Why it matters:</strong> Anthropic is the first major consumer to defensively pin against mcp 2.0, which confirms the 2.0 line breaks current consumers. Anyone shipping MCP servers or clients should pin now and budget a migration window before the July 28 spec lands and the whole ecosystem churns at once.</div>
     </div>
 
     <div class="card early">
@@ -160,7 +160,7 @@
       </div>
       <p>Published June 10: a 26B MoE model (3.8B active) that generates 256-token blocks in parallel instead of token-by-token, claiming 1000+ tokens per second on a single H100, 256K context, and quantized local use within 18 GB VRAM. Google states quality sits below standard Gemma 4 and frames it as shifting the inference bottleneck from memory bandwidth to compute. NVIDIA shipped a same-day RTX acceleration post.</p>
       <p class="meta">Source: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">blog.google DiffusionGemma</a> and <a href="https://simonwillison.net/2026/Jun/10/diffusiongemma/">simonwillison.net</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> First production-scale text diffusion model from a major lab. If parallel block generation holds up outside benchmarks, GPU buying math changes (compute-bound, not bandwidth-bound) and local-inference stacks get an entirely new architecture branch to absorb. Watch llama.cpp and vllm issue trackers for diffusion-support threads within days.</div>
+      <div class="why"><strong>Why it matters:</strong> First production-scale text diffusion model from a major lab. If parallel block generation holds up outside benchmarks, GPU buying math changes (compute-bound, not bandwidth-bound) and local-inference stacks get an entirely new architecture branch to absorb. Watch llama.cpp and vllm issue trackers for diffusion-support threads within days.</div>
     </div>
 
     <div class="card">
@@ -172,7 +172,7 @@
       </div>
       <p>Published June 10 on anthropic.com: a two-part policy framework proposing mandatory third-party testing in four risk areas (cyber, bio, loss of control, automated R&amp;D) for models trained above 10^25 FLOPs by companies with over $500M AI revenue or $1B+ AI R&amp;D spend, plus government authority to block unacceptable-risk deployments.</p>
       <p class="meta">Source: <a href="https://www.anthropic.com/policy-on-the-ai-exponential">anthropic.com/policy-on-the-ai-exponential</a></p>
-      <div class="why"><strong>Why this matters before others see it:</strong> Timing is the story: one day after Fable 5 shipped and roughly a week after the confidential S-1. This reads as Anthropic locking in a regulatory-moat narrative before the IPO window. Mandatory testing above 10^25 FLOPs would burden every frontier competitor equally while validating the safety positioning Fable 5 is being criticized for.</div>
+      <div class="why"><strong>Why it matters:</strong> Timing is the story: one day after Fable 5 shipped and roughly a week after the confidential S-1. This reads as Anthropic locking in a regulatory-moat narrative before the IPO window. Mandatory testing above 10^25 FLOPs would burden every frontier competitor equally while validating the safety positioning Fable 5 is being criticized for.</div>
     </div>
 
   </div>
