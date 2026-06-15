@@ -2,6 +2,11 @@
    jump-to-section nav, and prev/next archive navigation. Self-contained, no deps. */
 (function () {
   "use strict";
+  // Cloudflare Web Analytics (cookieless) for every brief page.
+  (function () { var cf = document.createElement("script"); cf.defer = true;
+    cf.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    cf.setAttribute("data-cf-beacon", '{"token": "497e5edd8f4a4b1e96619f0f85da49fc"}'); document.head.appendChild(cf); })();
+
   var ACCENT_KEY = "brief-theme";
   // Location-aware base: brief pages may live at site root (latest) or under /briefs/.
   var IN_BRIEFS = /\/briefs\//.test(location.pathname);
