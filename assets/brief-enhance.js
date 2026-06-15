@@ -3,6 +3,10 @@
 (function () {
   "use strict";
   var ACCENT_KEY = "brief-theme";
+  // Location-aware base: brief pages may live at site root (latest) or under /briefs/.
+  var IN_BRIEFS = /\/briefs\//.test(location.pathname);
+  var ROOT = IN_BRIEFS ? "../" : "./";
+  var HUB = ROOT + "archive.html";
 
   // 1) Inject theme + topbar styles (briefs share the same CSS variable names).
   var css = document.createElement("style");
@@ -54,7 +58,7 @@
   bar.className = "bx-bar";
   bar.innerHTML =
     '<div class="bx-in">' +
-    '<a class="bx-back" href="../">&larr; Archive</a>' +
+    '<a class="bx-back" href="' + HUB + '">&larr; Archive &amp; stats</a>' +
     '<nav class="bx-nav">' + navLinks + "</nav>" +
     '<a class="bx-step off" id="bx-prev" title="Previous brief">&lsaquo;</a>' +
     '<a class="bx-step off" id="bx-next" title="Next brief">&rsaquo;</a>' +
@@ -71,12 +75,12 @@
 
   // 5) Prev/next from the archive index (degrades silently if unavailable).
   if (curDate) {
-    fetch("../data/briefs.json").then(function (r) { return r.json(); }).then(function (d) {
+    fetch(ROOT + "data/briefs.json").then(function (r) { return r.json(); }).then(function (d) {
       var dates = d.briefs.map(function (b) { return b.date; }).sort(); // ascending
       var i = dates.indexOf(curDate);
       var prev = document.getElementById("bx-prev"), next = document.getElementById("bx-next");
-      if (i > 0) { prev.href = "./" + dates[i - 1] + ".html"; prev.classList.remove("off"); prev.title = "Previous: " + dates[i - 1]; }
-      if (i >= 0 && i < dates.length - 1) { next.href = "./" + dates[i + 1] + ".html"; next.classList.remove("off"); next.title = "Next: " + dates[i + 1]; }
+      if (i > 0) { prev.href = ROOT + "briefs/" + dates[i - 1] + ".html"; prev.classList.remove("off"); prev.title = "Previous: " + dates[i - 1]; }
+      if (i >= 0 && i < dates.length - 1) { next.href = ROOT + "briefs/" + dates[i + 1] + ".html"; next.classList.remove("off"); next.title = "Next: " + dates[i + 1]; }
     }).catch(function () {});
   }
 })();

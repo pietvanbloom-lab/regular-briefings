@@ -7,7 +7,7 @@ from datetime import datetime, date
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "briefs")
 OUT = os.path.join(ROOT, "data", "briefs.json")
-INDEX = os.path.join(ROOT, "index.html")
+HUB = os.path.join(ROOT, "archive.html")
 
 def strip_tags(s):
     s = re.sub(r"<[^>]+>", "", s)
@@ -172,15 +172,27 @@ def main():
     json.dump(data, open(OUT, "w"), indent=2, ensure_ascii=False)
     # Re-inject inline data block into index.html so the portal works on file:// and HTTP.
     try:
-        idx = open(INDEX, encoding="utf-8").read()
+        idx = open(HUB, encoding="utf-8").read()
         payload = json.dumps(data, ensure_ascii=False)
         new_block = '<script id="brief-data" type="application/json">\n' + payload + '\n</script>'
         idx2 = re.sub(r'<script id="brief-data"[^>]*>.*?</script>', new_block, idx, count=1, flags=re.S)
         if idx2 != idx:
-            open(INDEX, "w", encoding="utf-8").write(idx2)
-            print("Re-injected inline data into index.html")
+            open(HUB, "w", encoding="utf-8").write(idx2)
+            print("Re-injected inline data into archive.html")
     except FileNotFoundError:
         pass
+    # Root index.html is ALWAYS the latest brief (the top page).
+    if briefs:
+        latest = briefs[-1]["date"]
+        src = os.path.join(ROOT, "briefs", latest + ".html")
+        try:
+            bh = open(src, encoding="utf-8").read()
+            # rewrite asset/script depth from briefs/ (../assets) to root (assets)
+            bh = bh.replace('src="../assets/brief-enhance.js"', 'src="assets/brief-enhance.js"')
+            open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(bh)
+            print(f"Root index.html set to latest brief {latest}")
+        except FileNotFoundError:
+            pass
     print(f"Parsed {len(briefs)} briefs -> totals: signals={total_signals} early={total_early}")
     print("Hottest:", ", ".join(f"{h['topic']}({h['stories']},{h['trend']})" for h in hottest[:8]))
     print("Weeks:", ", ".join(f"{w['period']}:{w['signals']}" for w in weekly))
