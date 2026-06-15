@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Brief 2026-06-01</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ask-type" content="brief">
+<style>
+  :root {
+    --bg: #0b0c0f;
+    --panel: #14161c;
+    --panel2: #1a1d25;
+    --text: #e7e9ef;
+    --mute: #8a8f9a;
+    --line: #262a33;
+    --accent: #c98a3a;
+    --accent2: #6db4ff;
+    --tag-bg: #232732;
+    --good: #3fb95d;
+    --warn: #d49b3a;
+    --bad: #cf4d4d;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; line-height: 1.5; font-size: 15px; }
+  a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted rgba(109,180,255,0.4); }
+  a:hover { color: #9fcdff; border-bottom-color: rgba(109,180,255,0.8); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; margin: 4px 0 0; font-weight: 600; }
+  h2 { font-family: Georgia, serif; font-size: 20px; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 14px 0 4px; font-weight: 600; }
+  .meta { font-family: ui-monospace, monospace; font-size: 11px; color: var(--mute); }
+  .top3 { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 8px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 18px; border-radius: 4px; }
+  .card.early { border-left-color: var(--accent2); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; }
+  .tag { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--tag-bg); color: var(--mute); padding: 3px 8px; border-radius: 3px; }
+  .tag.t1 { color: var(--good); }
+  .tag.t2 { color: var(--warn); }
+  .tag.t3 { color: var(--mute); }
+  .tag.high { color: var(--good); }
+  .tag.med { color: var(--warn); }
+  .tag.low { color: var(--bad); }
+  .tag.early { color: var(--accent2); }
+  .why { font-style: italic; color: var(--text); border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 8px; font-size: 14px; }
+  .bucket { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 14px 18px; margin-bottom: 14px; }
+  .bucket .item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .bucket .item:last-child { border-bottom: none; }
+  .bucket .item h4 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+  .bucket .item p { margin: 4px 0 0; font-size: 13px; color: #d2d5dc; }
+  .quiet { color: var(--mute); font-style: italic; }
+  .footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--mute); font-family: ui-monospace, monospace; }
+  ul.sources { padding-left: 18px; margin: 4px 0 0; font-size: 12px; }
+  ul.sources li { margin: 2px 0; color: var(--mute); }
+  .twocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 760px) { .twocol { grid-template-columns: 1fr 1fr; } }
+
+  /* ── ask-link component (inline embed) ─────────────────────── */
+  .ask-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-left: 8px; vertical-align: middle;
+    background: transparent; border: 1px solid var(--line);
+    color: var(--mute); cursor: pointer; padding: 1px 7px;
+    border-radius: 3px; font-family: ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.06em; text-transform: lowercase;
+    opacity: 0.3;
+    transition: opacity 0.18s, color 0.15s, border-color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ask-btn::before { content: "\2197"; font-size: 11px; }
+  .item:hover .ask-btn,
+  .card:hover .ask-btn,
+  .ask-btn:focus-visible { opacity: 1; }
+  .ask-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+  .ask-btn:active { background: rgba(109,180,255,0.12); color: var(--accent2); border-color: var(--accent2); }
+  @media (hover: none) and (pointer: coarse) {
+    .ask-btn { opacity: 0.55; padding: 8px 12px; font-size: 12px; min-height: 36px; min-width: 56px; margin-left: 10px; }
+    .ask-btn::before { font-size: 13px; }
+    .item:hover .ask-btn, .card:hover .ask-btn { opacity: 1; }
+  }
+  #ask-popover {
+    position: absolute; z-index: 1000; min-width: 220px;
+    background: var(--panel2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  #ask-popover.open { display: block; }
+  #ask-popover .pop-eyebrow { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+  #ask-popover .pop-close { display: none; }
+  #ask-popover .pop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #ask-popover .pop-btn {
+    background: var(--panel); border: 1px solid var(--line); color: var(--text);
+    padding: 6px 9px; border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: inherit; text-align: left; text-decoration: none; display: block;
+    transition: border-color 0.15s, color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #ask-popover .pop-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn:active { background: rgba(109,180,255,0.12); border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn.copy { grid-column: 1 / span 2; text-align: center; border-style: dashed; }
+  #ask-popover .pop-btn.copied { color: var(--good); border-color: var(--good); }
+  #ask-backdrop { display: none; }
+  @media (max-width: 600px) {
+    #ask-popover {
+      position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+      width: 100%; min-width: 0; max-width: 100%; border-radius: 14px 14px 0 0;
+      padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.7); transform: translateY(100%);
+      transition: transform 0.2s ease-out; display: block;
+    }
+    #ask-popover.open { transform: translateY(0); }
+    #ask-popover .pop-grid { gap: 8px; }
+    #ask-popover .pop-btn { padding: 12px; font-size: 14px; min-height: 44px; }
+    #ask-popover .pop-btn.copy { padding: 14px 12px; }
+    #ask-popover .pop-close {
+      display: block; position: absolute; top: 8px; right: 12px;
+      background: transparent; border: none; color: var(--mute); font-size: 22px; cursor: pointer; padding: 6px 10px;
+    }
+    #ask-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 999; display: none; }
+    #ask-backdrop.open { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="eyebrow">AI Intelligence Brief</div>
+    <h1>2026-06-01 morning edition</h1>
+  </div>
+  <div class="meta">Window: 2026-05-31 06:00 CET to 2026-06-01 06:05 CEST<br>6 in-window items, 6 buckets, 3 highlighted. Quiet Sunday-into-Monday cycle. Today's signal is AI economics, not capability.</div>
+</header>
+
+<section>
+  <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
+  <div class="top3">
+
+    <div class="card early">
+      <h3>GitHub Copilot moves all monthly plans to usage-based "AI Credits" billing, effective today, June 1</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Coding Tools</span>
+        <span class="tag">Pricing</span>
+      </div>
+      <p>As of June 1, Copilot replaces premium request units with GitHub AI Credits, metered on input, output, and cached tokens at each model's published API rate (1 credit = $0.01). Monthly Pro and Pro+ users auto-migrate today; Pro+ stays $39 and now includes $39 of credits, Business $19, Enterprise $39, with Business and Enterprise getting promotional included usage through August. Code completions and next-edit suggestions stay unlimited and unbilled. Annual plan holders keep request-based pricing until renewal. Developer reaction on May 30-31 was sharply negative on cost predictability for long agentic sessions.</p>
+      <p class="meta">Source: <a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Blog</a> / <a href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/">TechCrunch</a>, effective June 1, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> This is the largest AI coding subscription converting flat-rate seats into metered consumption, and it is the first real test of whether developers accept token billing for everyday tooling. The second-order effect is that long-running agentic loops become cost-unpredictable, which pushes teams to cap agent autonomy, watch token budgets per task, or self-host. It also hands a pricing wedge to rivals: Cursor, Windsurf, and Claude Code can now position on predictable or flat pricing. Watch "tokens per task" become a budgeting metric, and watch GitHub probe how far it can move price before churn shows up, because the May 30-31 backlash signals real elasticity.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Correction and signal: DeepSeek's 75% V4-Pro price cut is permanent, not an expiring promo, the list price did not revert</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Competitor</span>
+        <span class="tag">Pricing</span>
+      </div>
+      <p>This brief reported on May 31 that DeepSeek's V4-Pro promotional discount would expire that day and list pricing would return. That was a misread. DeepSeek announced on May 22 that the 75% discount becomes the permanent list price: roughly $0.435 per million input tokens, $0.87 per million output, and $0.003625 per million cached. The cut did not roll back on May 31. By widely cited comparisons, V4-Pro now sits below OpenAI, Anthropic, and Google on token cost, on the order of 11x cheaper than GPT-5.5 on input.</p>
+      <p class="meta">Source: <a href="https://www.engadget.com/2180062/deepseek-permanently-reduces-the-price-of-its-flagship-v4-model-by-75-percent/">Engadget</a> / <a href="https://www.infoworld.com/article/4176709/deepseeks-steep-v4-pro-price-cut-escalates-ai-pricing-war.html">InfoWorld</a>, announced May 22, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> Two things. First, the correction: a scheduled "promo ends" framing circulated across multiple outlets and into this brief, when the real move was the opposite, a permanent reset. Worth flagging because the wrong version is still propagating. Second, the signal: a frontier-tier model holding a permanent sub-$0.50 input price sets a hard floor that squeezes everyone selling inference above it. Pair this with the Copilot item and the same week shows AI cost being repriced from both ends, the model layer and the tooling layer. The pressure lands hardest on mid-tier API resellers and on any product whose margin depends on inference staying expensive.</div>
+    </div>
+
+    <div class="card">
+      <h3>Gemini 2.0 Flash and 2.0 Flash-Lite shut down today, June 1, old model names start returning errors</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">Competitor</span>
+        <span class="tag">Lifecycle</span>
+      </div>
+      <p>Google retires gemini-2.0-flash and gemini-2.0-flash-lite on June 1. After today, API calls using the old model names return errors. Google's recommended path is a name swap to gemini-2.5-flash-lite, which carries identical $0.10 input and $0.40 output per-million pricing, so the migration is mostly a string change rather than a cost change. Teams still pinned to the 2.0 endpoints break today.</p>
+      <p class="meta">Source: <a href="https://ai.google.dev/gemini-api/docs/deprecations">Google Gemini deprecations</a>, effective June 1, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> The story is not this one model, it is the cadence. Frontier labs are now sunsetting last-generation models on tight cycles, which turns "model EOL risk" into a real production concern rather than a footnote. A team that hardcoded a model name a year ago can wake up to 400 errors with little warning. The practical takeaway: pin to model aliases where the provider offers them, keep a migration runbook, and treat model lifecycle like dependency management. Expect more of these forced cutovers across every major API through 2026.</div>
+    </div>
+
+  </div>
+</section>
+
+<h2>Latest by bucket</h2>
+
+<div class="bucket">
+  <div class="eyebrow">Anthropic / Claude</div>
+  <div class="item">
+    <h4>Claude Code v2.1.159 ships, internal infrastructure only with no user-facing changes</h4>
+    <p>The single in-window Claude Code release is a maintenance patch. The changelog entry states it contains internal infrastructure improvements and lists no new features, models, or user-facing fixes. Noted only to confirm the release cadence continued over the weekend. Source: <a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog</a>, May 31, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Quiet day otherwise: no in-window anthropic.com/news or research post</h4>
+    <p>The newsroom's top items remain May 28 (the roughly $65B Series H at about $965B post-money, and Opus 4.8), confirmed via direct fetch, with nothing dated May 31 or June 1. The Mythos wide release is still the May 28 "coming weeks" statement with no new confirmation. Recurring weekend aggregator pieces are restated coverage of last week's raise, not new disclosure. Source: <a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Agentic AI and MCP</div>
+  <div class="item">
+    <h4>GitHub Copilot usage-based billing reshapes the economics of agentic coding loops</h4>
+    <p>Full detail in Top 3. The agent-relevant angle: metered token billing changes the calculus for code-review agents, CI agent loops, and long multi-step sessions, where cost now scales with autonomy. This is the governance-by-budget lever arriving via pricing rather than policy. Source: <a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Blog</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Trust3 AI publishes a "continuous agent discovery" field guide framing inventory as the first security control</h4>
+    <p>A May 31 vendor field guide argues you cannot govern agents you cannot see, and defines a three-source discovery model: platform APIs, dev-environment and repo plus CI scans, and runtime egress telemetry. It recommends inspecting egress logs for MCP and tool calls to surface shadow agents spun up inside Cursor or Copilot Studio. Thought-leadership, not a product launch, but it tracks the agent-governance theme. Source: <a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store (aggregator)</a>, May 31, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">No in-window MCP spec or server movement</h4>
+    <p>modelcontextprotocol.io posted nothing in-window; the most recent blog activity predates the window and the release candidate remains locked for a July 28 final spec (stateless core, Extensions, Tasks, MCP Apps, auth hardening). Watch Microsoft Build 2026 on June 2-3 for a likely Windows Agent Runtime preview and agent-platform news. Source: <a href="https://blog.modelcontextprotocol.io/">MCP Blog</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Coding Tools</div>
+  <div class="item">
+    <h4>GitHub Copilot code review begins consuming GitHub Actions minutes on private repos, also today</h4>
+    <p>Separate from the AI Credits switch, Copilot code review starts billing GitHub Actions minutes from plan entitlement on private repositories as of June 1, on top of credit consumption. Public repos remain free. A second cost lever landing the same day for teams that lean on automated review. Source: <a href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/">GitHub Changelog</a>, effective June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>OpenAI Codex Pro 2x usage promotion expired May 31</h4>
+    <p>The promotion that doubled Codex usage on the $100 per month tier ended May 31, reverting that tier to its standard allotment. A scheduled expiry announced earlier, not a new release, but a cost change Codex power users feel this week. Source: <a href="https://whatllm.org/blog/new-ai-models-may-2026">whatllm.org</a>, expired May 31, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Otherwise quiet: no new in-window changelog release from Cursor, Windsurf, or Codex</h4>
+    <p>Cursor's changelog top entry is still 3.6 Auto-review (May 29); the OpenAI Codex Computer Use on Windows item (May 29) and Cognition's $1B raise (May 27) all predate the window. No new SWE-bench Verified results posted in-window; the leaderboard's last movement was May 28. Source: <a href="https://cursor.com/changelog">Cursor Changelog</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Competitor Moves</div>
+  <div class="item">
+    <h4>DeepSeek V4-Pro permanent 75% price cut continues to ripple through the inference price war</h4>
+    <p>Covered in Top 3. The permanent reset (roughly $0.435 input, $0.87 output per million) keeps DeepSeek positioned as the price leader among frontier-tier models and is the active competitive story this week, not the expired-promo version circulating elsewhere. Source: <a href="https://www.infoworld.com/article/4176709/deepseeks-steep-v4-pro-price-cut-escalates-ai-pricing-war.html">InfoWorld</a>, May 22, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Gemini 2.0 Flash and Flash-Lite retire today, migrate to 2.5 Flash-Lite</h4>
+    <p>Covered in Top 3. The retirement forces a model-name swap for anyone still on the 2.0 endpoints, with identical pricing on the recommended 2.5 Flash-Lite target. Source: <a href="https://ai.google.dev/gemini-api/docs/deprecations">Google Gemini deprecations</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">No frontier model or feature launch inside the window</h4>
+    <p>A Sunday-into-Monday window with no new model, pricing, or API drop from OpenAI, Google, xAI, Meta, Mistral, DeepSeek, Qwen, or Cohere. The freshest out-of-window anchors: xAI Grok Build 0.1 coding beta (May 29), Mistral Small 4 open weights and Cohere Command A+ under Apache 2.0 (around May 20), Qwen 3.7 Max (May 20). Expect Monday wire flow after this 06:05 cutoff. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Business</div>
+  <div class="item">
+    <h4>SpaceX IPO thread goes live this week: roadshow reported to start June 4, valuation cut contested by Musk [contested]</h4>
+    <p>SpaceX is reported to have trimmed its IPO valuation target to at least $1.8 trillion, down from a $2 trillion-plus goal, raising up to about $75B, which would be the largest IPO on record. Marketing is reported to begin as soon as June 4, pricing as early as June 11, and a Nasdaq debut (ticker SPCX) around June 12. Elon Musk replied "False" to the valuation-cut report. The report and denial both landed May 29, just outside the window; what makes it live is the imminent June 4 roadshow. Not an AI-core story, but the largest capital-markets event of the week. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-lowers-ipo-valuation-target-to-at-least-1-8-trillion">Bloomberg</a>, developing, May 29 into June</p>
+  </div>
+  <div class="item">
+    <h4>Watch: Cerebras S-1 on file, AI-chip IPO seen as near-term</h4>
+    <p>Cerebras filed its S-1 earlier in May and is viewed as one of the next AI hardware listings to price. No in-window movement, flagged as a watch item alongside the broader 2026 AI IPO wave. Source: <a href="https://www.renaissancecapital.com/IPO-Center/News">Renaissance Capital</a></p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Correction on a prior watch item: EU AI Act Digital Omnibus adoption now expected end-July, not June</h4>
+    <p>The Council confirms the provisional agreement (May 7) heads to formal adoption, but the targeted window is now between June and end-July rather than June specifically, with compliance dates such as December 2, 2026 for the new prohibitions. No in-window legislative movement. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Open Source and Research</div>
+  <div class="item">
+    <h4 class="quiet">Quiet window: no in-window open-weight release or notable paper with a confirmed timestamp</h4>
+    <p>Two structural reasons line up: the window spans a Sunday-into-Monday overnight, and arXiv does not announce new cs.CL, cs.LG, or cs.AI submissions on weekends. Monday's batch announces around 01:00 CET but was not yet indexed by the 06:00 cutoff. The llm-stats open-weights tracker explicitly shows no open-source releases this week. Source: <a href="https://llm-stats.com/ai-news">llm-stats research feed</a></p>
+  </div>
+  <div class="item">
+    <h4>Most recent notable open-source anchor remains Genesis World 1.0 (May 30)</h4>
+    <p>The Apache 2.0 robotics simulation stack reporting a 0.8996 sim-to-real correlation, covered in the May 31 brief, is still the freshest genuinely notable open-source development and was not superseded in this window. Re-check arXiv and Hugging Face Daily Papers around 07:30-08:00 CET for the first net-new item of the day. Source: <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a></p>
+  </div>
+</div>
+
+<h2>Rumors and Early Signals</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Microsoft Build 2026 opens June 2-3, Windows Agent Runtime preview expected [Tier 2 expectation]</h4>
+    <p>Build runs June 2-3 in San Francisco, opening just after this window. Industry expectation is a Windows Agent Runtime preview and broader agent-platform announcements. Flagged as the most likely source of the next major agentic news. Treat specifics as expectation, not confirmed. Source: <a href="https://build.microsoft.com/">Microsoft Build</a></p>
+  </div>
+  <div class="item">
+    <h4>SpaceX IPO valuation figure contested [Musk denies $1.8T cut]</h4>
+    <p>The $1.8 trillion valuation-cut figure is disputed by Musk on the record, so treat the number as unconfirmed even as the roadshow timing firms up. The directional signal, a mega-IPO marketing as soon as June 4, is the part to track. Source: <a href="https://seekingalpha.com/news/4598223-spacex-lowers-ipo-valuation-target-to-at-least-18t-report">Seeking Alpha</a></p>
+  </div>
+  <div class="item">
+    <h4>Gemini 3.5 Pro general availability still targeted for June [Tier 1 statement, timing unconfirmed]</h4>
+    <p>Google committed at I/O (May 19) to a "next month" general availability for its top Gemini tier, putting the release window in June. Still in limited preview, no firm date. Early signal for the next frontier-model GA. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+  </div>
+</div>
+
+<h2>Upcoming, next 7 days</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>GitHub Copilot AI Credits billing: live today, June 1</h4>
+    <p>Monthly Pro and Pro+ auto-migrate; Copilot code review starts consuming Actions minutes on private repos. Watch for credit-burn reports and any mitigation or grace-period adjustment in the first billing week.</p>
+  </div>
+  <div class="item">
+    <h4>Gemini 2.0 Flash and Flash-Lite shutdown: today, June 1</h4>
+    <p>Old model names return errors after today. Migrate to gemini-2.5-flash-lite (identical pricing).</p>
+  </div>
+  <div class="item">
+    <h4>Microsoft Build 2026: June 2-3</h4>
+    <p>Expected Windows Agent Runtime preview and agent-platform announcements. The next likely agentic-news catalyst.</p>
+  </div>
+  <div class="item">
+    <h4>SpaceX IPO roadshow: reported to start June 4, pricing as early as June 11</h4>
+    <p>Marketing reported to begin June 4 with a Nasdaq debut (SPCX) around June 12. Valuation figure contested; timing is the part to watch.</p>
+  </div>
+  <div class="item">
+    <h4>Gemini Interactions API legacy schema removal: June 8</h4>
+    <p>Breaking change for existing builders. Migration to the outputs-to-steps schema required.</p>
+  </div>
+  <div class="item">
+    <h4>Gemini 3.5 Pro general availability: targeted June 2026</h4>
+    <p>Google committed to GA "next month" at I/O. Watch ai.google.dev and Vertex for the release and pricing terms.</p>
+  </div>
+</div>
+
+<h2>Source log</h2>
+<ul class="sources">
+  <li><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Blog: Copilot usage-based billing</a> (Tier 1)</li>
+  <li><a href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/">GitHub Changelog: code review consumes Actions minutes June 1</a> (Tier 1)</li>
+  <li><a href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/">TechCrunch: developer backlash on Copilot token billing</a> (Tier 2)</li>
+  <li><a href="https://www.engadget.com/2180062/deepseek-permanently-reduces-the-price-of-its-flagship-v4-model-by-75-percent/">Engadget: DeepSeek V4 permanent 75% cut</a> (Tier 2)</li>
+  <li><a href="https://www.infoworld.com/article/4176709/deepseeks-steep-v4-pro-price-cut-escalates-ai-pricing-war.html">InfoWorld: DeepSeek price war</a> (Tier 2)</li>
+  <li><a href="https://ai.google.dev/gemini-api/docs/deprecations">Google Gemini deprecations (2.0 Flash retirement)</a> (Tier 1)</li>
+  <li><a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog v2.1.159</a> (Tier 1)</li>
+  <li><a href="https://www.anthropic.com/news">anthropic.com/news (no in-window post)</a> (Tier 1)</li>
+  <li><a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store: Trust3 agent-discovery field guide</a> (Tier 3)</li>
+  <li><a href="https://blog.modelcontextprotocol.io/">MCP Blog (no in-window spec movement)</a> (Tier 1)</li>
+  <li><a href="https://cursor.com/changelog">Cursor Changelog (no in-window release)</a> (Tier 1)</li>
+  <li><a href="https://whatllm.org/blog/new-ai-models-may-2026">whatllm.org: OpenAI Codex Pro promo expiry</a> (Tier 2)</li>
+  <li><a href="https://llm-stats.com/llm-updates">llm-stats LLM updates (competitor sweep)</a> (Tier 2)</li>
+  <li><a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-lowers-ipo-valuation-target-to-at-least-1-8-trillion">Bloomberg: SpaceX IPO valuation</a> (Tier 1)</li>
+  <li><a href="https://www.renaissancecapital.com/IPO-Center/News">Renaissance Capital: Cerebras S-1 watch</a> (Tier 2)</li>
+  <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council: AI Act Digital Omnibus</a> (Tier 1)</li>
+  <li><a href="https://llm-stats.com/ai-news">llm-stats research feed (no new open weights)</a> (Tier 2)</li>
+  <li><a href="https://build.microsoft.com/">Microsoft Build 2026 (June 2-3)</a> (Tier 1)</li>
+</ul>
+
+<div class="footer">
+  Generated 2026-06-01 06:05 CET. Quiet Sunday-into-Monday window, reported straight with no padding. Includes one correction to the May 31 brief (DeepSeek V4-Pro pricing). No em-dashes, no marketing adjectives, every claim sourced. Items marked [contested] or [UNVERIFIED] are excluded from Top 3.
+</div>
+
+</div>
+
+
+<script>
+/* ask-link.js v2
+   AI Brief, Ask-LLM prompt builder + provider popover
+   Self-contained inline version. ensurePopoverDOM() auto-injects
+   #ask-popover and #ask-backdrop; do NOT put them in HTML body.
+   ---------------------------------------------------------------- */
+
+(function () {
+  'use strict';
+
+  var TEMPLATES = {
+    brief: function (h, s, u, d) {
+      return [
+        'From my AI Intelligence Brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'I am tracking this for strategic and competitive implications.',
+        'What developments should I watch for next, and what are the second-order effects?'
+      ].join('\n');
+    },
+    portrait: function (h, s, u) {
+      return [
+        'I am reviewing a company intelligence brief. This section covers:',
+        '',
+        'Topic:  ' + h,
+        'Detail: ' + s,
+        'Source: ' + u,
+        '',
+        'Give me the key strategic and competitive takeaways from a B2B intelligence perspective.',
+        'What does this signal about positioning, risks, or opportunities?'
+      ].join('\n');
+    },
+    dashboard: function (h, s, u, d) {
+      return [
+        'From a live intelligence dashboard' + (d ? ' (' + d + ')' : '') + ', this signal came in:',
+        '',
+        'Signal:  ' + h,
+        'Context: ' + s,
+        'Source:  ' + u,
+        '',
+        'What immediate actions or watch items does this trigger?',
+        'What is the most likely next development?'
+      ].join('\n');
+    },
+    generic: function (h, s, u, d) {
+      return [
+        'From my intelligence brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'Please use this as context. I will ask follow-up questions.'
+      ].join('\n');
+    }
+  };
+
+  var PROVIDERS = {
+    claude:     function (p) { return 'https://claude.ai/new?q=' + encodeURIComponent(p); },
+    chatgpt:    function (p) { return 'https://chatgpt.com/?model=auto&prompt=' + encodeURIComponent(p); },
+    perplexity: function (p) { return 'https://www.perplexity.ai/search?q=' + encodeURIComponent(p); },
+    gemini:     function ()  { return 'https://gemini.google.com/app'; }
+  };
+
+  function detectContentType() {
+    var meta = document.querySelector('meta[name="ask-type"]');
+    if (meta && TEMPLATES[meta.content]) return meta.content;
+    var bodyType = document.body && document.body.dataset && document.body.dataset.askType;
+    if (bodyType && TEMPLATES[bodyType]) return bodyType;
+    var eyebrowText = [].slice.call(document.querySelectorAll('.eyebrow')).map(function (e) { return e.textContent; }).join(' ').toLowerCase();
+    var combined = ((document.title || '') + ' ' + eyebrowText).toLowerCase();
+    if (/\b(brief|intelligence brief)\b/.test(combined)) return 'brief';
+    if (/\bportrait\b/.test(combined)) return 'portrait';
+    if (/\bdashboard\b/.test(combined)) return 'dashboard';
+    return 'generic';
+  }
+
+  function detectDate() {
+    var meta = document.querySelector('meta[name="ask-date"]');
+    if (meta && meta.content) return meta.content;
+    var timeEl = document.querySelector('time[datetime]');
+    if (timeEl) return (timeEl.getAttribute('datetime') || '').slice(0, 10);
+    var sources = [document.title || ''];
+    var h1 = document.querySelector('h1');
+    if (h1) sources.push(h1.textContent);
+    for (var i = 0; i < sources.length; i++) {
+      var m = sources[i].match(/\d{4}-\d{2}-\d{2}/);
+      if (m) return m[0];
+    }
+    return '';
+  }
+
+  function cleanSummary(text) {
+    if (!text) return '';
+    return text.replace(/\s*Source:\s*.*$/i, '').trim();
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }).catch(function () { return fallbackCopy(text); });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+  }
+
+  function positionPopover(pop, btn) {
+    var rect = btn.getBoundingClientRect();
+    pop.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
+    pop.style.left = (window.scrollX + rect.left) + 'px';
+    requestAnimationFrame(function () {
+      var pr = pop.getBoundingClientRect();
+      var overflow = pr.right - window.innerWidth + 12;
+      if (overflow > 0) {
+        pop.style.left = Math.max(8, parseFloat(pop.style.left) - overflow) + 'px';
+      }
+    });
+  }
+
+  function ensurePopoverDOM() {
+    if (document.getElementById('ask-popover')) return;
+
+    var backdrop = document.createElement('div');
+    backdrop.id = 'ask-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+
+    var pop = document.createElement('div');
+    pop.id = 'ask-popover';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', 'Ask an LLM about this');
+    pop.innerHTML =
+      '<button class="pop-close" type="button" data-close aria-label="Close">&times;</button>' +
+      '<div class="pop-eyebrow">Use as LLM context</div>' +
+      '<div class="pop-grid">' +
+        '<a class="pop-btn" data-provider="claude"     target="_blank" rel="noopener">Open in Claude</a>' +
+        '<a class="pop-btn" data-provider="chatgpt"    target="_blank" rel="noopener">Open in ChatGPT</a>' +
+        '<a class="pop-btn" data-provider="perplexity" target="_blank" rel="noopener">Open in Perplexity</a>' +
+        '<a class="pop-btn" data-provider="gemini"     target="_blank" rel="noopener">Open in Gemini</a>' +
+        '<button class="pop-btn copy" type="button" data-copy>Copy prompt</button>' +
+      '</div>';
+    document.body.appendChild(pop);
+  }
+
+  function attachButtons() {
+    var containers = document.querySelectorAll('.item, .card');
+    [].forEach.call(containers, function (el) {
+      var headlineEl = el.querySelector('h3, h4');
+      if (!headlineEl) return;
+      if (headlineEl.querySelector('.ask-btn')) return;
+
+      var headline = headlineEl.textContent.trim();
+      var paragraphs = [].slice.call(el.querySelectorAll('p'));
+      var summaryP   = paragraphs.find(function (p) { return !p.classList.contains('meta'); });
+      var summary    = cleanSummary(summaryP ? summaryP.textContent : '');
+      var link = el.querySelector('a[href]');
+      var url  = link ? link.href : '';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ask-btn';
+      btn.title = 'Ask an LLM about this';
+      btn.textContent = 'ask';
+      btn.dataset.headline = headline;
+      btn.dataset.summary  = summary;
+      btn.dataset.url      = url;
+      headlineEl.appendChild(btn);
+    });
+  }
+
+  function setupPopover(template, date) {
+    var pop      = document.getElementById('ask-popover');
+    var backdrop = document.getElementById('ask-backdrop');
+    if (!pop) return;
+
+    var providerLinks = [].slice.call(pop.querySelectorAll('.pop-btn[data-provider]'));
+    var copyBtn       = pop.querySelector('[data-copy]');
+    var closeBtn      = pop.querySelector('[data-close]');
+    var activePrompt  = '';
+
+    function refreshLinks() {
+      providerLinks.forEach(function (a) {
+        var builder = PROVIDERS[a.dataset.provider];
+        a.href = builder ? builder(activePrompt) : '#';
+      });
+    }
+
+    function openPopover(btn) {
+      activePrompt = template(
+        btn.dataset.headline || '',
+        btn.dataset.summary  || '',
+        btn.dataset.url      || '',
+        date
+      );
+      refreshLinks();
+      if (copyBtn) { copyBtn.textContent = 'Copy prompt'; copyBtn.classList.remove('copied'); }
+      if (!isMobile()) {
+        pop.style.top = ''; pop.style.left = '';
+        positionPopover(pop, btn);
+      } else {
+        pop.style.top = ''; pop.style.left = '';
+        if (backdrop) backdrop.classList.add('open');
+      }
+      pop.classList.add('open');
+    }
+
+    function closePopover() {
+      pop.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.ask-btn');
+      if (btn) { e.stopPropagation(); openPopover(btn); return; }
+      if (!pop.contains(e.target)) closePopover();
+    });
+
+    providerLinks.forEach(function (a) {
+      a.addEventListener('click', function () { copyToClipboard(activePrompt); });
+    });
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        copyToClipboard(activePrompt).then(function () {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(function () { copyBtn.textContent = 'Copy prompt'; copyBtn.classList.remove('copied'); }, 2000);
+        });
+      });
+    }
+
+    if (closeBtn)  closeBtn.addEventListener('click', closePopover);
+    if (backdrop)  backdrop.addEventListener('click', closePopover);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopover(); });
+  }
+
+  function init() {
+    var contentType = detectContentType();
+    var date        = detectDate();
+    var template    = TEMPLATES[contentType] || TEMPLATES.generic;
+    ensurePopoverDOM();
+    attachButtons();
+    setupPopover(template, date);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+}());
+</script>
+  <script src="../assets/brief-enhance.js"></script>
+</body>
+</html>

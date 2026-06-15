@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Brief 2026-06-02</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ask-type" content="brief">
+<meta name="ask-date" content="2026-06-02">
+<style>
+  :root {
+    --bg: #0b0c0f;
+    --panel: #14161c;
+    --panel2: #1a1d25;
+    --text: #e7e9ef;
+    --mute: #8a8f9a;
+    --line: #262a33;
+    --accent: #c98a3a;
+    --accent2: #6db4ff;
+    --tag-bg: #232732;
+    --good: #3fb95d;
+    --warn: #d49b3a;
+    --bad: #cf4d4d;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; line-height: 1.5; font-size: 15px; }
+  a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted rgba(109,180,255,0.4); }
+  a:hover { color: #9fcdff; border-bottom-color: rgba(109,180,255,0.8); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; margin: 4px 0 0; font-weight: 600; }
+  h2 { font-family: Georgia, serif; font-size: 20px; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 14px 0 4px; font-weight: 600; }
+  .meta { font-family: ui-monospace, monospace; font-size: 11px; color: var(--mute); }
+  .top3 { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 8px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 18px; border-radius: 4px; }
+  .card.early { border-left-color: var(--accent2); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; }
+  .tag { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--tag-bg); color: var(--mute); padding: 3px 8px; border-radius: 3px; }
+  .tag.t1 { color: var(--good); }
+  .tag.t2 { color: var(--warn); }
+  .tag.t3 { color: var(--mute); }
+  .tag.high { color: var(--good); }
+  .tag.med { color: var(--warn); }
+  .tag.low { color: var(--bad); }
+  .tag.early { color: var(--accent2); }
+  .why { font-style: italic; color: var(--text); border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 8px; font-size: 14px; }
+  .bucket { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 14px 18px; margin-bottom: 14px; }
+  .bucket .item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .bucket .item:last-child { border-bottom: none; }
+  .bucket .item h4 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+  .bucket .item p { margin: 4px 0 0; font-size: 13px; color: #d2d5dc; }
+  .quiet { color: var(--mute); font-style: italic; }
+  .footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--mute); font-family: ui-monospace, monospace; }
+  ul.sources { padding-left: 18px; margin: 4px 0 0; font-size: 12px; }
+  ul.sources li { margin: 2px 0; color: var(--mute); }
+  .twocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 760px) { .twocol { grid-template-columns: 1fr 1fr; } }
+
+  /* ── ask-link component (inline embed) ─────────────────────── */
+  .ask-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-left: 8px; vertical-align: middle;
+    background: transparent; border: 1px solid var(--line);
+    color: var(--mute); cursor: pointer; padding: 1px 7px;
+    border-radius: 3px; font-family: ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.06em; text-transform: lowercase;
+    opacity: 0.3;
+    transition: opacity 0.18s, color 0.15s, border-color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ask-btn::before { content: "\2197"; font-size: 11px; }
+  .item:hover .ask-btn,
+  .card:hover .ask-btn,
+  .ask-btn:focus-visible { opacity: 1; }
+  .ask-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+  .ask-btn:active { background: rgba(109,180,255,0.12); color: var(--accent2); border-color: var(--accent2); }
+  @media (hover: none) and (pointer: coarse) {
+    .ask-btn { opacity: 0.55; padding: 8px 12px; font-size: 12px; min-height: 36px; min-width: 56px; margin-left: 10px; }
+    .ask-btn::before { font-size: 13px; }
+    .item:hover .ask-btn, .card:hover .ask-btn { opacity: 1; }
+  }
+  #ask-popover {
+    position: absolute; z-index: 1000; min-width: 220px;
+    background: var(--panel2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  #ask-popover.open { display: block; }
+  #ask-popover .pop-eyebrow { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+  #ask-popover .pop-close { display: none; }
+  #ask-popover .pop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #ask-popover .pop-btn {
+    background: var(--panel); border: 1px solid var(--line); color: var(--text);
+    padding: 6px 9px; border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: inherit; text-align: left; text-decoration: none; display: block;
+    transition: border-color 0.15s, color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #ask-popover .pop-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn:active { background: rgba(109,180,255,0.12); border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn.copy { grid-column: 1 / span 2; text-align: center; border-style: dashed; }
+  #ask-popover .pop-btn.copied { color: var(--good); border-color: var(--good); }
+  #ask-backdrop { display: none; }
+  @media (max-width: 600px) {
+    #ask-popover {
+      position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+      width: 100%; min-width: 0; max-width: 100%; border-radius: 14px 14px 0 0;
+      padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.7); transform: translateY(100%);
+      transition: transform 0.2s ease-out; display: block;
+    }
+    #ask-popover.open { transform: translateY(0); }
+    #ask-popover .pop-grid { gap: 8px; }
+    #ask-popover .pop-btn { padding: 12px; font-size: 14px; min-height: 44px; }
+    #ask-popover .pop-btn.copy { padding: 14px 12px; }
+    #ask-popover .pop-close {
+      display: block; position: absolute; top: 8px; right: 12px;
+      background: transparent; border: none; color: var(--mute); font-size: 22px; cursor: pointer; padding: 6px 10px;
+    }
+    #ask-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 999; display: none; }
+    #ask-backdrop.open { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="eyebrow">AI Intelligence Brief</div>
+    <h1>2026-06-02 morning edition</h1>
+  </div>
+  <div class="meta">Window: 2026-06-01 06:00 CET to 2026-06-02 06:05 CEST<br>9 in-window items, 6 buckets, 3 highlighted. A corporate and open-model day: Anthropic files to go public, two Tier 1 open-weight drops land, and Microsoft Build opens this morning.</div>
+</header>
+
+<section>
+  <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
+  <div class="top3">
+
+    <div class="card">
+      <h3>Anthropic confidentially files a draft S-1 with the SEC, opening the path to an IPO at a roughly $965B valuation</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">Anthropic</span>
+        <span class="tag">AI Business</span>
+      </div>
+      <p>Anthropic confirmed on June 1 that it submitted a confidential draft registration statement on Form S-1 to the SEC for a proposed IPO of its common stock. Share count and price are not set, and the company noted the offering depends on SEC review and market conditions. The filing follows the recently announced roughly $65B Series H at about $965B post-money, with reporting citing Q1 revenue near $4.8B and a run rate said to pass $50B by end-July.</p>
+      <p class="meta">Source: <a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic newsroom</a> / <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC</a> / <a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">TechCrunch</a>, filed June 1, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> This is the most concrete step yet toward a public listing for the highest-valued AI lab, and it changes the disclosure regime around frontier AI economics. Once the S-1 goes public, the market gets its first audited look at gross margin, inference cost structure, and customer concentration for a pure-play frontier lab, numbers that until now have only leaked. The second-order effect is competitive pressure: reporting says OpenAI is readying its own confidential filing, so the fall could bring a dual AI-lab IPO race that forces both to compete on financial transparency, not just benchmarks. Watch for the public S-1 unredaction, the implied compute and capex commitments, and how the disclosed margin profile reprices private AI rounds.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Z.ai releases GLM-5.1, a 754B-parameter open-weights MoE that tops open models on SWE-Bench Pro at 58.4</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Open Source</span>
+        <span class="tag">Coding</span>
+      </div>
+      <p>Z.ai pushed GLM-5.1 to Hugging Face under an MIT license, a 754B-parameter mixture-of-experts model built for agentic engineering and long-horizon coding. It leads open models on SWE-Bench Pro (58.4), CyberGym (68.7), and BrowseComp (68.0), and is positioned for sustained multi-round tool use across thousands of calls. Local serving via SGLang, vLLM, and Transformers is already documented.</p>
+      <p class="meta">Source: <a href="https://huggingface.co/zai-org/GLM-5.1">Hugging Face (zai-org/GLM-5.1)</a>, weights updated June 1, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> An MIT-licensed model that posts a SWE-Bench Pro number in the high 50s narrows the gap between open weights and the closed coding leaders to a margin that procurement teams will notice. The strategic angle is that self-hostable agentic coding is now a credible alternative just as the closed tools move to metered token billing, so the cost calculus flips for any team running heavy agent loops. Watch independent SWE-Bench Pro reproductions, whether inference providers list GLM-5.1 at a sharp price, and whether coding-tool vendors quietly add it as a backend. If the benchmark holds under third-party testing, this is the open-weight release that makes "host your own coding agent" a board-level option.</div>
+    </div>
+
+    <div class="card early">
+      <h3>NVIDIA open-sources a collection of agent skills for physical AI that plug into Claude Code, Codex, and Cursor</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Agentic AI</span>
+        <span class="tag">Interop</span>
+      </div>
+      <p>NVIDIA released an open-source collection of Agent Toolkit tools and skills that let coding agents build, test, and run robotics, autonomous-vehicle, and vision-AI workflows as repeatable instructions. The skills integrate with Claude Code, OpenAI Codex, and Cursor through the open agentskills.io spec, with OSMO orchestration and robotics partners including 1X, Agility, NEURA, and Universal Robots. Code is published on GitHub.</p>
+      <p class="meta">Source: <a href="https://nvidianews.nvidia.com/news/nvidia-releases-major-collection-of-open-source-agent-tools-and-skills-for-physical-ai">NVIDIA newsroom</a> / <a href="https://github.com/NVIDIA/skills">GitHub (NVIDIA/skills)</a>, May 31, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> The headline is robotics, but the real signal is interop. A major hardware vendor shipping skills against a vendor-neutral agentskills.io spec that already runs on Claude Code, Codex, and Cursor is a bet that "skills" become portable across agents the way containers became portable across clouds. The second-order effect is that the moat shifts from the agent runtime to the skill library, which pressures every coding-agent vendor to either adopt the open spec or risk fragmentation. Watch whether the agentskills.io format gets more first-party backers, how it relates to MCP as the transport layer, and whether physical-AI skills become the wedge that pulls coding agents into the robotics stack.</div>
+    </div>
+
+  </div>
+</section>
+
+<h2>Latest by bucket</h2>
+
+<div class="bucket">
+  <div class="eyebrow">Anthropic / Claude</div>
+  <div class="item">
+    <h4>Anthropic files a confidential draft S-1 with the SEC</h4>
+    <p>Full detail in Top 3. The Anthropic-specific read: this is the first formal regulatory step toward a listing, posted directly to the newsroom under Rule 135, with no share count or price yet. No new model, API, or Claude Code release landed inside the window. Source: <a href="https://www.anthropic.com/news/confidential-draft-s1-sec">anthropic.com/news</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Reported Agent SDK billing split flagged for June 15 [verify]</h4>
+    <p>Aggregator reporting says Anthropic is splitting subscription versus API-credit billing for programmatic usage effective June 15, which would affect teams running heavy Agent SDK workloads. This is a forward-dated policy item carried by a Tier 2-3 source and not yet confirmed against a first-party Anthropic doc, so treat the date as provisional. Source: <a href="https://byteiota.com/anthropics-june-15-billing-split-what-agent-devs-must-do/">byteiota (aggregator)</a>, reported June 1-2, 2026</p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Agentic AI and MCP</div>
+  <div class="item">
+    <h4>NVIDIA open-sources physical-AI agent skills with cross-agent interop</h4>
+    <p>Covered in Top 3. The agentic angle: skills published against the open agentskills.io spec run on Claude Code, Codex, and Cursor today, pushing portable skills as a layer above the individual agent runtimes. Source: <a href="https://nvidianews.nvidia.com/news/nvidia-releases-major-collection-of-open-source-agent-tools-and-skills-for-physical-ai">NVIDIA newsroom</a>, May 31, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Microsoft Build 2026 opens June 2, positioning Windows as an AI agent platform</h4>
+    <p>Nadella's June 2 keynote at Fort Mason centered on production agents. Reported platform pieces include a Windows Agent Runtime with native agent APIs in the OS shell, Azure Agent Mesh for multi-agent orchestration, and Copilot Workspace moving out of beta. The keynote lands at the tail edge of the window, so specific feature claims are keynote-day reporting pending first-party confirmation. Source: <a href="https://windowsnews.ai/article/microsoft-build-2026-windows-becomes-the-platform-for-ai-agents.420503">Windows News</a>, June 2, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Microsoft announces a Windows Agent Store with an 85% developer revenue share</h4>
+    <p>Microsoft unveiled a curated marketplace where developers publish agent manifests, mirroring the app-store model at an 85% developer cut, with Adobe and Zoom named as launch partners. The June 2026 Insiders preview reportedly supports only text agents over structured data such as JSON, XML, and PDF, with screen-reading vision agents slated for 2027. Source: <a href="https://byteiota.com/windows-agent-store-publish-ai-agents/">byteiota (aggregator)</a>, June 2, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">No in-window MCP spec or org movement</h4>
+    <p>The Model Context Protocol blog posted nothing in-window; the latest dated post remains April 8, the release candidate locked May 21, and the final spec ships July 28. MCP runs as connective tissue through the Build announcements but had no fresh org-level news of its own. Source: <a href="https://blog.modelcontextprotocol.io/">MCP Blog</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Coding Tools</div>
+  <div class="item">
+    <h4>Microsoft reportedly unveils "Project Polaris," an in-house coding model to replace GPT-4 in Copilot by August [Tier 2]</h4>
+    <p>Build-day reporting says Microsoft revealed Project Polaris, a homegrown reasoning model for multi-file refactoring, with existing Copilot subscribers auto-migrated in August and a multi-month fallback to the classic model. The framing is explicitly aimed at clawing share back from Claude Code, and it reportedly ships with a code IP-indemnity guarantee. No first-party github.blog confirmation yet, so treat the name and August date as MEDIUM confidence. Source: <a href="https://aiweekly.co/alerts/microsoft-targets-claude-code-with-project-polaris">AI Weekly</a> / <a href="https://windowsnews.ai/article/microsoft-build-2026-homegrown-ai-models-to-power-github-copilot.420887">Windows News</a>, June 2, 2026</p>
+  </div>
+  <div class="item">
+    <h4>GitHub Copilot Workspace announced GA at Build [Tier 2]</h4>
+    <p>Copilot Workspace, GitHub's repo-aware agentic environment that proposes multi-file edits and runs tests autonomously, was announced generally available at Build, alongside code-review agent GA and next-edit-suggestions GA. Reported via keynote-day aggregators pending the github.blog changelog. Source: <a href="https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/">ChatForest recap</a>, June 2, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Update on the Copilot AI Credits switch: mitigations, no reversal</h4>
+    <p>Following the June 1 move to usage-based "AI Credits" billing (yesterday's lead), the new development is GitHub's response rather than a rollback: promotional credits across June, July, and August, org-level pooled usage so light users offset heavy ones, and a hard $0 budget cap so users cannot be charged above their subscription. Backlash continued on the announcement thread with reports of large cost jumps for agentic power users. Source: <a href="https://github.com/orgs/community/discussions/192948">GitHub community discussion</a> / <a href="https://www.how2shout.com/ai/github-copilot-token-billing-june-2026-ai-credits-developer-backlash.html">how2shout</a>, June 1-2, 2026</p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Competitor Moves</div>
+  <div class="item">
+    <h4>xAI launches Composer 2.5, an agentic coding model in Grok Build at $0.50 and $2.50 per million tokens</h4>
+    <p>xAI shipped Composer 2.5, a fast agentic coding model now live in Grok Build, positioned for long-running tasks and complex tool use, with a faster variant priced at $3.00 and $15.00 per million tokens. Secondary reporting claims it was built on the open-weight checkpoint of Moonshot's Kimi K2.5 and trained on roughly 25x more synthetic tasks than Composer 2; treat the base-model claim as unconfirmed against the official page. Source: <a href="https://x.ai/news/composer-2-5">x.ai</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Anthropic IPO filing sets up pressure on OpenAI to follow</h4>
+    <p>The competitive read on the Anthropic S-1: reporting indicates OpenAI is preparing its own confidential filing, with some outlets citing a possible fall debut above $1T. The Anthropic filing is confirmed; the OpenAI timeline and valuation specifics are reported and remain unconfirmed. Source: <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Other frontier labs quiet inside the window</h4>
+    <p>No new in-window model, pricing, or API drop from Google, Meta, Mistral, DeepSeek, Qwen, or Cohere. Recent anchors trace to May: Google I/O (May 19), Qwen 3.7 (May 20), DeepSeek V4-Pro permanent price cut (May 22). Microsoft Build, opening today, is the likely source of the next competitor model news. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Business</div>
+  <div class="item">
+    <h4>Anthropic confidential S-1 leads the IPO-prep cluster</h4>
+    <p>Covered in Top 3. Genuinely new funding rounds and M&A were quiet in the strict window; the notable raises (Anthropic $65B, Cognition $1B, Sierra $950M) all landed in late May and are not repeated here. Source: <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>SpaceX amends its S-1, reserving up to 5% of IPO shares for a directed-share program</h4>
+    <p>In a June 1 amended filing, SpaceX set aside up to 5% of the offering for employees and friends-and-family ahead of a targeted June 12 Nasdaq debut under ticker SPCX, with that tranche reportedly exempt from the standard lock-up. After its February xAI merger, SpaceX frames itself as an AI services and infrastructure company. Source: <a href="https://www.cnbc.com/2026/06/01/spacex-sets-aside-up-to-5percent-of-shares-in-ipo-for-employees-and-friends.html">CNBC</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>SpaceX flags potential significant future equity issuance to IPO investors</h4>
+    <p>The same June 1 amendment warned that SpaceX may issue substantial equity in future acquisitions, divestitures, or strategic deals, a dilution-risk disclosure that signals an active M&A posture post-IPO at a roughly $1.75T to $1.8T target valuation. Source: <a href="https://techcrunch.com/2026/06/01/spacex-says-it-may-issue-significant-equity-in-future-transactions/">TechCrunch</a>, June 1, 2026</p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Open Source and Research</div>
+  <div class="item">
+    <h4>Z.ai releases GLM-5.1, a 754B open-weights coding flagship</h4>
+    <p>Covered in Top 3. MIT-licensed, MoE, leads open models on SWE-Bench Pro (58.4), CyberGym (68.7), and BrowseComp (68.0). The freshest genuinely notable open-source development in the window. Source: <a href="https://huggingface.co/zai-org/GLM-5.1">Hugging Face</a>, June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4>OpenBMB releases VoxCPM2, a 2B tokenizer-free diffusion TTS model under Apache 2.0</h4>
+    <p>OpenBMB shipped VoxCPM2, a tokenizer-free diffusion-autoregressive text-to-speech model on a MiniCPM-4 backbone, trained on more than 2M hours and supporting 30 languages plus voice design and controllable cloning. It outputs 48kHz audio with real-time streaming and is commercial-ready. Source: <a href="https://huggingface.co/openbmb/VoxCPM2">Hugging Face</a>, updated June 1, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">arXiv quiet over the weekend overnight window</h4>
+    <p>No high-signal LLM paper, dataset, or benchmark confirmable to June 1-2 with a timestamp. Searches returned only evergreen surveys and pre-existing work, and the llm-stats open-weights tracker showed no proprietary open-source releases this week. Re-check Hugging Face Daily Papers and arXiv cs.CL around 07:30 CET. Source: <a href="https://llm-stats.com/ai-news">llm-stats research feed</a></p>
+  </div>
+</div>
+
+<h2>Rumors and Early Signals</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Project Polaris framing is single-source aggregator until a Microsoft primary lands [Tier 2, partially UNVERIFIED]</h4>
+    <p>The claim that Microsoft's homegrown model replaces GPT-4 in Copilot by August appears across several outlets but lacks a first-party github.blog or microsoft.com post. The substance (Microsoft reducing OpenAI dependency in Copilot) is plausible and consistently reported; treat the exact name, date, and "replace GPT-4" wording as unconfirmed. Source: <a href="https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/">ChatForest recap</a></p>
+  </div>
+  <div class="item">
+    <h4>OpenAI confidential IPO filing reported as imminent [timeline UNVERIFIED]</h4>
+    <p>Following Anthropic's S-1, reporting says OpenAI is readying its own confidential filing, with some outlets citing a fall listing above $1T. The directional signal, a dual AI-lab IPO race this year, is the part to track; the specific filing date and valuation are unconfirmed. Source: <a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">TechCrunch</a></p>
+  </div>
+  <div class="item">
+    <h4>xAI Composer 2.5 reportedly built on Moonshot's Kimi K2.5 checkpoint [UNVERIFIED]</h4>
+    <p>Secondary reporting says Composer 2.5 was trained from the open-weight Kimi K2.5 base. The official x.ai page does not state this, so the provenance claim should be treated as unconfirmed pending a first-party model card. Source: <a href="https://x.ai/news/composer-2-5">x.ai</a></p>
+  </div>
+</div>
+
+<h2>Upcoming, next 7 days</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Microsoft Build 2026: June 2-3, San Francisco</h4>
+    <p>Keynote opens June 2 with a Windows-as-agent-platform focus. Watch for first-party confirmation of Windows Agent Runtime, Azure Agent Mesh, the Windows Agent Store, Copilot Workspace GA, and any Project Polaris detail. The next major agentic-news catalyst.</p>
+  </div>
+  <div class="item">
+    <h4>SpaceX IPO roadshow: reported to start June 4</h4>
+    <p>Marketing reported to begin June 4, pricing as early as June 11, and a Nasdaq debut under SPCX around June 12. Watch the directed-share and dilution disclosures filed June 1. Dates are reported targets, not SpaceX-confirmed.</p>
+  </div>
+  <div class="item">
+    <h4>Anthropic Agent SDK billing split: reported for June 15 [verify]</h4>
+    <p>Aggregator reporting flags a subscription-versus-credit billing change for programmatic usage on June 15. Confirm against a first-party Anthropic doc before acting.</p>
+  </div>
+  <div class="item">
+    <h4>OpenAI confidential IPO filing: watch</h4>
+    <p>Reported as imminent following Anthropic's S-1. No confirmed date. Watch for a same-style confidential-filing announcement.</p>
+  </div>
+  <div class="item">
+    <h4>Independent GLM-5.1 benchmark reproductions: watch</h4>
+    <p>The 58.4 SWE-Bench Pro claim needs third-party reproduction. Watch for independent runs and for inference providers listing GLM-5.1 with pricing.</p>
+  </div>
+</div>
+
+<h2>Source log</h2>
+<ul class="sources">
+  <li><a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic newsroom: confidential draft S-1</a> (Tier 1)</li>
+  <li><a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC: Anthropic IPO filing</a> (Tier 2)</li>
+  <li><a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">TechCrunch: Anthropic files to go public</a> (Tier 2)</li>
+  <li><a href="https://huggingface.co/zai-org/GLM-5.1">Hugging Face: Z.ai GLM-5.1 weights</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/openbmb/VoxCPM2">Hugging Face: OpenBMB VoxCPM2</a> (Tier 1)</li>
+  <li><a href="https://nvidianews.nvidia.com/news/nvidia-releases-major-collection-of-open-source-agent-tools-and-skills-for-physical-ai">NVIDIA newsroom: open-source agent skills</a> (Tier 1)</li>
+  <li><a href="https://github.com/NVIDIA/skills">GitHub: NVIDIA/skills</a> (Tier 1)</li>
+  <li><a href="https://x.ai/news/composer-2-5">x.ai: Composer 2.5</a> (Tier 1)</li>
+  <li><a href="https://www.cnbc.com/2026/06/01/spacex-sets-aside-up-to-5percent-of-shares-in-ipo-for-employees-and-friends.html">CNBC: SpaceX directed-share program</a> (Tier 1 filing)</li>
+  <li><a href="https://techcrunch.com/2026/06/01/spacex-says-it-may-issue-significant-equity-in-future-transactions/">TechCrunch: SpaceX dilution warning</a> (Tier 1 filing)</li>
+  <li><a href="https://windowsnews.ai/article/microsoft-build-2026-windows-becomes-the-platform-for-ai-agents.420503">Windows News: Build 2026 agent platform</a> (Tier 2)</li>
+  <li><a href="https://windowsnews.ai/article/microsoft-build-2026-homegrown-ai-models-to-power-github-copilot.420887">Windows News: homegrown models for Copilot</a> (Tier 2)</li>
+  <li><a href="https://aiweekly.co/alerts/microsoft-targets-claude-code-with-project-polaris">AI Weekly: Project Polaris</a> (Tier 2)</li>
+  <li><a href="https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/">ChatForest: Build 2026 recap</a> (Tier 2)</li>
+  <li><a href="https://byteiota.com/windows-agent-store-publish-ai-agents/">byteiota: Windows Agent Store</a> (Tier 3)</li>
+  <li><a href="https://github.com/orgs/community/discussions/192948">GitHub community: Copilot AI Credits discussion</a> (Tier 1)</li>
+  <li><a href="https://www.how2shout.com/ai/github-copilot-token-billing-june-2026-ai-credits-developer-backlash.html">how2shout: Copilot billing mitigations</a> (Tier 2)</li>
+  <li><a href="https://byteiota.com/anthropics-june-15-billing-split-what-agent-devs-must-do/">byteiota: Anthropic Agent SDK billing split</a> (Tier 3, verify)</li>
+  <li><a href="https://blog.modelcontextprotocol.io/">MCP Blog (no in-window movement)</a> (Tier 1)</li>
+  <li><a href="https://llm-stats.com/llm-updates">llm-stats LLM updates (competitor sweep)</a> (Tier 2)</li>
+  <li><a href="https://llm-stats.com/ai-news">llm-stats research feed (open weights)</a> (Tier 2)</li>
+</ul>
+
+<div class="footer">
+  Generated 2026-06-02 06:05 CET. Window 2026-06-01 06:00 to 2026-06-02 06:05. Reported straight with no padding. Today's signal is corporate structure and open models, a deliberate shift off yesterday's pricing theme. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] or [verify] are excluded from Top 3.
+</div>
+
+</div>
+
+
+<script>
+/* ask-link.js v2
+   AI Brief, Ask-LLM prompt builder + provider popover
+   Self-contained inline version. ensurePopoverDOM() auto-injects
+   #ask-popover and #ask-backdrop; do NOT put them in HTML body.
+   ---------------------------------------------------------------- */
+
+(function () {
+  'use strict';
+
+  var TEMPLATES = {
+    brief: function (h, s, u, d) {
+      return [
+        'From my AI Intelligence Brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'I am tracking this for strategic and competitive implications.',
+        'What developments should I watch for next, and what are the second-order effects?'
+      ].join('\n');
+    },
+    portrait: function (h, s, u) {
+      return [
+        'I am reviewing a company intelligence brief. This section covers:',
+        '',
+        'Topic:  ' + h,
+        'Detail: ' + s,
+        'Source: ' + u,
+        '',
+        'Give me the key strategic and competitive takeaways from a B2B intelligence perspective.',
+        'What does this signal about positioning, risks, or opportunities?'
+      ].join('\n');
+    },
+    dashboard: function (h, s, u, d) {
+      return [
+        'From a live intelligence dashboard' + (d ? ' (' + d + ')' : '') + ', this signal came in:',
+        '',
+        'Signal:  ' + h,
+        'Context: ' + s,
+        'Source:  ' + u,
+        '',
+        'What immediate actions or watch items does this trigger?',
+        'What is the most likely next development?'
+      ].join('\n');
+    },
+    generic: function (h, s, u, d) {
+      return [
+        'From my intelligence brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'Please use this as context. I will ask follow-up questions.'
+      ].join('\n');
+    }
+  };
+
+  var PROVIDERS = {
+    claude:     function (p) { return 'https://claude.ai/new?q=' + encodeURIComponent(p); },
+    chatgpt:    function (p) { return 'https://chatgpt.com/?model=auto&prompt=' + encodeURIComponent(p); },
+    perplexity: function (p) { return 'https://www.perplexity.ai/search?q=' + encodeURIComponent(p); },
+    gemini:     function ()  { return 'https://gemini.google.com/app'; }
+  };
+
+  function detectContentType() {
+    var meta = document.querySelector('meta[name="ask-type"]');
+    if (meta && TEMPLATES[meta.content]) return meta.content;
+    var bodyType = document.body && document.body.dataset && document.body.dataset.askType;
+    if (bodyType && TEMPLATES[bodyType]) return bodyType;
+    var eyebrowText = [].slice.call(document.querySelectorAll('.eyebrow')).map(function (e) { return e.textContent; }).join(' ').toLowerCase();
+    var combined = ((document.title || '') + ' ' + eyebrowText).toLowerCase();
+    if (/\b(brief|intelligence brief)\b/.test(combined)) return 'brief';
+    if (/\bportrait\b/.test(combined)) return 'portrait';
+    if (/\bdashboard\b/.test(combined)) return 'dashboard';
+    return 'generic';
+  }
+
+  function detectDate() {
+    var meta = document.querySelector('meta[name="ask-date"]');
+    if (meta && meta.content) return meta.content;
+    var timeEl = document.querySelector('time[datetime]');
+    if (timeEl) return (timeEl.getAttribute('datetime') || '').slice(0, 10);
+    var sources = [document.title || ''];
+    var h1 = document.querySelector('h1');
+    if (h1) sources.push(h1.textContent);
+    for (var i = 0; i < sources.length; i++) {
+      var m = sources[i].match(/\d{4}-\d{2}-\d{2}/);
+      if (m) return m[0];
+    }
+    return '';
+  }
+
+  function cleanSummary(text) {
+    if (!text) return '';
+    return text.replace(/\s*Source:\s*.*$/i, '').trim();
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }).catch(function () { return fallbackCopy(text); });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+  }
+
+  function positionPopover(pop, btn) {
+    var rect = btn.getBoundingClientRect();
+    pop.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
+    pop.style.left = (window.scrollX + rect.left) + 'px';
+    requestAnimationFrame(function () {
+      var pr = pop.getBoundingClientRect();
+      var overflow = pr.right - window.innerWidth + 12;
+      if (overflow > 0) {
+        pop.style.left = Math.max(8, parseFloat(pop.style.left) - overflow) + 'px';
+      }
+    });
+  }
+
+  function ensurePopoverDOM() {
+    if (document.getElementById('ask-popover')) return;
+
+    var backdrop = document.createElement('div');
+    backdrop.id = 'ask-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+
+    var pop = document.createElement('div');
+    pop.id = 'ask-popover';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', 'Ask an LLM about this');
+    pop.innerHTML =
+      '<button class="pop-close" type="button" data-close aria-label="Close">&times;</button>' +
+      '<div class="pop-eyebrow">Use as LLM context</div>' +
+      '<div class="pop-grid">' +
+        '<a class="pop-btn" data-provider="claude"     target="_blank" rel="noopener">Open in Claude</a>' +
+        '<a class="pop-btn" data-provider="chatgpt"    target="_blank" rel="noopener">Open in ChatGPT</a>' +
+        '<a class="pop-btn" data-provider="perplexity" target="_blank" rel="noopener">Open in Perplexity</a>' +
+        '<a class="pop-btn" data-provider="gemini"     target="_blank" rel="noopener">Open in Gemini</a>' +
+        '<button class="pop-btn copy" type="button" data-copy>Copy prompt</button>' +
+      '</div>';
+    document.body.appendChild(pop);
+  }
+
+  function attachButtons() {
+    var containers = document.querySelectorAll('.item, .card');
+    [].forEach.call(containers, function (el) {
+      var headlineEl = el.querySelector('h3, h4');
+      if (!headlineEl) return;
+      if (headlineEl.querySelector('.ask-btn')) return;
+
+      var headline = headlineEl.textContent.trim();
+      var paragraphs = [].slice.call(el.querySelectorAll('p'));
+      var summaryP   = paragraphs.find(function (p) { return !p.classList.contains('meta'); });
+      var summary    = cleanSummary(summaryP ? summaryP.textContent : '');
+      var link = el.querySelector('a[href]');
+      var url  = link ? link.href : '';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ask-btn';
+      btn.title = 'Ask an LLM about this';
+      btn.textContent = 'ask';
+      btn.dataset.headline = headline;
+      btn.dataset.summary  = summary;
+      btn.dataset.url      = url;
+      headlineEl.appendChild(btn);
+    });
+  }
+
+  function setupPopover(template, date) {
+    var pop      = document.getElementById('ask-popover');
+    var backdrop = document.getElementById('ask-backdrop');
+    if (!pop) return;
+
+    var providerLinks = [].slice.call(pop.querySelectorAll('.pop-btn[data-provider]'));
+    var copyBtn       = pop.querySelector('[data-copy]');
+    var closeBtn      = pop.querySelector('[data-close]');
+    var activePrompt  = '';
+
+    function refreshLinks() {
+      providerLinks.forEach(function (a) {
+        var builder = PROVIDERS[a.dataset.provider];
+        a.href = builder ? builder(activePrompt) : '#';
+      });
+    }
+
+    function openPopover(btn) {
+      activePrompt = template(
+        btn.dataset.headline || '',
+        btn.dataset.summary  || '',
+        btn.dataset.url      || '',
+        date
+      );
+      refreshLinks();
+      if (copyBtn) { copyBtn.textContent = 'Copy prompt'; copyBtn.classList.remove('copied'); }
+      if (!isMobile()) {
+        pop.style.top = ''; pop.style.left = '';
+        positionPopover(pop, btn);
+      } else {
+        pop.style.top = ''; pop.style.left = '';
+        if (backdrop) backdrop.classList.add('open');
+      }
+      pop.classList.add('open');
+    }
+
+    function closePopover() {
+      pop.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.ask-btn');
+      if (btn) { e.stopPropagation(); openPopover(btn); return; }
+      if (!pop.contains(e.target)) closePopover();
+    });
+
+    providerLinks.forEach(function (a) {
+      a.addEventListener('click', function () { copyToClipboard(activePrompt); });
+    });
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        copyToClipboard(activePrompt).then(function () {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(function () { copyBtn.textContent = 'Copy prompt'; copyBtn.classList.remove('copied'); }, 2000);
+        });
+      });
+    }
+
+    if (closeBtn)  closeBtn.addEventListener('click', closePopover);
+    if (backdrop)  backdrop.addEventListener('click', closePopover);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopover(); });
+  }
+
+  function init() {
+    var contentType = detectContentType();
+    var date        = detectDate();
+    var template    = TEMPLATES[contentType] || TEMPLATES.generic;
+    ensurePopoverDOM();
+    attachButtons();
+    setupPopover(template, date);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+}());
+</script>
+  <script src="../assets/brief-enhance.js"></script>
+</body>
+</html>

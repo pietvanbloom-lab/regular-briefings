@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Brief 2026-06-12</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ask-type" content="brief">
+<style>
+  :root {
+    --bg: #0b0c0f;
+    --panel: #14161c;
+    --panel2: #1a1d25;
+    --text: #e7e9ef;
+    --mute: #8a8f9a;
+    --line: #262a33;
+    --accent: #c98a3a;
+    --accent2: #6db4ff;
+    --tag-bg: #232732;
+    --good: #3fb95d;
+    --warn: #d49b3a;
+    --bad: #cf4d4d;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; line-height: 1.5; font-size: 15px; }
+  a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted rgba(109,180,255,0.4); }
+  a:hover { color: #9fcdff; border-bottom-color: rgba(109,180,255,0.8); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; margin: 4px 0 0; font-weight: 600; }
+  h2 { font-family: Georgia, serif; font-size: 20px; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 14px 0 4px; font-weight: 600; }
+  .meta { font-family: ui-monospace, monospace; font-size: 11px; color: var(--mute); }
+  .top3 { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 8px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 18px; border-radius: 4px; }
+  .card.early { border-left-color: var(--accent2); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; }
+  .tag { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--tag-bg); color: var(--mute); padding: 3px 8px; border-radius: 3px; }
+  .tag.t1 { color: var(--good); }
+  .tag.t2 { color: var(--warn); }
+  .tag.t3 { color: var(--mute); }
+  .tag.high { color: var(--good); }
+  .tag.med { color: var(--warn); }
+  .tag.low { color: var(--bad); }
+  .tag.early { color: var(--accent2); }
+  .why { font-style: italic; color: var(--text); border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 8px; font-size: 14px; }
+  .bucket { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 14px 18px; margin-bottom: 14px; }
+  .bucket .item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .bucket .item:last-child { border-bottom: none; }
+  .bucket .item h4 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+  .bucket .item p { margin: 4px 0 0; font-size: 13px; color: #d2d5dc; }
+  .quiet { color: var(--mute); font-style: italic; }
+  .footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--mute); font-family: ui-monospace, monospace; }
+  ul.sources { padding-left: 18px; margin: 4px 0 0; font-size: 12px; }
+  ul.sources li { margin: 2px 0; color: var(--mute); }
+  .twocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 760px) { .twocol { grid-template-columns: 1fr 1fr; } }
+
+  /* ── ask-link component (inline embed) ─────────────────────── */
+  .ask-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-left: 8px; vertical-align: middle;
+    background: transparent; border: 1px solid var(--line);
+    color: var(--mute); cursor: pointer; padding: 1px 7px;
+    border-radius: 3px; font-family: ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.06em; text-transform: lowercase;
+    opacity: 0.3;
+    transition: opacity 0.18s, color 0.15s, border-color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ask-btn::before { content: "\2197"; font-size: 11px; }
+  .item:hover .ask-btn,
+  .card:hover .ask-btn,
+  .ask-btn:focus-visible { opacity: 1; }
+  .ask-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+  .ask-btn:active { background: rgba(109,180,255,0.12); color: var(--accent2); border-color: var(--accent2); }
+  @media (hover: none) and (pointer: coarse) {
+    .ask-btn { opacity: 0.55; padding: 8px 12px; font-size: 12px; min-height: 36px; min-width: 56px; margin-left: 10px; }
+    .ask-btn::before { font-size: 13px; }
+    .item:hover .ask-btn, .card:hover .ask-btn { opacity: 1; }
+  }
+  #ask-popover {
+    position: absolute; z-index: 1000; min-width: 220px;
+    background: var(--panel2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  #ask-popover.open { display: block; }
+  #ask-popover .pop-eyebrow { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+  #ask-popover .pop-close { display: none; }
+  #ask-popover .pop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #ask-popover .pop-btn {
+    background: var(--panel); border: 1px solid var(--line); color: var(--text);
+    padding: 6px 9px; border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: inherit; text-align: left; text-decoration: none; display: block;
+    transition: border-color 0.15s, color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #ask-popover .pop-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn:active { background: rgba(109,180,255,0.12); border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn.copy { grid-column: 1 / span 2; text-align: center; border-style: dashed; }
+  #ask-popover .pop-btn.copied { color: var(--good); border-color: var(--good); }
+  #ask-backdrop { display: none; }
+  @media (max-width: 600px) {
+    #ask-popover {
+      position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+      width: 100%; min-width: 0; max-width: 100%; border-radius: 14px 14px 0 0;
+      padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.7); transform: translateY(100%);
+      transition: transform 0.2s ease-out; display: block;
+    }
+    #ask-popover.open { transform: translateY(0); }
+    #ask-popover .pop-grid { gap: 8px; }
+    #ask-popover .pop-btn { padding: 12px; font-size: 14px; min-height: 44px; }
+    #ask-popover .pop-btn.copy { padding: 14px 12px; }
+    #ask-popover .pop-close {
+      display: block; position: absolute; top: 8px; right: 12px;
+      background: transparent; border: none; color: var(--mute); font-size: 22px; cursor: pointer; padding: 6px 10px;
+    }
+    #ask-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 999; display: none; }
+    #ask-backdrop.open { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="eyebrow">AI Intelligence Brief</div>
+    <h1>2026-06-12 morning edition</h1>
+  </div>
+  <div class="meta">Window: 2026-06-11 06:00 CET to 2026-06-12 06:00 CET<br>22 verified items, 6 buckets, 3 highlighted</div>
+</header>
+
+<section>
+  <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
+  <div class="top3">
+
+    <div class="card">
+      <h3>OpenAI to acquire Ona (formerly Gitpod) to run Codex agents inside the customer's own cloud</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">Competitor / M&amp;A</span>
+      </div>
+      <p>Announced June 11: OpenAI will acquire Ona, the secure cloud execution and orchestration startup formerly known as Gitpod, and fold the team into its Codex division. The technology lets Codex agents keep running in a customer-controlled cloud sandbox for hours or days after a laptop closes. OpenAI said Codex passed 5 million weekly users, up roughly 400 percent this year. Terms were not disclosed and the deal is subject to regulatory approval.</p>
+      <p class="meta">Source: <a href="https://openai.com/index/openai-to-acquire-ona/">openai.com/index/openai-to-acquire-ona</a>, corroborated by CNBC and Bloomberg same day.</p>
+      <div class="why"><strong>Why it matters:</strong> Persistent, customer-controlled execution is the piece long-running coding agents have lacked. Owning it puts OpenAI in direct control of where Codex runs and pressures rivals (Anthropic, Cursor, Replit) who still lean on third-party sandboxes. Watch the data-residency pitch to enterprises and whether Gitpod's open-source components stay open after the close.</div>
+    </div>
+
+    <div class="card">
+      <h3>Anthropic apologizes and reverses the invisible Fable 5 guardrail that silently throttled AI-research requests</h3>
+      <div class="tags">
+        <span class="tag t2">Tier 2</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">Anthropic</span>
+      </div>
+      <p>After days of backlash over a system-card policy that let Fable 5 and Mythos 5 detect requests targeting frontier LLM development and quietly limit their usefulness without telling users, Anthropic told Wired it is making those safeguards visible. The company said it made the wrong tradeoff and apologized. This is the direct resolution of the "secret sabotage" thread that ran through the week, and a substantive walk-back rather than commentary.</p>
+      <p class="meta">Source: <a href="https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/">Wired</a>, link post <a href="https://simonwillison.net/2026/Jun/11/anthropic-secret-sabotage/">simonwillison.net</a>, first seen June 11 03:45 UTC.</p>
+      <div class="why"><strong>Why it matters:</strong> A public reversal of a shipped safety policy under researcher pressure is rare, and it sets a precedent that invisible capability throttling is off the table. Watch the Fable 5 system card changelog for how the now-visible safeguard is implemented, and whether the other silent reroutes get the same treatment.</div>
+    </div>
+
+    <div class="card">
+      <h3>Jeff Bezos's Prometheus raises $12B at a $41B valuation to build an "artificial general engineer"</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag">AI Business</span>
+      </div>
+      <p>Prometheus, where Bezos is co-CEO alongside Vik Bajaj, closed a $12 billion round at roughly a $41 billion valuation. Named backers include JPMorgan, Goldman Sachs, BlackRock, DST Global, and Arch Venture, plus Bezos himself. The roughly 150-person startup, launched in late 2024, builds AI tools to speed design-to-manufacturing for physical products, and part of the cash is earmarked for acquiring more compute. Bezos and Bajaj gave their first joint public interview the same day.</p>
+      <p class="meta">Source: <a href="https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/">TechCrunch</a>, corroborated by Bloomberg, Axios, and CNBC, June 11.</p>
+      <div class="why"><strong>Why it matters:</strong> Capital is rotating from pure-LLM labs toward applied AI for physical engineering. A $41B valuation for a 150-person, sub-two-year-old company resets the bar for what a hardware-design AI play is worth. Watch which compute vendor Prometheus locks up given the stated plan to buy more, and whether this pulls talent away from frontier-model labs.</div>
+    </div>
+
+  </div>
+</section>
+
+<h2>Latest by bucket</h2>
+
+<div class="bucket">
+  <div class="eyebrow">Anthropic / Claude</div>
+  <div class="item">
+    <h4>Anthropic signs multi-year global alliance with DXC Technology to embed Claude across regulated industries</h4>
+    <p>Announced June 11: DXC will train large numbers of Claude-certified forward-deployed engineers and bring Claude into the mission-critical systems it runs for banks, airlines, and insurers, starting with insurance, modernization-as-a-service, cybersecurity, and application services. DXC says it used Claude to write more than 95 percent of the code for its new OASIS orchestration platform, which now serves over 50 customers, and it joins the Claude Partner Network. Source: <a href="https://www.anthropic.com/news/dxc-anthropic-alliance">anthropic.com/news</a></p>
+  </div>
+  <div class="item">
+    <h4>Anthropic launches Claude Corps: $150M nonprofit fellowship placing 1,000 fellows at $85K salaries</h4>
+    <p>Announced June 11: a national program that trains and places fellows full-time and in-person at U.S. nonprofits for 12 months, with an initial $150 million commitment and a first cohort of 100 starting October 2026. CodePath acts as employer of record and Social Finance leads measurement. Fellow and host applications opened June 11, with the first-cohort window closing July 17, and at least 400 nonprofits including the YMCA, IRC, RAINN, and Goodwill set to host. Source: <a href="https://www.anthropic.com/news/claude-corps">anthropic.com/news</a></p>
+  </div>
+  <div class="item">
+    <h4>Microsoft restricts internal employee use of Claude Fable 5 over the 30-day data retention policy</h4>
+    <p>Developing the story from launch week: Microsoft pulled Fable 5 from the model picker its employees use for internal GitHub Copilot while legal and compliance review Anthropic's retention terms, under which prompts and outputs are kept 30 days and flagged content up to two years. Other Claude models stay available internally because they run under zero-data-retention terms, and Microsoft still offers Fable 5 to external customers via Foundry and Copilot. Source: <a href="https://www.techradar.com/pro/microsoft-limits-employee-use-of-claude-fable-5-over-data-retention-concerns">TechRadar Pro</a> (orig. The Verge)</p>
+  </div>
+  <div class="item">
+    <h4>Claude status page logs two June 11 incidents, both resolved, none on June 12 in window</h4>
+    <p>An "Elevated errors across models" event ran 16:42 to 17:03 UTC and was resolved 17:56 UTC, and a separate "Elevated errors on Claude Opus 4.6" incident was investigated and resolved between 14:37 and 15:01 UTC. Notable as a clean ops read: short, contained, and no Fable 5-specific incidents despite launch-week load. Source: <a href="https://status.claude.com/incidents/j8ghp7dk6lym">status.claude.com</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Agentic AI and MCP</div>
+  <div class="item">
+    <h4>Quiet day at the MCP spec level: protocol and servers repos last committed June 7 to 9, no new tags</h4>
+    <p>The modelcontextprotocol spec and servers repositories saw no release in the window, the TypeScript SDK remains at 2.0.0-alpha.2 (April 1) and the Python SDK at v1.27.2 (May 29). The July 28 stateless spec deadline still looms, but no fresh 2.0 migration activity landed June 11 to 12. Source: <a href="https://github.com/modelcontextprotocol/modelcontextprotocol">github.com/modelcontextprotocol</a></p>
+  </div>
+  <div class="item">
+    <h4>OpenAI Agents SDK for Python ships v0.17.5, a maintenance patch</h4>
+    <p>Released June 11 at 04:11 UTC: the release exposes sandbox error retryability so callers can distinguish transient failures, and re-types tool-end hook results as an object. Maintenance-grade, but the only OpenAI agents-stack movement in the window. Source: <a href="https://github.com/openai/openai-agents-python/releases/tag/v0.17.5">github.com/openai/openai-agents-python</a></p>
+  </div>
+  <div class="item">
+    <h4>LangGraph CLI 0.4.29 adds HTTPS support for the local dev server</h4>
+    <p>Released June 11 at 19:53 UTC: langgraph-cli 0.4.29 lets developers pass a certfile and cert key so the langgraph dev server runs under HTTPS, useful for testing agent servers against HTTPS-only clients locally. Follows 0.4.28 the prior day, which bumped Starlette and moved type checking to ty. Source: <a href="https://github.com/langchain-ai/langgraph/releases/tag/langgraph-cli==0.4.29">github.com/langchain-ai/langgraph</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Coding Tools</div>
+  <div class="item">
+    <h4>Claude Code v2.1.173 ships June 11 as a minor fix release</h4>
+    <p>A small point release the day after the larger 2.1.172 nested-subagents update: it strips the "[1m]" suffix on Fable 5 model names since that model now ships with 1M context by default, and removes a spurious "sandbox dependencies missing" startup warning on Windows when sandbox is enabled. Bug-fix only, no new features. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
+  </div>
+  <div class="item">
+    <h4>Supply-chain worm toolkit "Miasma" leaks, targeting npm, PyPI, GitHub Actions, and AI coding-tool configs [EARLY]</h4>
+    <p>A June 11 ThreatsDay bulletin aggregates the leak (dated June 10) of a self-propagating worm toolkit that specifically targets AI coding-tool configuration files alongside classic package registries, plus the earlier Claude Code GitHub Action secret-leak path and active phishing of AI coding and email agents into forwarding cloud keys. The underlying tool patches are older, so the fresh, trackable element is the worm toolkit aimed at agent configs. Source: <a href="https://www.rescana.com/post/threatsday-bulletin-june-2026-miasma-supply-chain-worm-leak-claude-code-github-action-vulnerability-ai-agent-phishing-to">Rescana ThreatsDay</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Competitor Moves</div>
+  <div class="item">
+    <h4>xAI ships a Grok Build Plugin Marketplace with six launch partners</h4>
+    <p>Launched June 11: a built-in marketplace for the Grok Build terminal coding agent lets developers browse, install, and update plugins without leaving the terminal, with launch plugins from MongoDB, Vercel, Sentry, Chrome DevTools, Cloudflare, and Superpowers. Each remote plugin is pinned to a specific commit SHA that Grok Build re-verifies at install, and the catalog is an open repo accepting community pull requests. Source: <a href="https://x.ai/news/grok-plugin-marketplace">x.ai/news</a></p>
+  </div>
+  <div class="item">
+    <h4>Google DeepMind opens a multi-agent AI safety research funding call of up to $10M [EARLY]</h4>
+    <p>Announced June 11 with Schmidt Sciences, the Cooperative AI Foundation, and ARIA, plus support from Google.org: a technical research call for work on safety in a world where millions of agents from different organizations interact. The application deadline is August 8, 2026, with awardees expected in autumn. An early steer on where institutional multi-agent safety money is heading. Source: <a href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/">deepmind.google</a></p>
+  </div>
+  <div class="item">
+    <h4>Gemini 3.5 Pro still not generally available as of June 12, remains a limited Vertex preview</h4>
+    <p>Despite one-month-from-I/O guidance pointing at mid-June, Gemini 3.5 Pro did not ship to GA in the window. It remains in limited preview for select Vertex enterprise customers, with the 2M-token context and Deep Think reasoning still gated, while Gemini 3.5 Flash holds the GA tier. A non-event worth logging: the awaited GA did not land. Source: <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes">Vertex AI release notes</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Business</div>
+  <div class="item">
+    <h4>AI hardware names rally June 11 on Oracle's roughly $70B FY2027 data-center capex signal</h4>
+    <p>Nvidia, AMD, Dell, and Supermicro jumped after Oracle's results flagged about $70 billion of net capex planned for FY2027 and continued data-center expansion, which investors read as durable GPU and AI-server demand. The capex disclosure itself broke June 10, so the supplier-stock reaction and read-through is the June 11 development. Source: <a href="https://www.tipranks.com/news/nvda-amd-dell-smci-why-ai-hardware-and-chip-stocks-are-rising-today-june-11-2026">TipRanks</a></p>
+  </div>
+  <div class="item">
+    <h4>Keel Infrastructure closes an upsized $458M convertible note for AI data centers, still with no signed customers [EARLY]</h4>
+    <p>Keel completed a $458 million convertible senior notes deal after buyers fully exercised a $58 million option, up from an initial $350 million plan on June 4, giving flexibility for equipment deposits and to accelerate its Panther Creek, Sharon, and Moses Lake projects. The notable caution flag: the company still has no signed customers for those sites, an early stress indicator for speculative AI-buildout financing. Source: <a href="https://ts2.tech/en/keel-infrastructure-rises-in-premarket-after-closing-458-million-ai-data-center-financing/">TS2</a></p>
+  </div>
+  <div class="item">
+    <h4>SpaceX prices a record $75B IPO at $135 per share, first Nasdaq trade June 12 under SPCX</h4>
+    <p>SpaceX set a fixed $135 price, selling 555.6 million shares to raise roughly $75 billion at about a $1.77 trillion valuation, with Musk retaining over 82 percent voting control. Not an AI company, but the largest IPO in history and a live test of public-market appetite for tech megacaps right ahead of the expected Anthropic and OpenAI listings. Source: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261904604-spacex-ipo-spcx-date-set-for-june-12-175-trillion-valuation-tradingkey">TradingKey</a>, corroborated by CNBC.</p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Open Source and Research</div>
+  <div class="item">
+    <h4>llama.cpp ships tags b9594 to b9601 on June 11, adding a Vulkan contiguous-buffer fast path</h4>
+    <p>The local inference engine pushed four build tags June 11, moving past the b9568 Gemma-4 baseline. Notable merged work: a Vulkan fast path for contiguous buffer transfers, medium matmul tiles on Asahi Linux, a vocab normalizer refactor adding strip_accents and BOS handling, and server fixes for router mode and checkpoint handling, with ggml core bumped to 0.15.0. Source: <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9601">github.com/ggml-org/llama.cpp</a></p>
+  </div>
+  <div class="item">
+    <h4>Qwen team paper "Breaking Entropy Bounds" claims up to 1.8x faster async RL training [EARLY]</h4>
+    <p>Surfacing June 12 (HF 2606.12370): the paper shows multi-token-prediction acceptance is bounded by entropy fluctuation, then uses probabilistic rejection sampling and a new TV loss to push acceptance up to 95 percent, yielding up to 25 percent extra inference throughput and up to 1.8x end-to-end async RL acceleration across math, code, and agentic tasks. Source: <a href="https://huggingface.co/papers/2606.12370">huggingface.co/papers/2606.12370</a></p>
+  </div>
+  <div class="item">
+    <h4>"Redesign Mixture-of-Experts Routers with Manifold Power Iteration" tops the June 12 HF daily papers [EARLY]</h4>
+    <p>The single most-upvoted item on the June 12 HF daily papers page (HF 2606.12397) proposes rebuilding MoE routing using manifold power iteration, targeting the expert-selection step that governs efficiency in large sparse models. Architecture-level routing work directly relevant to open-weight MoE training recipes. Source: <a href="https://huggingface.co/papers/2606.12397">huggingface.co/papers/2606.12397</a></p>
+  </div>
+  <div class="item">
+    <h4>Claw-SWE-Bench releases a 350-instance, 8-language benchmark to fairly compare agent harnesses [EARLY]</h4>
+    <p>From TokenRhythm (HF 2606.12344, June 12): it addresses the gap that general agent harnesses do not fit SWE-bench's clean Docker-patch contract, adding an adapter protocol with fixed prompt, runtime budget, and patch extraction across 350 GitHub issue-resolution instances in 8 languages and 43 repos, plus an 80-instance Lite subset. Code is open. Source: <a href="https://huggingface.co/papers/2606.12344">huggingface.co/papers/2606.12344</a></p>
+  </div>
+  <div class="item">
+    <h4>Princeton's i1 keeps trending: a fully open 3B text-to-image recipe (model, code, data) [EARLY]</h4>
+    <p>i1 (HF 2606.11289) open-sources a 3B text-to-image diffusion model competitive at 1024 resolution across GenEval, DPG-Bench, PRISM, CVTG-2K, and LongText-Bench, backed by more than 300 controlled experiments and over 700K TPU-hours. Submitted June 9, it stayed on the June 12 daily list, and the notable angle is the full open release rather than weights alone. Source: <a href="https://huggingface.co/papers/2606.11289">huggingface.co/papers/2606.11289</a></p>
+  </div>
+</div>
+
+<h2>Rumors and Early Signals</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>[UNVERIFIED] Grok Imagine said to add full text-to-video generation, surfaced via a Musk demo June 11</h4>
+    <p>Aggregator and trade posts report Grok Imagine expanded from stills into full video around June 11, pointing to a Musk demo clip on X rather than an xAI press release. The official x.ai news page carries no June 11 video post, and the prior on-record milestone is Grok Imagine Video 1.5 dated May 31. Treat as a single-source social claim. Tier 3, LOW confidence. Source: <a href="https://www.basenor.com/blogs/news/5-grok-updates-you-should-know-about-right-now">Basenor</a></p>
+  </div>
+  <div class="item">
+    <h4>[UNVERIFIED] Grok V9-Medium at 1.5T parameters still unconfirmed, no new June 11 to 12 evidence</h4>
+    <p>The mid-June release rumor for a roughly 1.5T-parameter Grok carried over from earlier in the week saw no fresh confirmation on x.ai/news or release notes in this window. xAI shipped distribution and tooling moves instead (eToro, the plugin marketplace). Tier 3, LOW confidence, still a rumor. Source: <a href="https://www.openpr.com/news/4544443/xai-finishes-training-grok-v9-at-1-5-trillion-parameters-while">openpr</a></p>
+  </div>
+</div>
+
+<h2>Upcoming, next 7 days</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Gemini 3.5 Pro GA window still open</h4>
+    <p>The one-month-from-I/O guidance has now passed without a GA. A launch would reset the frontier comparison tables and land in the same news cycle as Fable 5 and the OpenAI Ona deal. Watch the Vertex AI release notes and the Gemini app.</p>
+  </div>
+  <div class="item">
+    <h4>SpaceX SPCX first trade June 12 as an IPO-window bellwether</h4>
+    <p>The largest IPO in history opens the day this brief publishes. Its reception is a read-through for the expected Anthropic and OpenAI listings. Watch first-day pricing and whether it cools or warms appetite for AI megacaps.</p>
+  </div>
+  <div class="item">
+    <h4>Anthropic Fable 5 free access ends June 22, visible-guardrail rollout pending</h4>
+    <p>The launch-week free tier closes, and Anthropic still owes the implementation of the now-visible AI-research safeguard it committed to June 11. Watch the system card changelog and anthropic.com/news for the technical follow-through and any usage stats.</p>
+  </div>
+  <div class="item">
+    <h4>MCP stateless spec final ships July 28, 2.0 SDK churn still ahead</h4>
+    <p>The window was quiet at the spec level, but the deadline is fixed. Watch modelcontextprotocol SDK repos for 2.0 migration guides and which major consumers follow Anthropic's defensive pin.</p>
+  </div>
+  <div class="item">
+    <h4>Claude Corps first-cohort applications close July 17</h4>
+    <p>Fellow and host applications opened June 11 for an October 2026 start. Watch for application volume signals and any expansion of the 400-plus host nonprofit list.</p>
+  </div>
+</div>
+
+<h2>Source log</h2>
+<ul class="sources">
+  <li><a href="https://openai.com/index/openai-to-acquire-ona/">openai.com OpenAI to acquire Ona</a> (Tier 1)</li>
+  <li><a href="https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/">Wired Anthropic guardrail reversal</a> (Tier 2)</li>
+  <li><a href="https://simonwillison.net/2026/Jun/11/anthropic-secret-sabotage/">simonwillison.net link post</a> (Tier 2)</li>
+  <li><a href="https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/">TechCrunch Prometheus $12B</a> (Tier 2, Bloomberg corroborated)</li>
+  <li><a href="https://www.anthropic.com/news/dxc-anthropic-alliance">anthropic.com DXC alliance</a> (Tier 1)</li>
+  <li><a href="https://www.anthropic.com/news/claude-corps">anthropic.com Claude Corps</a> (Tier 1)</li>
+  <li><a href="https://www.techradar.com/pro/microsoft-limits-employee-use-of-claude-fable-5-over-data-retention-concerns">TechRadar Microsoft Fable 5 restriction</a> (Tier 2, orig. The Verge)</li>
+  <li><a href="https://status.claude.com/incidents/j8ghp7dk6lym">status.claude.com June 11 incidents</a> (Tier 1)</li>
+  <li><a href="https://github.com/modelcontextprotocol/modelcontextprotocol">github.com/modelcontextprotocol</a> (Tier 1)</li>
+  <li><a href="https://github.com/openai/openai-agents-python/releases/tag/v0.17.5">openai-agents-python v0.17.5</a> (Tier 1)</li>
+  <li><a href="https://github.com/langchain-ai/langgraph/releases/tag/langgraph-cli==0.4.29">langgraph-cli 0.4.29</a> (Tier 1)</li>
+  <li><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG v2.1.173</a> (Tier 1)</li>
+  <li><a href="https://www.rescana.com/post/threatsday-bulletin-june-2026-miasma-supply-chain-worm-leak-claude-code-github-action-vulnerability-ai-agent-phishing-to">Rescana ThreatsDay Miasma</a> (Tier 2)</li>
+  <li><a href="https://x.ai/news/grok-plugin-marketplace">x.ai Grok Build Plugin Marketplace</a> (Tier 1)</li>
+  <li><a href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/">deepmind.google multi-agent safety funding</a> (Tier 1)</li>
+  <li><a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/release-notes">Vertex AI release notes (Gemini 3.5 Pro status)</a> (Tier 1)</li>
+  <li><a href="https://www.tipranks.com/news/nvda-amd-dell-smci-why-ai-hardware-and-chip-stocks-are-rising-today-june-11-2026">TipRanks AI hardware rally</a> (Tier 3)</li>
+  <li><a href="https://ts2.tech/en/keel-infrastructure-rises-in-premarket-after-closing-458-million-ai-data-center-financing/">TS2 Keel Infrastructure $458M</a> (Tier 3)</li>
+  <li><a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261904604-spacex-ipo-spcx-date-set-for-june-12-175-trillion-valuation-tradingkey">TradingKey SpaceX IPO</a> (Tier 3, CNBC corroborated)</li>
+  <li><a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9601">llama.cpp b9601</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.12370">HF papers Qwen Breaking Entropy Bounds</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.12397">HF papers MoE Routers Manifold Power Iteration</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.12344">HF papers Claw-SWE-Bench</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/2606.11289">HF papers i1 open text-to-image</a> (Tier 1)</li>
+  <li><a href="https://www.basenor.com/blogs/news/5-grok-updates-you-should-know-about-right-now">Basenor Grok Imagine video rumor</a> (Tier 3)</li>
+  <li><a href="https://www.openpr.com/news/4544443/xai-finishes-training-grok-v9-at-1-5-trillion-parameters-while">openpr Grok V9 rumor</a> (Tier 3)</li>
+</ul>
+
+<div class="footer">
+  Generated 2026-06-12 06:00 CET. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from the Top 3.
+</div>
+
+</div>
+
+
+<script>
+/* ask-link.js
+   Global Intelligence Radar: design system component
+   Context-aware Ask-LLM prompt builder + provider popover
+   ----------------------------------------------------------------
+   Usage: <script src="../shared/ask-link.js"><\/script>
+   ----------------------------------------------------------------
+
+   Content-type detection (priority order):
+   1. <meta name="ask-type" content="brief|portrait|dashboard|generic">
+   2. document.body.dataset.askType  (data-ask-type="brief")
+   3. Auto-detect from title / eyebrow text
+   4. Falls back to "generic"
+
+   Date detection (priority order):
+   1. <meta name="ask-date" content="YYYY-MM-DD">
+   2. <time datetime="..."> element
+   3. YYYY-MM-DD pattern in <title> or <h1>
+   ---------------------------------------------------------------- */
+
+(function () {
+  'use strict';
+
+  /* ── Prompt templates per content type ─────────────────────────── */
+
+  var TEMPLATES = {
+
+    brief: function (h, s, u, d) {
+      return [
+        'From my AI Intelligence Brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'I am tracking this for strategic and competitive implications.',
+        'What developments should I watch for next, and what are the second-order effects?'
+      ].join('\n');
+    },
+
+    portrait: function (h, s, u) {
+      return [
+        'I am reviewing a company intelligence brief. This section covers:',
+        '',
+        'Topic:  ' + h,
+        'Detail: ' + s,
+        'Source: ' + u,
+        '',
+        'Give me the key strategic and competitive takeaways from a B2B intelligence perspective.',
+        'What does this signal about positioning, risks, or opportunities?'
+      ].join('\n');
+    },
+
+    dashboard: function (h, s, u, d) {
+      return [
+        'From a live intelligence dashboard' + (d ? ' (' + d + ')' : '') + ', this signal came in:',
+        '',
+        'Signal:  ' + h,
+        'Context: ' + s,
+        'Source:  ' + u,
+        '',
+        'What immediate actions or watch items does this trigger?',
+        'What is the most likely next development?'
+      ].join('\n');
+    },
+
+    generic: function (h, s, u, d) {
+      return [
+        'From my intelligence brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'Please use this as context. I will ask follow-up questions.'
+      ].join('\n');
+    }
+  };
+
+  /* ── Provider URL builders ──────────────────────────────────────── */
+
+  var PROVIDERS = {
+    claude:     function (p) { return 'https://claude.ai/new?q=' + encodeURIComponent(p); },
+    chatgpt:    function (p) { return 'https://chatgpt.com/?model=auto&prompt=' + encodeURIComponent(p); },
+    perplexity: function (p) { return 'https://www.perplexity.ai/search?q=' + encodeURIComponent(p); },
+    gemini:     function ()  { return 'https://gemini.google.com/app'; }
+  };
+
+  /* ── Content-type detection ─────────────────────────────────────── */
+
+  function detectContentType() {
+    // 1. <meta name="ask-type">
+    var meta = document.querySelector('meta[name="ask-type"]');
+    if (meta && TEMPLATES[meta.content]) return meta.content;
+
+    // 2. data-ask-type on <body>
+    var bodyType = document.body && document.body.dataset && document.body.dataset.askType;
+    if (bodyType && TEMPLATES[bodyType]) return bodyType;
+
+    // 3. Auto-detect from title + eyebrow text
+    var eyebrowText = [].slice
+      .call(document.querySelectorAll('.eyebrow'))
+      .map(function (e) { return e.textContent; })
+      .join(' ')
+      .toLowerCase();
+    var combined = ((document.title || '') + ' ' + eyebrowText).toLowerCase();
+
+    if (/\b(brief|intelligence brief)\b/.test(combined)) return 'brief';
+    if (/\bportrait\b/.test(combined))                   return 'portrait';
+    if (/\bdashboard\b/.test(combined))                  return 'dashboard';
+
+    return 'generic';
+  }
+
+  /* ── Date detection ─────────────────────────────────────────────── */
+
+  function detectDate() {
+    var meta = document.querySelector('meta[name="ask-date"]');
+    if (meta && meta.content) return meta.content;
+
+    var timeEl = document.querySelector('time[datetime]');
+    if (timeEl) return (timeEl.getAttribute('datetime') || '').slice(0, 10);
+
+    var sources = [document.title || ''];
+    var h1 = document.querySelector('h1');
+    if (h1) sources.push(h1.textContent);
+
+    for (var i = 0; i < sources.length; i++) {
+      var m = sources[i].match(/\d{4}-\d{2}-\d{2}/);
+      if (m) return m[0];
+    }
+    return '';
+  }
+
+  /* ── Helpers ────────────────────────────────────────────────────── */
+
+  function cleanSummary(text) {
+    if (!text) return '';
+    return text.replace(/\s*Source:\s*.*$/i, '').trim();
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text)
+        .then(function () { return true; })
+        .catch(function () { return fallbackCopy(text); });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+  }
+
+  function positionPopover(pop, btn) {
+    var rect = btn.getBoundingClientRect();
+    pop.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
+    pop.style.left = (window.scrollX + rect.left) + 'px';
+    requestAnimationFrame(function () {
+      var pr = pop.getBoundingClientRect();
+      var overflow = pr.right - window.innerWidth + 12;
+      if (overflow > 0) {
+        pop.style.left = Math.max(8, parseFloat(pop.style.left) - overflow) + 'px';
+      }
+    });
+  }
+
+  /* ── Ensure popover + backdrop DOM exists ───────────────────────── */
+
+  function ensurePopoverDOM() {
+    if (document.getElementById('ask-popover')) return;
+
+    var backdrop = document.createElement('div');
+    backdrop.id = 'ask-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+
+    var pop = document.createElement('div');
+    pop.id = 'ask-popover';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', 'Ask an LLM about this');
+    pop.innerHTML =
+      '<button class="pop-close" type="button" data-close aria-label="Close">&times;</button>' +
+      '<div class="pop-eyebrow">Use as LLM context</div>' +
+      '<div class="pop-grid">' +
+        '<a class="pop-btn" data-provider="claude"     target="_blank" rel="noopener">Open in Claude</a>' +
+        '<a class="pop-btn" data-provider="chatgpt"    target="_blank" rel="noopener">Open in ChatGPT</a>' +
+        '<a class="pop-btn" data-provider="perplexity" target="_blank" rel="noopener">Open in Perplexity</a>' +
+        '<a class="pop-btn" data-provider="gemini"     target="_blank" rel="noopener">Open in Gemini</a>' +
+        '<button class="pop-btn copy" type="button" data-copy>Copy prompt</button>' +
+      '</div>';
+    document.body.appendChild(pop);
+  }
+
+  /* ── Attach ask buttons to all article containers ───────────────── */
+
+  function attachButtons() {
+    var containers = document.querySelectorAll('.item, .card');
+    [].forEach.call(containers, function (el) {
+      var headlineEl = el.querySelector('h3, h4');
+      if (!headlineEl) return;
+      if (headlineEl.querySelector('.ask-btn')) return; // already attached
+
+      var headline = headlineEl.textContent.trim();
+
+      var paragraphs = [].slice.call(el.querySelectorAll('p'));
+      var summaryP   = paragraphs.find(function (p) { return !p.classList.contains('meta'); });
+      var summary    = cleanSummary(summaryP ? summaryP.textContent : '');
+
+      var link = el.querySelector('a[href]');
+      var url  = link ? link.href : '';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ask-btn';
+      btn.title = 'Ask an LLM about this';
+      btn.textContent = 'ask';
+      btn.dataset.headline = headline;
+      btn.dataset.summary  = summary;
+      btn.dataset.url      = url;
+
+      headlineEl.appendChild(btn);
+    });
+  }
+
+  /* ── Wire up popover interactions ───────────────────────────────── */
+
+  function setupPopover(template, date) {
+    var pop      = document.getElementById('ask-popover');
+    var backdrop = document.getElementById('ask-backdrop');
+    if (!pop) return;
+
+    var providerLinks = [].slice.call(pop.querySelectorAll('.pop-btn[data-provider]'));
+    var copyBtn       = pop.querySelector('[data-copy]');
+    var closeBtn      = pop.querySelector('[data-close]');
+    var activePrompt  = '';
+
+    function refreshLinks() {
+      providerLinks.forEach(function (a) {
+        var builder = PROVIDERS[a.dataset.provider];
+        a.href = builder ? builder(activePrompt) : '#';
+      });
+    }
+
+    function openPopover(btn) {
+      activePrompt = template(
+        btn.dataset.headline || '',
+        btn.dataset.summary  || '',
+        btn.dataset.url      || '',
+        date
+      );
+      refreshLinks();
+      if (copyBtn) {
+        copyBtn.textContent = 'Copy prompt';
+        copyBtn.classList.remove('copied');
+      }
+      if (!isMobile()) {
+        pop.style.top = ''; pop.style.left = '';
+        positionPopover(pop, btn);
+      } else {
+        pop.style.top = ''; pop.style.left = '';
+        if (backdrop) backdrop.classList.add('open');
+      }
+      pop.classList.add('open');
+    }
+
+    function closePopover() {
+      pop.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+
+    /* Click: open button, close on outside click */
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.ask-btn');
+      if (btn) { e.stopPropagation(); openPopover(btn); return; }
+      if (!pop.contains(e.target)) closePopover();
+    });
+
+    /* Copy prompt to clipboard whenever a provider link is clicked */
+    providerLinks.forEach(function (a) {
+      a.addEventListener('click', function () { copyToClipboard(activePrompt); });
+    });
+
+    /* Copy button */
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        copyToClipboard(activePrompt).then(function () {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(function () {
+            copyBtn.textContent = 'Copy prompt';
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        });
+      });
+    }
+
+    /* Close button (mobile sheet) + backdrop */
+    if (closeBtn)  closeBtn.addEventListener('click', closePopover);
+    if (backdrop)  backdrop.addEventListener('click', closePopover);
+
+    /* Escape key */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closePopover();
+    });
+  }
+
+  /* ── Bootstrap ──────────────────────────────────────────────────── */
+
+  function init() {
+    var contentType = detectContentType();
+    var date        = detectDate();
+    var template    = TEMPLATES[contentType] || TEMPLATES.generic;
+
+    ensurePopoverDOM();
+    attachButtons();
+    setupPopover(template, date);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+}());
+
+</script>
+  <script src="../assets/brief-enhance.js"></script>
+</body>
+</html>

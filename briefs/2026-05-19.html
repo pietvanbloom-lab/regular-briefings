@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Brief 2026-05-19</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ask-type" content="brief">
+<style>
+  :root {
+    --bg: #0b0c0f;
+    --panel: #14161c;
+    --panel2: #1a1d25;
+    --text: #e7e9ef;
+    --mute: #8a8f9a;
+    --line: #262a33;
+    --accent: #c98a3a;
+    --accent2: #6db4ff;
+    --tag-bg: #232732;
+    --good: #3fb95d;
+    --warn: #d49b3a;
+    --bad: #cf4d4d;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; line-height: 1.5; font-size: 15px; }
+  a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted rgba(109,180,255,0.4); }
+  a:hover { color: #9fcdff; border-bottom-color: rgba(109,180,255,0.8); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; margin: 4px 0 0; font-weight: 600; }
+  h2 { font-family: Georgia, serif; font-size: 20px; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 14px 0 4px; font-weight: 600; }
+  .meta { font-family: ui-monospace, monospace; font-size: 11px; color: var(--mute); }
+  .top3 { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 8px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 18px; border-radius: 4px; }
+  .card.early { border-left-color: var(--accent2); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; }
+  .tag { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--tag-bg); color: var(--mute); padding: 3px 8px; border-radius: 3px; }
+  .tag.t1 { color: var(--good); }
+  .tag.t2 { color: var(--warn); }
+  .tag.t3 { color: var(--mute); }
+  .tag.high { color: var(--good); }
+  .tag.med { color: var(--warn); }
+  .tag.low { color: var(--bad); }
+  .tag.early { color: var(--accent2); }
+  .why { font-style: italic; color: var(--text); border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 8px; font-size: 14px; }
+  .bucket { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 14px 18px; margin-bottom: 14px; }
+  .bucket .item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .bucket .item:last-child { border-bottom: none; }
+  .bucket .item h4 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+  .bucket .item p { margin: 4px 0 0; font-size: 13px; color: #d2d5dc; }
+  .quiet { color: var(--mute); font-style: italic; }
+  .footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--mute); font-family: ui-monospace, monospace; }
+  ul.sources { padding-left: 18px; margin: 4px 0 0; font-size: 12px; }
+  ul.sources li { margin: 2px 0; color: var(--mute); }
+  .twocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 760px) { .twocol { grid-template-columns: 1fr 1fr; } }
+
+  /* ask-link component (inline embed) */
+  .ask-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-left: 8px; vertical-align: middle;
+    background: transparent; border: 1px solid var(--line);
+    color: var(--mute); cursor: pointer; padding: 1px 7px;
+    border-radius: 3px; font-family: ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.06em; text-transform: lowercase;
+    opacity: 0.3;
+    transition: opacity 0.18s, color 0.15s, border-color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ask-btn::before { content: "\2197"; font-size: 11px; }
+  .item:hover .ask-btn,
+  .card:hover .ask-btn,
+  .ask-btn:focus-visible { opacity: 1; }
+  .ask-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+  .ask-btn:active { background: rgba(109,180,255,0.12); color: var(--accent2); border-color: var(--accent2); }
+  @media (hover: none) and (pointer: coarse) {
+    .ask-btn { opacity: 0.55; padding: 8px 12px; font-size: 12px; min-height: 36px; min-width: 56px; margin-left: 10px; }
+    .ask-btn::before { font-size: 13px; }
+    .item:hover .ask-btn, .card:hover .ask-btn { opacity: 1; }
+  }
+  #ask-popover {
+    position: absolute; z-index: 1000; min-width: 220px;
+    background: var(--panel2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  #ask-popover.open { display: block; }
+  #ask-popover .pop-eyebrow { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+  #ask-popover .pop-close { display: none; }
+  #ask-popover .pop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #ask-popover .pop-btn {
+    background: var(--panel); border: 1px solid var(--line); color: var(--text);
+    padding: 6px 9px; border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: inherit; text-align: left; text-decoration: none; display: block;
+    transition: border-color 0.15s, color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #ask-popover .pop-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn:active { background: rgba(109,180,255,0.12); border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn.copy { grid-column: 1 / span 2; text-align: center; border-style: dashed; }
+  #ask-popover .pop-btn.copied { color: var(--good); border-color: var(--good); }
+  #ask-backdrop { display: none; }
+  @media (max-width: 600px) {
+    #ask-popover {
+      position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+      width: 100%; min-width: 0; max-width: 100%; border-radius: 14px 14px 0 0;
+      padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.7); transform: translateY(100%);
+      transition: transform 0.2s ease-out; display: block;
+    }
+    #ask-popover.open { transform: translateY(0); }
+    #ask-popover .pop-grid { gap: 8px; }
+    #ask-popover .pop-btn { padding: 12px; font-size: 14px; min-height: 44px; }
+    #ask-popover .pop-btn.copy { padding: 14px 12px; }
+    #ask-popover .pop-close {
+      display: block; position: absolute; top: 8px; right: 12px;
+      background: transparent; border: none; color: var(--mute); font-size: 22px; cursor: pointer; padding: 6px 10px;
+    }
+    #ask-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 999; display: none; }
+    #ask-backdrop.open { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="eyebrow">AI Intelligence Brief</div>
+    <h1>2026-05-19 morning edition</h1>
+  </div>
+  <div class="meta">Window: 2026-05-18 06:00 CET to 2026-05-19 06:00 CET<br>26 verified items, 6 buckets, 3 highlighted</div>
+</header>
+
+<section>
+  <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
+  <div class="top3">
+
+    <div class="card early">
+      <h3>Anthropic publicly names 8 secondary platforms as unauthorized, voids SPV transfers, PreStocks token drops 36 percent on the day</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">AI Business</span>
+      </div>
+      <p>On May 18 Anthropic published a notice declaring any SPV that buys its stock through new offerings as unauthorized, naming Hiive, Forge Global, Open Door Partners, Unicorns Exchange, Pachamama Capital, Sydecar, Lionheart Ventures, and Upmarket. The Anthropic-tracking token on PreStocks fell from $1,400 to $900 inside the session.</p>
+      <p class="meta">Source: <a href="https://www.bloomberg.com/news/articles/2026-05-18/anthropic-sends-jolt-through-the-market-for-buying-shares-in-the-hottest-pre-ipo-startups">bloomberg.com / Anthropic SPV jolt</a> and <a href="https://support.claude.com/en/articles/13704655-unauthorized-anthropic-stock-sales-and-investment-scams">support.claude.com / unauthorized stock sales</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> First time a frontier lab has actively shut down its own secondary market with a named-and-shamed list. Sets a template OpenAI, xAI, and Mistral will copy ahead of any IPO window. Expect: secondary platforms scrambling to substitute "exposure tokens" with derivative wrappers, family-office allocators rotating into the next-tier names (Cohere, Reka, Suno) where SPVs still clear, and the $30B Anthropic follow-on round timing accelerating since a controlled primary issuance is the only legal path left in.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Cursor ships Composer 2.5 on a Kimi K2.5 base, claims Claude Opus 4.7 parity at one tenth the token cost</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Coding tools</span>
+      </div>
+      <p>Composer 2.5 shipped May 18, trained with 25x more synthetic coding tasks on top of Moonshot's open-weights Kimi K2.5. Reported scores: 79.8 percent on SWE-Bench Multilingual and 63.2 percent on CursorBench v3.1. Standard tier pricing $0.50 in / $2.50 out per million tokens vs Cursor Fast at $3 / $15.</p>
+      <p class="meta">Source: <a href="https://winbuzzer.com/2026/05/18/cursor-releases-composer-25-saying-its-better-at-s-xcxwbn/">winbuzzer.com / Composer 2.5</a> and <a href="https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/">the-decoder.com / Composer 2.5 vs Opus and GPT-5.5</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> First flagship from a Western coding-tools company built on a Chinese open-weights base that matches frontier closed models on coding. The model-supply-chain question stops being abstract: every coding tool now has a real choice between paying Anthropic or OpenAI gross margins and post-training a Kimi or DeepSeek base for 90 percent of the quality. Watch Windsurf, Codeium, Continue, and Aider for similar pivots inside 60 days, and watch Anthropic and OpenAI for "coding-tool" tier discounts to defend the API account.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Dell makes Codex, Gemini, and Palantir Foundry run on-prem the same day OpenAI publishes the Dell partnership page</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Enterprise AI</span>
+      </div>
+      <p>At Dell Technologies World on May 18 Dell launched Deskside Agentic AI workstations and PowerRack, and disclosed that OpenAI Codex, Google Gemini (via Google Distributed Cloud), and Palantir Foundry will run on Dell hardware on-premises. OpenAI's own newsroom published a matching Codex Enterprise partnership page the same day, citing 4M+ weekly Codex developers.</p>
+      <p class="meta">Source: <a href="https://siliconangle.com/2026/05/18/dell-targets-enterprise-ai-execution-gap-local-agentic-ai-systems-integrated-ai-infrastructure/">siliconangle.com / Dell on-prem agentic AI</a> and <a href="https://openai.com/index/dell-codex-enterprise-partnership/">openai.com / Dell Codex enterprise</a></p>
+      <div class="why"><strong>Why this matters before others see it:</strong> OpenAI breaking its cloud-only stance for Codex is the first crack in the SaaS-only frontier-AI distribution model. Regulated-vertical buyers (banks, hospitals, defence primes, pharma) now have a credible "we run our own copy" answer to internal AI governance. Second-order moves to watch: Anthropic will be pressed by enterprise channels for a parity on-prem Claude Code SKU at the same Dell partnership tier, hyperscalers lose the "you cannot get Codex outside Azure" lock-in pitch, and a fresh round of $25M-$50M deals will land in Q3 for "private Codex" engagements that previously flowed through Microsoft.</div>
+    </div>
+
+  </div>
+</section>
+
+<h2>Latest by bucket</h2>
+
+<div class="bucket">
+  <div class="eyebrow">Anthropic / Claude</div>
+  <div class="item">
+    <h4>Code with Claude London Day 1 livestream opens today, three-track agenda confirmed</h4>
+    <p>Conference runs May 19 to 20 in London. Opening keynote led by CPO Ami Vora, Claude Code head Boris Cherny, and Claude Platform head Angela Jiang. Research, Claude Platform, and Claude Code tracks confirmed. Free livestream during the window-closing morning. Source: <a href="https://claude.com/code-with-claude/london">claude.com / code-with-claude London</a></p>
+  </div>
+  <div class="item">
+    <h4>Anthropic notice voids unauthorized SPV transfers, names 8 platforms (see Top 3)</h4>
+    <p>Anthropic published a formal support article and matching legal notice on May 18 declaring SPV-routed share purchases unauthorized. Hiive new offerings explicitly listed, Forge Global new offerings listed, plus six smaller venues. Source: <a href="https://support.claude.com/en/articles/13704655-unauthorized-anthropic-stock-sales-and-investment-scams">support.claude.com / unauthorized sales</a></p>
+  </div>
+  <div class="item">
+    <h4>Two Claude production incidents inside the window: Haiku 4.5 1h20m, Opus 4.7 31 minutes</h4>
+    <p>Haiku 4.5 elevated errors 06:13 to 07:33 UTC on May 18, Opus 4.7 elevated errors 21:47 to 22:18 UTC the same day. Both resolved. Reliability data point for the new Opus 4.7 default. Source: <a href="https://status.claude.com/history">status.claude.com / history</a></p>
+  </div>
+  <div class="item">
+    <h4>SandboxAQ wires its Large Quantitative Models into Claude via MCP</h4>
+    <p>Press release dated May 18: SandboxAQ exposes its LQM platform to Claude through plain-English prompts, targeted at drug discovery and materials science workflows. Indicates MCP traction outside SaaS productivity into deep-tech. Source: <a href="https://www.prnewswire.com/news-releases/sandboxaq-integrates-its-quantitative-ai-models-with-anthropics-claude-via-mcp-302773174.html">prnewswire.com / SandboxAQ + Claude MCP</a></p>
+  </div>
+  <div class="item">
+    <h4>Anthropic $30B follow-on at $900B+ valuation still in talks, not closed inside the window</h4>
+    <p>Bloomberg May 12 reporting: Greenoaks, Sequoia, Dragoneer, Altimeter lined up. No term sheet signed as of May 18. The SPV-crackdown move above suggests the issuance window is being cleared deliberately. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com / Anthropic $30B</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Agentic AI and MCP</div>
+  <div class="item">
+    <h4>OpenAI Agents SDK reaches GA on TypeScript, parity with the April 15 Python release</h4>
+    <p>Released May 19. Same model-native harness: sandbox execution, handoffs, guardrails, sessions, tracing. Standard API pricing. Closes a six-week JavaScript-ecosystem gap. Source: <a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">openai.com / Agents SDK TS GA</a></p>
+  </div>
+  <div class="item">
+    <h4>MCP Inspector v6.0.0 cuts a major version bump, C# and Go SDKs ship same-day updates</h4>
+    <p>Release dated May 18 in the modelcontextprotocol GitHub org. Notes are sparse but the major bump implies a breaking change in the inspector visual-testing tool. Watch for a spec change RFC in the next few days. Source: <a href="https://github.com/modelcontextprotocol/inspector/releases">github.com / mcp inspector releases</a></p>
+  </div>
+  <div class="item">
+    <h4>Claude Code release adds terminalSequence hook output and workload identity federation env</h4>
+    <p>Release inside the window adds the `terminalSequence` hook payload, `CLAUDE_CODE_PLUGIN_PREFER_HTTPS`, `ANTHROPIC_WORKSPACE_ID` for workload identity federation, `claude project purge`, amber-spinner past 10s thinking, MCP OAuth refresh-token race fix, parallel-tool-call malformed-name hang fix in the Agent SDK. Source: <a href="https://releasebot.io/updates/anthropic/claude-code">releasebot.io / claude-code updates</a></p>
+  </div>
+  <div class="item">
+    <h4>BenchLM May 2026 agentic weighted ranking: Claude Mythos Preview 100, GPT-5.5 98.3, Gemini 3 Pro Deep Think 95.4</h4>
+    <p>Blended score across Terminal-Bench 2.0, BrowseComp, and OSWorld-Verified at a 22 percent agentic weight. OSWorld component: Claude Mythos 79.6 vs GPT-5.4 75.0 vs Opus 4.6 72.7. Source: <a href="https://benchlm.ai/agentic">benchlm.ai / agentic</a></p>
+  </div>
+  <div class="item">
+    <h4>Notion positions its workspace as a hub for external coding agents, claims 1M+ Custom Agents built since February</h4>
+    <p>External Agent API plus Custom Agents now route Claude Code, Cursor, Codex, and Decagon as first-party citizens. Reinforces last week's Notion 3.5 launch as a serious distribution channel for agent vendors. Source: <a href="https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/">techcrunch.com / Notion agent hub</a></p>
+  </div>
+  <div class="item">
+    <h4>LangGraph 1.2 adds per-node timeouts, DeltaChannel checkpoints, streaming v3</h4>
+    <p>Released May 11 to 12. Durable error recovery, graceful shutdown, content-block-centric streaming API, typed per-channel projections, beta DeltaChannel for incremental long-thread checkpoints. Material for any agent operator on LangChain. Source: <a href="https://github.com/langchain-ai/langgraph/releases">github.com / langgraph releases</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Coding Tools</div>
+  <div class="item">
+    <h4>Cursor Composer 2.5 on Kimi K2.5 base claims Opus 4.7 parity at 1/10 cost (see Top 3)</h4>
+    <p>SWE-Bench Multilingual 79.8, CursorBench v3.1 63.2. Pricing $0.50 / $2.50 per M tokens. First Western coding tool to ship a flagship model on a Chinese open-weights base. Source: <a href="https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/">the-decoder.com / Composer 2.5</a></p>
+  </div>
+  <div class="item">
+    <h4>GitHub Copilot CLI remote control hits GA across mobile, web, VS Code, JetBrains</h4>
+    <p>Announced May 18: drive Copilot CLI sessions from GitHub Mobile, github.com, VS Code, JetBrains, including non-GitHub repos and unassociated directories. Flags `copilot --remote` or `/remote on`. Pairs with the Copilot desktop preview that landed May 14. Source: <a href="https://github.blog/changelog/2026-05-18-remote-control-for-copilot-cli-sessions-now-generally-available-on-mobile-web-and-vs-code/">github.blog / Copilot CLI remote GA</a></p>
+  </div>
+  <div class="item">
+    <h4>GitHub Copilot Spaces API hits GA for enterprises managing context at scale</h4>
+    <p>Programmatic CRUD on Copilot Spaces. Foundation for inserting Spaces into existing IT automation, ticketing, or onboarding tooling. Source: <a href="https://github.blog/changelog/2026-05-18-copilot-spaces-api-now-generally-available/">github.blog / Copilot Spaces API</a></p>
+  </div>
+  <div class="item">
+    <h4>Copilot cloud agent ships one-click fixes for failing GitHub Actions jobs</h4>
+    <p>Investigates a failed Actions job, pushes a fix to the branch, tags the original author for review. Live for Copilot Business and Enterprise on May 18. Reduces CI debugging to a single click for the majority of common breakages. Source: <a href="https://github.blog/changelog/2026-05-18-one-click-fixes-for-failing-actions-with-copilot-cloud-agent/">github.blog / Copilot Actions fixes</a></p>
+  </div>
+  <div class="item">
+    <h4>OpenAI Codex changelog drops plugin sharing, headless remote-control entrypoint, Bedrock login</h4>
+    <p>Codex update around May 18 adds richer plugin sharing, a `codex remote-control` entrypoint for headless app-server use, app-server thread paging, AWS Bedrock login, and Python SDK migration to openai-codex with concurrent turn routing. Source: <a href="https://developers.openai.com/codex/changelog">developers.openai.com / codex changelog</a></p>
+  </div>
+  <div class="item">
+    <h4>New REST API in public preview lets admins audit Copilot cloud agent config per repo</h4>
+    <p>Returns MCP server config, enabled tools, Actions workflow policy, firewall rules. Becomes the basis for any meaningful security review of a Copilot-enabled monorepo. Source: <a href="https://github.blog/changelog/2026-05-18-audit-repository-copilot-cloud-agent-configuration-via-the-rest-api/">github.blog / Copilot agent audit API</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Competitor Moves</div>
+  <div class="item">
+    <h4>Google I/O 2026 keynote opens today 19:00 CET with Gemini Omni and 3.2 Flash leaks staged</h4>
+    <p>Two-day program runs May 19 to 20. Android XR glasses partner reveal (Samsung Galaxy Glasses, Warby Parker, Gentle Monster, XREAL), Project Aura, and Googlebook with "Magic Pointer" all confirmed. "Powered by Omni" UI string found in Gemini video tab earlier this month points to a unified text/image/video model reveal. Source: <a href="https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news">androidcentral.com / I/O 2026 live blog</a></p>
+  </div>
+  <div class="item">
+    <h4>Musk teases new Grok build partially trained on Colossus 2 gigawatt cluster</h4>
+    <p>X post May 18 of a two-word "Grok upgrades" message with confirmation the build used the Colossus 2 GW cluster. No model card or pricing. Framed as a precursor to Grok 5 reportedly targeting roughly 10T parameters. Source: <a href="https://www.basenor.com/blogs/news/grok-gets-major-upgrades-5-things-to-know-right-now">basenor.com / Grok upgrades</a></p>
+  </div>
+  <div class="item">
+    <h4>Meta starts 8,000-person layoff tomorrow (May 20), reorgs into "pods" under Wang</h4>
+    <p>CNBC confirms cuts begin May 20, with 6,000 open requisitions cancelled on top, taking effective headcount reduction to ~14,000. Frees capex for the $115B to $135B 2026 AI infra budget including the $27B Nebius Louisiana JV. Source: <a href="https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html">cnbc.com / Meta layoffs Wang</a></p>
+  </div>
+  <div class="item">
+    <h4>Mistral Medium 3.5 holds the EU-friendly coding lead at 77.6 percent SWE-Bench Verified</h4>
+    <p>Released May 1: 128B dense, 256K context, open weights. Bundles Medium 3.1, Magistral reasoning, and Devstral 2 into one weight set with per-request reasoning_effort. API at $1.50 / $7.50 per M. Vibe remote agents + Le Chat Enterprise extend the stack. Source: <a href="https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/">marktechpost.com / Mistral Medium 3.5</a></p>
+  </div>
+  <div class="item">
+    <h4>DeepSeek V4 Pro and V4 Flash remain the price-performance floor through the window</h4>
+    <p>V4 Pro 1.6T total / 49B active, V4 Flash 284B / 13B active, both MIT-licensed with 1M context. Pricing $0.20/$0.40 (Flash) and $2.40/$4.80 (Pro) per M. Continues to set the ceiling for what any vendor can charge for non-frontier-tier coding and reasoning. Source: <a href="https://fortune.com/2026/04/24/deepseek-v4-ai-model-price-performance-china-open-source/">fortune.com / DeepSeek V4</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Business</div>
+  <div class="item">
+    <h4>Sigma closes $80M Series E at $3B valuation led by Princeville, doubles previous mark</h4>
+    <p>Announced May 18. New backers: Databricks Ventures, ServiceNow Ventures, Workday Ventures. ARR $200M+ at 100%+ YoY. 2,000+ customers including JPMorgan Chase, AMD, Duolingo. Pivots positioning to "agentic analytics" on cloud warehouses. Source: <a href="https://siliconangle.com/2026/05/18/sigma-computing-seals-80m-funding-round-pivots-toward-agentic-analytics/">siliconangle.com / Sigma $80M</a></p>
+  </div>
+  <div class="item">
+    <h4>Dust raises $40M Series B led by Sequoia and Abstract for multiplayer enterprise AI</h4>
+    <p>Paris-based Dust closes Series B with Snowflake and Datadog also in. Cumulative funding now above $60M. 3,000+ customer orgs, 300,000 deployed agents, 70 percent weekly active usage, zero churn in 2025 per the disclosure. Source: <a href="https://techfundingnews.com/dust-40m-series-b-collaborai-ai-enterprise-workspaces-sequoia/">techfundingnews.com / Dust Series B</a></p>
+  </div>
+  <div class="item">
+    <h4>Dell on-prem agentic AI deal with OpenAI, Google, Palantir (see Top 3)</h4>
+    <p>Dell Deskside Agentic AI workstations + PowerRack launched May 18. Codex, Gemini (via Google Distributed Cloud), Foundry all running on-prem on Dell. 5,000 cumulative AI Factory customers after adding 1,000 net-new last quarter. Source: <a href="https://siliconangle.com/2026/05/18/dell-targets-enterprise-ai-execution-gap-local-agentic-ai-systems-integrated-ai-infrastructure/">siliconangle.com / Dell on-prem</a></p>
+  </div>
+  <div class="item">
+    <h4>Searchable raises $14M Series A at $85M for "AI SEO" (GEO) analytics on ChatGPT, Gemini, Claude, Perplexity</h4>
+    <p>Headline-led round on May 18. Category-defining play in generative-engine-optimisation. First properly-funded vendor pitching brands on measuring share-of-voice inside LLM answers. Source: <a href="https://techstartups.com/2026/05/18/top-startup-and-tech-funding-news-may-18-2025/">techstartups.com / Searchable</a></p>
+  </div>
+  <div class="item">
+    <h4>EU AI Act Digital Omnibus defers high-risk obligations to December 2027, adds new prohibitions</h4>
+    <p>Provisional Council/Parliament/Commission agreement on May 7: Annex III high-risk obligations pushed from August 2026 to December 2027, synthetic-content transparency moves to December 2026, new prohibitions on non-consensual intimate AI content and AI-CSAM effective December 2, 2026. Formal adoption expected June, publication July. Source: <a href="https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/">insideprivacy.com / EU AI Act timeline</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Open Source and Research</div>
+  <div class="item">
+    <h4>llama.cpp ships b9222 with HVX-vectorised PAD kernel for Snapdragon NPU backend</h4>
+    <p>Build b9222 published May 19 00:29 UTC, macOS x64 binary attached. Continues the rolling Hexagon HTP enablement on top of b9221 which added the HVX `GGML_OP_PAD` kernel. Local-inference on Snapdragon X / Snapdragon 8 Gen 4 is getting materially faster month over month. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">github.com / llama.cpp releases</a></p>
+  </div>
+  <div class="item">
+    <h4>llama.cpp prebuilt Windows binaries now span CUDA 13.1, Vulkan, HIP, SYCL</h4>
+    <p>Writeup dated May 18 documents the b9196 cycle's expanded backend matrix in the official prebuilt Windows binaries. Setup friction drops for AMD ROCm/Vulkan and Intel SYCL users running local GGUF inference. Source: <a href="https://www.knightli.com/en/2026/05/18/llama-cpp-windows-cuda-vulkan-gguf/">knightli.com / llama.cpp Windows</a></p>
+  </div>
+  <div class="item">
+    <h4>vLLM 0.21.0 stable: hybrid memory allocator, speculative decoding with thinking budget, MiMo-V2.5 and Moondream3 support</h4>
+    <p>Stable May 15, supersedes 0.20.x line. Adds BF16 and MXFP8 all-to-all on FlashInfer, KV offloading, new model arches (MiMo-V2.5, Laguna XS.2, Moondream3). ROCm 7.2.2 now required. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com / vllm releases</a></p>
+  </div>
+  <div class="item">
+    <h4>HuggingFace papers May 18 highlights: SANA-Video constant-memory KV, MinerU2.5 doc parser, Kronos K-line foundation model</h4>
+    <p>Top of the May 18 daily papers feed: SANA-Video (small linear-attention diffusion video model with constant-memory KV cache, transferable trick), MinerU2.5 (1.2B vision-language coarse-to-fine document parser), Kronos (decoder-only foundation model for financial K-line sequences, AAAI 2026 accepted), ARIS adversarial research harness, AI-Trader live multi-market financial agent benchmark. Source: <a href="https://huggingface.co/papers/date/2026-05-18">huggingface.co / papers 2026-05-18</a></p>
+  </div>
+  <div class="item">
+    <h4>arXiv 2026-05-18 cs.AI feed: agentic safety topology paper picks up traction</h4>
+    <p>"Position: Safety and Fairness in Agentic AI Depend on Interaction Topology, Not on Model Scale or Alignment" (Bajaj et al., 18 pages) is the most-discussed position paper from the Monday-night drop. Aligns with the broader shift from model-level safety to system-level scaffolding analysis. Source: <a href="https://arxiv.org/list/cs.AI/recent">arxiv.org / cs.AI recent</a></p>
+  </div>
+</div>
+
+<h2>Rumors and Early Signals</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Anthropic $30B follow-on round at $900B+ valuation could close this week [Tier 2, MEDIUM]</h4>
+    <p>Bloomberg May 12 sourcing pointed to closure "as soon as this month." The May 18 SPV crackdown is consistent with clearing the deck for a primary issuance announcement inside the next 5 trading days. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com / Anthropic $30B</a></p>
+  </div>
+  <div class="item">
+    <h4>Google "Gemini Omni" unified text/image/video model expected at I/O keynote today [Tier 2, MEDIUM]</h4>
+    <p>UI string "Powered by Omni" was found inside Gemini's video tab earlier this month, sitting next to internal codename "Toucan" for Veo 3.1. Watch the I/O keynote at 19:00 CET. Source: <a href="https://www.aixploria.com/en/ai-radar/google-gemini-omni-leak-video-model-io-2026/">aixploria.com / Gemini Omni leak</a></p>
+  </div>
+  <div class="item">
+    <h4>Gemini 3.2 Flash leak: sub-200ms latency target at materially lower cost [Tier 3, LOW]</h4>
+    <p>Codenames Ajax, Hercules, Hector, Orpheus circulating on LM Arena and Google AI Studio. If real and announced today, it directly contests DeepSeek V4 Flash on cost while keeping Google's distribution edge. Source: <a href="https://nokiapoweruser.com/gemini-3-2-flash-leak-fast-cheap-ai-google-io-2026/">nokiapoweruser.com / Gemini 3.2 Flash leak</a></p>
+  </div>
+  <div class="item">
+    <h4>Code with Claude London Day 1 keynote likely to ship a fresh Claude Code or platform feature [Tier 1, MEDIUM]</h4>
+    <p>Pattern from the May US edition: at least one product surprise dropped during the opening keynote. Track claude.com/news and the claude-code CHANGELOG within 4 hours of the livestream. Source: <a href="https://claude.com/code-with-claude/london">claude.com / code-with-claude London</a></p>
+  </div>
+</div>
+
+<h2>Upcoming, next 7 days</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Tuesday May 19, 19:00 CET: Google I/O 2026 keynote</h4>
+    <p>Pre-briefings staged Gemini 4 / 3.1 Ultra, Project Astra, TPU v7 in Vertex, Android XR glasses, Googlebook. The single largest competitive read for the rest of the week.</p>
+  </div>
+  <div class="item">
+    <h4>Tuesday May 19 to Wednesday May 20: Code with Claude London</h4>
+    <p>Day 1 keynote livestreamed. Three tracks (Research, Claude Platform, Claude Code). Watch for Claude Code at-scale features, managed agents updates, and Skills/MCP roadmap signals.</p>
+  </div>
+  <div class="item">
+    <h4>Wednesday May 20: Meta Llama 8,000-person layoff execution</h4>
+    <p>First major test of whether the May 17 CNBC "AI layoffs are not a stock boost" finding extends to a hyperscaler. Watch META intraday and any Wang Superintelligence Labs talent-acquisition signal in the days after.</p>
+  </div>
+  <div class="item">
+    <h4>Window open: Anthropic $30B follow-on round close announcement</h4>
+    <p>Bloomberg timeline points to "this month," May 18 SPV crackdown is consistent with imminent primary issuance. Press release could land any business day.</p>
+  </div>
+  <div class="item">
+    <h4>June: EU AI Act Digital Omnibus formal adoption</h4>
+    <p>Provisional deal reached May 7 defers Annex III high-risk obligations to December 2027. Formal Council and Parliament votes expected in June, publication in July.</p>
+  </div>
+</div>
+
+<h2>Source log</h2>
+<ul class="sources">
+  <li><a href="https://www.bloomberg.com/news/articles/2026-05-18/anthropic-sends-jolt-through-the-market-for-buying-shares-in-the-hottest-pre-ipo-startups">bloomberg.com / Anthropic SPV jolt</a> (Tier 1)</li>
+  <li><a href="https://support.claude.com/en/articles/13704655-unauthorized-anthropic-stock-sales-and-investment-scams">support.claude.com / unauthorized stock sales</a> (Tier 1)</li>
+  <li><a href="https://claude.com/code-with-claude/london">claude.com / code-with-claude London</a> (Tier 1)</li>
+  <li><a href="https://status.claude.com/history">status.claude.com / history</a> (Tier 1)</li>
+  <li><a href="https://www.prnewswire.com/news-releases/sandboxaq-integrates-its-quantitative-ai-models-with-anthropics-claude-via-mcp-302773174.html">prnewswire.com / SandboxAQ + Claude MCP</a> (Tier 2)</li>
+  <li><a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com / Anthropic $30B</a> (Tier 1)</li>
+  <li><a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">openai.com / Agents SDK TS GA</a> (Tier 1)</li>
+  <li><a href="https://github.com/modelcontextprotocol/inspector/releases">github.com / mcp inspector releases</a> (Tier 1)</li>
+  <li><a href="https://releasebot.io/updates/anthropic/claude-code">releasebot.io / claude-code updates</a> (Tier 2)</li>
+  <li><a href="https://benchlm.ai/agentic">benchlm.ai / agentic</a> (Tier 2)</li>
+  <li><a href="https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/">techcrunch.com / Notion agent hub</a> (Tier 3)</li>
+  <li><a href="https://github.com/langchain-ai/langgraph/releases">github.com / langgraph releases</a> (Tier 1)</li>
+  <li><a href="https://winbuzzer.com/2026/05/18/cursor-releases-composer-25-saying-its-better-at-s-xcxwbn/">winbuzzer.com / Cursor Composer 2.5</a> (Tier 2)</li>
+  <li><a href="https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/">the-decoder.com / Composer 2.5 benchmarks</a> (Tier 2)</li>
+  <li><a href="https://github.blog/changelog/2026-05-18-remote-control-for-copilot-cli-sessions-now-generally-available-on-mobile-web-and-vs-code/">github.blog / Copilot CLI remote GA</a> (Tier 1)</li>
+  <li><a href="https://github.blog/changelog/2026-05-18-copilot-spaces-api-now-generally-available/">github.blog / Copilot Spaces API GA</a> (Tier 1)</li>
+  <li><a href="https://github.blog/changelog/2026-05-18-one-click-fixes-for-failing-actions-with-copilot-cloud-agent/">github.blog / Copilot Actions fixes</a> (Tier 1)</li>
+  <li><a href="https://github.blog/changelog/2026-05-18-audit-repository-copilot-cloud-agent-configuration-via-the-rest-api/">github.blog / Copilot audit API</a> (Tier 1)</li>
+  <li><a href="https://developers.openai.com/codex/changelog">developers.openai.com / Codex changelog</a> (Tier 1)</li>
+  <li><a href="https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news">androidcentral.com / I/O 2026 live</a> (Tier 3)</li>
+  <li><a href="https://www.basenor.com/blogs/news/grok-gets-major-upgrades-5-things-to-know-right-now">basenor.com / Grok upgrades</a> (Tier 2)</li>
+  <li><a href="https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html">cnbc.com / Meta layoffs Wang</a> (Tier 1)</li>
+  <li><a href="https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/">marktechpost.com / Mistral Medium 3.5</a> (Tier 2)</li>
+  <li><a href="https://fortune.com/2026/04/24/deepseek-v4-ai-model-price-performance-china-open-source/">fortune.com / DeepSeek V4</a> (Tier 1)</li>
+  <li><a href="https://siliconangle.com/2026/05/18/sigma-computing-seals-80m-funding-round-pivots-toward-agentic-analytics/">siliconangle.com / Sigma $80M</a> (Tier 1)</li>
+  <li><a href="https://techfundingnews.com/dust-40m-series-b-collaborai-ai-enterprise-workspaces-sequoia/">techfundingnews.com / Dust Series B</a> (Tier 2)</li>
+  <li><a href="https://siliconangle.com/2026/05/18/dell-targets-enterprise-ai-execution-gap-local-agentic-ai-systems-integrated-ai-infrastructure/">siliconangle.com / Dell on-prem agentic</a> (Tier 1)</li>
+  <li><a href="https://openai.com/index/dell-codex-enterprise-partnership/">openai.com / Dell Codex enterprise</a> (Tier 1)</li>
+  <li><a href="https://techstartups.com/2026/05/18/top-startup-and-tech-funding-news-may-18-2025/">techstartups.com / Searchable Series A</a> (Tier 2)</li>
+  <li><a href="https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/">insideprivacy.com / EU AI Act timeline</a> (Tier 1)</li>
+  <li><a href="https://github.com/ggml-org/llama.cpp/releases">github.com / llama.cpp releases</a> (Tier 1)</li>
+  <li><a href="https://www.knightli.com/en/2026/05/18/llama-cpp-windows-cuda-vulkan-gguf/">knightli.com / llama.cpp Windows</a> (Tier 2)</li>
+  <li><a href="https://github.com/vllm-project/vllm/releases">github.com / vllm releases</a> (Tier 1)</li>
+  <li><a href="https://huggingface.co/papers/date/2026-05-18">huggingface.co / papers 2026-05-18</a> (Tier 1)</li>
+  <li><a href="https://arxiv.org/list/cs.AI/recent">arxiv.org / cs.AI recent</a> (Tier 1)</li>
+  <li><a href="https://www.aixploria.com/en/ai-radar/google-gemini-omni-leak-video-model-io-2026/">aixploria.com / Gemini Omni leak</a> (Tier 2)</li>
+  <li><a href="https://nokiapoweruser.com/gemini-3-2-flash-leak-fast-cheap-ai-google-io-2026/">nokiapoweruser.com / Gemini 3.2 Flash leak</a> (Tier 3)</li>
+</ul>
+
+<div class="footer">
+  Generated 2026-05-19 06:00 CET. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from the Top 3.
+</div>
+
+</div>
+
+
+<script>
+/* ask-link.js
+   AI Brief design system component
+   Context-aware Ask-LLM prompt builder + provider popover
+   ----------------------------------------------------------------
+   Content-type detection (priority order):
+   1. <meta name="ask-type" content="brief|portrait|dashboard|generic">
+   2. document.body.dataset.askType
+   3. Auto-detect from title / eyebrow text
+   4. Falls back to "generic"
+   ---------------------------------------------------------------- */
+
+(function () {
+  'use strict';
+
+  var TEMPLATES = {
+
+    brief: function (h, s, u, d) {
+      return [
+        'From my AI Intelligence Brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'I am tracking this for strategic and competitive implications.',
+        'What developments should I watch for next, and what are the second-order effects?'
+      ].join('\n');
+    },
+
+    portrait: function (h, s, u) {
+      return [
+        'I am reviewing a company intelligence brief. This section covers:',
+        '',
+        'Topic:  ' + h,
+        'Detail: ' + s,
+        'Source: ' + u,
+        '',
+        'Give me the key strategic and competitive takeaways from a B2B intelligence perspective.',
+        'What does this signal about positioning, risks, or opportunities?'
+      ].join('\n');
+    },
+
+    dashboard: function (h, s, u, d) {
+      return [
+        'From a live intelligence dashboard' + (d ? ' (' + d + ')' : '') + ', this signal came in:',
+        '',
+        'Signal:  ' + h,
+        'Context: ' + s,
+        'Source:  ' + u,
+        '',
+        'What immediate actions or watch items does this trigger?',
+        'What is the most likely next development?'
+      ].join('\n');
+    },
+
+    generic: function (h, s, u, d) {
+      return [
+        'From my intelligence brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'Please use this as context. I will ask follow-up questions.'
+      ].join('\n');
+    }
+  };
+
+  var PROVIDERS = {
+    claude:     function (p) { return 'https://claude.ai/new?q=' + encodeURIComponent(p); },
+    chatgpt:    function (p) { return 'https://chatgpt.com/?model=auto&prompt=' + encodeURIComponent(p); },
+    perplexity: function (p) { return 'https://www.perplexity.ai/search?q=' + encodeURIComponent(p); },
+    gemini:     function ()  { return 'https://gemini.google.com/app'; }
+  };
+
+  function detectContentType() {
+    var meta = document.querySelector('meta[name="ask-type"]');
+    if (meta && TEMPLATES[meta.content]) return meta.content;
+
+    var bodyType = document.body && document.body.dataset && document.body.dataset.askType;
+    if (bodyType && TEMPLATES[bodyType]) return bodyType;
+
+    var eyebrowText = [].slice
+      .call(document.querySelectorAll('.eyebrow'))
+      .map(function (e) { return e.textContent; })
+      .join(' ')
+      .toLowerCase();
+    var combined = ((document.title || '') + ' ' + eyebrowText).toLowerCase();
+
+    if (/\b(brief|intelligence brief)\b/.test(combined)) return 'brief';
+    if (/\bportrait\b/.test(combined))                   return 'portrait';
+    if (/\bdashboard\b/.test(combined))                  return 'dashboard';
+
+    return 'generic';
+  }
+
+  function detectDate() {
+    var meta = document.querySelector('meta[name="ask-date"]');
+    if (meta && meta.content) return meta.content;
+
+    var timeEl = document.querySelector('time[datetime]');
+    if (timeEl) return (timeEl.getAttribute('datetime') || '').slice(0, 10);
+
+    var sources = [document.title || ''];
+    var h1 = document.querySelector('h1');
+    if (h1) sources.push(h1.textContent);
+
+    for (var i = 0; i < sources.length; i++) {
+      var m = sources[i].match(/\d{4}-\d{2}-\d{2}/);
+      if (m) return m[0];
+    }
+    return '';
+  }
+
+  function cleanSummary(text) {
+    if (!text) return '';
+    return text.replace(/\s*Source:\s*.*$/i, '').trim();
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text)
+        .then(function () { return true; })
+        .catch(function () { return fallbackCopy(text); });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+  }
+
+  function positionPopover(pop, btn) {
+    var rect = btn.getBoundingClientRect();
+    pop.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
+    pop.style.left = (window.scrollX + rect.left) + 'px';
+    requestAnimationFrame(function () {
+      var pr = pop.getBoundingClientRect();
+      var overflow = pr.right - window.innerWidth + 12;
+      if (overflow > 0) {
+        pop.style.left = Math.max(8, parseFloat(pop.style.left) - overflow) + 'px';
+      }
+    });
+  }
+
+  function ensurePopoverDOM() {
+    if (document.getElementById('ask-popover')) return;
+
+    var backdrop = document.createElement('div');
+    backdrop.id = 'ask-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+
+    var pop = document.createElement('div');
+    pop.id = 'ask-popover';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', 'Ask an LLM about this');
+    pop.innerHTML =
+      '<button class="pop-close" type="button" data-close aria-label="Close">&times;</button>' +
+      '<div class="pop-eyebrow">Use as LLM context</div>' +
+      '<div class="pop-grid">' +
+        '<a class="pop-btn" data-provider="claude"     target="_blank" rel="noopener">Open in Claude</a>' +
+        '<a class="pop-btn" data-provider="chatgpt"    target="_blank" rel="noopener">Open in ChatGPT</a>' +
+        '<a class="pop-btn" data-provider="perplexity" target="_blank" rel="noopener">Open in Perplexity</a>' +
+        '<a class="pop-btn" data-provider="gemini"     target="_blank" rel="noopener">Open in Gemini</a>' +
+        '<button class="pop-btn copy" type="button" data-copy>Copy prompt</button>' +
+      '</div>';
+    document.body.appendChild(pop);
+  }
+
+  function attachButtons() {
+    var containers = document.querySelectorAll('.item, .card');
+    [].forEach.call(containers, function (el) {
+      var headlineEl = el.querySelector('h3, h4');
+      if (!headlineEl) return;
+      if (headlineEl.querySelector('.ask-btn')) return;
+
+      var headline = headlineEl.textContent.trim();
+
+      var paragraphs = [].slice.call(el.querySelectorAll('p'));
+      var summaryP   = paragraphs.find(function (p) { return !p.classList.contains('meta'); });
+      var summary    = cleanSummary(summaryP ? summaryP.textContent : '');
+
+      var link = el.querySelector('a[href]');
+      var url  = link ? link.href : '';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ask-btn';
+      btn.title = 'Ask an LLM about this';
+      btn.textContent = 'ask';
+      btn.dataset.headline = headline;
+      btn.dataset.summary  = summary;
+      btn.dataset.url      = url;
+
+      headlineEl.appendChild(btn);
+    });
+  }
+
+  function setupPopover(template, date) {
+    var pop      = document.getElementById('ask-popover');
+    var backdrop = document.getElementById('ask-backdrop');
+    if (!pop) return;
+
+    var providerLinks = [].slice.call(pop.querySelectorAll('.pop-btn[data-provider]'));
+    var copyBtn       = pop.querySelector('[data-copy]');
+    var closeBtn      = pop.querySelector('[data-close]');
+    var activePrompt  = '';
+
+    function refreshLinks() {
+      providerLinks.forEach(function (a) {
+        var builder = PROVIDERS[a.dataset.provider];
+        a.href = builder ? builder(activePrompt) : '#';
+      });
+    }
+
+    function openPopover(btn) {
+      activePrompt = template(
+        btn.dataset.headline || '',
+        btn.dataset.summary  || '',
+        btn.dataset.url      || '',
+        date
+      );
+      refreshLinks();
+      if (copyBtn) {
+        copyBtn.textContent = 'Copy prompt';
+        copyBtn.classList.remove('copied');
+      }
+      if (!isMobile()) {
+        pop.style.top = ''; pop.style.left = '';
+        positionPopover(pop, btn);
+      } else {
+        pop.style.top = ''; pop.style.left = '';
+        if (backdrop) backdrop.classList.add('open');
+      }
+      pop.classList.add('open');
+    }
+
+    function closePopover() {
+      pop.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.ask-btn');
+      if (btn) { e.stopPropagation(); openPopover(btn); return; }
+      if (!pop.contains(e.target)) closePopover();
+    });
+
+    providerLinks.forEach(function (a) {
+      a.addEventListener('click', function () { copyToClipboard(activePrompt); });
+    });
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        copyToClipboard(activePrompt).then(function () {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(function () {
+            copyBtn.textContent = 'Copy prompt';
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        });
+      });
+    }
+
+    if (closeBtn)  closeBtn.addEventListener('click', closePopover);
+    if (backdrop)  backdrop.addEventListener('click', closePopover);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closePopover();
+    });
+  }
+
+  function init() {
+    var contentType = detectContentType();
+    var date        = detectDate();
+    var template    = TEMPLATES[contentType] || TEMPLATES.generic;
+
+    ensurePopoverDOM();
+    attachButtons();
+    setupPopover(template, date);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+}());
+
+</script>
+  <script src="../assets/brief-enhance.js"></script>
+</body>
+</html>

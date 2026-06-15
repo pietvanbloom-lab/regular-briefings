@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Brief 2026-05-31</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="ask-type" content="brief">
+<style>
+  :root {
+    --bg: #0b0c0f;
+    --panel: #14161c;
+    --panel2: #1a1d25;
+    --text: #e7e9ef;
+    --mute: #8a8f9a;
+    --line: #262a33;
+    --accent: #c98a3a;
+    --accent2: #6db4ff;
+    --tag-bg: #232732;
+    --good: #3fb95d;
+    --warn: #d49b3a;
+    --bad: #cf4d4d;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; line-height: 1.5; font-size: 15px; }
+  a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted rgba(109,180,255,0.4); }
+  a:hover { color: #9fcdff; border-bottom-color: rgba(109,180,255,0.8); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; margin: 4px 0 0; font-weight: 600; }
+  h2 { font-family: Georgia, serif; font-size: 20px; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 16px; margin: 14px 0 4px; font-weight: 600; }
+  .meta { font-family: ui-monospace, monospace; font-size: 11px; color: var(--mute); }
+  .top3 { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 8px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 18px; border-radius: 4px; }
+  .card.early { border-left-color: var(--accent2); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; }
+  .tag { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--tag-bg); color: var(--mute); padding: 3px 8px; border-radius: 3px; }
+  .tag.t1 { color: var(--good); }
+  .tag.t2 { color: var(--warn); }
+  .tag.t3 { color: var(--mute); }
+  .tag.high { color: var(--good); }
+  .tag.med { color: var(--warn); }
+  .tag.low { color: var(--bad); }
+  .tag.early { color: var(--accent2); }
+  .why { font-style: italic; color: var(--text); border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 8px; font-size: 14px; }
+  .bucket { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 14px 18px; margin-bottom: 14px; }
+  .bucket .item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .bucket .item:last-child { border-bottom: none; }
+  .bucket .item h4 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+  .bucket .item p { margin: 4px 0 0; font-size: 13px; color: #d2d5dc; }
+  .quiet { color: var(--mute); font-style: italic; }
+  .footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--mute); font-family: ui-monospace, monospace; }
+  ul.sources { padding-left: 18px; margin: 4px 0 0; font-size: 12px; }
+  ul.sources li { margin: 2px 0; color: var(--mute); }
+  .twocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 760px) { .twocol { grid-template-columns: 1fr 1fr; } }
+
+  /* ── ask-link component (inline embed) ─────────────────────── */
+  .ask-btn {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-left: 8px; vertical-align: middle;
+    background: transparent; border: 1px solid var(--line);
+    color: var(--mute); cursor: pointer; padding: 1px 7px;
+    border-radius: 3px; font-family: ui-monospace, monospace;
+    font-size: 10px; letter-spacing: 0.06em; text-transform: lowercase;
+    opacity: 0.3;
+    transition: opacity 0.18s, color 0.15s, border-color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ask-btn::before { content: "\2197"; font-size: 11px; }
+  .item:hover .ask-btn,
+  .card:hover .ask-btn,
+  .ask-btn:focus-visible { opacity: 1; }
+  .ask-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+  .ask-btn:active { background: rgba(109,180,255,0.12); color: var(--accent2); border-color: var(--accent2); }
+  @media (hover: none) and (pointer: coarse) {
+    .ask-btn { opacity: 0.55; padding: 8px 12px; font-size: 12px; min-height: 36px; min-width: 56px; margin-left: 10px; }
+    .ask-btn::before { font-size: 13px; }
+    .item:hover .ask-btn, .card:hover .ask-btn { opacity: 1; }
+  }
+  #ask-popover {
+    position: absolute; z-index: 1000; min-width: 220px;
+    background: var(--panel2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  #ask-popover.open { display: block; }
+  #ask-popover .pop-eyebrow { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+  #ask-popover .pop-close { display: none; }
+  #ask-popover .pop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #ask-popover .pop-btn {
+    background: var(--panel); border: 1px solid var(--line); color: var(--text);
+    padding: 6px 9px; border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: inherit; text-align: left; text-decoration: none; display: block;
+    transition: border-color 0.15s, color 0.15s, background 0.1s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #ask-popover .pop-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn:active { background: rgba(109,180,255,0.12); border-color: var(--accent2); color: var(--accent2); }
+  #ask-popover .pop-btn.copy { grid-column: 1 / span 2; text-align: center; border-style: dashed; }
+  #ask-popover .pop-btn.copied { color: var(--good); border-color: var(--good); }
+  #ask-backdrop { display: none; }
+  @media (max-width: 600px) {
+    #ask-popover {
+      position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+      width: 100%; min-width: 0; max-width: 100%; border-radius: 14px 14px 0 0;
+      padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+      box-shadow: 0 -8px 28px rgba(0,0,0,0.7); transform: translateY(100%);
+      transition: transform 0.2s ease-out; display: block;
+    }
+    #ask-popover.open { transform: translateY(0); }
+    #ask-popover .pop-grid { gap: 8px; }
+    #ask-popover .pop-btn { padding: 12px; font-size: 14px; min-height: 44px; }
+    #ask-popover .pop-btn.copy { padding: 14px 12px; }
+    #ask-popover .pop-close {
+      display: block; position: absolute; top: 8px; right: 12px;
+      background: transparent; border: none; color: var(--mute); font-size: 22px; cursor: pointer; padding: 6px 10px;
+    }
+    #ask-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 999; display: none; }
+    #ask-backdrop.open { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="eyebrow">AI Intelligence Brief</div>
+    <h1>2026-05-31 morning edition</h1>
+  </div>
+  <div class="meta">Window: 2026-05-30 06:00 CET to 2026-05-31 06:00 CET<br>7 in-window items, 6 buckets, 3 highlighted. Quiet weekend cycle.</div>
+</header>
+
+<section>
+  <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
+  <div class="top3">
+
+    <div class="card early">
+      <h3>Gartner projects ~40% of enterprises will demote or decommission autonomous agents by 2027 over governance gaps, prescribes a four-tier proportional control model</h3>
+      <div class="tags">
+        <span class="tag t2">Tier 2</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Agentic</span>
+        <span class="tag">Governance</span>
+      </div>
+      <p>CIO published coverage on May 30 of a Gartner finding that one-size-fits-all governance will push roughly 40% of enterprises to demote or decommission autonomous agents by 2027. Gartner's prescription is a four-tier proportional model (observe, advise, act with approval, act autonomously) that scales controls and rollback testing to each agent's autonomy and access scope. The underlying Gartner release dates to May 26; the in-window event is the secondary coverage now amplifying it.</p>
+      <p class="meta">Source: <a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO</a> / <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure">Gartner</a> — May 30, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> The 2024-2025 story was agent capability. The 2026-2027 story is agent retirement. This is the first hard analyst number putting a failure rate on production agents, and it reframes the buyer conversation from "what can the agent do" to "can we govern, audit, and roll it back." Vendors that ship tiered permissioning and rollback testing now (Anthropic's Auto mode classifier, Cursor Auto-review, ServiceNow's tiered fabric) are positioned for the governance wave. Expect "agent governance" to become a named budget line and a procurement gate within two quarters, separating platforms that treat it as a feature from those that bolt it on after a failure.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Cognizant opens TriZetto Unify to AI agents with agent-ready FHIR APIs, launches Electronic Prior Authorization as the first headless-for-agents healthcare service</h3>
+      <div class="tags">
+        <span class="tag t1">Tier 1</span>
+        <span class="tag high">High confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Agentic</span>
+        <span class="tag">Healthcare</span>
+      </div>
+      <p>Cognizant announced a "headless" API model that treats AI agents as first-tier consumers of its TriZetto Unify healthcare platform, with Electronic Prior Authorization live as the first agent-ready service. It exposes three HL7 FHIR-aligned API resources covering the prior-auth workflow (confirm if authorization is required, identify documentation, submit the request) so agents call them directly instead of driving a UI. Cognizant says clinical decisions stay with humans and plans to extend agent-ready access across the broader Unify roadmap over the next year.</p>
+      <p class="meta">Source: <a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">PRNewswire (Cognizant)</a> — May 30, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> Most "AI agent" healthcare news is a chatbot bolted onto an existing portal. This is the opposite architecture: a core claims platform redesigning its surface so the API, not the UI, is the primary interface for agents. Prior authorization is the most-hated friction point in US healthcare, which makes it the perfect agent wedge. The durable signal is the "headless for agents" pattern itself: incumbents with the workflow data are realizing that exposing FHIR-aligned, agent-callable resources is a defensible moat that a thin agent startup cannot replicate. Watch other claims, EHR, and payer platforms follow with their own agent-ready API tiers.</div>
+    </div>
+
+    <div class="card early">
+      <h3>Genesis AI releases Genesis World 1.0 open-source robotics simulation stack under Apache 2.0, reports 0.90 sim-to-real correlation and policy evaluation cut from 200+ hours to under 0.5 hours</h3>
+      <div class="tags">
+        <span class="tag t2">Tier 2</span>
+        <span class="tag med">Medium confidence</span>
+        <span class="tag early">Early signal</span>
+        <span class="tag">Open Source</span>
+        <span class="tag">Robotics</span>
+      </div>
+      <p>The full open-source artifact set for Genesis World 1.0 surfaced May 30: a multi-physics engine plus Nyx (a GPU path-traced renderer targeting noise-free 1080p frames under 4 ms) and Quadrants (a Taichi-fork Python-to-GPU compiler claiming up to 4.6x runtime improvement). The platform reports a 0.8996 Pearson correlation between simulation evaluation and on-hardware rollouts across 14 tasks, cutting policy evaluation time from over 200 hours to under 0.5 hours. The core engine is open source under Apache 2.0 (GitHub: Genesis-Embodied-AI/genesis-world); the underlying launch dates to roughly May 27, with the open-source detail and benchmarks propagating May 30.</p>
+      <p class="meta">Source: <a href="https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/">MarkTechPost</a> / <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a> — May 30, 2026</p>
+      <div class="why"><strong>Why this matters before others see it:</strong> The bottleneck in robotics foundation models is not model size, it is evaluation cost. If a 0.90 sim-to-real correlation holds up independently, teams can screen policies in simulation in minutes instead of burning days of hardware time, which compresses the iteration loop that currently gates physical-AI progress. Doing this in the open under Apache 2.0 lowers the barrier for smaller robotics labs that cannot afford large hardware test fleets. The number to verify is that correlation: if it generalizes beyond the 14 reported tasks, open simulation infrastructure becomes the default evaluation layer for embodied AI. Treat the benchmark as promising, not settled.</div>
+    </div>
+
+  </div>
+</section>
+
+<h2>Latest by bucket</h2>
+
+<div class="bucket">
+  <div class="eyebrow">Anthropic / Claude</div>
+  <div class="item">
+    <h4>Claude Code v2.1.158 extends Auto mode to Bedrock, Vertex, and Foundry for Opus 4.7 and 4.8</h4>
+    <p>The release makes Auto mode (the permission tier between manual approval and full bypass, gated by a separate classifier model) available on AWS Bedrock, Google Vertex, and Microsoft Foundry. Users opt in via the environment variable CLAUDE_CODE_ENABLE_AUTO_MODE=1. This is an enterprise-deployment unlock that lets regulated teams run Auto mode on their existing cloud-hosting paths rather than first-party API only. Source: <a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog</a> — May 30, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Anthropic IPO analysis circulates: ~$47B run-rate framing and a possible trillion-dollar listing after the $965B raise</h4>
+    <p>A May 30 Motley Fool breakdown walks through Anthropic's path to a likely trillion-dollar IPO following the May 28 Series H, separating confirmed facts (post-money near $965B, confidential or pre-filing stage) from speculation (an approximate October 2026 listing target, no final decision announced). This is analysis recapping last week's raise, not new corporate disclosure. Source: <a href="https://www.fool.com/investing/2026/05/30/the-next-1-trillion-ai-ipo-anthropic-heres-what-we/">The Motley Fool</a> — May 30, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Quiet day otherwise: no new anthropic.com/news or research post timestamped in-window</h4>
+    <p>The week's headline items (Opus 4.8 on May 28, the $65B Series H, the Mythos wide-release statement) all landed May 28-29, just outside this window, and are not re-run here as fresh. Watch anthropic.com/news for the Mythos release terms.</p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Agentic AI and MCP</div>
+  <div class="item">
+    <h4>Cognizant opens TriZetto Unify to AI agents, Electronic Prior Authorization first agent-ready service</h4>
+    <p>Full detail in Top 3. Three HL7 FHIR-aligned API resources let agents drive the prior-auth workflow directly rather than through a UI, with humans retaining clinical decisions. First major incumbent claims platform to publicly reframe its API surface as agent-first. Source: <a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">PRNewswire</a> — May 30, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Gartner governance warning amplifies: four-tier proportional control model to avoid mass agent decommissioning</h4>
+    <p>Covered in Top 3. The prescription matches controls (observe, advise, act with approval, act autonomously) and rollback testing to each agent's autonomy and access scope, rather than applying uniform governance across all agents. Source: <a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO</a> — May 30, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">No in-window MCP spec movement</h4>
+    <p>The MCP release candidate locked May 21 (stateless core, Extensions, Tasks, MCP Apps, auth hardening), with the final spec targeting July 28. No new server launches from modelcontextprotocol.io or major framework releases inside this 24h window. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP Blog</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Coding Tools</div>
+  <div class="item">
+    <h4 class="quiet">Quiet day for coding tools: the week's moves landed May 27-29, just outside the window</h4>
+    <p>Cursor 3.6 Auto-review (May 29), GitHub Copilot usage-metrics adoption cohorts (May 29), and Cognition's $1B raise at roughly $26B (May 27) all predate this window. The only confirmed in-window release is Claude Code v2.1.158 (see Anthropic bucket). No new SWE-Bench results posted in-window. Source: <a href="https://cursor.com/changelog/auto-review">Cursor Changelog</a></p>
+  </div>
+  <div class="item">
+    <h4>For context: Cursor 3.6 Auto-review Run Mode uses a classifier subagent to gate Shell, MCP, and Fetch calls</h4>
+    <p>Published May 29, just before the window. A new run mode lets the agent allow, redirect, or escalate tool calls automatically so it runs longer with fewer human prompts. Notable as another vendor shipping the tiered-permission pattern that the Gartner governance item rewards. Source: <a href="https://cursor.com/changelog/auto-review">cursor.com</a> — May 29, 2026</p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Competitor Moves</div>
+  <div class="item">
+    <h4>DeepSeek V4-Pro promotional API discount expires May 31, list price returns</h4>
+    <p>DeepSeek's roughly 40% promotional discount on V4-Pro API pricing ends May 31 (15:59 UTC), reverting from about one-quarter of original list back to full list price. A pricing event teams running V4-Pro on cost-sensitive workloads will feel this weekend. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a> — effective May 31, 2026</p>
+  </div>
+  <div class="item">
+    <h4>xAI refreshes developer release notes (May 30), consolidating Grok Speech-to-Text and voice</h4>
+    <p>The xAI developer docs release-notes page carries a May 30 timestamp consolidating the Grok Speech-to-Text API (multi-speaker transcription, 25 languages, batch and streaming, word-level diarization). The underlying STT product first launched April 18, so this is a docs refresh rather than a net-new release. Source: <a href="https://docs.x.ai/developers/release-notes">xAI Docs</a> — May 30, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">Otherwise quiet: no frontier in-window model launch or pricing change</h4>
+    <p>The late-May cluster (OpenAI Codex for Windows and Rosalind Biodefense on May 29, Mistral's first public chip comments on May 28) all predate the window. Watch for Gemini 3.5 Pro GA, which Google committed to "next month," and the Gemini Interactions API legacy-schema removal on June 8. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">AI Business</div>
+  <div class="item">
+    <h4 class="quiet">Quiet day: no in-window funding, M&A, or exec move with a confirmed primary-source datestamp</h4>
+    <p>A Saturday-into-Sunday window with wire desks dark. The cycle is still echoing the May 28 Anthropic Series H, the roughly May 22 OpenAI confidential IPO filing, and Cognition's May 27 raise, all out of window and covered previously. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value">Bloomberg</a></p>
+  </div>
+  <div class="item">
+    <h4>Watch item: EU AI Act "Digital Omnibus" formal adoption expected June</h4>
+    <p>The provisional agreement (Annex III high-risk timeline relief to December 2027, new non-consensual intimate image prohibitions) was reached May 7 and awaits formal Council and Parliament adoption, expected in June with publication to follow. No in-window movement, flagged as a near-term regulatory catalyst. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council</a></p>
+  </div>
+</div>
+
+<div class="bucket">
+  <div class="eyebrow">Open Source and Research</div>
+  <div class="item">
+    <h4>Genesis World 1.0 ships open-source under Apache 2.0 with Nyx renderer and Quadrants compiler</h4>
+    <p>Full detail in Top 3. Reported 0.8996 sim-to-real Pearson correlation across 14 tasks and policy evaluation cut from 200+ hours to under 0.5 hours. The benchmark is the claim to verify; the open-source robotics-evaluation category is the signal to track. Source: <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a> — May 30, 2026</p>
+  </div>
+  <div class="item">
+    <h4 class="quiet">No new arXiv papers in-window: weekend, no Saturday submissions</h4>
+    <p>arXiv does not publish new cs.CL / cs.LG / cs.AI submissions on weekends, confirmed via the llm-stats live research feed showing "no new papers today." No major lab shipped new open weights to Hugging Face inside this 24h window. Source: <a href="https://llm-stats.com/ai-news">llm-stats</a></p>
+  </div>
+</div>
+
+<h2>Rumors and Early Signals</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>Gemini 3.5 Pro GA committed for "next month" (June 2026), still in limited Vertex preview [Tier 1 statement, timing unconfirmed]</h4>
+    <p>Announced at Google I/O on May 19 and still in limited Vertex preview, with Sundar Pichai committing to general availability "next month." Targets roughly 2M-token context and Deep Think. Early signal for the next frontier-model release window. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+  </div>
+  <div class="item">
+    <h4>Mistral exploring in-house chips [Tier 1 comment, no partner, architecture, or timeline named]</h4>
+    <p>CEO Arthur Mensch gave his first public comment on in-house silicon ambitions on May 28, alongside the Vibe agent and the Les Ulis inference data center. No partner, architecture, or timeline disclosed. A directional signal that frontier labs beyond the US hyperscalers are weighing vertical integration into compute. Source: <a href="https://www.cnbc.com/2026/05/28/mistral-arthur-mensch-design-chips-ai-data-centers.html">CNBC</a> — May 28, 2026</p>
+  </div>
+  <div class="item">
+    <h4>Gemini Interactions API legacy schema removed June 8 [breaking-change watch for builders]</h4>
+    <p>The new outputs-to-steps schema became default May 26; the legacy schema is removed June 8. Builders on the Gemini Interactions API should migrate ahead of that date to avoid breakage. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
+  </div>
+</div>
+
+<h2>Upcoming, next 7 days</h2>
+<div class="bucket">
+  <div class="item">
+    <h4>DeepSeek V4-Pro price reversion: May 31, 15:59 UTC</h4>
+    <p>Promotional discount ends and list pricing returns. Watch for any extension or follow-on promo, and for downstream effects on routing platforms that default to lowest-cost models.</p>
+  </div>
+  <div class="item">
+    <h4>Gemini 3.5 Pro general availability: targeted June 2026</h4>
+    <p>Google committed to GA "next month." Watch ai.google.dev and Vertex for the release and initial pricing and context-window terms.</p>
+  </div>
+  <div class="item">
+    <h4>Gemini Interactions API legacy schema removal: June 8</h4>
+    <p>Breaking change for existing builders. Migration to the outputs-to-steps schema required.</p>
+  </div>
+  <div class="item">
+    <h4>EU AI Act Digital Omnibus formal adoption: expected June</h4>
+    <p>Council and Parliament formal adoption of the provisional agreement. Watch for the final text and the confirmed timeline relief on Annex III high-risk obligations.</p>
+  </div>
+  <div class="item">
+    <h4>Anthropic Mythos wide release: "coming weeks" from May 28</h4>
+    <p>Stated intent from the Series H announcement. Watch anthropic.com/news for the release and access terms.</p>
+  </div>
+</div>
+
+<h2>Source log</h2>
+<ul class="sources">
+  <li><a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO on Gartner agent governance</a> (Tier 2)</li>
+  <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure">Gartner press release</a> (Tier 1)</li>
+  <li><a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">Cognizant TriZetto Unify for AI agents</a> (Tier 1)</li>
+  <li><a href="https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/">MarkTechPost Genesis World 1.0</a> (Tier 2)</li>
+  <li><a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub Genesis-Embodied-AI/genesis-world</a> (Tier 1)</li>
+  <li><a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog v2.1.158</a> (Tier 1)</li>
+  <li><a href="https://www.fool.com/investing/2026/05/30/the-next-1-trillion-ai-ipo-anthropic-heres-what-we/">Motley Fool Anthropic IPO analysis</a> (Tier 3)</li>
+  <li><a href="https://cursor.com/changelog/auto-review">Cursor 3.6 Auto-review</a> (Tier 1)</li>
+  <li><a href="https://llm-stats.com/llm-updates">llm-stats DeepSeek price reversion</a> (Tier 2)</li>
+  <li><a href="https://docs.x.ai/developers/release-notes">xAI developer release notes</a> (Tier 1)</li>
+  <li><a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a> (Tier 1)</li>
+  <li><a href="https://www.cnbc.com/2026/05/28/mistral-arthur-mensch-design-chips-ai-data-centers.html">CNBC Mistral chips</a> (Tier 2)</li>
+  <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council AI Act Omnibus</a> (Tier 1)</li>
+  <li><a href="https://llm-stats.com/ai-news">llm-stats research feed (no new papers)</a> (Tier 2)</li>
+  <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP release candidate</a> (Tier 1)</li>
+</ul>
+
+<div class="footer">
+  Generated 2026-05-31 06:00 CET. Quiet weekend window, reported straight with no padding. No em-dashes, no marketing adjectives, every claim sourced. Items marked [UNVERIFIED] are excluded from Top 3.
+</div>
+
+</div>
+
+
+<script>
+/* ask-link.js v2
+   AI Brief — Ask-LLM prompt builder + provider popover
+   Self-contained inline version. ensurePopoverDOM() auto-injects
+   #ask-popover and #ask-backdrop; do NOT put them in HTML body.
+   ---------------------------------------------------------------- */
+
+(function () {
+  'use strict';
+
+  var TEMPLATES = {
+    brief: function (h, s, u, d) {
+      return [
+        'From my AI Intelligence Brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'I am tracking this for strategic and competitive implications.',
+        'What developments should I watch for next, and what are the second-order effects?'
+      ].join('\n');
+    },
+    portrait: function (h, s, u) {
+      return [
+        'I am reviewing a company intelligence brief. This section covers:',
+        '',
+        'Topic:  ' + h,
+        'Detail: ' + s,
+        'Source: ' + u,
+        '',
+        'Give me the key strategic and competitive takeaways from a B2B intelligence perspective.',
+        'What does this signal about positioning, risks, or opportunities?'
+      ].join('\n');
+    },
+    dashboard: function (h, s, u, d) {
+      return [
+        'From a live intelligence dashboard' + (d ? ' (' + d + ')' : '') + ', this signal came in:',
+        '',
+        'Signal:  ' + h,
+        'Context: ' + s,
+        'Source:  ' + u,
+        '',
+        'What immediate actions or watch items does this trigger?',
+        'What is the most likely next development?'
+      ].join('\n');
+    },
+    generic: function (h, s, u, d) {
+      return [
+        'From my intelligence brief' + (d ? ' ' + d : '') + ':',
+        '',
+        'Headline: ' + h,
+        'Summary:  ' + s,
+        'Source:   ' + u,
+        '',
+        'Please use this as context. I will ask follow-up questions.'
+      ].join('\n');
+    }
+  };
+
+  var PROVIDERS = {
+    claude:     function (p) { return 'https://claude.ai/new?q=' + encodeURIComponent(p); },
+    chatgpt:    function (p) { return 'https://chatgpt.com/?model=auto&prompt=' + encodeURIComponent(p); },
+    perplexity: function (p) { return 'https://www.perplexity.ai/search?q=' + encodeURIComponent(p); },
+    gemini:     function ()  { return 'https://gemini.google.com/app'; }
+  };
+
+  function detectContentType() {
+    var meta = document.querySelector('meta[name="ask-type"]');
+    if (meta && TEMPLATES[meta.content]) return meta.content;
+    var bodyType = document.body && document.body.dataset && document.body.dataset.askType;
+    if (bodyType && TEMPLATES[bodyType]) return bodyType;
+    var eyebrowText = [].slice.call(document.querySelectorAll('.eyebrow')).map(function (e) { return e.textContent; }).join(' ').toLowerCase();
+    var combined = ((document.title || '') + ' ' + eyebrowText).toLowerCase();
+    if (/\b(brief|intelligence brief)\b/.test(combined)) return 'brief';
+    if (/\bportrait\b/.test(combined)) return 'portrait';
+    if (/\bdashboard\b/.test(combined)) return 'dashboard';
+    return 'generic';
+  }
+
+  function detectDate() {
+    var meta = document.querySelector('meta[name="ask-date"]');
+    if (meta && meta.content) return meta.content;
+    var timeEl = document.querySelector('time[datetime]');
+    if (timeEl) return (timeEl.getAttribute('datetime') || '').slice(0, 10);
+    var sources = [document.title || ''];
+    var h1 = document.querySelector('h1');
+    if (h1) sources.push(h1.textContent);
+    for (var i = 0; i < sources.length; i++) {
+      var m = sources[i].match(/\d{4}-\d{2}-\d{2}/);
+      if (m) return m[0];
+    }
+    return '';
+  }
+
+  function cleanSummary(text) {
+    if (!text) return '';
+    return text.replace(/\s*Source:\s*.*$/i, '').trim();
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }).catch(function () { return fallbackCopy(text); });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:absolute;left:-9999px;top:0;';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+  }
+
+  function positionPopover(pop, btn) {
+    var rect = btn.getBoundingClientRect();
+    pop.style.top  = (window.scrollY + rect.bottom + 6) + 'px';
+    pop.style.left = (window.scrollX + rect.left) + 'px';
+    requestAnimationFrame(function () {
+      var pr = pop.getBoundingClientRect();
+      var overflow = pr.right - window.innerWidth + 12;
+      if (overflow > 0) {
+        pop.style.left = Math.max(8, parseFloat(pop.style.left) - overflow) + 'px';
+      }
+    });
+  }
+
+  function ensurePopoverDOM() {
+    if (document.getElementById('ask-popover')) return;
+
+    var backdrop = document.createElement('div');
+    backdrop.id = 'ask-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+
+    var pop = document.createElement('div');
+    pop.id = 'ask-popover';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', 'Ask an LLM about this');
+    pop.innerHTML =
+      '<button class="pop-close" type="button" data-close aria-label="Close">&times;</button>' +
+      '<div class="pop-eyebrow">Use as LLM context</div>' +
+      '<div class="pop-grid">' +
+        '<a class="pop-btn" data-provider="claude"     target="_blank" rel="noopener">Open in Claude</a>' +
+        '<a class="pop-btn" data-provider="chatgpt"    target="_blank" rel="noopener">Open in ChatGPT</a>' +
+        '<a class="pop-btn" data-provider="perplexity" target="_blank" rel="noopener">Open in Perplexity</a>' +
+        '<a class="pop-btn" data-provider="gemini"     target="_blank" rel="noopener">Open in Gemini</a>' +
+        '<button class="pop-btn copy" type="button" data-copy>Copy prompt</button>' +
+      '</div>';
+    document.body.appendChild(pop);
+  }
+
+  function attachButtons() {
+    var containers = document.querySelectorAll('.item, .card');
+    [].forEach.call(containers, function (el) {
+      var headlineEl = el.querySelector('h3, h4');
+      if (!headlineEl) return;
+      if (headlineEl.querySelector('.ask-btn')) return;
+
+      var headline = headlineEl.textContent.trim();
+      var paragraphs = [].slice.call(el.querySelectorAll('p'));
+      var summaryP   = paragraphs.find(function (p) { return !p.classList.contains('meta'); });
+      var summary    = cleanSummary(summaryP ? summaryP.textContent : '');
+      var link = el.querySelector('a[href]');
+      var url  = link ? link.href : '';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ask-btn';
+      btn.title = 'Ask an LLM about this';
+      btn.textContent = 'ask';
+      btn.dataset.headline = headline;
+      btn.dataset.summary  = summary;
+      btn.dataset.url      = url;
+      headlineEl.appendChild(btn);
+    });
+  }
+
+  function setupPopover(template, date) {
+    var pop      = document.getElementById('ask-popover');
+    var backdrop = document.getElementById('ask-backdrop');
+    if (!pop) return;
+
+    var providerLinks = [].slice.call(pop.querySelectorAll('.pop-btn[data-provider]'));
+    var copyBtn       = pop.querySelector('[data-copy]');
+    var closeBtn      = pop.querySelector('[data-close]');
+    var activePrompt  = '';
+
+    function refreshLinks() {
+      providerLinks.forEach(function (a) {
+        var builder = PROVIDERS[a.dataset.provider];
+        a.href = builder ? builder(activePrompt) : '#';
+      });
+    }
+
+    function openPopover(btn) {
+      activePrompt = template(
+        btn.dataset.headline || '',
+        btn.dataset.summary  || '',
+        btn.dataset.url      || '',
+        date
+      );
+      refreshLinks();
+      if (copyBtn) { copyBtn.textContent = 'Copy prompt'; copyBtn.classList.remove('copied'); }
+      if (!isMobile()) {
+        pop.style.top = ''; pop.style.left = '';
+        positionPopover(pop, btn);
+      } else {
+        pop.style.top = ''; pop.style.left = '';
+        if (backdrop) backdrop.classList.add('open');
+      }
+      pop.classList.add('open');
+    }
+
+    function closePopover() {
+      pop.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('open');
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.ask-btn');
+      if (btn) { e.stopPropagation(); openPopover(btn); return; }
+      if (!pop.contains(e.target)) closePopover();
+    });
+
+    providerLinks.forEach(function (a) {
+      a.addEventListener('click', function () { copyToClipboard(activePrompt); });
+    });
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        copyToClipboard(activePrompt).then(function () {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(function () { copyBtn.textContent = 'Copy prompt'; copyBtn.classList.remove('copied'); }, 2000);
+        });
+      });
+    }
+
+    if (closeBtn)  closeBtn.addEventListener('click', closePopover);
+    if (backdrop)  backdrop.addEventListener('click', closePopover);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopover(); });
+  }
+
+  function init() {
+    var contentType = detectContentType();
+    var date        = detectDate();
+    var template    = TEMPLATES[contentType] || TEMPLATES.generic;
+    ensurePopoverDOM();
+    attachButtons();
+    setupPopover(template, date);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+}());
+</script>
+  <script src="../assets/brief-enhance.js"></script>
+</body>
+</html>
