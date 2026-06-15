@@ -14,6 +14,11 @@
     'html[data-theme="light"]{--bg:#f6f5f2;--panel:#ffffff;--panel2:#efede8;--text:#1c1e24;' +
     '--mute:#6a7079;--line:#e2ded6;--accent:#b3741f;--accent2:#2f6fb0;--tag-bg:#eceae4;}' +
     'html,body{transition:background .25s ease,color .25s ease;}' +
+    // Light-mode fixes for brief colors hardcoded for dark backgrounds:
+    'html[data-theme=\"light\"] .bucket .item p{color:#353a42;}' +
+    'html[data-theme=\"light\"] h1,html[data-theme=\"light\"] .card h3,html[data-theme=\"light\"] .item h4,' +
+    'html[data-theme=\"light\"] .upcoming-list li strong,html[data-theme=\"light\"] .rumors-list li strong{color:#1c1e24;}' +
+    'html[data-theme=\"light\"] a:hover{color:#2f6fb0;}' +
     '.bx-bar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 86%,transparent);' +
     'backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}' +
     '.bx-in{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:9px 24px;}' +
