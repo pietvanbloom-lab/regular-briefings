@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Anthropic publishes Model Spec Midtraining alignment paper, agentic-misalignment cut from 68% to 5% on Qwen2.5-32B</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First public sign Anthropic is moving alignment intervention from post-training fine-tune into the midtraining phase, the same place capability scaling happens. If replicated by other labs, the unit of competitive differentiation shifts from RLHF data to midtraining curricula. Watch for OpenAI, DeepMind, and Meta to either replicate the technique or push back with their own alignment-during-pretraining results within the next 8 weeks.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Anthropic Managed Agents: multiagent sessions and lifecycle webhooks move to public beta</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -163,7 +163,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Multi-agent orchestration is no longer a framework pattern, it is a managed primitive with a containerized runtime and lifecycle hooks. Expect LangGraph, CrewAI, and AutoGen to either build native adapters or risk being replaced for production workloads. The 20-agent ceiling is the number to watch: pricing, isolation guarantees, and per-agent quotas will set the production cost floor for the next wave of agent products.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Cerebras lifts IPO range to $125 to $135, books oversubscribed more than 20x, $30B implied cap, list date May 14</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -183,19 +183,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code v2.1.137 and v2.1.138 ship same day on May 9</h4>
     <p>Two patches landed on npm on May 9. v2.1.137 fixed VS Code extension activation failure on Windows. v2.1.138 was an internal stability bump. Builds on v2.1.136 (May 8) which added settings.autoMode.hard_deny for unconditional auto-mode classifier blocks. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude Opus 4.1 elevated error-rate incident on May 9</h4>
     <p>Status page logged elevated errors on Opus 4.1 within the window, eventually resolved. Coincided with widespread user reports surging around 18:48 ET. No public root cause yet. Source: <a href="https://status.claude.com/">status.claude.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>MCP and plugin disappearance bug fixed across VS Code, JetBrains, Agent SDK</h4>
     <p>May 8 to 9 Claude Code releases shipped fixes for MCP servers and plugins disappearing after /clear in the VS Code extension, JetBrains plugin, and Agent SDK. Also resolved drag-and-drop image upload hangs and a crash when piping more than 10MB to claude -p. Hardening signal ahead of broader Agent SDK adoption. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Akamai $1.8B seven-year compute deal continues to ripple, AKAM up 27%</h4>
     <p>Bloomberg-broken deal still driving coverage on May 9: roughly $257M per year, more than doubling Akamai's segment run rate. AKAM logged largest single-day rally in 22 years. Edge-CDN inference angle remains under-covered. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai">bloomberg.com Akamai-Anthropic</a></p>
   </div>
@@ -203,15 +203,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Claude Agent SDK Python adds defer permission decision and DeferredToolUse</h4>
     <p>May 8 SDK release introduces a defer hook decision in PreToolUseHookSpecificOutput.permissionDecision and a new DeferredToolUse dataclass on ResultMessage.deferred_tool_use, plus hook event streaming via include_hook_events and strict MCP config support. Unlocks human-in-the-loop patterns previously kludged around hooks. Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github claude-agent-sdk-python releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Claude Code adds --plugin-url for URL-loaded plugin archives, settings.autoMode.hard_deny ships</h4>
     <p>v2.1.138 supports .zip plugin archives via --plugin-dir and adds --plugin-url to fetch a plugin archive from a URL for the current session. Practical impact: internal tooling teams can ship plugins from artifact stores without going through a marketplace. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>AWS MCP Server hits GA with single-tool any-API access and sandboxed Python execution</h4>
     <p>Remote managed MCP server lets agents call any AWS API through one tool, run sandboxed Python against AWS services without local filesystem or shell access, and rely on IAM context keys instead of separate permissions. Free, pay only for underlying resources. Announced May 6, GA wave reached this window. Source: <a href="https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/">aws.amazon.com MCP server GA</a></p>
   </div>
@@ -219,19 +219,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>ServiceNow Build Agent goes GA inside Cursor, Windsurf, Claude Code, and GitHub Copilot</h4>
     <p>ServiceNow announced GA of Build Agent inside ServiceNow Studio with direct integrations into the four leading AI coding tools, governed by default. First major enterprise platform to ship a unified coding-agent layer across all four IDEs simultaneously. Source: <a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Build-Agent-now-works-inside-every-major-AI-coding-tool-governed-by-default/default.aspx">servicenow newsroom</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>SWE-Bench Verified leaderboard: Claude Mythos Preview at 93.9%, Opus 4.7 at 87.6%</h4>
     <p>Public leaderboard standings as of May 2026 show Claude Mythos Preview leading at 93.9%, Opus 4.7 at 87.6%, Opus 4.5 at 80.9%. Aider Polyglot leader is Opus 4.5 at 89.4%. Mythos Preview surfacing publicly is a leak-style early signal worth tracking against any silent docs.claude.com update. Source: <a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats SWE-Bench Verified</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Cursor Auto model degradation incident, fixed at 00:22 UTC May 10</h4>
     <p>Cursor's Auto routing tier suffered degraded performance on May 9, fix deployed at 00:22 UTC with monitoring afterward. No new feature changelog entry in the window. Last feature drop was Cursor 3.3 on May 7 with parallel-agent plan execution and PR review. Source: <a href="https://status.cursor.com/">status.cursor.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>GitHub Copilot CLI v1.0.44 hooks that bypass model calls now in stable</h4>
     <p>userPromptSubmitted hooks can now respond directly without invoking the LLM. Faster /user list and /user switch for multi-account users. Material for prompt-routing and cost optimization layers in front of Copilot CLI. Source: <a href="https://github.com/github/copilot-cli/releases">github.com/github/copilot-cli/releases</a></p>
   </div>
@@ -239,23 +239,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>OpenAI Codex CLI ships plugin sharing and Bedrock AWS-login auth</h4>
     <p>May 9 Codex CLI release adds plugin sharing with discoverability controls, simpler remote-control startup, thread pagination, and AWS console-login profile support for Bedrock auth. Multi-environment view_image resolution improved. Quiet deepening of OpenAI's AWS partnership inside the developer surface. Source: <a href="https://releasebot.io/updates/openai">releasebot.io openai updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>OpenAI rolls out ChatGPT Trusted Contact safety feature</h4>
     <p>Opt-in feature for personal accounts that lets users designate someone to be notified during serious suicide-related safety concerns. Eligible regions and personal plans only, not Business or Enterprise or Edu. Source: <a href="https://openai.com/news/">openai.com news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Perplexity Computer expands to Microsoft Teams, Mac native app live</h4>
     <p>Perplexity Computer became available as a Microsoft Teams app for Enterprise Max and Pro subscribers. Personal Computer rolled out to all users in a new native Mac app. Aggressive enterprise channel push directly inside Microsoft territory. Source: <a href="https://9to5mac.com/2026/05/07/perplexity-ai-app-introduces-all-new-native-mac-experience-for-personal-computer/">9to5Mac Perplexity Mac</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>xAI announces May 15 retirement of grok-code-fast-1 and other legacy models</h4>
     <p>Developer console notice within the window: legacy models including grok-code-fast-1 retire May 15, 2026 at 12:00pm PT, migration to Grok 4.3 recommended. Operationally important for any team still pinned to the old endpoint. Source: <a href="https://docs.x.ai/developers/migration/may-15-retirement">docs.x.ai retirement notice</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Quiet day for net-new model releases from Google, Meta, Mistral, DeepSeek</h4>
     <p>No new model launches landed within the May 9 to 10 window from Google DeepMind, Meta Llama, Mistral, or DeepSeek. Last priors: DeepSeek V4 Pro on Apr 24, Mistral Medium 3.5 plus Vibe remote agents on Apr 29, Grok 4.3 GA on May 5. Source: <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">huggingface deepseek-ai</a></p>
   </div>
@@ -263,19 +263,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>EU Council and Parliament agree Omnibus VII, AI Act high-risk obligations pushed, watermarking accelerated</h4>
     <p>May 7 provisional deal: high-risk standalone AI rules pushed to Dec 2, 2027 (Aug 2028 for embedded systems), watermarking and provenance transparency accelerated to Dec 2, 2026, new prohibition on non-consensual sexual AI content, bias-detection clarified for special-category data. Commission opened follow-up consultation on transparency guidelines May 8. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu Omnibus VII</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Nvidia AI equity bets cross $40B in 2026 (CNBC, May 9)</h4>
     <p>CNBC reported May 9 that Nvidia's commitments to AI companies have already topped $40B for the year. Tracks against the AMD-Meta $100B/6GW deal and the SpaceX-Anthropic Colossus 1 capacity arrangement. Concentration and circularity narrative continues to harden. Source: <a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">cnbc.com Nvidia $40B equity bets</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Anthropic + Goldman + Blackstone + Hellman & Friedman launch $1.5B PE-portfolio AI venture</h4>
     <p>Four parties anchored a joint venture at roughly $300M each to deploy Claude-based AI tooling across PE-owned portfolio companies. Same-week parallel: OpenAI's $10B DeployCo vehicle anchored by TPG, Brookfield, Advent, Bain. PE portfolios as the new enterprise distribution vector. Source: <a href="https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/">techcrunch.com PE AI ventures</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Cloudflare cuts 1,100 jobs (20% of workforce), cites internal AI productivity gains</h4>
     <p>Disclosed after internal AI usage rose more than 600% in three months. Same week, PayPal told staff it plans to cut roughly 20% of its 23,800 workforce over 2 to 3 years. First wave of AI-attributed restructurings at infrastructure-tier firms. Source: <a href="https://finance.yahoo.com/sectors/technology/articles/layoffs-accelerate-may-2026-firms-040430218.html">yahoo finance May 2026 layoffs</a></p>
   </div>
@@ -283,23 +283,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Anthropic releases The Hot Mess of AI misalignment-scaling study</h4>
     <p>Tests how misalignment scales jointly with model intelligence and task complexity, building on the hot mess hypothesis that smarter systems are judged less coherent. Empirical follow-up to last year's agentic-misalignment work, useful as a benchmark frame for evaluating frontier models. Source: <a href="https://alignment.anthropic.com/2026/hot-mess-of-ai/">alignment.anthropic.com hot-mess-of-ai</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Anthropic Natural Language Autoencoders continue to drive interpretability discussion</h4>
     <p>NLA paper (May 7) translates Claude internal activations directly into readable English. Most-cited interpretability work on r/MachineLearning over the last 24 hours. Reported applications include catching Mythos Preview during eval-awareness and tracing language-switch artifacts to specific training data. Source: <a href="https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/">marktechpost NLA writeup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>vLLM v0.20.2 stable lands after v0.20.1 yank for tensor-parallelism bug</h4>
     <p>vLLM published v0.20.2 on May 8 as the stable replacement for v0.20.1, which was yanked because of a tensor-parallelism bug. Operators on the previous build should upgrade before the next deploy window. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>llama.cpp build b9075 ships SYCL BF16 fix</h4>
     <p>Adds GGML_TYPE_BF16 support to the SYCL GET_ROWS op, fixing a regression where models with BF16 embedding tensors were silently falling back to CPU on Intel GPU backends. Restores expected throughput. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">github.com/ggml-org/llama.cpp releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>Hugging Face Transformers 5.8.0 brings DeepSeek-V4, Granite Speech Plus, Granite Vision 4.1</h4>
     <p>5.8.0 release (May 5) adds first-class support for DeepSeek-V4 next-gen MoE, IBM Granite Speech Plus with speaker labels and word-level timestamps, and Granite Vision 4.1 for enterprise document, chart, table extraction. Downstream loaders, quantizers, and inference servers now updating to track. Source: <a href="https://github.com/huggingface/transformers/releases">github.com/huggingface/transformers releases</a></p>
   </div>
@@ -307,11 +307,11 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Claude Mythos Preview surfacing on public SWE-Bench leaderboard at 93.9% [Tier 1, MEDIUM]</h4>
     <p>Mythos has not been formally announced by Anthropic but is now visible as the top entry on a public benchmark scrape. Naming convention suggests a Mythos series sitting above Opus 4.7. Watch docs.claude.com models page and HuggingFace anthropic uploads for an official artifact. Source: <a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats leaderboard</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>Anthropic exploring SpaceX orbital data center satellites [UNVERIFIED]</h4>
     <p>Lifeboat blog and downstream coverage on May 9 referenced Anthropic considering SpaceX orbital data center satellites as a future compute vector, an extension of the Colossus 1 deal. No primary Anthropic source confirms; treat as rumor pending an official statement. Source: <a href="https://lifeboat.com/blog/2026/05/anthropic-to-consider-using-spacex-orbital-data-center-satellites">lifeboat.com</a></p>
   </div>
@@ -319,19 +319,19 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Cerebras (CBRS) Nasdaq listing</h4>
     <p>May 14, 2026. Pricing range $125 to $135 per share, ~28M Class A shares, ~$3.7B raise, ~$30B implied cap. First major AI compute IPO of 2026. Books reported oversubscribed >20x.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>xAI legacy model retirement window</h4>
     <p>May 15, 2026 at 12:00pm PT. grok-code-fast-1 and other legacy endpoints retired. Migration to Grok 4.3 required.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>EU AI Act Omnibus VII final text and trilogue completion expected</h4>
     <p>Provisional political deal reached May 7. Final text expected within the next 7 to 10 days. Compliance recalibration follows.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Anthropic root-cause note on Opus 4.1 May 9 incident likely</h4>
     <p>Standard Anthropic pattern: status page incidents that affect a flagship model receive a follow-up RCA within a week. Watch status.claude.com.</p>
   </div>

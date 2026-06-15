@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Anthropic confidentially files a draft S-1 with the SEC, opening the path to an IPO at a roughly $965B valuation</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -151,7 +151,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> This is the most concrete step yet toward a public listing for the highest-valued AI lab, and it changes the disclosure regime around frontier AI economics. Once the S-1 goes public, the market gets its first audited look at gross margin, inference cost structure, and customer concentration for a pure-play frontier lab, numbers that until now have only leaked. The second-order effect is competitive pressure: reporting says OpenAI is readying its own confidential filing, so the fall could bring a dual AI-lab IPO race that forces both to compete on financial transparency, not just benchmarks. Watch for the public S-1 unredaction, the implied compute and capex commitments, and how the disclosed margin profile reprices private AI rounds.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Z.ai releases GLM-5.1, a 754B-parameter open-weights MoE that tops open models on SWE-Bench Pro at 58.4</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -165,7 +165,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> An MIT-licensed model that posts a SWE-Bench Pro number in the high 50s narrows the gap between open weights and the closed coding leaders to a margin that procurement teams will notice. The strategic angle is that self-hostable agentic coding is now a credible alternative just as the closed tools move to metered token billing, so the cost calculus flips for any team running heavy agent loops. Watch independent SWE-Bench Pro reproductions, whether inference providers list GLM-5.1 at a sharp price, and whether coding-tool vendors quietly add it as a backend. If the benchmark holds under third-party testing, this is the open-weight release that makes "host your own coding agent" a board-level option.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>NVIDIA open-sources a collection of agent skills for physical AI that plug into Claude Code, Codex, and Cursor</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -186,11 +186,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Anthropic files a confidential draft S-1 with the SEC</h4>
     <p>Full detail in Top 3. The Anthropic-specific read: this is the first formal regulatory step toward a listing, posted directly to the newsroom under Rule 135, with no share count or price yet. No new model, API, or Claude Code release landed inside the window. Source: <a href="https://www.anthropic.com/news/confidential-draft-s1-sec">anthropic.com/news</a>, June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Reported Agent SDK billing split flagged for June 15 [verify]</h4>
     <p>Aggregator reporting says Anthropic is splitting subscription versus API-credit billing for programmatic usage effective June 15, which would affect teams running heavy Agent SDK workloads. This is a forward-dated policy item carried by a Tier 2-3 source and not yet confirmed against a first-party Anthropic doc, so treat the date as provisional. Source: <a href="https://byteiota.com/anthropics-june-15-billing-split-what-agent-devs-must-do/">byteiota (aggregator)</a>, reported June 1-2, 2026</p>
   </div>
@@ -198,19 +198,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>NVIDIA open-sources physical-AI agent skills with cross-agent interop</h4>
     <p>Covered in Top 3. The agentic angle: skills published against the open agentskills.io spec run on Claude Code, Codex, and Cursor today, pushing portable skills as a layer above the individual agent runtimes. Source: <a href="https://nvidianews.nvidia.com/news/nvidia-releases-major-collection-of-open-source-agent-tools-and-skills-for-physical-ai">NVIDIA newsroom</a>, May 31, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Microsoft Build 2026 opens June 2, positioning Windows as an AI agent platform</h4>
     <p>Nadella's June 2 keynote at Fort Mason centered on production agents. Reported platform pieces include a Windows Agent Runtime with native agent APIs in the OS shell, Azure Agent Mesh for multi-agent orchestration, and Copilot Workspace moving out of beta. The keynote lands at the tail edge of the window, so specific feature claims are keynote-day reporting pending first-party confirmation. Source: <a href="https://windowsnews.ai/article/microsoft-build-2026-windows-becomes-the-platform-for-ai-agents.420503">Windows News</a>, June 2, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Microsoft announces a Windows Agent Store with an 85% developer revenue share</h4>
     <p>Microsoft unveiled a curated marketplace where developers publish agent manifests, mirroring the app-store model at an 85% developer cut, with Adobe and Zoom named as launch partners. The June 2026 Insiders preview reportedly supports only text agents over structured data such as JSON, XML, and PDF, with screen-reading vision agents slated for 2027. Source: <a href="https://byteiota.com/windows-agent-store-publish-ai-agents/">byteiota (aggregator)</a>, June 2, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4 class="quiet">No in-window MCP spec or org movement</h4>
     <p>The Model Context Protocol blog posted nothing in-window; the latest dated post remains April 8, the release candidate locked May 21, and the final spec ships July 28. MCP runs as connective tissue through the Build announcements but had no fresh org-level news of its own. Source: <a href="https://blog.modelcontextprotocol.io/">MCP Blog</a></p>
   </div>
@@ -218,15 +218,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Microsoft reportedly unveils "Project Polaris," an in-house coding model to replace GPT-4 in Copilot by August [Tier 2]</h4>
     <p>Build-day reporting says Microsoft revealed Project Polaris, a homegrown reasoning model for multi-file refactoring, with existing Copilot subscribers auto-migrated in August and a multi-month fallback to the classic model. The framing is explicitly aimed at clawing share back from Claude Code, and it reportedly ships with a code IP-indemnity guarantee. No first-party github.blog confirmation yet, so treat the name and August date as MEDIUM confidence. Source: <a href="https://aiweekly.co/alerts/microsoft-targets-claude-code-with-project-polaris">AI Weekly</a> / <a href="https://windowsnews.ai/article/microsoft-build-2026-homegrown-ai-models-to-power-github-copilot.420887">Windows News</a>, June 2, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>GitHub Copilot Workspace announced GA at Build [Tier 2]</h4>
     <p>Copilot Workspace, GitHub's repo-aware agentic environment that proposes multi-file edits and runs tests autonomously, was announced generally available at Build, alongside code-review agent GA and next-edit-suggestions GA. Reported via keynote-day aggregators pending the github.blog changelog. Source: <a href="https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/">ChatForest recap</a>, June 2, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Update on the Copilot AI Credits switch: mitigations, no reversal</h4>
     <p>Following the June 1 move to usage-based "AI Credits" billing (yesterday's lead), the new development is GitHub's response rather than a rollback: promotional credits across June, July, and August, org-level pooled usage so light users offset heavy ones, and a hard $0 budget cap so users cannot be charged above their subscription. Backlash continued on the announcement thread with reports of large cost jumps for agentic power users. Source: <a href="https://github.com/orgs/community/discussions/192948">GitHub community discussion</a> / <a href="https://www.how2shout.com/ai/github-copilot-token-billing-june-2026-ai-credits-developer-backlash.html">how2shout</a>, June 1-2, 2026</p>
   </div>
@@ -234,15 +234,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>xAI launches Composer 2.5, an agentic coding model in Grok Build at $0.50 and $2.50 per million tokens</h4>
     <p>xAI shipped Composer 2.5, a fast agentic coding model now live in Grok Build, positioned for long-running tasks and complex tool use, with a faster variant priced at $3.00 and $15.00 per million tokens. Secondary reporting claims it was built on the open-weight checkpoint of Moonshot's Kimi K2.5 and trained on roughly 25x more synthetic tasks than Composer 2; treat the base-model claim as unconfirmed against the official page. Source: <a href="https://x.ai/news/composer-2-5">x.ai</a>, June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Anthropic IPO filing sets up pressure on OpenAI to follow</h4>
     <p>The competitive read on the Anthropic S-1: reporting indicates OpenAI is preparing its own confidential filing, with some outlets citing a possible fall debut above $1T. The Anthropic filing is confirmed; the OpenAI timeline and valuation specifics are reported and remain unconfirmed. Source: <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC</a>, June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4 class="quiet">Other frontier labs quiet inside the window</h4>
     <p>No new in-window model, pricing, or API drop from Google, Meta, Mistral, DeepSeek, Qwen, or Cohere. Recent anchors trace to May: Google I/O (May 19), Qwen 3.7 (May 20), DeepSeek V4-Pro permanent price cut (May 22). Microsoft Build, opening today, is the likely source of the next competitor model news. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a></p>
   </div>
@@ -250,15 +250,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Anthropic confidential S-1 leads the IPO-prep cluster</h4>
     <p>Covered in Top 3. Genuinely new funding rounds and M&A were quiet in the strict window; the notable raises (Anthropic $65B, Cognition $1B, Sierra $950M) all landed in late May and are not repeated here. Source: <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC</a>, June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>SpaceX amends its S-1, reserving up to 5% of IPO shares for a directed-share program</h4>
     <p>In a June 1 amended filing, SpaceX set aside up to 5% of the offering for employees and friends-and-family ahead of a targeted June 12 Nasdaq debut under ticker SPCX, with that tranche reportedly exempt from the standard lock-up. After its February xAI merger, SpaceX frames itself as an AI services and infrastructure company. Source: <a href="https://www.cnbc.com/2026/06/01/spacex-sets-aside-up-to-5percent-of-shares-in-ipo-for-employees-and-friends.html">CNBC</a>, June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>SpaceX flags potential significant future equity issuance to IPO investors</h4>
     <p>The same June 1 amendment warned that SpaceX may issue substantial equity in future acquisitions, divestitures, or strategic deals, a dilution-risk disclosure that signals an active M&A posture post-IPO at a roughly $1.75T to $1.8T target valuation. Source: <a href="https://techcrunch.com/2026/06/01/spacex-says-it-may-issue-significant-equity-in-future-transactions/">TechCrunch</a>, June 1, 2026</p>
   </div>
@@ -266,15 +266,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Z.ai releases GLM-5.1, a 754B open-weights coding flagship</h4>
     <p>Covered in Top 3. MIT-licensed, MoE, leads open models on SWE-Bench Pro (58.4), CyberGym (68.7), and BrowseComp (68.0). The freshest genuinely notable open-source development in the window. Source: <a href="https://huggingface.co/zai-org/GLM-5.1">Hugging Face</a>, June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>OpenBMB releases VoxCPM2, a 2B tokenizer-free diffusion TTS model under Apache 2.0</h4>
     <p>OpenBMB shipped VoxCPM2, a tokenizer-free diffusion-autoregressive text-to-speech model on a MiniCPM-4 backbone, trained on more than 2M hours and supporting 30 languages plus voice design and controllable cloning. It outputs 48kHz audio with real-time streaming and is commercial-ready. Source: <a href="https://huggingface.co/openbmb/VoxCPM2">Hugging Face</a>, updated June 1, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4 class="quiet">arXiv quiet over the weekend overnight window</h4>
     <p>No high-signal LLM paper, dataset, or benchmark confirmable to June 1-2 with a timestamp. Searches returned only evergreen surveys and pre-existing work, and the llm-stats open-weights tracker showed no proprietary open-source releases this week. Re-check Hugging Face Daily Papers and arXiv cs.CL around 07:30 CET. Source: <a href="https://llm-stats.com/ai-news">llm-stats research feed</a></p>
   </div>
@@ -282,15 +282,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Project Polaris framing is single-source aggregator until a Microsoft primary lands [Tier 2, partially UNVERIFIED]</h4>
     <p>The claim that Microsoft's homegrown model replaces GPT-4 in Copilot by August appears across several outlets but lacks a first-party github.blog or microsoft.com post. The substance (Microsoft reducing OpenAI dependency in Copilot) is plausible and consistently reported; treat the exact name, date, and "replace GPT-4" wording as unconfirmed. Source: <a href="https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/">ChatForest recap</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>OpenAI confidential IPO filing reported as imminent [timeline UNVERIFIED]</h4>
     <p>Following Anthropic's S-1, reporting says OpenAI is readying its own confidential filing, with some outlets citing a fall listing above $1T. The directional signal, a dual AI-lab IPO race this year, is the part to track; the specific filing date and valuation are unconfirmed. Source: <a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">TechCrunch</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>xAI Composer 2.5 reportedly built on Moonshot's Kimi K2.5 checkpoint [UNVERIFIED]</h4>
     <p>Secondary reporting says Composer 2.5 was trained from the open-weight Kimi K2.5 base. The official x.ai page does not state this, so the provenance claim should be treated as unconfirmed pending a first-party model card. Source: <a href="https://x.ai/news/composer-2-5">x.ai</a></p>
   </div>
@@ -298,23 +298,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Microsoft Build 2026: June 2-3, San Francisco</h4>
     <p>Keynote opens June 2 with a Windows-as-agent-platform focus. Watch for first-party confirmation of Windows Agent Runtime, Azure Agent Mesh, the Windows Agent Store, Copilot Workspace GA, and any Project Polaris detail. The next major agentic-news catalyst.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>SpaceX IPO roadshow: reported to start June 4</h4>
     <p>Marketing reported to begin June 4, pricing as early as June 11, and a Nasdaq debut under SPCX around June 12. Watch the directed-share and dilution disclosures filed June 1. Dates are reported targets, not SpaceX-confirmed.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Anthropic Agent SDK billing split: reported for June 15 [verify]</h4>
     <p>Aggregator reporting flags a subscription-versus-credit billing change for programmatic usage on June 15. Confirm against a first-party Anthropic doc before acting.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>OpenAI confidential IPO filing: watch</h4>
     <p>Reported as imminent following Anthropic's S-1. No confirmed date. Watch for a same-style confidential-filing announcement.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Independent GLM-5.1 benchmark reproductions: watch</h4>
     <p>The 58.4 SWE-Bench Pro claim needs third-party reproduction. Watch for independent runs and for inference providers listing GLM-5.1 with pricing.</p>
   </div>

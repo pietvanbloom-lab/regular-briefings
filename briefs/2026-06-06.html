@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Google signs a roughly $30B compute deal with SpaceX: $920M a month through mid-2029, about 110,000 NVIDIA GPUs, one week before the SpaceX IPO</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> A hyperscaler that builds its own TPUs is now renting GPU capacity from a rocket company, a sign even Google cannot self-supply fast enough for 2027 demand. Watch for SpaceX to position Starlink-linked orbital and ground compute as a third neutral supplier alongside CoreWeave and Nebius, and for the IPO prospectus to lean on these contracts as recurring revenue.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Claude Code ships a June 5 release: Opus 4.8 defaults to high effort, dynamic workflows orchestrate hundreds of background agents, and a cheaper fast mode arrives</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -163,7 +163,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Dynamic workflows move multiagent orchestration from a research demo into the default CLI, which resets what a single developer can spawn in one session. Paired with the June 15 agent credit-pool change, the message is consistent: Anthropic wants heavy agent fan-out, but priced separately. Watch teams benchmark dynamic-workflow runs against Codex and Copilot CLI on cost-per-task within two weeks.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a3">
       <h3>OpenAI extends its cyber-tuned GPT-5.5-Cyber to vetted EU defenders, governments, and the EU AI Office under a Trusted Access program</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -182,15 +182,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code June 5 release: Opus 4.8 high-effort default, dynamic workflows, fast mode</h4>
     <p>The changelog defaults Opus 4.8 to high effort, adds dynamic workflows that orchestrate tens to hundreds of background agents, and a fast mode at 2x rate for about 2.5x speed, plus enterprise version pinning. The freshest in-window Anthropic item. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude hit by a multi-product outage June 5, resolved within hours</h4>
     <p>Elevated error rates hit claude.ai, the Claude API, Claude Code, and Cowork from 15:08 UTC, with full restoration reported by 18:27 UTC the same day. Claude for Government appeared unaffected. Second outage in the same week. Source: <a href="https://status.claude.com/history">status.claude.com history</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Code w/ Claude developer conference runs live in Tokyo, June 5 to 6</h4>
     <p>The Tokyo leg streamed Day 1 keynotes and breakouts, the third city after San Francisco and London, with an Extended Tokyo follow-on listed for June 11. Content recaps prior SF and London reveals, no net-new product surfaced in the window. Source: <a href="https://claude.com/code-with-claude/tokyo">claude.com Code w/ Claude Tokyo</a></p>
   </div>
@@ -198,11 +198,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Quiet 24 hours for net-new agent launches, the meaty stories landed June 2 to 3</h4>
     <p>No tagged headline release surfaced inside the strict window. The substantive items, ServiceNow Action Fabric opening its system of action to external agents and Noma Agent Access Control governing MCP servers, both predate the window by two to three days. Source: <a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-opens-its-full-system-of-action-to-every-AI-Agent-in-the-enterprise/default.aspx">ServiceNow newsroom</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP core repos see June 5 commit activity, no new version tag</h4>
     <p>The modelcontextprotocol registry, Python SDK, and Rust SDK repos show June 4 to 5 activity, reading as routine maintenance rather than a versioned launch (latest tagged Python SDK is 1.27.2 from May 29). The 2026-07-28 spec release candidate remains the forward marker. Source: <a href="https://github.com/orgs/modelcontextprotocol/repositories">github.com/orgs/modelcontextprotocol</a></p>
   </div>
@@ -210,11 +210,11 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Claude Code June 5 release leads the coding-tools day</h4>
     <p>Opus 4.8 high-effort default, dynamic workflows orchestrating tens to hundreds of background agents, and a fast mode billed at 2x rate for about 2.5x speed. The one clean in-window Tier 1 coding signal. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG.md</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>SWE-bench Lite leaderboard refreshes June 5, Claude Opus 4.6 holds top at 62.7%</h4>
     <p>A leaderboard data refresh, not a model launch: Opus 4.6 leads at 62.7% with MiniMax M2.5 at 56.3%. Useful as a current ranking snapshot for agentic coding evals. Source: <a href="https://pricepertoken.com/leaderboards/benchmark/swe-bench-lite">pricepertoken.com SWE-bench Lite</a></p>
   </div>
@@ -222,19 +222,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>OpenAI opens GPT-5.5-Cyber to vetted EU defenders and the EU AI Office</h4>
     <p>The cyber-tuned, more permissive variant reaches authorized European red teams, governments, cyber agencies, and EU institutions via identity-based Trusted Access, framed competitively against Claude Mythos at ENISA. Source: <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/">openai.com Trusted Access for Cyber</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Musk posts a Grok core model improvement and worktrees support for Grok Build (June 5)</h4>
     <p>Two June 5 updates: a core model improvement tied to a reported Grok V9-Medium at about 1.5T params with a mid-June target, and Git worktrees support for the Grok Build coding agent, allowing multiple isolated working directories from one repo. Param specs are reported, not confirmed. Source: <a href="https://releasebot.io/updates/xai">releasebot.io xAI updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>OpenAI Dreaming V3 memory upgrade reportedly reaching ChatGPT Plus and Pro in the US [MEDIUM]</h4>
     <p>A memory overhaul that auto-updates stored facts over time, for example revising a future trip into a past one once it passes, said to have begun reaching US Plus and Pro users June 4, with Free and Go to follow. Single secondary source, no primary OpenAI link confirmed. Source: <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-5-2026">buildfastwithai roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Google DeepMind, Meta, Mistral, and DeepSeek were quiet in the window</h4>
     <p>No fresh June 5 to 6 primary-source releases surfaced from these labs. The recent waves (Gemini 3.5 Flash GA at I/O, Qwen3.7-Plus GA June 1) predate the window. A pre-WWDC lull. Source: <a href="https://deepmind.google/">deepmind.google</a></p>
   </div>
@@ -242,15 +242,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Google to rent about $30B of compute from SpaceX at $920M a month through mid-2029</h4>
     <p>Roughly 110,000 NVIDIA GPUs plus CPUs and memory from October 2026 to June 2029. Combined with the SpaceX-Anthropic pact, disclosed SpaceX compute contracts top $70B ahead of an IPO targeted around June 12 under ticker SPCX. Source: <a href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/">TechCrunch</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>AI funding megarounds dominate the June 5 Crunchbase weekly roundup</h4>
     <p>Flourish raised $500M to build brain-inspired AI models with Bezos, Lux, and Google Ventures backing; Supabase raised $500M at $10.5B led by GIC; Suno raised $400M at $5.4B amid label lawsuits; Generalist AI raised $400M at about $2B; AlphaSense raised $350M at $7.5B. Source: <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/">Crunchbase roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>2026 tech layoffs reach 149,935 cuts across 363 events as of June 5</h4>
     <p>The TrueUp tracker logs about 974 cuts a day, 44% faster than 2025, with Challenger attributing roughly 17% of 2026 cuts to AI. Uber cut 23% of its People and Places division, framed as org complexity rather than AI. Source: <a href="https://www.techtimes.com/articles/317848/20260605/tech-layoffs-2026-hit-149935-uber-cuts-hr-days-after-ai-drained-its-coding-budget.htm">TechTimes</a></p>
   </div>
@@ -258,11 +258,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Quiet day for open weights and research, no fresh in-window Tier 1 drop</h4>
     <p>No confirmed primary-source open-weights model, dataset, or breakthrough paper landed cleanly inside the 24h window. Yesterday's NVIDIA Nemotron 3 Ultra remains the standing open-weights story, with no new development today. Source: <a href="https://huggingface.co/models">huggingface.co/models</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>MiniMax M3 open weights still pending, expected around June 11</h4>
     <p>M3 launched June 1 as a frontier-coding, 1M-context, native-multimodal model (reported 59.0% SWE-Bench Pro, 66.0% Terminal-Bench 2.1). Weights and the technical report were promised within about 10 days, so roughly June 11. As of the window the weights are not yet released. Source: <a href="https://www.minimax.io/blog/minimax-m3">minimax.io M3 blog</a></p>
   </div>
@@ -270,15 +270,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a20">
     <h4>xAI Grok V9-Medium, about 1.5T params, release expected mid-June [Tier 2, MEDIUM]</h4>
     <p>Reportedly about triple the current v8-small production model, with a public release targeted mid-June per Musk's June 5 posts. Param counts are reported, not independently confirmed. Watch for a model card or API endpoint. Source: <a href="https://www.panewslab.com/en/articles/019e5e87-84da-70a9-ab8e-da7f57f75779">PANews</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>MiniMax M3 open weights and tech report expected around June 11 [Tier 1, MEDIUM]</h4>
     <p>Open-weight, 1M context, native multimodal, said to have launched June 1 with weights and report promised within about 10 days. Watch HuggingFace and GitHub for the actual drop. Source: <a href="https://the-decoder.com/minimax-m3-open-weight-model-with-a-million-token-context-challenges-proprietary-leaders/">The Decoder</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>OpenAI Dreaming V3 memory rollout and an updated GPT-Rosalind [Tier 3, LOW to MEDIUM]</h4>
     <p>A single secondary roundup reports a Dreaming V3 memory overhaul reaching US Plus and Pro, and an updated GPT-Rosalind for life sciences with stronger agentic coding and bioinformatics plugins. No primary OpenAI confirmation yet. Source: <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-5-2026">buildfastwithai roundup</a></p>
   </div>
@@ -286,19 +286,19 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a23">
     <h4>2026-06-08: Apple WWDC 2026 keynote</h4>
     <p>Expected Siri overhaul reportedly leaning on Google Gemini, iOS 27, expanded on-device Apple Intelligence, and App Store AI-agent integration. The dominant near-term catalyst. Source: <a href="https://techcrunch.com/2026/06/04/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/">TechCrunch WWDC preview</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>2026-06-11: MiniMax M3 open weights expected to drop</h4>
     <p>Weights and technical report promised within about 10 days of the June 1 launch. The next major open-weights test against proprietary coding leaders. Source: <a href="https://www.minimax.io/blog/minimax-m3">minimax.io M3 blog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>2026-06-12: SpaceX IPO possible Nasdaq listing</h4>
     <p>Listing under ticker SPCX as early as June 12, reportedly near a $1.77T valuation, with the SpaceX-Google and SpaceX-Anthropic compute contracts as recurring-revenue anchors. A read-through for the Anthropic and OpenAI IPO pipeline. Source: <a href="https://money.usnews.com/investing/news/articles/2026-06-05/spacex-signs-cloud-deal-with-google">US News</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>2026-06-15: Anthropic agent credit pool and model deprecations take effect</h4>
     <p>Agent and headless usage moves to a separate API-rate credit pool, with model deprecations the same day and migration to Sonnet 4.6 and Opus 4.8. Source: <a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com release notes</a></p>
   </div>

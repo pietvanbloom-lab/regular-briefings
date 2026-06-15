@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Gartner projects ~40% of enterprises will demote or decommission autonomous agents by 2027 over governance gaps, prescribes a four-tier proportional control model</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -151,7 +151,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> The 2024-2025 story was agent capability. The 2026-2027 story is agent retirement. This is the first hard analyst number putting a failure rate on production agents, and it reframes the buyer conversation from "what can the agent do" to "can we govern, audit, and roll it back." Vendors that ship tiered permissioning and rollback testing now (Anthropic's Auto mode classifier, Cursor Auto-review, ServiceNow's tiered fabric) are positioned for the governance wave. Expect "agent governance" to become a named budget line and a procurement gate within two quarters, separating platforms that treat it as a feature from those that bolt it on after a failure.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Cognizant opens TriZetto Unify to AI agents with agent-ready FHIR APIs, launches Electronic Prior Authorization as the first headless-for-agents healthcare service</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -165,7 +165,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Most "AI agent" healthcare news is a chatbot bolted onto an existing portal. This is the opposite architecture: a core claims platform redesigning its surface so the API, not the UI, is the primary interface for agents. Prior authorization is the most-hated friction point in US healthcare, which makes it the perfect agent wedge. The durable signal is the "headless for agents" pattern itself: incumbents with the workflow data are realizing that exposing FHIR-aligned, agent-callable resources is a defensible moat that a thin agent startup cannot replicate. Watch other claims, EHR, and payer platforms follow with their own agent-ready API tiers.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Genesis AI releases Genesis World 1.0 open-source robotics simulation stack under Apache 2.0, reports 0.90 sim-to-real correlation and policy evaluation cut from 200+ hours to under 0.5 hours</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -186,15 +186,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code v2.1.158 extends Auto mode to Bedrock, Vertex, and Foundry for Opus 4.7 and 4.8</h4>
     <p>The release makes Auto mode (the permission tier between manual approval and full bypass, gated by a separate classifier model) available on AWS Bedrock, Google Vertex, and Microsoft Foundry. Users opt in via the environment variable CLAUDE_CODE_ENABLE_AUTO_MODE=1. This is an enterprise-deployment unlock that lets regulated teams run Auto mode on their existing cloud-hosting paths rather than first-party API only. Source: <a href="https://code.claude.com/docs/en/changelog">Claude Code Changelog</a> — May 30, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Anthropic IPO analysis circulates: ~$47B run-rate framing and a possible trillion-dollar listing after the $965B raise</h4>
     <p>A May 30 Motley Fool breakdown walks through Anthropic's path to a likely trillion-dollar IPO following the May 28 Series H, separating confirmed facts (post-money near $965B, confidential or pre-filing stage) from speculation (an approximate October 2026 listing target, no final decision announced). This is analysis recapping last week's raise, not new corporate disclosure. Source: <a href="https://www.fool.com/investing/2026/05/30/the-next-1-trillion-ai-ipo-anthropic-heres-what-we/">The Motley Fool</a> — May 30, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4 class="quiet">Quiet day otherwise: no new anthropic.com/news or research post timestamped in-window</h4>
     <p>The week's headline items (Opus 4.8 on May 28, the $65B Series H, the Mythos wide-release statement) all landed May 28-29, just outside this window, and are not re-run here as fresh. Watch anthropic.com/news for the Mythos release terms.</p>
   </div>
@@ -202,15 +202,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Cognizant opens TriZetto Unify to AI agents, Electronic Prior Authorization first agent-ready service</h4>
     <p>Full detail in Top 3. Three HL7 FHIR-aligned API resources let agents drive the prior-auth workflow directly rather than through a UI, with humans retaining clinical decisions. First major incumbent claims platform to publicly reframe its API surface as agent-first. Source: <a href="https://www.prnewswire.com/news-releases/faster-decisions-faster-care-for-patients-cognizant-opens-trizetto-unify-to-ai-agents-302785705.html">PRNewswire</a> — May 30, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Gartner governance warning amplifies: four-tier proportional control model to avoid mass agent decommissioning</h4>
     <p>Covered in Top 3. The prescription matches controls (observe, advise, act with approval, act autonomously) and rollback testing to each agent's autonomy and access scope, rather than applying uniform governance across all agents. Source: <a href="https://www.cio.com/article/4178628/many-autonomous-agents-doomed-by-governance-failures.html">CIO</a> — May 30, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4 class="quiet">No in-window MCP spec movement</h4>
     <p>The MCP release candidate locked May 21 (stateless core, Extensions, Tasks, MCP Apps, auth hardening), with the final spec targeting July 28. No new server launches from modelcontextprotocol.io or major framework releases inside this 24h window. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP Blog</a></p>
   </div>
@@ -218,11 +218,11 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4 class="quiet">Quiet day for coding tools: the week's moves landed May 27-29, just outside the window</h4>
     <p>Cursor 3.6 Auto-review (May 29), GitHub Copilot usage-metrics adoption cohorts (May 29), and Cognition's $1B raise at roughly $26B (May 27) all predate this window. The only confirmed in-window release is Claude Code v2.1.158 (see Anthropic bucket). No new SWE-Bench results posted in-window. Source: <a href="https://cursor.com/changelog/auto-review">Cursor Changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>For context: Cursor 3.6 Auto-review Run Mode uses a classifier subagent to gate Shell, MCP, and Fetch calls</h4>
     <p>Published May 29, just before the window. A new run mode lets the agent allow, redirect, or escalate tool calls automatically so it runs longer with fewer human prompts. Notable as another vendor shipping the tiered-permission pattern that the Gartner governance item rewards. Source: <a href="https://cursor.com/changelog/auto-review">cursor.com</a> — May 29, 2026</p>
   </div>
@@ -230,15 +230,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>DeepSeek V4-Pro promotional API discount expires May 31, list price returns</h4>
     <p>DeepSeek's roughly 40% promotional discount on V4-Pro API pricing ends May 31 (15:59 UTC), reverting from about one-quarter of original list back to full list price. A pricing event teams running V4-Pro on cost-sensitive workloads will feel this weekend. Source: <a href="https://llm-stats.com/llm-updates">llm-stats</a> — effective May 31, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>xAI refreshes developer release notes (May 30), consolidating Grok Speech-to-Text and voice</h4>
     <p>The xAI developer docs release-notes page carries a May 30 timestamp consolidating the Grok Speech-to-Text API (multi-speaker transcription, 25 languages, batch and streaming, word-level diarization). The underlying STT product first launched April 18, so this is a docs refresh rather than a net-new release. Source: <a href="https://docs.x.ai/developers/release-notes">xAI Docs</a> — May 30, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4 class="quiet">Otherwise quiet: no frontier in-window model launch or pricing change</h4>
     <p>The late-May cluster (OpenAI Codex for Windows and Rosalind Biodefense on May 29, Mistral's first public chip comments on May 28) all predate the window. Watch for Gemini 3.5 Pro GA, which Google committed to "next month," and the Gemini Interactions API legacy-schema removal on June 8. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
   </div>
@@ -246,11 +246,11 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4 class="quiet">Quiet day: no in-window funding, M&A, or exec move with a confirmed primary-source datestamp</h4>
     <p>A Saturday-into-Sunday window with wire desks dark. The cycle is still echoing the May 28 Anthropic Series H, the roughly May 22 OpenAI confidential IPO filing, and Cognition's May 27 raise, all out of window and covered previously. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Watch item: EU AI Act "Digital Omnibus" formal adoption expected June</h4>
     <p>The provisional agreement (Annex III high-risk timeline relief to December 2027, new non-consensual intimate image prohibitions) was reached May 7 and awaits formal Council and Parliament adoption, expected in June with publication to follow. No in-window movement, flagged as a near-term regulatory catalyst. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU Council</a></p>
   </div>
@@ -258,11 +258,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Genesis World 1.0 ships open-source under Apache 2.0 with Nyx renderer and Quadrants compiler</h4>
     <p>Full detail in Top 3. Reported 0.8996 sim-to-real Pearson correlation across 14 tasks and policy evaluation cut from 200+ hours to under 0.5 hours. The benchmark is the claim to verify; the open-source robotics-evaluation category is the signal to track. Source: <a href="https://github.com/Genesis-Embodied-AI/genesis-world">GitHub</a> — May 30, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4 class="quiet">No new arXiv papers in-window: weekend, no Saturday submissions</h4>
     <p>arXiv does not publish new cs.CL / cs.LG / cs.AI submissions on weekends, confirmed via the llm-stats live research feed showing "no new papers today." No major lab shipped new open weights to Hugging Face inside this 24h window. Source: <a href="https://llm-stats.com/ai-news">llm-stats</a></p>
   </div>
@@ -270,15 +270,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Gemini 3.5 Pro GA committed for "next month" (June 2026), still in limited Vertex preview [Tier 1 statement, timing unconfirmed]</h4>
     <p>Announced at Google I/O on May 19 and still in limited Vertex preview, with Sundar Pichai committing to general availability "next month." Targets roughly 2M-token context and Deep Think. Early signal for the next frontier-model release window. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Mistral exploring in-house chips [Tier 1 comment, no partner, architecture, or timeline named]</h4>
     <p>CEO Arthur Mensch gave his first public comment on in-house silicon ambitions on May 28, alongside the Vibe agent and the Les Ulis inference data center. No partner, architecture, or timeline disclosed. A directional signal that frontier labs beyond the US hyperscalers are weighing vertical integration into compute. Source: <a href="https://www.cnbc.com/2026/05/28/mistral-arthur-mensch-design-chips-ai-data-centers.html">CNBC</a> — May 28, 2026</p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Gemini Interactions API legacy schema removed June 8 [breaking-change watch for builders]</h4>
     <p>The new outputs-to-steps schema became default May 26; the legacy schema is removed June 8. Builders on the Gemini Interactions API should migrate ahead of that date to avoid breakage. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">Google Gemini changelog</a></p>
   </div>
@@ -286,23 +286,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a22">
     <h4>DeepSeek V4-Pro price reversion: May 31, 15:59 UTC</h4>
     <p>Promotional discount ends and list pricing returns. Watch for any extension or follow-on promo, and for downstream effects on routing platforms that default to lowest-cost models.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Gemini 3.5 Pro general availability: targeted June 2026</h4>
     <p>Google committed to GA "next month." Watch ai.google.dev and Vertex for the release and initial pricing and context-window terms.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Gemini Interactions API legacy schema removal: June 8</h4>
     <p>Breaking change for existing builders. Migration to the outputs-to-steps schema required.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>EU AI Act Digital Omnibus formal adoption: expected June</h4>
     <p>Council and Parliament formal adoption of the provisional agreement. Watch for the final text and the confirmed timeline relief on Annex III high-risk obligations.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Anthropic Mythos wide release: "coming weeks" from May 28</h4>
     <p>Stated intent from the Series H announcement. Watch anthropic.com/news for the release and access terms.</p>
   </div>

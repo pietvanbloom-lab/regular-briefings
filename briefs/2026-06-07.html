@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Claude Code 2.1.166 ships a June 6 security fix: relayed SendMessage requests from other Claude sessions no longer carry user authority, plus a new fallbackModel setting</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> As multiagent fan-out becomes the default (last week's dynamic workflows), the new attack surface is one agent spoofing the user's consent to another. Anthropic is closing that authority-confusion hole at the CLI level before frameworks standardize on agent-to-agent messaging. Watch for MCP and rival agent SDKs to adopt explicit non-delegable permission scopes within weeks, and for this to become a named requirement in enterprise agent security reviews.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>OpenAI starts shipping its Dreaming memory architecture to ChatGPT Plus and Pro in the US, auto-updating stored memories over time</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Memory that mutates on its own shifts the moat from model quality to a durable personal data graph that gets stickier the longer you stay. It also raises a fresh control question: users will want to audit and freeze auto-revised facts, not just delete them. Watch Anthropic and Google to answer with their own long-horizon memory, and expect "memory portability" and edit logs to become the next consumer-AI battleground.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Sriram Krishnan to exit the White House senior AI policy adviser role at the end of June, reportedly to start an outside tech-policy institution</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -182,15 +182,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code 2.1.166 and 2.1.167 ship June 6 with fallbackModel and a cross-session messaging security fix</h4>
     <p>2.1.166 adds a fallbackModel setting (up to three models tried in order when the primary is overloaded), glob-pattern support in deny-rule tool-name positions, and a fix so relayed SendMessage permission requests from other Claude sessions no longer carry user authority. 2.1.167 follows with reliability bug fixes. The freshest hard-dated June 6 Anthropic release. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>A separate Opus 4.8 elevated-error incident hit June 6, 18:12 to 18:55 UTC</h4>
     <p>A narrow outage returned 500 and 529 errors on Opus 4.8 API requests for about 43 minutes, identified around 18:37 and resolved the same day. Distinct from the June 5 multi-product outage, with blast radius limited to Opus 4.8 for API and Claude Code users. Source: <a href="https://status.claude.com/history">status.claude.com history</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Claude Partner Network adds a Services Track and a Partner Hub (first seen June 6)</h4>
     <p>The program update introduces a tiered Services Track reflecting what firms have built and delivered on Claude, plus a Partner Hub giving firms visibility into standing, certifications, and deployments, connectable to Claude through a new MCP connector. Context: 40,000-plus firms have applied since the March launch and 10,000-plus consultants hold a Claude certification. Source: <a href="https://www.anthropic.com/news/claude-partner-network">anthropic.com Claude Partner Network</a></p>
   </div>
@@ -198,11 +198,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Quiet weekend for MCP and agent frameworks, no new spec or SDK tag in the window</h4>
     <p>The MCP Python SDK remains at v1.27.2 (May 29) and the TypeScript SDK at the 2.0.0-alpha.2 line (April 1), with only routine non-tagged commits dated June 6 to 7. No major framework cut a release inside the window. The 2026-07-28 stateless-core release candidate stays the standing forward marker. Source: <a href="https://github.com/modelcontextprotocol/python-sdk/releases">modelcontextprotocol python-sdk releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP Dev Summit lands in Bengaluru June 9 to 10, two days out</h4>
     <p>The two-day developer summit is the next likely source of net-new spec and SDK discussion tied to the July stateless-core changes. Worth pre-positioning for the June 9 to 10 briefs. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">blog.modelcontextprotocol.io release candidate</a></p>
   </div>
@@ -210,11 +210,11 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Quiet 24 hours, no Tier 1 coding-tool release dated June 6 or 7</h4>
     <p>Cursor, GitHub Copilot, Cline, Aider, Devin (formerly Windsurf), and Zed show no in-window changelog entry. The week's substantive items (Cursor SDK and Design Mode June 4 to 5, Copilot usage-based billing June 1, Windsurf-to-Devin Desktop rebrand June 2) all predate the window. A weekend lull. Source: <a href="https://cursor.com/changelog">cursor.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Watch item: Gemini CLI and Code Assist shut down June 18, migrating to Antigravity CLI</h4>
     <p>Google's scheduled June 18 sunset pushes existing Gemini CLI users to the Antigravity CLI. Not in the window, flagged as the next dated coding-tool catalyst. Source: <a href="https://developers.googleblog.com/">developers.googleblog.com</a></p>
   </div>
@@ -222,19 +222,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>OpenAI Dreaming memory begins shipping to US ChatGPT Plus and Pro</h4>
     <p>The auto-updating memory system reached US Plus and Pro users around June 6, roughly doubling capacity and adding a reviewable memory summary, with Free and Go plans staged over coming weeks. Confirms and ships yesterday's rumor. Source: <a href="https://releasebot.io/updates/openai/chatgpt">releasebot.io ChatGPT</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>xAI adds Connectors to Grok on the web and a Quality Mode to the Grok Imagine API (June 6)</h4>
     <p>Grok web gained connectors for SharePoint, Outlook, OneDrive, Google Workspace, Notion, GitHub, and Linear, plus bring-your-own MCP server support. A separate Quality Mode landed in the Grok Imagine API for higher realism and stronger text rendering. Distinct from the V9-Medium base-model rumor still in watch. Source: <a href="https://releasebot.io/updates/xai">releasebot.io xAI updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>OpenAI Codex turns on default plugin sharing for Enterprise and EDU workspaces (June 6)</h4>
     <p>Eligible ChatGPT Enterprise and EDU workspaces can now share local Codex plugins so teammates install them from the Codex plugin directory. An incremental workspace-collaboration feature. Source: <a href="https://releasebot.io/updates/openai">releasebot.io OpenAI updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Google, Meta, Mistral, DeepSeek, and Qwen quiet on net-new in the window, Apple WWDC is tomorrow</h4>
     <p>No fresh June 6 to 7 primary-source model release surfaced from these labs. The Apple WWDC 2026 keynote on June 8 (expected LLM-based Siri overhaul and iOS 27 Apple Intelligence) is the marquee near-term catalyst, with leaks so far predating the window. Source: <a href="https://www.macrumors.com/roundup/wwdc/">MacRumors WWDC roundup</a></p>
   </div>
@@ -242,15 +242,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Sriram Krishnan to leave the White House senior AI policy role at end of June</h4>
     <p>The former a16z general partner announced his exit June 6 after 17 months shaping the administration's AI agenda, reportedly to start an outside tech-policy institution. No successor named, leaving a gap atop US AI policy ahead of the August EU AI Act deadline. Source: <a href="https://www.cnbc.com/amp/2026/06/06/white-house-ai-policy-adviser-krishnan-to-leave-position.html">CNBC</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Meta weighs a multi-billion equity raise to fund AI capex, calls share-sale talk speculation</h4>
     <p>Following Alphabet's upsized roughly $85B raise, Meta is reportedly considering selling equity to fund a 2026 capex budget near $125B to $145B. A Meta spokesperson dismissed the share-sale report as speculation, and no banks are hired. Signals a Big Tech equity-issuance race to fund AI infrastructure. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-05/meta-considers-raising-billions-in-share-sale-ft-reports">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>DeepSeek nears a roughly $7.4B maiden raise at a $52B to $59B valuation (new vs prior brief)</h4>
     <p>China's DeepSeek is signing term sheets for its first external round, reportedly led by Tencent (around $1.5B) and CATL (around $740M), with founder Liang Wenfeng adding about $3B and the state-backed National AI Industry Investment Fund participating. The deal broke June 3 to 4, predating the window but not in yesterday's brief, and is not yet closed. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-03/deepseek-close-to-sealing-7-billion-funding-in-historic-ai-deal">Bloomberg</a></p>
   </div>
@@ -258,11 +258,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Quiet day for open weights and research, no in-window Tier 1 drop</h4>
     <p>No confirmed primary-source open-weights model, major-lab dataset, or breakout paper landed inside the window. Curated trackers show the day's open-source signal as carryover, with arXiv cs.* listings showing routine submissions and no breakout social pickup. Source: <a href="https://huggingface.co/models">huggingface.co/models</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>MiniMax M3 open weights still pending on day 6 of the 10-day promise</h4>
     <p>As of June 7 there is no MiniMax-M3 card live on HuggingFace, with access remaining API and OpenRouter only. Weights and the technical report were promised within about 10 days of the June 1 launch, so roughly June 11. Source: <a href="https://huggingface.co/MiniMaxAI">huggingface.co/MiniMaxAI</a></p>
   </div>
@@ -270,15 +270,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Anthropic investigating unconfirmed claims of cross-user responses during the June 5 outage [Tier 2/3, MEDIUM]</h4>
     <p>Following Friday's outage, Anthropic is looking into social-media claims that Claude may have returned responses meant for other users during the disruption. A Claude Code engineer said they had seen no evidence of leaked customer data but were taking reports seriously, and Anthropic attributes the outage to infrastructure failure, not an inference bug. The claim is unverified, watch for an official postmortem. Source: <a href="https://cybernews.com/ai-news/claude-outage-resolved-anthropic-opus-model-errors/">Cybernews</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Meta share-sale to fund AI capex [Tier 2, MEDIUM, early signal]</h4>
     <p>An FT-sourced report says Meta is weighing a multi-billion equity raise for its 2026 AI buildout, which Meta calls speculation. If real, it marks a shift from cash and debt to equity issuance for AI infrastructure. Watch for any banker mandate or a filing. Source: <a href="https://www.winbuzzer.com/2026/06/06/meta-weighs-equity-raise-as-alphabet-sets-ai-benchmark-xcxwbn/">WinBuzzer</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>xAI Grok V9-Medium, about 1.5T params, still expected mid-June [Tier 2, MEDIUM]</h4>
     <p>The base-model upgrade flagged in yesterday's brief remains a watch item, separate from the June 6 Grok Connectors product update. Param counts are reported, not confirmed. Watch for a model card or API endpoint. Source: <a href="https://releasebot.io/updates/xai">releasebot.io xAI updates</a></p>
   </div>
@@ -286,27 +286,27 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a23">
     <h4>2026-06-08: Apple WWDC 2026 keynote</h4>
     <p>Expected LLM-based Siri overhaul (reportedly leaning on Google Gemini), iOS 27, expanded on-device Apple Intelligence, and App Store AI-agent integration. The dominant near-term catalyst. Source: <a href="https://www.macrumors.com/roundup/wwdc/">MacRumors WWDC roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>2026-06-09 to 10: MCP Dev Summit, Bengaluru</h4>
     <p>Two-day developer summit, the next likely source of net-new MCP spec and SDK discussion ahead of the July stateless-core release candidate. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">blog.modelcontextprotocol.io</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>2026-06-11: MiniMax M3 open weights expected to drop</h4>
     <p>Weights and technical report promised within about 10 days of the June 1 launch. The next major open-weights test against proprietary coding leaders. Source: <a href="https://huggingface.co/MiniMaxAI">huggingface.co/MiniMaxAI</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>2026-06-12: SpaceX IPO first trade on Nasdaq</h4>
     <p>SpaceX set a fixed $135 per share at a roughly $1.77T valuation, with pricing expected after close June 11 and first trade June 12 under ticker SPCX, potentially the largest IPO in history and an anchor for the SpaceX-Google and SpaceX-Anthropic compute contracts. Source: <a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html">CNBC</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>2026-06-15: Anthropic agent credit pool and model deprecations take effect</h4>
     <p>Agent and headless usage moves to a separate API-rate credit pool, with model deprecations the same day and migration to Sonnet 4.6 and Opus 4.8. Source: <a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com release notes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>2026-06-18: Gemini CLI and Code Assist shut down, migrate to Antigravity CLI</h4>
     <p>Google sunsets the Gemini CLI and Code Assist, moving users to the Antigravity CLI. The next dated coding-tool transition. Source: <a href="https://developers.googleblog.com/">developers.googleblog.com</a></p>
   </div>

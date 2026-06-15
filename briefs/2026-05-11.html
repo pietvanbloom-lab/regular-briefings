@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Cerebras lifts CBRS IPO price range to $150 to $160, raise targets $4.8B with 20x oversubscription</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -149,7 +149,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> A 20x-oversubscribed AI compute IPO at $4.8B reopens the public-market window for compute-heavy AI names and forces private secondaries to mark up within days, with knock-on implications for Nvidia-challenger valuations and the Anthropic Series F whisper price.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>Anthropic "Teaching Claude Why" research lands on main research hub, mainstream press picks it up the same day</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -161,7 +161,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First time Anthropic elevates a deep alignment-science post to the main research front page within 48 hours of authoring, reframing alignment as a training-data curation problem competitors will be pressured to copy. Lands precisely 48 hours before Google's Android Show: I/O Edition on May 12 and locks the safety-leadership narrative going into I/O week.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>llama.cpp release b9097 ships NCCL-free AllReduce CUDA kernel for tensor-parallel inference</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -181,15 +181,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Anthropic alignment story enters mainstream press cycle, blackmail rates from 96% to 0% in Haiku 4.5</h4>
     <p>TechCrunch, Android Headlines, Analytics Insight, and Bitcoin World all ran the alignment story on May 10. Anthropic reports training on constitutional docs plus fictional stories of admirable AIs cut agentic misalignment by more than 3x compared with demonstration-only training. Source: <a href="https://alignment.anthropic.com/2026/teaching-claude-why/">alignment.anthropic.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>status.anthropic.com clean through the 24h window, post-SpaceX-compute uplift holding</h4>
     <p>No new incidents posted Sunday into Monday morning. Last incident was Opus 4.7 elevated-error event on May 7 and GitHub IP-allowlist breakage on May 6 to 7. Confirms the higher Pro and Max limits roll-out has stabilized. Source: <a href="https://status.anthropic.com/history">status.anthropic.com/history</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>No new Anthropic SDK or claude-code releases over the weekend window, [Tier 1 absence-of-signal]</h4>
     <p>Last shipped versions remain claude-code 2.1.138 from May 9 and anthropic-sdk-python 0.100.0 from May 6. Pattern across the past four weeks suggests next push lands Monday or Tuesday, worth watching the GitHub release feed. Source: <a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code/releases</a></p>
   </div>
@@ -197,19 +197,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>MCP TypeScript SDK lands ReDoS fix CVE-2026-0621, drops zod from peerDependencies, adds Fastify adapter</h4>
     <p>Patch fixes a ReDoS in the UriTemplate regex, moves zod to a direct auto-installed dependency, switches unknown-tool errors to JSON-RPC -32602, and ships first-class Standard Schema support for Zod v4, Valibot, and ArkType. Source: <a href="https://github.com/modelcontextprotocol/typescript-sdk/releases">github.com/modelcontextprotocol/typescript-sdk</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Claude Code 2.1.138 MCP fixes ship to stable, subagent forking now works in non-interactive runs</h4>
     <p>Patch addresses MCP servers configured in .mcp.json, plugins, and claude.ai connectors silently disappearing after /clear, plus a bug where MCP OAuth refresh tokens were lost during concurrent multi-server refresh. Production teams running multi-server fleets should pin to 2.1.138 or newer. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com/docs/en/changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>MCP STDIO command-injection advisory still spreading, 7,000+ public servers and 150M+ downloads exposed</h4>
     <p>OX Security and Adversa continued to circulate the MCP STDIO architectural RCE advisory tied to CVE-2025-49596, CVE-2026-22252, CVE-2026-22688, CVE-2025-54994, and CVE-2025-54136. Anthropic has not modified the protocol, citing the behaviour as expected. Source: <a href="https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/">ox.security advisory</a>, <a href="https://adversa.ai/blog/top-mcp-security-resources-may-2026/">adversa.ai roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>claude-agent-sdk-python 0.1.80 bundles Claude CLI 2.1.138, tightens in-process MCP path</h4>
     <p>Re-bundles the latest Claude CLI and inherits the MCP server-state and OAuth fixes. ClaudeSDKClient continues to expose custom tools and hooks as in-process MCP servers running inside the host Python process. Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github.com/anthropics/claude-agent-sdk-python</a></p>
   </div>
@@ -217,15 +217,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Coding-tool launch wave from earlier in the week still propagating into trade press</h4>
     <p>Windsurf 2.0 with embedded Devin (May 6), Coder Agents self-hosted beta (May 6), Cursor 3.3 parallel agents and PR review (May 7), and ServiceNow Build Agent GA inside Cursor, Windsurf, Claude Code, and Copilot (May 7) are all still in trade-press cycles. Source: <a href="https://sdtimes.com/ai/may-8-2026-ai-updates-from-the-past-week-coder-agents-launch-snyk-claude-partnership-opsera-cursor-partnership-and-more/">SD Times weekly</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Cursor parallel-agent architecture and context-usage breakdown shift IDE category toward orchestration shell</h4>
     <p>Cursor 3.3 introduced inline PR review, split-changes-into-PRs, parallel agents for plan execution, and a context-usage panel showing which rules, skills, MCPs, and subagents consume tokens. Puts Cursor on the same trajectory as Devin and Windsurf and away from Copilot's chat paradigm. Source: <a href="https://cursor.com/changelog">cursor.com/changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Quiet weekend in the coding tools bucket itself, only Claude Code 2.1.138 MCP patches in the strict 24h window</h4>
     <p>No new releases from Windsurf, Cursor, GitHub Copilot, or Cline between May 10 06:00 CET and now. The week's structural shifts (parallel subagents, embedded cloud delegation, MCP skill plug-ins) were already locked in before the window. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
   </div>
@@ -233,19 +233,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Android Show: I/O Edition confirmed for May 12, 10am PT, kicks off Google I/O 2026 week</h4>
     <p>Android 17, Aluminium OS, and XR glasses expected at the pre-show. Main I/O keynote May 19 to 20 widely tipped to unveil Gemini 4.0, a Proactive Assistant feature, and a "Remy" 24/7 agent. Source: <a href="https://www.tech2geek.net/google-confirms-the-android-show-i-o-edition-2026-android-17-aluminium-os-and-xr-glasses-expected/">tech2geek</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>[UNVERIFIED] Google reportedly shuts down internal "Mariner" agent project ahead of I/O</h4>
     <p>Weekly AI roundups reported Google shut the internal Mariner agent project just before its developer event, suggesting consolidation into a unified Gemini Agent / "Remy" stack. Pre-I/O agent strategy reshuffle is a leading indicator that Google is betting on one agent SKU. Source: <a href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week">MarketingProfs roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Perplexity Computer agent now in beta for all Pro subscribers with 400+ connectors and MCP support</h4>
     <p>Tier expansion from Max-only widens install base. 20+ models, prebuilt and custom skills, hundreds of connectors. Custom MCP connectors enabled for Pro, Max, and Enterprise on top of the 400+ prebuilt set. Source: <a href="https://releasebot.io/updates/perplexity-ai">releasebot.io Perplexity</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Mainstream press amplifies Anthropic alignment story while OpenAI mid ad-platform rollout</h4>
     <p>TechCrunch, Android Headlines, Bitcoin World, and Analytics Insight all ran the Anthropic blackmail/fictional-AI story on May 10. The press cycle sharpens the brand contrast between Anthropic safety positioning and OpenAI consumer monetization push. Source: <a href="https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/">TechCrunch</a></p>
   </div>
@@ -253,19 +253,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>White House drafting AI security executive order that omits mandatory model tests</h4>
     <p>NEC director Hassett likened the order to FDA drug review but stops short of mandatory model evaluations. A parallel draft would pair federal agencies with AI vendors on cyber defense. Voluntary-only US security regime widens the regulatory gap with the EU. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-08/us-prepares-ai-security-order-that-omits-mandatory-model-tests">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Nvidia equity-investment portfolio crosses $40B with IREN ($2.1B option) and Corning ($3.2B option) deals same week</h4>
     <p>CNBC tally shows Nvidia's strategic-equity book now tops $40B, including a five-year right to buy 30M IREN shares at $70 and warrants for up to 18M Corning shares plus a $500M pre-funded warrant at $180. Both stocks rallied on announcement. Source: <a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">CNBC tally</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>EU AI Act Omnibus implementation analysis: sandbox deadline slips to Aug 2027, transparency grace cut to 3 months</h4>
     <p>May 7 political agreement detail circulating into May 10. National AI sandbox setup postponed to Aug 2, 2027. GenAI content transparency grace cut to Dec 2, 2026. SME-style relief extended to small mid-caps. AI Office powers reinforced. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>[UNVERIFIED] Suno Series D reports point to $5B+ valuation, roughly doubling Nov 2025 $2.45B mark</h4>
     <p>Reporting circulating into the window says AI music generator Suno is lining up a Series D that would value the company above $5B. No lead investor disclosed yet. A 2x markup inside six months for a copyright-exposed GenAI music app signals VCs are again willing to underwrite litigation risk. Source: <a href="https://www.digitalmusicnews.com/2026/05/04/suno-series-d-reports/">Digital Music News</a></p>
   </div>
@@ -273,19 +273,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>OpenSearch-VL ships fully open recipe for frontier multimodal search agents</h4>
     <p>Open recipe for training multimodal deep search agents combining text and image search, OCR, cropping, and super-resolution tools with a multi-turn fatal-aware GRPO algorithm. Ships SearchVL-SFT-36k and SearchVL-RL-8k datasets plus models, with 10+ point gains across seven benchmarks. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>ARIS open-source autonomous research harness with cross-model adversarial assurance layer</h4>
     <p>Three-layer harness with 65+ Markdown-defined skills, MCP model integrations, and a five-pass scientific-editing pipeline. The assurance layer cross-checks manuscript claims against a claim ledger and raw evidence to catch silent claim drift in long-horizon agent runs. Source: <a href="https://arxiv.org/list/cs.AI/recent">arxiv cs.AI</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>vLLM v0.20.2 patch lands DeepSeek V4 stabilization, multi-stream pre-attention GEMM, BF16/MXFP8 FlashInfer all-to-all</h4>
     <p>Patch on v0.20.0 adds multi-stream pre-attn GEMM, tunable VLLM_MULTI_STREAM_GEMM_TOKEN_THRESHOLD, PTX cvt for faster FP32 to FP4, and fixes a persistent topk cooperative deadlock at TopK=1024. Production-grade fixes for DeepSeek V4 serving on Blackwell-class hardware. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>[UNVERIFIED] Uniform-Correct Policy Optimization challenges RLVR's indifference to diversity</h4>
     <p>Paper argues that RLVR's single-attempt accuracy gains come at the cost of multi-sample coverage and diversity collapse, proposing a uniform-correct fix. Directly engages the post-DeepSeek-R1 reasoning-RL line. If the diversity-collapse thesis holds, reshapes how reasoning labs evaluate RLVR beyond pass@1. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
@@ -293,15 +293,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Google "Mariner" agent project reportedly shuttered pre-I/O [Tier 2, LOW confidence]</h4>
     <p>Single-source via weekly AI roundup. If confirmed at I/O on May 19, signals Google is consolidating internal agent stacks into one Gemini Agent SKU rather than fielding several competing internal efforts. Source: <a href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week">MarketingProfs roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Suno Series D north of $5B valuation [Tier 2, MEDIUM confidence]</h4>
     <p>2x markup inside six months on a copyright-exposed GenAI music app. No lead investor named. Worth tracking through the I/O week, since closing could anchor a comparable round for ElevenLabs or Udio. Source: <a href="https://www.digitalmusicnews.com/2026/05/04/suno-series-d-reports/">Digital Music News</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>Trump AI security executive order described as voluntary, FDA-style review [Tier 1, MEDIUM confidence on timing]</h4>
     <p>NEC framing as "FDA for AI" without mandatory model tests would lock in a transatlantic regulatory gap. Direct implication for frontier-model release cadence: OpenAI, Anthropic, and xAI gain US runway while EU Omnibus VII pushes high-risk obligations into 2027 and 2028. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-08/us-prepares-ai-security-order-that-omits-mandatory-model-tests">Bloomberg</a></p>
   </div>
@@ -309,23 +309,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a29">
     <h4>2026-05-12: Android Show: I/O Edition at 10am PT</h4>
     <p>Pre-show for I/O 2026. Android 17, Aluminium OS, XR glasses expected. First Google AI catalyst of the week. Source: <a href="https://www.tech2geek.net/google-confirms-the-android-show-i-o-edition-2026-android-17-aluminium-os-and-xr-glasses-expected/">tech2geek</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>2026-05-13: Cerebras CBRS IPO pricing window</h4>
     <p>Listing with band raised to $150 to $160, deal 20x oversubscribed at $4.8B raise. Will set the public-market comp for Nvidia challengers. Source: <a href="https://www.cnbc.com/2026/05/10/cerebras-ipo-price-range.html">CNBC</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>2026-05-19 to 20: Google I/O 2026 main keynote</h4>
     <p>Gemini 4.0, Proactive Assistant, and the "Remy" 24/7 agent widely tipped. If Mariner has been folded in, expect a single unified Gemini Agent SKU pitched directly against ChatGPT, Claude, and Perplexity Computer.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>Anthropic Monday or Tuesday release window</h4>
     <p>Pattern across recent weeks suggests next claude-code or anthropic-sdk push lands today or tomorrow. Worth watching the GitHub release feed and the claude.com blog for Project Glasswing or Managed Agents follow-ons.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>EU AI Act Omnibus VII final text expected this week</h4>
     <p>Provisional deal reached 2026-05-07. Final text and compliance recalibration likely within the week. Watch consilium.europa.eu for the legislative resolution.</p>
   </div>

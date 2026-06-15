@@ -139,7 +139,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Anthropic closes 30B USD round at 900B+ valuation, surpassing OpenAI's last mark</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -151,7 +151,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> the cap-table inversion is the headline, but the operational signal is the 2.1x ARR growth in 60 days. Watch for OpenAI to leak an updated revenue number within the week to defend its valuation anchor, and for SoftBank to be quietly added to Anthropic's round to balance Microsoft's 27% OpenAI stake.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Project Glasswing: Claude Mythos Preview surfaces 10,000+ high/critical vulnerabilities in one month</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -163,7 +163,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Mythos is positioned as a distinct security-tuned model line, not just an Opus variant, and is gated to vetted security teams rather than offered on the public API. That structure is the template for a tiered frontier-access regime split by capability and trust. Expect Microsoft, Google and Meta to announce gated security-specialist preview tracks within 60 days, and US/UK governments to push for SBOM-style disclosure of which CVEs were AI-found.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>California signs first AI labor-disruption executive order; EU AI Act enforcement slips to Dec 2027</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -183,19 +183,19 @@
 
   <div class="bucket">
     <div class="eyebrow">Anthropic / Claude</div>
-    <div class="item">
+    <div class="item" id="a4">
       <h4>Claude Mythos Preview unveiled as a security-tuned frontier model line</h4>
       <p>red.anthropic.com positions Mythos as a general-purpose model exceptionally strong on offensive and defensive security tasks, gated to vetted teams via Glasswing. First public framing as a distinct model line separate from Opus 4.7. Source: <a href="https://red.anthropic.com/2026/mythos-preview/">red.anthropic.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a5">
       <h4>Opus 4.7 elevated error rates for 4 hours on May 25</h4>
       <p>Anthropic status logged errors from 06:30 to 10:30 UTC on May 25, now resolved. Second Opus availability incident in two days; follows an AI credits purchasing bug earlier in the week. Source: <a href="https://status.claude.com/">status.claude.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a6">
       <h4>Claude Code v2.1.139 adds agent view, /goal command, Opus 4.7 default in fast mode</h4>
       <p>Single screen lists all live sessions with running/waiting/done status. /goal keeps an agent working across turns until a stated completion condition is met. New claude agents CLI flags include --add-dir, --settings, --mcp-config, --plugin-dir, --permission-mode, --model, --effort. Source: <a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a7">
       <h4>Self-hosted sandboxes in public beta, MCP tunnels in research preview for Claude Managed Agents</h4>
       <p>Sandboxes run tool execution in customer-controlled infra or via Cloudflare, Daytona, Modal, or Vercel; orchestration stays on Anthropic. MCP tunnels (gated) provide outbound encrypted reach into internal databases without inbound firewall rules. Source: <a href="https://thenewstack.io/anthropic-mcp-tunnels-sandboxes/">thenewstack.io</a></p>
     </div>
@@ -203,19 +203,19 @@
 
   <div class="bucket">
     <div class="eyebrow">Agentic AI &amp; MCP</div>
-    <div class="item">
+    <div class="item" id="a8">
       <h4>MCP 2026-07-28 release candidate locked on May 21</h4>
       <p>Headline change: MCP becomes stateless at the protocol layer, scaling on ordinary HTTP infrastructure. Adds Extensions framework, Tasks for long-running work, MCP Apps for server-rendered sandboxed UIs, OAuth/OIDC authorization, formal deprecation policy. Breaking changes from 2025-11-25 spec; Tier 1 SDKs target support inside the 10-week window. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">blog.modelcontextprotocol.io</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a9">
       <h4>MCP SDK wave on May 25: Java, Kotlin, C#, Inspector all push updates</h4>
       <p>Coordinated commit cluster validates the release candidate against real workloads before July 28. Inspector also adds early support for the new ext-server-card surface. Source: <a href="https://github.com/orgs/modelcontextprotocol/repositories">github.com/orgs/modelcontextprotocol</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a10">
       <h4>SWE-bench Verified refresh: Mythos Preview leads at 93.9%</h4>
       <p>May 22 leaderboard update: Mythos Preview 93.9, Opus 4.7 Adaptive 87.6, GPT-5.3 Codex 85.0, Gemini 3.1 Pro and DeepSeek V4 Pro Max tied at 80.6. Agent frameworks add 5 to 15 points over raw model scores. Source: <a href="https://www.marc0.dev/en/leaderboard">marc0.dev / SWE-bench leaderboard</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a11">
       <h4>OSWorld-Human paper: best computer-use agents take 2.7x to 4.3x more steps than humans</h4>
       <p>Manually annotated each OSWorld task with a human-determined trajectory, then evaluated 16 computer-use agents. Even top performers (Claude Sonnet 4.6 at 72.5, Opus 4.5 at 66.3) substantially overshoot, suggesting headline OSWorld scores overstate practical readiness. Source: <a href="https://arxiv.org/abs/2506.16042">arxiv.org/abs/2506.16042</a></p>
     </div>
@@ -223,19 +223,19 @@
 
   <div class="bucket">
     <div class="eyebrow">AI Coding Tools</div>
-    <div class="item">
+    <div class="item" id="a12">
       <h4>Cursor switches Bugbot to usage-based billing, adds effort tiers</h4>
       <p>From the first renewal after June 8, Bugbot moves off the 40 USD/seat/month subscription to per-run pricing on Teams and Individual plans. Average run is 1.00 to 1.50 USD; a new high-effort mode reportedly surfaces 35% more bugs in internal testing while preserving the 80% merge-resolution rate. Source: <a href="https://cursor.com/blog/may-2026-bugbot-changes">cursor.com/blog</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a13">
       <h4>GitHub Copilot CLI v1.0.53 (May 24): shell stability and skills config</h4>
       <p>Patch fixes multiline prompt clipping, selection offset, makes /skills honor --config-dir, and stops Bash sessions hanging when PS0 or PROMPT_COMMAND is set. v1.0.52 (May 23) added a vertical scrollbar with drag support. Source: <a href="https://github.com/github/copilot-cli/releases/tag/v1.0.53-0">github.com/github/copilot-cli</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a14">
       <h4>Sourcegraph Amp: CLI rebuilt from scratch, npm package renamed to @ampcode/cli</h4>
       <p>Rebuild landed May 6 (active migration story this week as teams update). GPT-5.5 now powers Amp's deep mode as of May 4. Source: <a href="https://sourcegraph.com/changelog">sourcegraph.com/changelog</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a15">
       <h4>Windsurf, Replit Agent, Lovable, v0, Bolt, Aider, Cline: no Tier 1 release in window</h4>
       <p class="quiet">Quiet 24 hours across the rest of the coding-tool stack. Most recent material drops were Windsurf 2.0 + Devin Cloud (May 6) and Windsurf Fast/Comprehensive Code Review (May 12).</p>
     </div>
@@ -243,23 +243,23 @@
 
   <div class="bucket">
     <div class="eyebrow">Competitor Moves</div>
-    <div class="item">
+    <div class="item" id="a16">
       <h4>Gemini Spark opens broad rollout to Google AI Ultra US subscribers this week</h4>
       <p>Spark, gated to trusted testers since I/O on May 19, now ships to all US Ultra subscribers (100 USD/mo) starting week of May 26. Persists on dedicated Google Cloud VMs and executes tasks in third-party apps even when the user's device is off. EU/UK gated pending AI Act review. Source: <a href="https://www.techtimes.com/articles/317144/20260525/gemini-spark-googles-24-7-cloud-ai-agent-now-executes-tasks-third-party-apps.htm">techtimes.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a17">
       <h4>Musk: Grok V9-Medium (1.5T params) finished pre-training, public release in 2 to 3 weeks</h4>
       <p>Musk confirmed on May 25 that V9-Medium completed pre-training with positive evals. SFT underway, RL begins within days. Heavy Cursor data inclusion signals xAI doubling down on the dev/coding stack after Grok Build (May 14). [UNVERIFIED specifics pending official x.ai post] Source: <a href="https://www.basenor.com/blogs/news/grok-v9-medium-1-5t-finishes-training-release-in-2-3-weeks">basenor.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a18">
       <h4>OpenAI IPO leak: Microsoft listed as risk factor, top-five cap table surfaces</h4>
       <p>Pre-S-1 language leaked May 25 reportedly flags Microsoft as a business risk and states intent to diversify away from its largest commercial partner and compute provider. Top-five cap table surfaced: MSFT 26.79, OpenAI Foundation 25.8, SoftBank 11.66, Amazon 4.66, NVIDIA 3.4. [UNVERIFIED single-source leak] Source: <a href="https://x.com/ns123abc/status/2036262552867307604">x.com / leak thread</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a19">
       <h4>Google deprecates gemini-3.1-flash-lite-preview on May 25</h4>
       <p>Listed shutdown date in the official Gemini API changelog. Forces migration to Gemini 3.5 Flash announced at I/O, accelerating consolidation of the 3.x line a week post-launch. Source: <a href="https://ai.google.dev/gemini-api/docs/changelog">ai.google.dev/gemini-api/docs/changelog</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a20">
       <h4>ByteDance Doubao paid tier appears in App Store, monetization signal</h4>
       <p>ByteDance confirmed to Global Times in late May that a paid subscription tier for Doubao (155M WAU) is under testing after the storefront briefly showed pricing. First monetization signal from China's #1 chatbot, free since launch. Source: <a href="https://www.globaltimes.cn/page/202605/1360270.shtml">globaltimes.cn</a></p>
     </div>
@@ -267,19 +267,19 @@
 
   <div class="bucket">
     <div class="eyebrow">AI Business</div>
-    <div class="item">
+    <div class="item" id="a21">
       <h4>Primer raises 100M USD Series C led by Sofina for agentic payments infrastructure</h4>
       <p>Peak XV joins; Balderton, Accel, ICONIQ, Tencent, Speedinvest follow on. Total raised reaches 170M USD. Capital funds expansion of Primer Companion agent into autonomous decisioning and US revenue scaling from ~20% to 33%+ by 2028. Source: <a href="https://www.businesswire.com/news/home/20260519989278/en/Primer-Raises-$100M-Series-C-to-Bring-AI-to-Every-Payment-and-Accelerate-US-Expansion">businesswire.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a22">
       <h4>Recursive Superintelligence emerges from stealth with 650M USD</h4>
       <p>Founding team draws from OpenAI, DeepMind, Google Brain and Meta to build self-improving AI systems. Mega-round signals investors still backing frontier research talent over application-layer plays. Source: <a href="https://www.businesswire.com/news/home/20260515505589/en/SUI-Group-Co-Leads-$15-Million-Funding-Round-for-AI-Trading-Lab-Nof1-Makes-Strategic-Investment-in-Recursive-Superintelligence">businesswire.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a23">
       <h4>NextEra-Dominion 67B USD merger reshapes AI power supply</h4>
       <p>Combination creates the largest US utility, positioned to capture AI data center load. NextEra has committed ~10 GW for Texas and Pennsylvania hubs co-owned by US and Japanese governments under the 550B USD Japan trade deal. Power certainty now the binding constraint on data-center siting. Source: <a href="https://fortune.com/2026/05/18/nextera-dominion-67-billion-acquisition-ai-data-centers-largest-utility/">fortune.com</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a24">
       <h4>NVDA delivers 81.6B USD quarterly revenue, authorizes 80B USD buyback</h4>
       <p>EPS 1.87 USD beats 1.78 consensus; revenue +85% YoY. Data center segment 39.1B USD (+69% YoY in Q1 FY27 framing). Dividend lifted from 0.01 to 0.25 USD. Analyst targets moving to 260 to 270 USD on the agentic-AI narrative. Source: <a href="https://www.bloomberg.com/news/live-blog/2026-05-20/nvidia-first-quarter-earnings">bloomberg.com</a></p>
     </div>
@@ -287,23 +287,23 @@
 
   <div class="bucket">
     <div class="eyebrow">Open Source &amp; Research</div>
-    <div class="item">
+    <div class="item" id="a25">
       <h4>HLE leaderboard update: Gemini 3.1 Pro Preview leads at 44.7%</h4>
       <p>Humanity's Last Exam as of May 25: Gemini 3.1 Pro Preview 44.7, GPT-5.4 41.6, Gemini 3.5 Flash 41.0. Closed models still dominate the hardest reasoning eval; top open weights (GLM-5.1, Kimi K2.6) remain behind here. Source: <a href="https://agi.safe.ai/">agi.safe.ai</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a26">
       <h4>Qwen3.6-27B matches or beats its 397B-A17B MoE predecessor on coding</h4>
       <p>Independent reviews this week verify: SWE-bench Verified 77.2 vs 76.2, SWE-bench Pro 53.5 vs 50.9, Terminal-Bench 2.0 59.3 vs 52.5. Apache-style open weights at 27B dense, 262K native context extendable to 1M. Source: <a href="https://huggingface.co/Qwen/Qwen3.6-27B">huggingface.co/Qwen/Qwen3.6-27B</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a27">
       <h4>GLM-5.1 holds #1 open-source slot on Chatbot Arena</h4>
       <p>Z.ai's 744B-total / 40B-active MoE, released April 7 under MIT license, is now confirmed top open model on LMArena Text Leaderboard as of May 2026, ahead of all DeepSeek V4 variants. Scored 58.4 on SWE-Bench Pro, above Claude Opus 4.6 (57.3). Source: <a href="https://huggingface.co/spaces/lmarena-ai/arena-leaderboard">huggingface.co / arena-leaderboard</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a28">
       <h4>Stable Audio 3 paper drops with three open-weight sizes</h4>
       <p>Stability AI published the full paper (arXiv:2605.17991) alongside weights for 459M small, 1.4B medium, and 2.7B large variants on HF. Latent diffusion over a semantic-acoustic autoencoder with adversarial post-training; medium and large generate 6:20 compositions. First open-weight music model at this fidelity/length combination. Source: <a href="https://arxiv.org/abs/2605.17991">arxiv.org/abs/2605.17991</a></p>
     </div>
-    <div class="item">
+    <div class="item" id="a29">
       <h4>Zyphra ZAYA1-8B: first frontier-quality open model trained end-to-end on AMD MI300X</h4>
       <p>Apache 2.0, 8B total / ~760M active MoE, pretrained entirely on 1,024 AMD MI300X nodes via IBM Cloud. Approaches Claude 4.5 Sonnet, Gemini 2.5 Pro, DeepSeek V3.2 on math benchmarks with test-time compute. Released May 6, still gaining benchmark coverage. Source: <a href="https://www.zyphra.com/post/zaya1-8b">zyphra.com</a></p>
     </div>
@@ -313,19 +313,19 @@
 
 <h2>Upcoming (next 7 days)</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a30">
     <h4>Anthropic 30B USD round formal close expected this week</h4>
     <p>Bloomberg's reporting timed it for the week of May 26; watch for the named final lead order, any SoftBank inclusion, and downstream OpenAI revenue counter-leak. <a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week">bloomberg.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Grok V9-Medium public release window opens (Musk timing: 2 to 3 weeks)</h4>
     <p>If Musk's May 25 timeline holds, the earliest plausible release is week of June 9. Watch x.ai/news for the official cadence. <a href="https://www.basenor.com/blogs/news/grok-v9-medium-1-5t-finishes-training-release-in-2-3-weeks">basenor.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>MCP 2026-07-28 spec window: 10 weeks of SDK validation start now</h4>
     <p>Tier 1 SDKs (Python, TypeScript, Java, C#, Kotlin) target release-candidate support through this window. Expect breaking-change migration guides from Anthropic, Cursor, and Cline within 30 days. <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">blog.modelcontextprotocol.io</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>EU AI Omnibus formal text expected before EP summer recess</h4>
     <p>Political agreement is in place (May 7); the binding text fixing the Dec 2, 2027 high-risk enforcement deadline is the next milestone. <a href="https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks">legalnodes.com</a></p>
   </div>
@@ -333,15 +333,15 @@
 
 <h2>Rumors &amp; early signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a34">
     <h4>OpenAI cap table leak: MSFT 26.79, OpenAI Foundation 25.8, SoftBank 11.66, Amazon 4.66, NVIDIA 3.4</h4>
     <p>Single-source social leak on May 25 also reportedly shows Microsoft listed as a business risk factor. Treat as directional pending the public S-1. <a href="https://x.com/ns123abc/status/2036262552867307604">x.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Anthropic Claude Agent SDK Python 0.2.87 introduces Task tool family, deprecates TodoWrite</h4>
     <p>TaskCreate/TaskUpdate/TaskGet/TaskList replace TodoWrite in headless and SDK sessions. New EffortLevel type alias (low|medium|high|max|xhigh) exported. Confirm release date inside window before promoting. <a href="https://github.com/anthropics/claude-agent-sdk-python/releases">github.com/anthropics/claude-agent-sdk-python</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a36">
     <h4>MCP Server Ecosystem Tracker: 15,930+ servers on PulseMCP, only 56 production-grade</h4>
     <p>New monthly tracker debuted May 25 cataloging 56 production-ready or vendor-backed servers across 10 categories. Reference: Anthropic's official repo ships 7 active servers. Fragmentation thesis confirmed. <a href="https://www.digitalapplied.com/blog/mcp-server-ecosystem-tracker-50-servers-cataloged-2026">digitalapplied.com</a></p>
   </div>

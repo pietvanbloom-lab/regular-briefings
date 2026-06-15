@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Anthropic leases SpaceX Colossus 1: 300+ MW, 220k+ Nvidia GPUs, raises Pro and Max limits this month</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -149,7 +149,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First time a frontier-lab compute deal is paired with a same-quarter consumer-tier limit raise, signalling that the supply ceiling on Claude Pro and Max usage is loosening this month, not next quarter.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>Akamai signs $1.8B seven-year compute deal with Anthropic, largest in Akamai history</h3>
       <div class="tags">
         <span class="tag t3">Tier 3</span>
@@ -161,7 +161,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Anthropic is now sourcing capacity from a CDN, not just hyperscalers and SpaceX. Edge-CDN inference is the new vector, with implications for latency-sensitive Claude API traffic and a precedent competitors will copy.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Dragos: Claude Code used in attempted intrusion on Mexican water utility SADM</h3>
       <div class="tags">
         <span class="tag t3">Tier 3</span>
@@ -180,15 +180,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Dario Amodei: Q1 revenue and usage grew 80x year-on-year, ARR above $30B</h4>
     <p>First public 80x figure from Amodei, reframes the compute scramble as growth-driven not vanity capex. Source: <a href="https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/">Fortune</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Status page: Sonnet 4.6 elevated errors and GitHub IP-allowlist breakage on 2026-05-08</h4>
     <p>Outbound IP change broke Claude Code remote sessions and GitHub Enterprise plugin sync for orgs that pin source IPs. Tier 1 ops signal. Source: <a href="https://status.anthropic.com/">status.anthropic.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>EPAM partnership: 10,000 Claude-certified architects target, 1,300 already trained</h4>
     <p>Largest single-vendor Claude services bench announced to date, includes 250 forward-deployed Black Belts. Source: <a href="https://www.epam.com/about/newsroom/press-releases/2026/epam-and-anthropic-team-up-to-build-the-future-of-enterprise-transformation-with-safe-applied-ai">EPAM press release</a></p>
   </div>
@@ -196,19 +196,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Claude Agent SDK Python release on 2026-05-08 with parallel MCP reconnect, retries, fixes for Opus 4.7</h4>
     <p>Subagent and MCP server reconfiguration now connects in parallel. Opus 4.7 requires SDK v0.2.111 or newer. Production users on 4.7 must pin the bump. Source: <a href="https://pypi.org/project/claude-agent-sdk/">PyPI</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP Apps ext-apps repo updated 2026-05-08, SEP-1865 SDK iteration continues</h4>
     <p>ext-apps is the joint Anthropic/OpenAI standard for embedding interactive React UIs from MCP servers via the ui:// scheme. Leading indicator for client UI rollout. Source: <a href="https://github.com/modelcontextprotocol/ext-apps/">github.com/modelcontextprotocol/ext-apps</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Solo.io ships NemoClaw production agentic runtime for Kubernetes</h4>
     <p>Step-level telemetry and tracing for the agent loop at fleet scale on K8s, integrated into kagent. Operationalization layer enterprise agent platforms have been waiting for. Source: <a href="https://www.globenewswire.com/news-release/2026/05/07/3290085/0/en/solo-io-brings-nemoclaw-to-production-agentic-runtime-for-kubernetes.html">GlobeNewswire</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Claude Managed Agents adds Dreaming, Outcomes, and Multiagent Orchestration</h4>
     <p>Outcomes and shared-filesystem multiagent are public beta, Dreaming is research preview. Harvey reports a roughly 6x lift in completion rate. Source: <a href="https://claude.com/blog/new-in-claude-managed-agents">claude.com blog</a></p>
   </div>
@@ -216,19 +216,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>GitHub Copilot CLI v1.0.44 ships userPromptSubmitted hooks that bypass model calls</h4>
     <p>Hooks that handle prompts without a model call enable deterministic policy and routing layers in front of Copilot CLI. Adds prerelease channel. Source: <a href="https://github.com/github/copilot-cli/releases">github releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Claude Code 2.1.133 adds CLAUDE_CODE_SESSION_ID env var, fullscreen opt-out, 1M-context fix</h4>
     <p>Session ID exposure to Bash subprocesses unlocks cleaner hook and agent telemetry. Fix for false "prompt too long" rejections is load-bearing for long-context coders. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">CHANGELOG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Cursor introduces Build in Parallel mode running independent plan steps via async subagents</h4>
     <p>Parallelized planning with context-usage breakdown panel. Cursor closing the gap to Devin and Claude Code on multi-task orchestration. Source: <a href="https://cursor.com/changelog">cursor changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Coder launches self-hosted, model-agnostic Coder Agents in beta</h4>
     <p>Full agent loop, chat history, and tool execution stay inside the customer's Coder deployment. Targets the air-gapped segment Cursor and Windsurf cannot serve. Source: <a href="https://coder.com/blog/introducing-coder-agents">coder.com blog</a></p>
   </div>
@@ -236,23 +236,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>xAI launches Grok Imagine Quality Mode API at $0.01 to $0.07 per image</h4>
     <p>Enterprise tier with photorealism, brand consistency, multilingual text rendering. LMArena top-five placement. Direct pricing pressure on OpenAI Images and Adobe Firefly. Source: <a href="https://x.ai/news/grok-imagine-quality-mode">x.ai news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>xAI ships Connectors for Google Workspace and Outlook inside Grok web</h4>
     <p>Mirrors ChatGPT enterprise integration play. xAI moves from consumer chat into workplace assistant territory. Source: <a href="https://www.distillintelligence.com/briefings/ai-leaders-2026-05-08">Distill briefing</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Perplexity ships native Mac app with Personal Computer agent for Pro and Enterprise</h4>
     <p>Tier expansion from Max-only widens install base for an agent that orchestrates Gemini, Nano Banana, and ChatGPT under Perplexity's brand. Source: <a href="https://9to5mac.com/2026/05/07/perplexity-ai-app-introduces-all-new-native-mac-experience-for-personal-computer/">9to5Mac</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Apple publishes Privacy-Preserving ML and AI 2026 workshop materials</h4>
     <p>Topic mix of private learning, foundation model privacy, attacks and security signals what shows up in iOS 27 Apple Intelligence at WWDC. Source: <a href="https://machinelearning.apple.com/updates/ppml-2026">machinelearning.apple.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Microsoft confirms Copilot for Xbox and mobile gaming wind-down</h4>
     <p>Microsoft narrowing Copilot surface area to productivity. Early sign of cutting non-monetizing assistant deployments to fund Cowork and 365 Copilot Frontier features. Source: <a href="https://gameinformer.com/2026/05/05/microsoft-copilot-will-no-longer-come-to-consoles-says-xbox-ceo">Game Informer</a></p>
   </div>
@@ -260,19 +260,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Founders Fund closes $6B late-stage vehicle, $1.5B from GPs, targeting AI growth bets</h4>
     <p>Unusually high GP commitment signals conviction in late-stage AI valuations holding through the next leg. Source: <a href="https://techfundingnews.com/founders-fund-6b-growth-fund-peter-thiel-late-stage-ai/">TechFunding News</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>EU Council and Parliament agree Omnibus VII slimming AI Act, high-risk obligations pushed to Dec 2027 and Aug 2028</h4>
     <p>16-month delay on high-risk AI obligations and SME relief extended to companies up to 500 employees. Materially shifts EU compliance cost curve for 2026 launches. Source: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Cerebras updates S-1, $115 to $125 per share, $3.5B raise at $26.6B valuation, ticker CBRS</h4>
     <p>First major AI compute IPO of 2026. OpenAI's prior $20B inference capacity deal anchors revenue visibility. Sets public-market comp for Nvidia challengers. Source: <a href="https://www.fool.com/investing/2026/05/04/meet-3-upcoming-monster-artificial-intelligence-ai/">Motley Fool</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Anthropic recruits Sana Ouji from Google to lead data center infrastructure</h4>
     <p>Coordinated lift-out of Google data center engineers suggests Anthropic moving from leased to owned or co-developed infrastructure. Capex implications for next funding round. Source: <a href="https://aimagazine.com/news/anthropic-ramps-up-hiring-spree-to-tackle-ai-infrastructure">AI Magazine</a></p>
   </div>
@@ -280,23 +280,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>llama.cpp merges 1-bit weight support [UNVERIFIED exact day]</h4>
     <p>1-bit quant in the dominant local-inference engine cuts memory by roughly 16x versus fp16. Phone-class deployments of 70B-class models likely within weeks. Source: <a href="https://github.com/ggml-org/llama.cpp/releases/">github releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>PACZero: PAC-Private Fine-Tuning via Sign Quantization, ICML 2026</h4>
     <p>Combines differential privacy with 1-bit quantization. Lands the same week llama.cpp merged 1-bit support, so practical privacy-preserving local fine-tuning suddenly tractable. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>UniPool: globally shared expert pool for MoE</h4>
     <p>With every flagship open model now MoE, shared-expert pooling could reduce parameter footprint of the next training run. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Verifier-Backed Hard Problem Generation for Mathematical Reasoning</h4>
     <p>Yee Whye Teh group. Verifier-driven curriculum generation is the current frontier for synthetic reasoning data, directly relevant to RLVR pipelines. Source: <a href="https://arxiv.org/list/cs.LG/recent">arxiv cs.LG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>AI Co-Mathematician paper, agentic system for working mathematicians</h4>
     <p>Sits in the AlphaProof lane. Could trigger replication efforts before mainstream coverage. Source: <a href="https://arxiv.org/list/cs.AI/recent">arxiv cs.AI</a></p>
   </div>
@@ -304,11 +304,11 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Pentagon AI awards reportedly exclude Anthropic on supply-chain risk grounds [Tier 3, MEDIUM confidence]</h4>
     <p>Awards to OpenAI, Google, Microsoft, Amazon, Oracle, Nvidia, SpaceX, Reflection AI. No direct DoD release confirmed yet. If verified, first public DoD signal differentiating frontier labs on procurement criteria, not capability. Source: <a href="https://www.ghacks.net/2026/05/04/pentagon-signs-ai-deals-with-openai-google-microsoft-nvidia-and-others-cutting-out-anthropic/">ghacks aggregation</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>Trump administration to test Google, Microsoft, and xAI models [Tier 2, MEDIUM]</h4>
     <p>Federal pre-deployment testing for named labs sets a precedent that could harden into rule. Direct cost implications for release cadence. Source: <a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html">CNBC</a></p>
   </div>
@@ -316,19 +316,19 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Cerebras IPO pricing window</h4>
     <p>S-1 amendment indicates $115 to $125 band. Listing date watch: late May, ticker CBRS.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>EU AI Act Omnibus VII final text expected</h4>
     <p>Provisional deal reached 2026-05-07. Final text and compliance recalibration likely within the week.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>Anthropic likely to publish misuse report on Mexican water-utility incident</h4>
     <p>Standard pattern: Anthropic posts a follow-up after Dragos disclosure. Watch anthropic.com/news.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Apple WWDC pre-announcement window opens</h4>
     <p>PPML 2026 workshop materials are an early signal. Watch for Apple Intelligence iOS 27 leaks.</p>
   </div>

@@ -37,15 +37,33 @@ def topic_hits(text):
     t = text.lower()
     return [label for label, pat in TOPICS.items() if re.search(pat, t)]
 
-def parse_brief(path):
-    raw = open(path, encoding="utf-8").read()
-    fname = os.path.basename(path)
-    d = re.search(r"(\d{4}-\d{2}-\d{2})", fname).group(1)
+ID_TAG = re.compile(r'<div class="(?:card|item)[^"]*"')
+def assign_ids(raw):
+    """Give each top3 card and bucket item a stable anchor id (a1, a2, ...) in DOM order.
+    Idempotent: strips any prior aN ids first. Returns (new_raw, {headline: aid})."""
+    raw = re.sub(r'(<div class="(?:card|item)[^"]*")\s+id="a\d+"', r'\1', raw)
+    matches = list(ID_TAG.finditer(raw))
+    hmap = {}
+    # build headline map from original positions
+    for i, m in enumerate(matches):
+        region = raw[m.end(): matches[i+1].start() if i+1 < len(matches) else len(raw)]
+        h = re.search(r'<h[34][^>]*>(.*?)</h[34]>', region, re.S)
+        if h:
+            hl = strip_tags(h.group(1))
+            hmap.setdefault(hl, f"a{i+1}")
+    # insert ids from the end so offsets stay valid
+    new = raw
+    for i in range(len(matches) - 1, -1, -1):
+        pos = matches[i].end()
+        new = new[:pos] + f' id="a{i+1}"' + new[pos:]
+    return new, hmap
+
+def parse_brief(raw, d):
 
     top3 = []
     mtop = re.search(r'<div class="top3">(.*?)(?:<h2|<div class="bucket")', raw, re.S)
     top_block = mtop.group(1) if mtop else ""
-    for cm in re.finditer(r'<div class="card([^"]*)">(.*?)(?=<div class="card|\Z)', top_block, re.S):
+    for cm in re.finditer(r'<div class="card([^"]*)"[^>]*>(.*?)(?=<div class="card|\Z)', top_block, re.S):
         cls, card = cm.group(1), cm.group(2)
         h3 = re.search(r"<h3[^>]*>(.*?)</h3>", card, re.S)
         if not h3:
@@ -73,7 +91,7 @@ def parse_brief(path):
         b = bm.group(1)
         name_m = re.search(r'<div class="eyebrow">(.*?)</div>', b, re.S)
         name = strip_tags(name_m.group(1)) if name_m else "Other"
-        items = re.findall(r'<div class="item[^"]*">(.*?)</div>', b, re.S)
+        items = re.findall(r'<div class="item[^"]*"[^>]*>(.*?)</div>', b, re.S)
         hs = []
         for it in items:
             h4 = re.search(r"<h4[^>]*>(.*?)</h4>", it, re.S)
@@ -117,7 +135,16 @@ def month(d): return d[:7]
 def main():
     briefs = []
     for p in sorted(glob.glob(os.path.join(SRC, "*.html"))):
-        try: briefs.append(parse_brief(p))
+        try:
+            d = re.search(r"(\d{4}-\d{2}-\d{2})", os.path.basename(p)).group(1)
+            raw = open(p, encoding="utf-8").read()
+            new_raw, hmap = assign_ids(raw)
+            if new_raw != raw:
+                open(p, "w", encoding="utf-8").write(new_raw)
+                raw = new_raw
+            b = parse_brief(raw, d)
+            b["_hmap"] = hmap
+            briefs.append(b)
         except Exception as e: print("skip", p, e)
     briefs.sort(key=lambda b: b["date"])
 
@@ -142,9 +169,11 @@ def main():
     # Flat article list (newest first) with date + file, for the topic drawer.
     articles = []
     for b in briefs:
+        hmap = b.get("_hmap", {})
         for a in b.get("articles", []):
             articles.append({"h": a["h"], "u": a.get("u", ""), "topics": a.get("topics", []),
-                             "date": b["date"], "file": b["file"], "lead": a.get("lead", False)})
+                             "date": b["date"], "file": b["file"], "lead": a.get("lead", False),
+                             "aid": hmap.get(a["h"], "")})
     articles.sort(key=lambda a: a["date"], reverse=True)
 
     # Per-topic insights: busiest week + share, keyed by topic label.
@@ -173,10 +202,12 @@ def main():
     def top_stories(period_fn):
         groups = defaultdict(list)
         for b in briefs:
+            hmap = b.get("_hmap", {})
             for i, t in enumerate(b["top3"]):
                 groups[period_fn(b["date"])].append({
                     "headline": t["headline"], "topic": t["topic"], "why": t["why"],
-                    "date": b["date"], "rank": i + 1, "early": t["early"], "file": b["file"]})
+                    "date": b["date"], "rank": i + 1, "early": t["early"], "file": b["file"],
+                    "aid": hmap.get(t["headline"], "")})
         out = {}
         for per, items in groups.items():
             items.sort(key=lambda x: (x["rank"], not x["early"], x["date"]))

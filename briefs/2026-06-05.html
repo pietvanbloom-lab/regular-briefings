@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>NVIDIA Nemotron 3 Ultra weights go live on HuggingFace: 550B total, 55B active, now the top US open-weights model</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> The US open-weights lead now sits with a chip vendor, not a model lab, and the pitch is speed per unit intelligence for long-running agents, not raw score. Expect agent builders to benchmark Nemotron against Kimi K2.6 on cost-to-serve within two weeks, and watch whether labs respond by shipping their own open weights.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Anthropic moves agent and headless usage to a separate credit pool on June 15, ending the flat-rate subsidy for programmatic Claude</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -163,7 +163,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Any team running scheduled agents, CI bots or background workers on a subscription plan has a 10-day window to model the new cost. This resets the unit economics of agent-heavy workflows and is a direct read on how Anthropic prices autonomous compute as IPO scrutiny rises.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a3">
       <h3>KPMG rolls Claude out to all 276,000 staff across 138 countries, with a reciprocal private-equity portfolio play</h3>
       <div class="tags">
         <span class="tag t3">Tier 3</span>
@@ -182,15 +182,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>KPMG global alliance puts Claude on every desk, 276,000 staff in 138 countries</h4>
     <p>Claude Cowork and Managed Agents go into KPMG's Digital Gateway; reciprocal preferred-partner status targets private equity portfolio rollouts via KPMG Blaze. Source: <a href="https://thenextweb.com/news/kpmg-anthropic-claude-alliance">The Next Web</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude Agent SDK Python 0.2.90 published, bundling Claude CLI 2.1.163</h4>
     <p>Routine release, no API-surface changes, internal dependency bump to the 2.1.163 CLI line. TypeScript SDK also moved to the same line. Source: <a href="https://github.com/anthropics/claude-agent-sdk-python/releases/tag/v0.2.90">github.com/anthropics claude-agent-sdk-python v0.2.90</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Status: zero incidents June 4 to 5, a calm spell after a noisy early-June stretch</h4>
     <p>status.claude.com clean for the window. The prior cluster of Opus 4.7 and 4.8 error incidents ran May 31 to June 3 and is outside this window. Stability signal worth noting. Source: <a href="https://status.claude.com/">status.claude.com</a></p>
   </div>
@@ -198,19 +198,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Microsoft Agent Framework python-1.8.0 ships MCP-based skills discovery and progressive tool exposure</h4>
     <p>New McpSkillsSource discovers agent skills via MCP servers, plus progressive tool exposure and background-agent support. The skills-over-MCP pattern mirrors Anthropic's Agent Skills, a sign MCP is becoming the cross-vendor channel for distributing skills, not just tools. Source: <a href="https://github.com/microsoft/agent-framework/releases/tag/python-1.8.0">github.com/microsoft/agent-framework python-1.8.0</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP spec moves from SEP finalization into RC polish: server/discover made cacheable, auth spec split</h4>
     <p>PR #2855 declares server/discover results cacheable in schema and docs; PR #2858 splits the monolithic authorization spec for load time; a further auth restructure PR #2862 opened June 5. All rc-high-priority for the July 28 release train. Source: <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2855">MCP PR #2855</a>, <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2858">PR #2858</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>MCP Authorization Interest Group gets a formal charter</h4>
     <p>PR #2843 adds the Authorization IG charter to the spec repo, formalizing a group that has incubated six auth-focused Working Groups. Governance maturation under the AAIF, relevant for anyone tracking enterprise auth in MCP. Source: <a href="https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2843">MCP PR #2843</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Microsoft Build 2026 closes on an agent-first frame for Windows, Foundry and GitHub</h4>
     <p>Day 3 wrap, June 4. Most drops landed with the June 2 keynote: OS-level agent isolation containers, Aion on-device models, Foundry toolboxes unifying MCP, OpenAPI and A2A, and Hosted Agents reaching GA by end of June. Source: <a href="https://news.microsoft.com/build-2026/">news.microsoft.com/build-2026</a></p>
   </div>
@@ -218,31 +218,31 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Cursor 3.7 adds Canvas Design Mode and an in-canvas Context Usage Report</h4>
     <p>Select and annotate UI elements to direct edits instead of describing them; an interactive report breaks token spend across system prompt, tools, rules and skills with a Debug with Agent button. Context engineering becomes a user-facing feature. Source: <a href="https://cursor.com/changelog">cursor.com/changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>GitHub Copilot gains 1M-token context and configurable reasoning levels</h4>
     <p>Supported models in VS Code, Copilot CLI and the app now run with 1M context and user-selectable reasoning depth, both consuming more AI credits per call. A direct answer to Claude's 1M context, tied to the June 1 credit billing change. Source: <a href="https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot">github.blog changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Claude Code 2.1.163 adds enterprise version pinning via requiredMinimum/MaximumVersion</h4>
     <p>Managed settings can refuse to start Claude Code outside an admin-approved range. Also /plugin list filters, Stop and SubagentStop hooks that return additionalContext to continue a turn, and a claude -p backgrounding fix. Fleet-control hardening. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG.md</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>OpenAI Codex CLI rust-v0.137.0 stable: remote-control pairing RPCs and cloud-managed config</h4>
     <p>Adds app-server v2 RPCs for remote-control pairing, enterprise config bundles with monthly credit limits, parallel web search and codex plugin list. Remote control of CLI sessions is now a three-way race with Claude Code and Copilot CLI. Source: <a href="https://github.com/openai/codex/releases/tag/rust-v0.137.0">github.com/openai/codex rust-v0.137.0</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>GitHub Copilot opens cloud-agent REST API and Fix with Copilot to individual paid plans</h4>
     <p>The agent-tasks REST API and one-click fixes for failing Actions runs reach Pro, Pro+ and Max, down from Business and Enterprise. Agentic features moving from enterprise gating to the mass tier. Source: <a href="https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max">github.blog agent-tasks REST API</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Windsurf is now Devin Desktop, and Claude Code's changelog codifies the rename</h4>
     <p>Claude Code 2.1.162 renames Windsurf to Devin Desktop across /ide and terminal setup, following Cognition's June 2 rebrand of Windsurf into a multi-agent host running Codex, Claude Agent and OpenCode side by side. A competitor codifying the rename confirms the Windsurf brand is retired. Source: <a href="https://devin.ai/blog/windsurf-is-now-devin-desktop/">devin.ai blog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Copilot CLI v1.0.60-0 prerelease surfaces the new billing system and PR worktrees</h4>
     <p>Adds a billing help topic for AI credits, git worktree creation from the pull-requests screen, rewind diff stats and vim keys in /diff. First CLI build exposing the June 1 billing change in-product. Source: <a href="https://github.com/github/copilot-cli/releases/tag/v1.0.60-0">github/copilot-cli v1.0.60-0</a></p>
   </div>
@@ -250,23 +250,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Quiet 24 hours, the real cluster landed June 1 to 3 just before the window</h4>
     <p>No Tier 1 model launches inside the strict window. Aggregator hits for a June 4 Grok Voice and GPT-5.5 launch are recycled SEO artifacts; both shipped in April. The freshest verified items are below, dated honestly. Pre-WWDC lull.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>OpenAI opens GPT-Rosalind life-sciences research preview, adds Novo Nordisk (June 3)</h4>
     <p>Combines GPT-5.5 agentic coding with stronger medicinal-chemistry and genomics reasoning, beating GPT-5.5 on MedChemBench and GeneBench with about 31 percent fewer tokens on genomics tasks. Two new Codex plugins for all users. Source: <a href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/">openai.com GPT-Rosalind</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>OpenAI frontier models and Codex reach GA on AWS Bedrock (June 1)</h4>
     <p>GPT-5.5, GPT-5.4 and Codex live on Bedrock at first-party pricing, counting toward AWS commitments. Codex disclosed more than 5M weekly users, up from 4M at the April preview. Start of a multi-cloud expansion. Source: <a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/">openai.com on AWS</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>xAI ships Grok Imagine 1.5 image-to-video in API preview (June 3)</h4>
     <p>grok-imagine-video-1.5-preview does single-image-to-video up to 720p with natural-language camera and motion control and multi-shot chaining. xAI also made Grok the voice layer for Vapi's agent platform. Source: <a href="https://x.ai/news/grok-imagine-1-5">x.ai/news Grok Imagine 1.5</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Microsoft Build introduces seven MAI models and an Autopilot agent category (June 2 to 3)</h4>
     <p>MAI-Thinking-1 (35B, 256K reasoning) in private Foundry preview, MAI-Code-1-Flash in the Copilot picker, plus image, voice and transcribe models, and Autopilot, an always-on autonomous agent category starting with Scout. Source: <a href="https://www.testingcatalog.com/microsoft-build-2026-recap-from-windows-to-copilot-all-ai/">TestingCatalog recap</a></p>
   </div>
@@ -274,23 +274,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Generalist AI raises $400M at a $2B valuation for robotics foundation models</h4>
     <p>Led by Radical Ventures with 8VC, USV, Norwest and existing backers Nvidia and Bezos Expeditions; angels include Fei-Fei Li and Eric Yuan. Total funding past $500M, aimed at real-world data collection and compute for physical-AGI robot models. Source: <a href="https://siliconangle.com/2026/06/04/generalist-ai-raises-400m-2b-valuation-build-general-intelligence-real-world/">SiliconANGLE</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Cloudflare acquires VoidZero, the maker of Vite and Vitest, and pledges $1M to the ecosystem</h4>
     <p>Cloudflare folds VoidZero's JavaScript toolchain into its platform for one-click deploys, plus a $1M open-source fund for Vite. Terms undisclosed. A CDN buying the dominant front-end build tool. Source: <a href="https://www.cloudflare.com/press/press-releases/2026/cloudflare-acquires-voidzero-to-build-the-future-of-the-ai-native-web/">cloudflare.com press</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Foxconn and Intel partner on next-generation AI data-center infrastructure</h4>
     <p>Joint development of Xeon-powered racks, accelerators, interconnects and cooling, plus edge and physical-AI platforms for robotics and automotive. Terms undisclosed; Intel closed up about 4.4 percent. Source: <a href="https://www.datacenterdynamics.com/en/news/foxconn-and-intel-partner-for-development-of-next-generation-ai-infrastructure/">Data Center Dynamics</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Anthropic IPO drumbeat: Daniela Amodei at Bloomberg Tech frames the capital case</h4>
     <p>CEO Daniela Amodei argued the listing is about access to capital for frontier training and inference. Context filed June 1: confidential S-1, $965B valuation off the $65B Series H, about $47B run-rate revenue. Listing could come as early as fall 2026. Source: <a href="https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/">TechCrunch</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>White House EO on AI innovation and security draws a wave of legal analysis</h4>
     <p>The June 2 executive order directs agencies to harden systems with AI cyber defenses and stand up a voluntary framework for up to 30 days of pre-release access to covered frontier models, with deliverables due July 2 and August 1. Major firm analyses published June 4. Source: <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">whitehouse.gov EO</a></p>
   </div>
@@ -298,19 +298,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>NVIDIA Nemotron 3 Ultra 550B weights land on HuggingFace, top US open-weights model</h4>
     <p>550B total, 55B active hybrid Mamba-Transformer MoE, 1M context, open license with weights, data and recipes. Index score 48, ahead of Gemma 4 31B and gpt-oss-120b, behind Kimi K2.6. Up to about 6x throughput claimed versus comparable open LLMs. Source: <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16">huggingface.co/nvidia Nemotron 3 Ultra</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>llama.cpp ships builds b9512 to b9518, disables on-device speculative checkpoints server-side</h4>
     <p>Multiple tagged builds in the window. Notable commit disables on-device spec checkpoints in the server (#24108), plus an imatrix-loader dedup refactor. Relevant for anyone running the llama.cpp server. Source: <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9518">github.com/ggml-org llama.cpp b9518</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>HuggingFace transformers v5.10.2 hotfixes a CLIP conversion bug that broke SAM3</h4>
     <p>Emergency patch for a model-conversion bug in CLIP-family models. Follows v5.10.1, which added Gemma 4 12B Unified, Sapiens2, DeepSeek-OCR-2 and JetBrains Mellum v2. Anyone on 5.10.0 or 5.10.1 using CLIP or SAM3 should update. Source: <a href="https://github.com/huggingface/transformers/releases/tag/v5.10.2">github.com/huggingface transformers v5.10.2</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Paper: scaling rules for Gated Delta Networks enable zero-shot learning-rate transfer</h4>
     <p>Liu and Gu (UCLA) derive muP-style scaling for Gated Delta Networks, the Mamba2-with-delta-rule linear-attention family, giving learning-rate transfer across widths where standard parametrization fails. Practical for sub-quadratic LLM training now going mainstream. Source: <a href="https://arxiv.org/abs/2606.04048">arXiv 2606.04048</a></p>
   </div>
@@ -318,19 +318,19 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a32">
     <h4>Meta "Hatch" consumer agent reportedly runs on Claude as a transitional layer [Tier 2, MEDIUM]</h4>
     <p>The Information reports an always-on Meta agent grounded in Instagram and Facebook data, targeting internal testing by end of June, reportedly on Claude Opus or Sonnet 4.6 before Muse Spark, with pricing floated up to $200 a month. Watch for a waitlist or the Claude dependency surfacing. Source: <a href="https://www.testingcatalog.com/meta-prepares-hatch-agent-under-waitlist-and-social-media-skills/">TestingCatalog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>xAI Grok V9-Medium, about 1.5T params, release expected mid-June [Tier 3, LOW to MEDIUM]</h4>
     <p>Reportedly triple the current production parameter count, trained on Cursor developer-workflow data, targeting a coding lead. Grok 5 still training on Colossus 2. Prediction markets put the V9 ship near 33 percent by June 30. Source: <a href="https://www.techtimes.com/articles/317328/20260528/grok-ai-new-model-triples-parameter-count-targets-coding-lead-release-expected-mid-june.htm">TechTimes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>MiniMax M3 open weights and tech report expected this week [Tier 2, LOW to MEDIUM]</h4>
     <p>Open-weight, 1M context, native multimodal, reported 59.0 percent on SWE-Bench Pro, said to have launched June 1 with weights and report promised within about 10 days. Watch for the full release landing. Source: <a href="https://huggingface.co/MiniMaxAI">huggingface.co/MiniMaxAI</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Anthropic "Mythos" next-gen model hint persists in the site footer [LOW]</h4>
     <p>A Mythos Preview link sits under Models tied to Project Glasswing. No release in the window. Treat as a placeholder, not news, until a model card or changelog appears. Source: <a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com release notes</a></p>
   </div>
@@ -338,19 +338,19 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a36">
     <h4>2026-06-08: Apple WWDC 2026 keynote</h4>
     <p>Expected Siri overhaul reportedly leaning on Google Gemini, iOS 27, expanded on-device Apple Intelligence and App Store AI-agent integration. The dominant near-term catalyst. Source: <a href="https://techcrunch.com/2026/06/04/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/">TechCrunch WWDC preview</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>2026-06-10: Code with Claude Tokyo</h4>
     <p>Third stop after San Francisco (May 6) and London (May 19). Watch for Claude Code and agent tooling announcements. Source: <a href="https://thenewstack.io/claude-code-vs-cursor-vs-codex-vs-antigravity-2026/">The New Stack</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a38">
     <h4>2026-06-12: SpaceX IPO possible Nasdaq listing</h4>
     <p>Roadshow targeting the week of June 8, listing under ticker SPCX as early as June 12 at a $1.75T to $2T valuation. A read-through for the Anthropic and OpenAI IPO pipeline. Source: <a href="https://builtin.com/articles/top-tech-ipos-2026">Built In</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a39">
     <h4>2026-06-15: Anthropic agent credit pool and model deprecations take effect</h4>
     <p>Agent and headless usage moves to a separate API-rate credit pool; model deprecations land the same day with migration to Sonnet 4.6 and Opus 4.8. Source: <a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com release notes</a></p>
   </div>

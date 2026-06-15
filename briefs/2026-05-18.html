@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>CNBC review: 56 percent of S&amp;P 500 firms that pinned layoffs on AI now trade below pre-announcement levels, average drop 25 percent</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> The "AI efficiency" CFO talking point has lost its share-price kicker. Expect a wave of repositioning: layoffs will be re-framed as "portfolio rationalisation" or "post-COVID overhire correction," vendors will lean into productivity gains rather than headcount cuts, and IR teams will pre-brief analysts to scrub the AI language from upcoming Q2 prints.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Bloomberg: India set to drop out of world's top five equity markets as roughly two thirds of recent rotation flows exit on lack of AI exposure</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -163,7 +163,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First clean macro story where AI exposure is the primary explanatory variable for cross-border equity flows. Sets up two second-order moves: an Indian government push to subsidise sovereign compute (watch MeitY for a fresh chip incentive package) and EM allocators reweighting toward Korea and Taiwan even at richer multiples. The "power is the new GPU" thesis (see Bloomberg China energy segment, same day) compounds this.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Roo Code shuts down with explicit "IDEs are not the future of coding" thesis, days after GitHub Copilot desktop app preview</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -183,19 +183,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Quiet day for first-party Anthropic news, Sunday window into early Monday</h4>
     <p>No new anthropic.com/news post, no model release, no Claude Code release inside the window. Status page clean across May 17 (one May 16 incident on multiple models resolved in 1h17m before the window opened). Source: <a href="https://status.claude.com/history">status.claude.com/history</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Code with Claude London opens Tuesday May 19, livestream confirmed for Day 1 keynotes</h4>
     <p>Second 2026 developer stop, runs May 19 to 20 in London. Expect platform and Claude Code announcements within 24 to 48 hours. Source: <a href="https://claude.com/code-with-claude/london">claude.com/code-with-claude/london</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Claude Code v2.1.143 line continues to ship MCP and Skills fixes mid-May</h4>
     <p>Patches address HTTP/SSE MCP memory leaks (16 MB per-frame cap), Skill(name *) permission rules, settings hot-reload on symlinks, agent-view PowerShell respawn on Windows, and stop-hook loops. Cadence visible, no headline feature inside the window. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Anthropic Series G at roughly $900B valuation reportedly close, no signed announcement May 17</h4>
     <p>FT and Bloomberg reporting from May 12 to 13 said terms agreed on a $30B round that "could close as soon as this month." Press-release window now open. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com / Anthropic $30B talks</a></p>
   </div>
@@ -203,23 +203,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP Inspector and supporting repos pushed maintenance updates May 17</h4>
     <p>Routine pushes to the inspector visual testing tool plus servers, quickstart-resources, and go-sdk repos on May 16 to 17. No spec change. Source: <a href="https://github.com/modelcontextprotocol">github.com/modelcontextprotocol</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Anthropic Claude Agent SDK ships parallel-tool-call hang fix ahead of June 15 billing split</h4>
     <p>Fix for a hang when the model emits a malformed tool name inside a parallel batch. Comes ahead of the June 15 rollout that puts the Agent SDK and third-party agent frameworks on a separate $20 / $100 / $200 credit pool. Source: <a href="https://releasebot.io/updates/anthropic">releasebot.io / Anthropic updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Cloudflare Sandboxes hit GA: per-agent dev environment with terminal, persistent state, snapshot and warm-start</h4>
     <p>Positions Cloudflare alongside E2B, Modal, Northflank, Docker, Vercel and Ramp in the agent-sandbox category. Live URLs and filesystem-change events included. Source: <a href="https://blog.cloudflare.com/sandbox-ga/">blog.cloudflare.com / sandbox-ga</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Notion 3.5 launches Developer Platform with External Agent API connecting Claude Code, Cursor, Codex, Decagon</h4>
     <p>Workers, database sync, and an External Agent API waitlist that wires named coding agents as first-party citizens inside Notion workspaces. Source: <a href="https://www.notion.com/releases/2026-05-13">notion.com/releases/2026-05-13</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>WebArena top-three spread tightens to 4.2 points: Claude Mythos Preview 68.7, GPT-5.4 Pro 65.8, Claude Opus 4.6 64.5</h4>
     <p>May 2026 snapshot on 812 multi-step browser tasks. Two-year jump from ~14 percent SOTA is the steepest in any agent benchmark. Berkeley RDI work suggests current scaffolded numbers may be 5 to 15 points inflated. Source: <a href="https://benchlm.ai/benchmarks/webArena">benchlm.ai / WebArena</a></p>
   </div>
@@ -227,23 +227,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>GitHub Copilot desktop app enters technical preview on Win, macOS, Linux for Pro and Pro+</h4>
     <p>Standalone agentic app runs parallel sessions, each with its own git worktree, branch, and task state. Business and Enterprise rolling out same week. Free plans excluded. Source: <a href="https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/">github.blog / Copilot app preview</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>OpenAI Codex preview lands in ChatGPT mobile app, adds HIPAA-eligible local environment</h4>
     <p>Codex sessions reviewable and steerable from iOS or Android while running on a connected Mac. Same release expanded remote SSH, hooks, programmatic access tokens for Enterprise / Business. Source: <a href="https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/">techcrunch.com / Codex on your phone</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>GitHub Copilot CLI v1.0.48 replaces opaque dots with token prices in the model picker</h4>
     <p>Useful for usage-based-billing users. Also fixes CJK/emoji line gaps, applyTo glob handling, and shows correct token limits per model. Source: <a href="https://github.com/github/copilot-cli/releases/">github/copilot-cli releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Zed 1.2.6 stable adds ChatGPT subscription provider for the Zed agent</h4>
     <p>Users can plug ChatGPT Plus or Pro into Zed and set effort level for OpenAI models. Preview channel 1.3.3 adds inline image and Mermaid rendering plus a new subagent_model setting. Source: <a href="https://zed.dev/releases/stable/latest">zed.dev/releases/stable</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Cursor 3.4.16 patch follows v3.4 dev-environments launch on May 13</h4>
     <p>v3.4 gave teams configurable dev environments for parallel cloud agents (multi-repo, Dockerfile-based). Pairs with the May 11 Bugbot move to usage-based billing with Default / High / Custom effort (high effort 0.95 bugs/run vs 0.7 default). Source: <a href="https://cursor.com/changelog">cursor.com/changelog</a></p>
   </div>
@@ -251,19 +251,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>OpenAI GPT-5.5 default model logged a performance degradation incident, resolved inside the window</h4>
     <p>Reliability data point for the new ChatGPT default. Full recovery same day. Source: <a href="https://status.openai.com/history">status.openai.com/history</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>OpenAI ChatGPT Pro personal-finance dashboard with Plaid expands coverage rolling May 15 to 17</h4>
     <p>Live for US Pro users across 12,000+ institutions (Schwab, Fidelity, Chase, Robinhood, Amex, Capital One). Intuit support flagged "soon." Secondary coverage hit May 17. Source: <a href="https://openai.com/index/personal-finance-chatgpt/">openai.com / personal-finance-chatgpt</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Cohere positions as the "low drama" sovereign-AI option ahead of expected 2026 IPO window</h4>
     <p>Canadian Affairs profile reframes Cohere post-Aleph Alpha merger as deliberately quiet, revenue-first, European alternative. Investor-narrative shaping rather than product news. Source: <a href="https://www.canadianaffairs.news/2026/05/16/canadas-cohere-embraces-low-drama-amid-ai-giant-tumult/">canadianaffairs.news / Cohere low drama</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Google I/O 2026 keynote pre-briefings seeded Sunday point to Gemini 4 and Gemini 3.1 Ultra reveal Tuesday May 19</h4>
     <p>Pre-event briefings stage Project Astra updates, TPU v7 in Vertex, Android XR glasses, and Googlebook hardware for the 10am PT keynote. Frames the competitive set for the week. Source: <a href="https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news">androidcentral.com / I/O 2026 live blog</a></p>
   </div>
@@ -271,19 +271,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>CNBC: 56 percent of S&amp;P 500 AI-layoff disclosers trading below pre-announcement, average -25 percent</h4>
     <p>Nike ~-35 percent, Salesforce ~-32 percent, Fiverr -54 percent. Market repricing the "AI as cost cut" framing. Source: <a href="https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html">cnbc.com / AI layoffs</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Bloomberg: India set to lose top-5 equity ranking on AI-driven capital rotation</h4>
     <p>Roughly two thirds of recent reallocation flows leaving India for AI-exposed markets in Taiwan, Korea, US. First three-year break in the streak. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-17/india-missed-out-on-ai-and-now-its-run-as-market-darling-may-be-over">bloomberg.com / India AI rotation</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Bloomberg video: China's energy buildout positioned as AI advantage over US power-constrained data centres</h4>
     <p>Paulson, Burns, Economy on camera arguing power, not silicon, is now the binding constraint on US AI leadership. Reinforces the "power is the new GPU" thesis driving hyperscaler nuclear and gas-peaker deals. Source: <a href="https://www.bloomberg.com/news/videos/2026-05-17/china-s-energy-boom-could-give-it-the-ai-edge-video">bloomberg.com / China energy AI edge</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>OpenAI CFO Sarah Friar signals more capital on top of $122B round to chase compute scarcity</h4>
     <p>Friar tied further dilution explicitly to a 2026 compute shortage. Continues to be the dominant infra-finance signal of the weekend. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-15/openai-may-raise-more-money-as-compute-crunch-deepens-cfo-says">bloomberg.com / Friar more capital</a></p>
   </div>
@@ -291,23 +291,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Quiet 24-hour window for frontier open-weights, no major arXiv drop in the Sunday Eastern slot</h4>
     <p>Cadence-setters (DeepSeek V4, Kimi K2.6, Qwen 3.6) all landed in April. Items below are recent-week, still actively circulating. Source: <a href="https://arxiv.org/list/cs.AI/recent">arxiv cs.AI recent</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>SOOHAK benchmark released: 439 hand-written math tasks including 99 deliberately unsolvable to probe overconfidence</h4>
     <p>Consortium of 64 mathematicians. Designed to stress-test reasoning beyond saturated MATH and GSM8K. Source: <a href="https://llm-stats.com/ai-news">llm-stats.com / ai-news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>Microsoft Research and Browserbase open-source verifier framework for computer-use agents</h4>
     <p>Reference implementations and evaluation harness for scoring whether a computer-use agent actually succeeded. Directly relevant to RL training loops for agent models. Source: <a href="https://llm-stats.com/ai-news">llm-stats.com / ai-news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>vLLM v0.20.2 ships Gemma 4 full support and MXFP8 all-to-all for FlashInfer one-sided comms</h4>
     <p>Patch dated 2026-05-10, deployment ramp through May 17. Multi-stream pre-attention GEMM included. Material for OSS inference operators. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm/releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>arXiv 2605.06494: Weisfeiler-Lehman analysis of sparse autoencoder features moves interp past top-token analysis</h4>
     <p>Graph-kernel similarity over SAE features captures higher-order co-occurrence structure. Active citation in interp circles through the window. Source: <a href="https://arxiv.org/abs/2605.06494">arxiv.org/abs/2605.06494</a></p>
   </div>
@@ -315,15 +315,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Anthropic Series G $900B-valuation $30B round may sign this week [Tier 2, MEDIUM]</h4>
     <p>FT and Bloomberg both reported terms agreed May 12 to 13 with closure "as soon as this month." Worth pre-scoping a comms response. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com / Anthropic $30B</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>Meta Llama org 8,000-person layoff scheduled to execute May 20 [Tier 2, MEDIUM]</h4>
     <p>Will produce fresh in-window news Monday to Tuesday. Adds to the CNBC layoff-stocks data point above and could flip Meta into the negative cohort. Source: <a href="https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html">cnbc.com / AI layoffs context</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>Code with Claude London Day 1 keynote likely to ship new Claude Code / platform feature [Tier 1, MEDIUM]</h4>
     <p>Pattern from the US edition suggests at least one shipped product surprise during the keynote. Live stream confirmed. Source: <a href="https://claude.com/code-with-claude/london">claude.com/code-with-claude/london</a></p>
   </div>
@@ -331,19 +331,19 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Tuesday May 19: Google I/O 2026 keynote, 10am PT</h4>
     <p>Pre-briefings staged Gemini 4 / 3.1 Ultra, Project Astra, TPU v7 in Vertex, Android XR. Direct competitive read for the rest of the week.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Tuesday May 19 and Wednesday May 20: Code with Claude London</h4>
     <p>Day 1 keynotes live-streamed. Watch for Claude Code, platform, and enterprise announcements.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Wednesday May 20: Meta Llama 8,000-person layoff execution</h4>
     <p>First major test of whether the CNBC "AI layoffs are not a stock boost" finding extends to a hyperscaler. Watch META intraday.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>Window open: Anthropic Series G close announcement</h4>
     <p>Reported timeline points to "this month." Press release could land any business day.</p>
   </div>

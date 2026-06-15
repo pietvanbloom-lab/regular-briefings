@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Apple rebuilds Siri as a standalone "Siri AI" app powered by a custom Google Gemini model, under a deal reported near 1 billion dollars a year</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Apple choosing Gemini over building its own frontier model, and over OpenAI or Anthropic, hands Google the largest assistant distribution channel on the planet and validates Gemini as the model to beat on device. The third-party default toggle turns Apple Intelligence into a routing layer rather than a model, so the real fight becomes which provider a billion users pick by default. Watch the EU and China exclusions become an opening for local and sovereign models, and watch Anthropic push Claude as the privacy-first default inside that same toggle.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>OpenAI confirms a confidential S-1 IPO filing with the SEC, joining Anthropic one week after its own draft and days before the SpaceX listing</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Two of the three largest private AI labs filed confidential S-1s within a week, and SpaceX lists June 12, so the AI IPO window is opening and the first prints will set the valuation comps every later raise is benchmarked against. Watch whether OpenAI's for-profit conversion and the Microsoft revenue-share survive the disclosure that an S-1 forces, and whether a soft SpaceX debut cools the whole queue. The lab that lists first sets the narrative the others have to price against.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>An unreleased Anthropic frontier model, "Claude Mythos Preview," reaches Hitachi as it joins Project Glasswing for offensive-grade vulnerability finding</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -182,15 +182,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Hitachi joins Project Glasswing and gains Claude Mythos Preview access (June 8)</h4>
     <p>Hitachi signed on to Anthropic's Glasswing security program and will use the unreleased Claude Mythos Preview model through its Cyber Center of Excellence to harden software for social infrastructure and energy. It is the first named participant disclosed from the roughly 150-organization Glasswing expansion announced June 2. Source: <a href="https://www.tradingview.com/news/reuters.com,2026-06-08:newsml_JCN107616:0-hitachi-joins-anthropic-s-project-glasswing-an-ai-powered-security-program/">JCN Newswire via TradingView</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude routed as a selectable third-party default inside Apple Intelligence (June 8)</h4>
     <p>Apple's WWDC announcement lets iOS 27, iPadOS 27, and macOS 27 users set a third-party model such as Claude or ChatGPT as the default provider for Apple Intelligence features like Writing Tools and Image Playground, putting Claude one toggle away from hundreds of millions of Apple devices even though the core Siri AI runs on Gemini. Source: <a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/">TechCrunch</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Several brief Claude status incidents logged June 8, no full outage</h4>
     <p>status.claude.com recorded a series of short elevated-error windows across Opus 4.8, Opus 4.7, and Haiku 4.5 on June 8, each resolved within roughly 15 to 40 minutes. Distinct from the June 5 outage and data-leak probe, with no extended downtime. Per-model timings are approximate because the status history page is JavaScript rendered. Source: <a href="https://status.claude.com/history">status.claude.com history</a></p>
   </div>
@@ -198,11 +198,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>MCP Dev Summit Bengaluru opens today, June 9, with the day-1 program confirmed</h4>
     <p>The Linux Foundation and Agentic AI Foundation MCP Dev Summit runs June 9 to 10 in Bengaluru, with day-1 keynotes including opening remarks from Angie Jones (AAIF), David Nalley (AWS), a session on shared MCP infrastructure before it scales to a million servers, and a track on building agentic AI on India's Digital Public Infrastructure. This is the most likely venue for net-new spec, registry, or agent-security news ahead of the July stateless-core release candidate. Source: <a href="https://events.linuxfoundation.org/mcp-dev-summit-bengaluru/">LF Events</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP SDKs and spec unchanged in the window</h4>
     <p>The MCP Python SDK remains at v1.27.2 (May 29) and the TypeScript SDK at the 2.0.0-alpha.2 line (April 1), with no new tag inside the window. The spec blog has no post since April 8. No major agent framework (LangGraph, CrewAI, AutoGen, LlamaIndex, OpenAI Agents SDK, Google ADK) cut a dated release in the window. Source: <a href="https://github.com/modelcontextprotocol/python-sdk/releases">modelcontextprotocol python-sdk releases</a></p>
   </div>
@@ -210,11 +210,11 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Quiet 24 hours, no Tier 1 coding-tool feature release dated June 8</h4>
     <p>Cursor, GitHub Copilot, Cline, Aider, Devin, Zed, Replit, JetBrains, Sourcegraph Amp, and others show no in-window changelog entry. The freshest real coding features all carry June 4 to 6 dates and were captured earlier (Cursor 3.7 Design Mode June 4 to 5, Copilot 1M-token context and agent-tasks API June 4, Zed stability fixes June 6). A weekend lull. Source: <a href="https://cursor.com/changelog">cursor.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Lone June 8 entry is GitHub governance, not a coding feature</h4>
     <p>The single hard-dated June 8 item across coding-tool primary sources is GitHub making IP allow list coverage generally available for Enterprise Managed User namespaces, an admin and network control rather than a Copilot or agent capability. Flagged only because it is the one dated entry. Source: <a href="https://github.blog/changelog/2026-06-08-ip-allow-list-coverage-for-emu-namespaces-in-general-availability">github.blog changelog</a></p>
   </div>
@@ -222,19 +222,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Apple unveils Siri AI powered by a custom Google Gemini model at WWDC 2026 (June 8)</h4>
     <p>Apple's rebuilt assistant runs on a custom Gemini model under a multi-year deal reported near 1 billion dollars a year, shipping as a standalone app with multi-step and cross-app commands and a three-tier on-device, Private Cloud Compute, and Google Cloud router. A developer beta started June 8, with a US English public beta later this year and broad release around the September iOS 27 launch. Source: <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">apple.com newsroom</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>OpenAI confirms a confidential S-1 IPO filing (June 8)</h4>
     <p>OpenAI said it recently submitted a confidential S-1 to the SEC, the first formal step toward a listing, with reporting tying the process to Goldman Sachs and Morgan Stanley and a possible September target. The move follows Anthropic's June 1 confidential draft and lands days before the SpaceX IPO. Source: <a href="https://www.pymnts.com/artificial-intelligence-2/2026/openai-confidential-ipo-filing-joins-race-for-largest-public-listing-ever/">PYMNTS</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>xAI moves a Starlink engineer to lead the Grok training team (June 9)</h4>
     <p>Bloomberg reported that xAI brought over SpaceX and Starlink engineer Jack Garabedian to run the team training Grok, replacing a younger engineer atop the human-data team, a sign of continued reshuffling as work on the next Grok model proceeds. Single-outlet personnel reporting, not independently confirmed. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-09/musk-s-xai-taps-starlink-staffer-to-run-grok-training-team">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Google DeepMind, Meta, Mistral, DeepSeek, and Qwen quiet on net-new in the window</h4>
     <p>No fresh June 8 to 9 primary-source model release surfaced from these labs, with the big recent activity sitting at Google I/O, Microsoft Build, and LlamaCon. Note that the Apple deal is itself a Google DeepMind win, putting Gemini inside Siri. Gemini 3.5 Pro is the most likely near-term catalyst, expected this month without a fixed day. Source: <a href="https://blog.google/">blog.google</a></p>
   </div>
@@ -242,15 +242,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>China's Moonshot AI seeks roughly 30 billion dollar valuation in its third raise in six months (June 8)</h4>
     <p>The Kimi developer has held early talks to raise more than 1 billion dollars, up to about 2 billion, at a roughly 30 billion dollar valuation, even as it closes a separate Meituan-led round at a 20 billion dollar valuation. That would be about a seven-fold jump from its roughly 4 billion dollar value in December, with annual recurring revenue reportedly past 200 million dollars in April. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Bain report: private equity tech deal value fell about 70 percent on AI valuation fears (June 8)</h4>
     <p>A Bain and Co. report covered by Bloomberg found global tech buyout value dropped roughly 70 percent to about 20 billion dollars in Q1 as investors grew cautious about software worth in the AI era, with software-company valuations down about 8 percent versus a 0.3 percent decline for all other sectors. A macro signal that AI disruption is repricing the broader software and PE market. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-08/ai-fears-spur-70-plunge-in-private-equity-tech-deal-value">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>SpaceX IPO sequence anchors the week, pricing June 11 and trading June 12</h4>
     <p>SpaceX is set to price after the close June 11 at a fixed 135 dollars per share, roughly 75 billion dollars raised at about a 1.77 trillion dollar valuation, with first trade June 12 on Nasdaq under ticker SPCX. It functions as the first public-market stress test for the AI and space capital wave, including the SpaceX-Google and SpaceX-Anthropic compute contracts. Source: <a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html">CNBC</a></p>
   </div>
@@ -258,11 +258,11 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Quiet day for open weights and research, no in-window Tier 1 drop</h4>
     <p>No net-new open-weights model from labs in scope (Meta, Mistral, DeepSeek, Qwen, NVIDIA, MiniMax, Allen AI, Moonshot, Cohere, Stability) landed in the trailing 24 hours. Two independent trackers confirm the lull, with Price Per Token showing zero releases in the last 24 hours and llm-stats.com reporting no open-source releases this week. The HuggingFace recently-created feed shows only individual fine-tunes and quants. Source: <a href="https://huggingface.co/models">huggingface.co/models</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Edge-of-window flag: Google published Gemma 4 quantization-aware-trained checkpoints (June 5)</h4>
     <p>Google released quantization-aware-trained variants of its open-weight Gemma 4 12B and 31B models for lower-memory local inference on phones and laptops, a packaging and optimization follow-on rather than a new base model. Just outside the window, noted for the local-inference angle. Source: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">blog.google Gemma 4 QAT</a></p>
   </div>
@@ -270,19 +270,19 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Next Grok model still expected mid-June, training org reshuffled [Tier 2, MEDIUM, early signal]</h4>
     <p>The June 9 Bloomberg report on xAI moving a Starlink engineer atop the Grok training team pairs with standing rumors of a Grok V9-Medium release around mid-June and a larger Grok 5 still training on Colossus 2. Param counts and timing are reported, not confirmed. Watch for a model card or API endpoint. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-09/musk-s-xai-taps-starlink-staffer-to-run-grok-training-team">Bloomberg</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Apple-Gemini model said to be about 1.2 trillion parameters on Blackwell B200 [Tier 3, MEDIUM]</h4>
     <p>Aggregators describe the custom Gemini model behind Siri AI as roughly 1.2 trillion parameters running on Nvidia Blackwell B200 GPUs in Google Cloud. The Gemini partnership and three-tier architecture are well corroborated, but the exact parameter count and GPU detail do not appear in Apple's own materials, so treat the specs as unconfirmed. Source: <a href="https://www.macrumors.com/guide/wwdc-2026-what-to-expect/">MacRumors</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Anthropic raise size still varies by source around a 965 billion dollar post-money [Tier 2, MEDIUM, early signal]</h4>
     <p>Following Anthropic's June 1 confidential S-1, aggregators now cite a roughly 965 billion dollar post-money valuation, but the headline raise size differs by outlet, with figures up to a reported 65 billion dollar Series H not yet pinned by a Tier 1 wire. Treat the raise size as unconfirmed until a primary filing or wire confirms. Source: <a href="https://www.pymnts.com/artificial-intelligence-2/2026/openai-confidential-ipo-filing-joins-race-for-largest-public-listing-ever/">PYMNTS</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Gemini 3.5 Pro expected this month, no fixed date [Tier 2, MEDIUM]</h4>
     <p>At Google I/O, Sundar Pichai committed to delivering Gemini 3.5 Pro within the following month, putting the launch in June without a confirmed day. It is the most likely near-term frontier-model catalyst from Google, especially now that Gemini also powers Siri. Watch blog.google. Source: <a href="https://blog.google/">blog.google</a></p>
   </div>
@@ -290,31 +290,31 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a24">
     <h4>2026-06-09 to 10: MCP Dev Summit, Bengaluru</h4>
     <p>Two-day developer summit, live now, the next likely source of net-new MCP spec, registry, and agent-security discussion ahead of the July stateless-core release candidate. Source: <a href="https://events.linuxfoundation.org/mcp-dev-summit-bengaluru/">LF Events</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>2026-06-11: MiniMax M3 open weights expected to drop</h4>
     <p>Weights and the technical report were promised within about 10 days of the June 1 launch, with the API endpoint already live. The next major open-weights test against proprietary coding leaders. Source: <a href="https://huggingface.co/MiniMaxAI">huggingface.co/MiniMaxAI</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>2026-06-11: SpaceX IPO prices after the close</h4>
     <p>Fixed 135 dollars per share, roughly 75 billion dollars raised at about a 1.77 trillion dollar valuation, Goldman lead. The pricing print sets the comparable for the Anthropic and OpenAI IPO filings. Source: <a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html">CNBC</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>2026-06-11: Bartz v. Anthropic settlement distributions calculated</h4>
     <p>The administrator of the roughly 1.5 billion dollar copyright settlement fund is set to calculate author distributions, a near-term marker in the Anthropic training-data case. Date is reported, not docket-confirmed. Source: <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/">Authors Guild</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>2026-06-12: SpaceX first trade on Nasdaq under ticker SPCX</h4>
     <p>First trading day, potentially the largest IPO on record, and an anchor for the SpaceX-Google and SpaceX-Anthropic compute contracts. Source: <a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html">CNBC</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>2026-06-15: Anthropic agent credit pool and API model retirements take effect</h4>
     <p>Agent and headless usage moves to a separate API-rate credit pool, and Opus 4 and Sonnet 4 retire on the Claude API with migration to the 4.6 line. Source: <a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com release notes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>2026-06-18: Gemini CLI and Code Assist shut down, migrate to Antigravity CLI</h4>
     <p>Google sunsets the Gemini CLI and Code Assist IDE extensions for AI Pro and Ultra and free individual users, moving them to the Antigravity CLI. Enterprise and paid API keys are unaffected. Source: <a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/">developers.googleblog.com</a></p>
   </div>

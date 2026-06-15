@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Claude Agent SDK billing split goes live today: automated workloads leave Pro and Max pools onto a separate metered credit</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -149,7 +149,7 @@
       <div class="why"><strong>Why it matters:</strong> Any team running scheduled or CI-driven Claude agents on a subscription seat can hit a hard stop mid-job today without warning. This is the first time Anthropic has carved automated agent usage into its own meter, a template other labs will copy as agent traffic outgrows human-seat pricing.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>Claude Opus 4 and Sonnet 4 original API snapshots retire today, pinned integrations start erroring</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -161,7 +161,7 @@
       <div class="why"><strong>Why it matters:</strong> Production systems that hardcoded the May 2025 snapshots fail closed today, not gracefully. Pairing this with the Agent SDK billing cutover means June 15 is a double break point for Claude API integrators, the kind of dependency exposure that surfaces only when both land at once.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Open-weight coding models now drop faster than stable inference tooling can absorb them</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -180,19 +180,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Fable 5 and Mythos 5 stay globally suspended, no restoration date, Anthropic calls the trigger a misunderstanding</h4>
     <p>Follow-up to yesterday: as of June 14 both frontier models remain offline for all customers, including US users, while Anthropic complies with the June 12 US export-control directive. Anthropic frames the rival jailbreak demo that prompted it as narrow and non-universal. Opus 4.8 and all other models are unaffected. Source: <a href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com/news/fable-mythos-access</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Agent SDK billing split takes effect today, June 15 (see Top 3)</h4>
     <p>Automated agent workloads move off subscription pools onto a separate monthly credit metered at full API rates. The live builder-cost event of the day. Source: <a href="https://thenewstack.io/anthropic-agent-sdk-credits/">thenewstack.io</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Opus 4 and Sonnet 4 original API snapshots retire today, June 15 (see Top 3)</h4>
     <p>Pinned claude-opus-4-20250514 and claude-sonnet-4-20250514 calls now error. Migrate to claude-opus-4-8 and claude-sonnet-4-6. Source: <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations">platform.claude.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>status.anthropic.com: all components operational as of June 14, no new in-window outage</h4>
     <p>No fresh incident opened overnight. Most recent prior incident was the June 13 Fable 5 and Mythos 5 access suspension. Source: <a href="https://status.anthropic.com/">status.anthropic.com</a></p>
   </div>
@@ -200,15 +200,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP Dev Summit Mumbai runs June 14 to 15, opened in-window</h4>
     <p>Linux Foundation event opened June 14 with talks on agent infrastructure and shared MCP infrastructure (vCluster, SailPoint, Arcade). Sessions are workshops and case studies, no protocol-level announcement surfaced from day one. Source: <a href="https://events.linuxfoundation.org/mcp-dev-summit-mumbai/program/schedule/">events.linuxfoundation.org schedule</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>MCP 2026-07-28 spec release candidate remains the locked RC, no change in-window</h4>
     <p>Standing context: the RC published May 21 introduces a stateless protocol core (removes Mcp-Session-Id and the initialize handshake), plus Extensions, Tasks, MCP Apps, and auth hardening. Python SDK v2 beta targeted June 30, final spec July 28. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">blog.modelcontextprotocol.io</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4 class="quiet">Otherwise a quiet day for agentic and MCP</h4>
     <p class="quiet">No new MCP spec post, no in-window SDK GitHub release, and no fresh framework drops from LangChain, LlamaIndex, CrewAI, AutoGen, OpenAI Agents SDK, or Google ADK.</p>
   </div>
@@ -216,23 +216,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Claude Code v2.1.177 (June 13) suspends Fable 5 access, silently falls back to Opus 4.8</h4>
     <p>Following the US government directive, selecting Fable 5 in the model picker now routes to Claude Opus 4.8. Shipped to npm June 13 with no CHANGELOG entry yet. A government-driven model pull, not a routine bump. Source: <a href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Claude Code v2.1.176 (June 12): localized session titles, footerLinksRegexes, allowlist security fix</h4>
     <p>New footerLinksRegexes setting renders regex-matched clickable link badges in the footer. Session titles generate in the conversation language. Security fix closes a path where ANTHROPIC_DEFAULT model env vars could bypass the availableModels allowlist. Source: <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.176">github.com/anthropics/claude-code releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>GitHub Copilot CLI v1.0.62 (June 13): inline scrolling dialogs, plugin-marketplace extensions, diff search</h4>
     <p>Elicitation dialogs now scroll inline with the timeline instead of taking over the screen. Adds content search with match highlighting in diff view, an /app slash command, and lets plugins ship installable extensions via the marketplace. Subagent model and reasoning effort now configurable. Source: <a href="https://github.com/github/copilot-cli/releases">github.com/github/copilot-cli releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>GitHub Copilot code review adds org runner controls and content-exclusion support (June 12)</h4>
     <p>New org-level controls to run code review on self-hosted or large runners, Copilot content-exclusion support in review, and removal of the character limit on repository custom instructions. Source: <a href="https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/">github.blog changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Watch item: Google Antigravity CLI consumer launch scheduled June 18</h4>
     <p>Go-based CLI replacing Gemini CLI for consumers, expected to land June 18. Worth tracking across the next few briefs. Source: <a href="https://www.digitalapplied.com/blog/cursor-bugbot-90-second-reviews-june-2026-release">digitalapplied.com</a></p>
   </div>
@@ -240,19 +240,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4 class="quiet">Quiet 24h for competitor launches, no verified in-window model, pricing, or deal</h4>
     <p class="quiet">Search results across the strict window were either earlier-week or conflicting aggregator noise. The items below are live context rather than fresh in-window moves.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>xAI Grok V9-Medium still inside its mid-June public-release watch window, launch not confirmed</h4>
     <p>The 1.5T-parameter model, reportedly trained on Cursor coding workflows, finished training and is targeted for a mid-June public release per Musk posts. No confirmation it landed June 14. The single most likely near-term competitor event. Source: <a href="https://www.techtimes.com/articles/318165/20260610/grok-v9-rolls-tesla-cars-x-why-musks-distribution-flywheel-worries-ai-rivals.htm">techtimes.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>OpenAI GPT-5.2 family retired from ChatGPT effective June 12, conversations migrate to GPT-5.5</h4>
     <p>Active backdrop, not a new June 14 event. GPT-5.2 Instant, Thinking, and Pro are gone from ChatGPT. Source: <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">help.openai.com release notes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>OpenAI workspace agents free period extended to July 6 before credit-based pricing begins</h4>
     <p>Relevant to enterprise cost watchers, not a fresh in-window move. Source: <a href="https://releasebot.io/updates/openai">releasebot.io/updates/openai</a></p>
   </div>
@@ -260,19 +260,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>EU AI Act high-risk classification guidelines remain in public consultation through June 23</h4>
     <p>The Commission draft guidelines on classifying high-risk AI systems (published May 19) are open for comment through June 23, so the consultation is live during this window. Separately, a June 10 Code of Practice on marking AI-generated content precedes the August 2026 transparency rules. Source: <a href="https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-the-european-commission-publishes-draft-guidelines-on-hrais/">insideprivacy.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>This-week context: Bezos-backed Prometheus raised 12B USD at a 41B valuation (June 11)</h4>
     <p>Physical-AI startup co-founded by Jeff Bezos and Vik Bajaj, building an artificial general engineer for the physical world. A marker for the physical-AI capital wave, framed as this-week context not a 24h item. Source: <a href="https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/">techcrunch.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>This-week context: DeepSeek close to a roughly 7.4B USD round, among China's largest startup financings</h4>
     <p>Reported close to sealing 50B yuan with Tencent and its founder among backers as of June 3. Watch for closing confirmation. Source: <a href="https://www.bloomberg.com/news/articles/2026-06-03/deepseek-close-to-sealing-7-billion-funding-in-historic-ai-deal">bloomberg.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>This-week context: Anthropic confidential IPO S-1 filed June 1, pricing not yet set</h4>
     <p>Filed at a roughly 965B valuation following the 65B Series H. The big pending event in the AI IPO pipeline behind the completed SpaceX listing. Source: <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">cnbc.com</a></p>
   </div>
@@ -280,19 +280,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>MiniMax M3 inference-tooling race continues: llama.cpp still a preliminary PR, vLLM nightly only (see Top 3)</h4>
     <p>MiniMax M3 (428B total, 23B active, MiniMax Sparse Attention, 1M context) dropped June 1. As of this window, llama.cpp support is unmerged and falls back to dense attention, and vLLM support is nightly or Docker-recipe only, not a tagged stable release. Community GGUF quants exist. Source: <a href="https://github.com/ggml-org/llama.cpp">github.com/ggml-org/llama.cpp</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Kimi K2.7-Code (1T total, 32B active) open weights on Hugging Face, June 12</h4>
     <p>Moonshot AI coding MoE under a Modified MIT license, live on Kimi APIs and Hugging Face. Vendor-reported gains of +21.8% on Kimi Code Bench v2 and a 30% cut in reasoning tokens versus K2.6. Just outside the strict window but the freshest open-weight model still propagating through tooling. Source: <a href="https://cryptobriefing.com/kimi-k2-7-code-open-source-release/">cryptobriefing.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Hugging Face transformers v5.10.1 adds Gemma4 Unified, Sapiens2, DeepSeek-OCR-2, JetBrains Mellum [UNVERIFIED date]</h4>
     <p>Point release adds encoder-free multimodal Gemma4 Unified, Sapiens2 human-centric ViTs, a DeepSeek-OCR-2 hybrid encoder, and JetBrains Mellum, plus Gemma4 stability and quantization fixes. Exact release date inside the 24h window is unverified, tagged June 2026. Source: <a href="https://github.com/huggingface/transformers/releases">github.com/huggingface/transformers releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>vLLM v0.15.0 expands model coverage (Kimi-K2.5, Molmo2, Step3vl, GLM-Lite), several deprecations [UNVERIFIED date]</h4>
     <p>335 commits, 158 contributors. Removes DeepSpeedFp8 and RTN, deprecates HQQ, drops the old time_per_output_token metric. Newer tags also surfaced, so this may predate the window. Source: <a href="https://github.com/vllm-project/vllm/releases/tag/v0.15.0">github.com/vllm-project/vllm releases</a></p>
   </div>
@@ -300,11 +300,11 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a28">
     <h4>xAI Grok V9-Medium imminent, reportedly trained on Cursor session data [Tier 3, MEDIUM]</h4>
     <p>Training complete, mid-June public-release window open, no launch confirmed yet. If the Cursor-session training detail holds, it signals a coding-first positioning for the model. Source: <a href="https://www.techtimes.com/articles/318165/20260610/grok-v9-rolls-tesla-cars-x-why-musks-distribution-flywheel-worries-ai-rivals.htm">techtimes.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Aggregator chatter on GPT-5.4, Gemini 3.5 Pro, and Grok 5 mid-June launches [UNVERIFIED, LOW]</h4>
     <p>Conflicting model names across low-quality aggregator pages, a classic sign of fabricated content. No primary-source confirmation. Flagged as noise, excluded from Top 3. Source: <a href="https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/">wavespeed.ai</a></p>
   </div>
@@ -312,23 +312,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a30">
     <h4>Today, June 15: Anthropic API model retirements and Agent SDK billing split are live</h4>
     <p>Both changes take effect today. Expect support traffic from teams with pinned snapshots or subscription-seat agents. Watch status.anthropic.com.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Fable 5 and Mythos 5 restoration watch, no date set</h4>
     <p>Anthropic is working to restore access with no firm timeline. Media estimates point to a few weeks. Watch anthropic.com/news.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>June 18: Google Antigravity CLI consumer launch expected</h4>
     <p>Go-based CLI replacing Gemini CLI for consumers. A new front in the terminal-agent race.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>June 23: EU AI Act high-risk classification consultation closes</h4>
     <p>Comment window on the high-risk classification guidelines ends. Final text shapes 2026 compliance cost.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>June 30: MCP Python SDK v2 beta targeted</h4>
     <p>Beta milestone on the path to the July 28 final spec, which moves the protocol core to stateless.</p>
   </div>

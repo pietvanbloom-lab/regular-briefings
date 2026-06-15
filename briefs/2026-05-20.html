@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Google I/O Day 1 lands a full agent stack: Gemini Omni video, Gemini 3.5 Flash, Spark 24/7 agent, Antigravity 2.0, AI Ultra repriced from $250 to $100</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -151,7 +151,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Google fused frontier multimodal, agent runtime, distribution, and pricing into one move. Antigravity Managed Agents spin up isolated Linux sandboxes via a single Gemini API call: that is a direct surface match to Anthropic's Managed Agents and OpenAI Codex Enterprise. The AI Ultra cut to $100 plus 5x Antigravity quota is a sharpened blade aimed at Claude Max ($200) and ChatGPT Pro ($200) at the moment both are pushing developer-tier ramps. Second-order moves to watch over the next 30 days: Anthropic and OpenAI quietly bundling agent-runtime quota into existing dev plans to defend per-seat ARR, Cursor and Windsurf adding Gemini 3.5 Flash to the default-tier rotation to harvest the price drop, and Veo / Sora / Mythos creators rotating to Omni since YouTube Shorts and Create get free unlimited 10-second generations.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Anthropic ships MCP Tunnels and Self-Hosted Sandboxes for Managed Agents at Code with Claude London</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -164,7 +164,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> This is the architectural counter to yesterday's Dell on-prem story. Rather than ship hardware-bound copies of Claude, Anthropic kept the brain in the cloud and built a controlled hole through the customer firewall. That preserves model gross margin and central learning loops while still answering the regulated-vertical objection that has been gating six- and seven-figure Claude Enterprise deals. Watch over the next 60 days: a wave of Claude Enterprise pilots inside banks and hospitals previously stuck on data-residency, Cloudflare collecting partner-of-record revenue on every Tunnel deployment, and OpenAI being forced to publish a parity story for Codex Enterprise that does not require Dell hardware or a hyperscaler contract. The Antigravity Managed Agents launch on the same day means the agent-runtime-with-secure-private-tools category is now a three-horse race.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Andrej Karpathy joins Anthropic to start a pre-training team that uses Claude itself to accelerate research</h3>
       <div class="tags">
         <span class="tag t2">Tier 2</span>
@@ -184,27 +184,27 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>MCP Tunnels and Self-Hosted Sandboxes ship at Code with Claude London (see Top 3)</h4>
     <p>Tunnels in research preview, Sandboxes in public beta. Cloudflare, Daytona, Modal, Vercel named as sandbox partners. Direct answer to the Dell on-prem narrative. Source: <a href="https://www.infoq.com/news/2026/05/claude-mcp-tunnels/">infoq.com / MCP Tunnels</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Karpathy joins Anthropic pre-training team using Claude (see Top 3)</h4>
     <p>Starts this week under Nick Joseph. Confirmed by an Anthropic spokesperson to TechCrunch on May 19. Highest-profile inbound research hire of the cycle. Source: <a href="https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/">techcrunch.com / Karpathy to Anthropic</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Claude Code v2.1.144 ships background-session /resume and fixes a 75s startup hang</h4>
     <p>Released May 19. /resume now lists sessions started via `claude --bg` or agent view alongside interactive ones, tagged `bg`. Fixes startup hang up to 75 seconds when api.anthropic.com is unreachable through captive portal, firewall or VPN. Plugin dependency enforcement added. /extra-usage renamed to /usage-credits, old name still works. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com / changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Anthropic v. DOD blacklist heard in D.C. Circuit, panel skeptical Anthropic can block the label</h4>
     <p>Three-judge panel (Henderson, Katsas, Rao) heard arguments on May 19. Each side had 15 minutes formally but Q&A ran nearly two hours. Judge Henderson called the DOD's actions a "spectacular overreach" but Bloomberg and the Washington Post both reported the panel overall skeptical Anthropic can block the label. Court agreed to expedite, ruling possible within weeks. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-19/appeals-court-skeptical-anthropic-can-block-us-supply-risk-label">bloomberg.com / D.C. Circuit Anthropic-DOD</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Anthropic takes No. 1 on the 2026 CNBC Disruptor 50, overtakes OpenAI</h4>
     <p>14th annual list published May 19 with Anthropic No. 1, OpenAI No. 2. Revenue run rate cited at $30B annualized, up from $9B at end of last year. Amodei told CNBC Q1 revenue grew 80x year over year. Lands alongside the reported $900B follow-on round still in talks. Source: <a href="https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-anthropic-no-1.html">cnbc.com / Disruptor 50</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Three Claude production incidents inside the window: Haiku 4.5 55m, Opus 4.7 1h30m, Opus 4.7 1h15m</h4>
     <p>status.claude.com logged Haiku 4.5 warn 07:03 UTC (55m), Opus 4.7 warn 08:43 UTC (1h30m), Opus 4.7 down severity 14:08 UTC (1h15m) on May 19. Window overlapped the London keynote livestream. All resolved. Source: <a href="https://status.claude.com/history">status.claude.com / history</a></p>
   </div>
@@ -212,23 +212,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Cloudflare publishes enterprise MCP reference architecture with Portal and Code Mode</h4>
     <p>May 18 post details a reference architecture that funnels all MCP traffic through a centralized Portal with Cloudflare Access enforcing SSO/MFA, conditional access and DLP. Formalizes Code Mode, which collapses MCP tool definitions into dynamic entry points and is reported to cut MCP-related token usage by up to 99.9 percent versus exposing every operation directly. Sets the de facto template every MCP gateway vendor will benchmark against. Source: <a href="https://blog.cloudflare.com/enterprise-mcp/">blog.cloudflare.com / enterprise MCP</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>MCP Rust, PHP, Go SDKs and Inspector push same-day updates after the 6.0.0 cut</h4>
     <p>The modelcontextprotocol GitHub org shipped coordinated commits across Rust, PHP, Go SDKs and the Inspector on May 19, continuing the cadence after Inspector 6.0.0 (May 18). Consistent with the public roadmap target of TypeScript SDK v2 stable in Q1-Q2 2026. Source: <a href="https://github.com/modelcontextprotocol">github.com / modelcontextprotocol</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Google Antigravity 2.0 stands up as the most direct competitor to Claude Code and OpenAI Codex</h4>
     <p>Standalone desktop app re-architected around agent orchestration, plus an Antigravity CLI (replacing the Gemini CLI), an Antigravity SDK, Managed Agents in the Gemini API, and a Gemini Enterprise Agent Platform tier. Dynamic subagents enable parallelized workflows. AI Ultra at $100/month grants 5x the Antigravity limits of the Pro plan. Source: <a href="https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/">developers.googleblog.com / Antigravity 2.0</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Simon Willison synthesizes "the last six months in LLMs" around coding agents</h4>
     <p>May 19 retrospective. Argues coding agents "got really good" and laptop-class open models outperformed expectations even as frontier still leads. Widely cited in practitioner channels within hours of posting. Source: <a href="https://simonwillison.net/2026/May/19/5-minute-llms/">simonwillison.net / 5 minute LLMs</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>LangGraph 1.1.7a1 bumps langchain-core to 1.2.28</h4>
     <p>Alpha release May 19. Dependency hygiene, no headline new APIs. Continues the 1.1.x stabilization track after LangGraph 1.2 covered in yesterday's brief. Source: <a href="https://github.com/langchain-ai/langgraph/releases">github.com / langgraph releases</a></p>
   </div>
@@ -236,23 +236,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Cursor launches native Jira integration with Cloud Agents from work items</h4>
     <p>Shipped May 19. Jira issues now become agent runs: users start and manage Cloud Agents from inside Jira work items, with the agent fetching context, opening a branch and returning a PR for review. Extends the May 11 Microsoft Teams integration and the May 18 Composer 2.5 launch into Atlassian's stack. Source: <a href="https://cursor.com/changelog">cursor.com / changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>GitHub Copilot CLI v1.0.49 adds /chronicle search and /rubber-duck self-critique</h4>
     <p>Released May 19. /chronicle search searches all prior session content by keyword or topic, /rubber-duck runs an independent critique pass on current work. Fixes the postToolUse hook so additionalContext is injected as a system message instead of silently discarded. Adds Alpine Linux (musl) support and persists static OAuth client registration for MCP token refreshes. Source: <a href="https://github.com/github/copilot-cli/blob/main/changelog.md">github.com / copilot-cli changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>OpenAI Codex CLI ships codex doctor diagnostics, blended token usage display, hardened Windows sandbox</h4>
     <p>Codex changelog entry around May 19 introduces `codex doctor`, a support-ready diagnostic across runtime, auth, terminal, network, config and local state. TUI gains data-driven service-tier commands, blended token usage display, permissions/approval-mode surfacing, effective workspace roots and responsive Markdown tables. Windows sandbox hardened around deny-read rules, scoped write roots and PowerShell edge cases. App-server and local-state startup now preserve SQLite data and fail closed when state cannot open. Source: <a href="https://developers.openai.com/codex/changelog">developers.openai.com / codex changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Claude Code v2.1.144 sees background sessions, reliability sweep (see Anthropic bucket)</h4>
     <p>/resume across background sessions, plugin dependency enforcement, projected context cost in /plugin marketplace browse, /extra-usage renamed to /usage-credits. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com / changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Google Antigravity 2.0 reframes itself as a direct Claude Code and Codex alternative (see Agentic bucket)</h4>
     <p>Standalone agent IDE plus CLI/SDK/Managed Agents. 5x Antigravity quota bundled into the new $100 AI Ultra plan. Source: <a href="https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/">developers.googleblog.com / Antigravity 2.0</a></p>
   </div>
@@ -260,31 +260,31 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Gemini Omni launches as a single multimodal model for video creation with persistent characters (see Top 3)</h4>
     <p>Unveiled by Google DeepMind CTO Koray Kavukcuoglu at I/O 2026 on May 19. Generates and edits video reasoning across image, audio, video and text. Omni Flash rolled out same day to Plus, Pro, Ultra subscribers via Gemini app and Flow, plus free access in YouTube Shorts and YouTube Create with a 10-second cap. API "in the coming weeks." Source: <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/">blog.google / Gemini Omni</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Gemini 3.5 Flash becomes the new default across Search, Gemini app and Workspace</h4>
     <p>Faster default model. Notable that Google jumped from leaked "3.2 Flash" naming to 3.5 Flash, suggesting a real internal jump and not a re-skin. Anchors the model layer for Spark, Omni, Antigravity. Source: <a href="https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html">cnbc.com / Gemini 3.5 and Spark</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Gemini Spark is the 24/7 cloud agent positioned against Claude's "always-on" managed agents</h4>
     <p>Cloud-resident agent across Gmail, Calendar, Tasks and connected third-party apps, drafts and sends email by voice, runs multi-step scheduling without the app open. Closed beta this week, broader US AI Ultra rollout next week. AI Ultra simultaneously cut from $250 to $100/month (5x Pro usage, 20 TB storage, YouTube Premium); a $200 higher tier retained. Source: <a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/">techcrunch.com / Gemini Spark</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Android XR glasses: Samsung "Fall 2026," XREAL Project Aura ships before year-end</h4>
     <p>Samsung's first Android XR glasses, co-developed with Gentle Monster and Warby Parker, targeted for Fall 2026. XREAL Project Aura: 70-degree FOV, optical see-through display, external compute puck, DisplayPort-in, integrated Gemini. First concrete consumer Android XR timeline. Source: <a href="https://9to5google.com/2026/05/19/google-samsung-android-xr-glasses-styles-release-date/">9to5google.com / Android XR glasses</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>OpenAI Codex Enterprise + Dell distribution disclosed May 19, OpenAI says 4M+ weekly Codex developers</h4>
     <p>OpenAI published the Codex Enterprise partnership page the day after Dell Tech World. Hybrid and on-prem distribution into financial services, healthcare, government. The hyper-cloud cracks open. Source: <a href="https://openai.com/index/dell-codex-enterprise-partnership/">openai.com / Dell Codex enterprise</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>xAI Grok update partly trained on Colossus 2 gigawatt cluster</h4>
     <p>Musk posted "Grok upgrades" on X around May 18-19, confirming partial training on Colossus 2. No model card, no benchmark numbers, no pricing. Sits below Grok 5 (target ~10T parameters) and above Grok 4.20 with its 2M-token context. Source: <a href="https://x.ai/news">x.ai / news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Meta layoffs of ~8,000 begin May 20, reorganized around Wang's Superintelligence Labs</h4>
     <p>CNBC confirmed May 19 notices going out from 4:00 PT May 20. Around 10 percent of staff. ~7,000 reassigned to AI products. Meta is guiding to $115-135B in 2026 AI infrastructure spend; more cuts planned for H2 2026. Source: <a href="https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html">cnbc.com / Meta layoffs</a></p>
   </div>
@@ -292,23 +292,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Armada raises $230M Series B at $2B for modular AI data centers, Johnson Controls becomes manufacturing partner</h4>
     <p>Co-led by Overmatch, BlackRock and 8090 Industries on May 19. New strategic investors include Johnson Controls, NightDragon, Mitsui, Singtel Innov8. Manufacturing pact with Johnson Controls stands up "Galleon Forge One," a 400,000 sq ft Arizona factory targeting 500 jobs and continuous production from summer 2026. Bookings up 540 percent YoY, Q1 FY27 up 2,000 percent YoY. Source: <a href="https://www.prnewswire.com/news-releases/armada-announces-agreement-with-johnson-controls-for-galleon-forge-one-raises-230m-in-oversubscribed-series-b-with-a-pre-money-valuation-of-2b-302775720.html">prnewswire.com / Armada $230M</a> and <a href="https://www.cnbc.com/2026/05/19/modular-data-center-builder-armada-raises-230-million.html">cnbc.com / Armada</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>Moment raises $78M Series C led by Index for AI OS in wealth management, $10T client AUM on platform</h4>
     <p>Less than 10 months after a $36M Series B (also Index-led). a16z and Avra participate. Platform now powers investment workflows for firms collectively running roughly $10T in client assets, up from $300B in 18 months. Anchor customers include Edward Jones, LPL Financial, Hightower Advisors. Total funding $134M. Source: <a href="https://www.pymnts.com/news/investment-tracker/2026/moment-raises-78-million-to-meld-ai-and-wealth-management/">pymnts.com / Moment $78M</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Ocean Security launches from stealth with $28M led by Lightspeed for agentic email security</h4>
     <p>Lightspeed-led, with Picture Capital, Cerca Partners, and angels including Wiz's Assaf Rappaport and Armis founders. First agentic, AI-native replacement for detection-based email security. Already protecting "hundreds of thousands of mailboxes" at launch. Source: <a href="https://www.globenewswire.com/news-release/2026/05/19/3297836/0/en/Ocean-Raises-28M-as-Enterprises-Confront-a-New-Wave-of-AI-Powered-Email-Attacks.html">globenewswire.com / Ocean $28M</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>SpaceX targeting May 20 to make IPO prospectus public, $1.75T valuation, $75B raise</h4>
     <p>Per reporting tracked through May 18-19, SpaceX targets May 20 to flip its confidentially filed S-1 (April 1) public. Roadshow June 4, pricing June 11, Nasdaq debut June 12 under SPCX. Material because Starshield AI compute and orbital-data ambitions sit inside the same offering. Source: <a href="https://www.advanced-television.com/2026/05/18/spacex-ipo-is-close/">advanced-television.com / SpaceX IPO</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>European Commission publishes draft guidelines classifying high-risk AI systems</h4>
     <p>Released May 19. Sits downstream of the May 7 Digital Omnibus political agreement (extended high-risk compliance deadlines to December 2027, watermarking to December 2026). Formal Council and Parliament adoption still targeted by July 2026. Source: <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">digital-strategy.ec.europa.eu / AI Act framework</a></p>
   </div>
@@ -316,27 +316,27 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>llama.cpp build b9240 cuts with a verbosity-help fix, daily cadence intact</h4>
     <p>ggml-org tagged b9240 on May 20 at 03:00 UTC, immediate successor to yesterday's b9222 HVX PAD kernel build. Multi-platform binaries (macOS, Linux, Windows, Android, openEuler) ship alongside the tag. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">github.com / llama.cpp releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>llm-gemini 0.32 streams reasoning tokens for Gemini, timed to Gemini 3.5 Flash GA</h4>
     <p>Simon Willison shipped llm-gemini 0.32 (and 0.32a0 alpha) on May 19. Adds streaming of reasoning tokens for Google's Gemini family, aligned with the new `llm` 0.32a tooling that surfaces summarized reasoning in a separate color with -R / --hide-reasoning toggles. Lands the same day as Gemini 3.5 Flash. Source: <a href="https://simonwillison.net/2026/May/19/llm-gemini-2/">simonwillison.net / llm-gemini 0.32</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>NVIDIA LongLive-2.0 tops HuggingFace papers with NVFP4 parallel infra for long video gen</h4>
     <p>Submitted May 18, top trending paper with ~1.22k upvotes by May 19. Introduces an NVFP4-based parallel infrastructure for long video generation using sequence-parallel autoregressive training and diffusion tuning. Removes training and inference bottlenecks for the previously H100-bound LongLive frame-level AR framework (1.3B params, 20.7 FPS on a single H100, up to 240-second clips). Source: <a href="https://huggingface.co/papers">huggingface.co / papers</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Orthrus paper claims 7.8x lossless inference speedup via dual-view diffusion on frozen autoregressive LLMs</h4>
     <p>arxiv 2605.12825 augments a frozen autoregressive LLM with a trainable parallel-diffusion module sharing the same KV cache. Reports up to 7.8x speedup with O(1) memory overhead and provably lossless outputs through an exact consensus mechanism. Adobe Research and University of Oregon authors. Code at github.com/chiennv2000/orthrus. Source: <a href="https://arxiv.org/abs/2605.12825">arxiv.org / 2605.12825 Orthrus</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Memtensor publishes SkillsVote for lifecycle governance of agent Skills</h4>
     <p>arxiv 2605.18401 (May 18) profiles a million-scale open-source corpus for collecting, recommending and evolving reusable Agent Skills. Treats skills as an experience schema coupling executable scripts with non-executable guidance. Sits in HuggingFace trending alongside Memtensor's MemOS and MemRL releases. Source: <a href="https://arxiv.org/abs/2605.18401">arxiv.org / 2605.18401 SkillsVote</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>MiniCPM-o 4.5 keeps full-duplex multimodal momentum on HF trending</h4>
     <p>OpenBMB MiniCPM-o 4.5 (9B params, SigLip2 + Whisper-medium + CosyVoice2 + Qwen3-8B). 77.6 on OpenCompass, approaching Gemini 2.5 Flash on vision-language. Omni-Flow streaming framework aligns inputs and outputs temporally for real-time full-duplex perception. Weights, GGUF quantizations, hosted demo on the openbmb HF org. Source: <a href="https://huggingface.co/openbmb/MiniCPM-o-4_5">huggingface.co / MiniCPM-o 4.5</a></p>
   </div>
@@ -344,19 +344,19 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a38">
     <h4>Anthropic $30B follow-on round at $900B+ valuation expected to close inside the month [Tier 2, MEDIUM]</h4>
     <p>Bloomberg May 12 timeline still active. The May 18 SPV crackdown plus the May 19 Karpathy hire plus the Disruptor 50 No. 1 ranking are all consistent with a primary issuance announcement inside the next 5 to 10 trading days. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com / Anthropic $30B</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a39">
     <h4>D.C. Circuit ruling on Anthropic DOD blacklist could land within weeks [Tier 2, MEDIUM]</h4>
     <p>Court agreed to expedite after the May 19 hearing. If the panel sides with DOD as the questioning suggested, Anthropic loses contract eligibility across a swath of US government work that Defense already routes through Bedrock. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-19/appeals-court-skeptical-anthropic-can-block-us-supply-risk-label">bloomberg.com / D.C. Circuit Anthropic</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a40">
     <h4>Gemini Omni API opens "in the coming weeks," undercut for Sora and Mythos pricing likely [Tier 1, MEDIUM]</h4>
     <p>Google's keynote disclosure on Omni API timing implies launch inside the next 4 to 6 weeks. Free unlimited 10-second generations inside YouTube Shorts and YouTube Create at GA suggest Google will price the API aggressively below Sora and well below Mythos. Source: <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/">blog.google / Gemini Omni</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a41">
     <h4>Anthropic primary issuance timing may follow the Code with Claude London close [Tier 3, LOW]</h4>
     <p>Pattern from past Anthropic rounds: major product days cluster with funding-window opens. Code with Claude London wraps May 20. Watch claude.com/news and Bloomberg deal coverage May 21-23. Source: <a href="https://claude.com/code-with-claude/london">claude.com / code-with-claude London</a></p>
   </div>
@@ -364,23 +364,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a42">
     <h4>Wednesday May 20: Meta begins 8,000-person layoff wave at 4:00 PT</h4>
     <p>First major test of whether the May 17 CNBC "AI layoffs are not a stock boost" finding extends to a hyperscaler. Watch META intraday and any Wang Superintelligence Labs talent-acquisition signal in the days after.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a43">
     <h4>Wednesday May 20: Code with Claude London Day 2 (Extended London) and SpaceX S-1 expected public</h4>
     <p>Day 2 is positioned for independent developers and early-stage founders, no second keynote drop expected. SpaceX flip from confidential to public filing could land before US open.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a44">
     <h4>Within 2-3 weeks: D.C. Circuit ruling on Anthropic v. DOD blacklist</h4>
     <p>Court agreed to expedite. Material for US federal contracting strategy if Anthropic loses.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a45">
     <h4>Within 4-6 weeks: Gemini Omni API GA</h4>
     <p>Google said "in the coming weeks" at the keynote. Watch pricing closely against Sora and Mythos.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a46">
     <h4>June: EU AI Act Digital Omnibus formal adoption</h4>
     <p>Provisional deal reached May 7 defers Annex III high-risk obligations to December 2027. Formal Council and Parliament votes expected in June, publication in July.</p>
   </div>

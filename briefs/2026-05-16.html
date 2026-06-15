@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Bilateral AI guardrails language at head-of-state level typically precedes export-control or compute-export rule changes by 60 to 120 days. Watch for follow-up by USTR, BIS, and the National Security Council. The downstream effect on Anthropic's frontier-model distribution policy (Project Glasswing) becomes the live question.</p>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <div class="tags">
         <span class="tag t2">Tier 2</span>
         <span class="tag med">Medium confidence</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> A 2.5x markup in 8 months on a coding-agent pure play resets pricing for every AI coding tool round in flight (Cursor, Replit, Lovable, Bolt). It also pulls forward Devin's likely IPO timeline, and pressures GitHub Copilot to demonstrate ARR transparency. Watch for follow-on activity in late May from Cursor and Magic.dev.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="a3">
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
@@ -182,27 +182,27 @@
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
 
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code May 15 release: Advisor tool beta, Agent View research preview, rate limits reset</h4>
     <p>Advisor tool is now in beta natively on the Claude Platform. Agent View shipped as Research Preview across Pro, Max, Team, Enterprise, and API plans (opt-in via `claude agents`). Release also added "Summarize up to here" context compression, expanded /feedback to cover recent sessions, and manually reset the 5-hour and weekly usage counters for Pro/Max/Team/Enterprise plans. <a href="https://releasebot.io/updates/anthropic/claude-code">Release notes</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude Agent SDK for TypeScript updated May 15</h4>
     <p>The anthropics/claude-agent-sdk-typescript repo received an update dated May 15, 2026. Active development on the official Node.js/TypeScript SDK for building autonomous agents with programmatic tool and platform integration controls. Specific version bump should be verified against the GitHub releases page. <a href="https://github.com/anthropics/claude-agent-sdk-typescript/releases">GitHub releases</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Federal judge withholds approval on $1.5B authors settlement, asks for more detail</h4>
     <p>At a May 14 hearing carrying into May 15 coverage, U.S. District Judge Araceli Martinez-Olguin declined to grant final approval to Anthropic's proposed $1.5 billion settlement with authors over alleged training on pirated books. The judge pressed for more information on lawyers' fees and lead-plaintiff payments before signing off. Settlement would also require Anthropic to destroy original files from the pirated book datasets within 30 days of final judgment. <a href="https://www.claimsjournal.com/news/national/2026/05/15/337610.htm">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Claude for Small Business roadshow continues, PayPal AI fluency course in tandem</h4>
     <p>The Claude for Small Business rollout (launched May 13 with 15 prebuilt agentic workflows inside QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365) entered its second day of the multi-city tour. Free half-day AI fluency workshops continue across 10 cities including Tulsa, Dallas, Baton Rouge, and Salt Lake City. Attendees receive a one-month Claude Max subscription. <a href="https://www.anthropic.com/news/claude-for-small-business">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a8">
     <h4>ClaudeBleed patch: LayerX says May 6 fix leaves "privileged" mode exploitable</h4>
     <p>Continued reporting on May 15 reaffirmed that Anthropic's May 6 fix (v1.0.70) for the ClaudeBleed flaw in the Claude Chrome extension added a UI permission layer, not a fix to the underlying externally_connectable handler. If a user enables "Act without asking" privileged mode, any installed Chrome extension can still hijack Claude to exfiltrate Gmail, Drive, and GitHub data. Dominant agent-security story in the cycle. <a href="https://www.business-standard.com/technology/tech-news/claude-in-chrome-extension-vulnerable-exploitation-despite-update-126051100441_1.html">Coverage</a>.</p>
   </div>
@@ -212,27 +212,27 @@
 <div class="bucket">
   <div class="eyebrow">Agentic AI &amp; MCP</div>
 
-  <div class="item">
+  <div class="item" id="a9">
     <h4>xAI launches Grok Build agentic coding CLI in early beta</h4>
     <p>Terminal-native agentic CLI that can plan projects, write and edit files, execute shell commands, and spawn up to 8 concurrent agents. Runs on Grok 4.3 beta with a 2M-token context window, includes a review-and-approve "plan mode," initially gated behind the SuperGrok Heavy tier at $300 per month with a $99 intro offer. Positioned against Claude Code, Codex, and Gemini Code. <a href="https://x.ai/news/grok-build-cli">Announcement</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a10">
     <h4>OpenAI rolls out Codex inside ChatGPT mobile app on iOS and Android preview</h4>
     <p>Codex becomes a control surface in the ChatGPT mobile app for sessions running on a developer's laptop, Mac mini, or remote devbox. Users can start tasks, review diffs, approve commands, switch models, and follow terminal output from their phone. Available across all tiers including Free in supported regions. <a href="https://openai.com/index/work-with-codex-from-anywhere/">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Moonshot AI ships Kimi WebBridge, a local-first browser-agent extension</h4>
     <p>Chrome and Edge extension that lets AI agents drive the browser locally via Chrome DevTools Protocol, so authenticated sessions and enterprise data never leave the device. Agent-agnostic: supports Claude Code, Cursor, Codex, Hermes, and Kimi Code CLI as drivers. Notable structural bet against cloud browser-agent offerings from Anthropic and OpenAI. <a href="https://cntechpost.com/2026/05/15/chinese-ai-startup-moonshot-launches-kimi-webbridge-automate-complex-web-tasks/">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Anthropic Agent SDK billing cutover details: June 15 split-credit model</h4>
     <p>From June 15, 2026, Claude Agent SDK, `claude -p`, Claude Code GitHub Actions, and any third-party tool authenticating via a Claude subscription move off the subscription rate-limit pool onto a separate $200 per month credit pool metered at API list prices. Practical effect documented at 12x to 175x effective price increase for heavy Agent SDK workloads. Relevant for any team building on Claude Agent SDK. <a href="https://thenewstack.io/anthropic-agent-sdk-credits/">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a13">
     <h4>MCP protocol: quiet day</h4>
     <p><span class="quiet">No new MCP spec version, no notable single-server launch, no major registry announcement in the window. Routine repo activity only: TypeScript SDK updated 2026-05-16, Inspector, Kotlin SDK, and ext-apps protocol repo touched 2026-05-15. Current spec remains the 2025-11-25 release.</span> <a href="https://github.com/modelcontextprotocol">MCP org</a>.</p>
   </div>
@@ -242,22 +242,22 @@
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
 
-  <div class="item">
+  <div class="item" id="a14">
     <h4>OpenAI extends Codex with mobile supervision and remote SSH GA</h4>
     <p>Codex preview inside the ChatGPT mobile app on iOS and Android lets developers steer agents running on remote machines from their phone: approvals, diffs, terminal output, screenshots, model switching. Remote SSH for Codex went GA the same day on all plans. Weekly Codex users reportedly topped 4 million. <a href="https://openai.com/index/codex-for-almost-everything/">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a15">
     <h4>GitHub ships team-level Copilot usage metrics via API</h4>
     <p>New user-teams report in the Copilot usage metrics API. Admins can join it with the existing per-user usage report to produce team-level Copilot consumption views for any team in an org or enterprise. Targets enterprise license-management workflows. <a href="https://github.blog/changelog/2026-05-14-team-level-copilot-usage-metrics-now-available-via-api/">Changelog</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a16">
     <h4>GitHub adds REST API to start Copilot cloud agent tasks</h4>
     <p>New REST endpoint to kick off Copilot cloud agent tasks programmatically. Enables external orchestration: starting agent sessions from CI, scripts, or third-party tools without the web UI. Pairs with the new desktop app for headless workflows. <a href="https://github.blog/changelog/2026-05-13-start-copilot-cloud-agent-tasks-via-the-rest-api/">Changelog</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Cursor, Windsurf, Zed, Replit, JetBrains AI: quiet day</h4>
     <p><span class="quiet">No Tier 1 changelog updates inside the 24-hour window. Cursor's most recent release was v3.4 on 2026-05-13. SWE-bench saw no new top-of-leaderboard entry in this window.</span></p>
   </div>
@@ -267,37 +267,37 @@
 <div class="bucket">
   <div class="eyebrow">Competitor moves</div>
 
-  <div class="item">
+  <div class="item" id="a18">
     <h4>OpenAI launches personal finance experience in ChatGPT with Plaid integration</h4>
     <p>Personal finance preview for ChatGPT Pro subscribers in the U.S., allowing users to connect over 12,000 financial institutions via Plaid (Schwab, Fidelity, Chase, Robinhood, Amex, Capital One). Leans on GPT-5.5 contextual reasoning to combine account data with user goals for spending analysis and planning. Pro-tier exclusive, U.S.-only at launch. <a href="https://openai.com/index/personal-finance-chatgpt/">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a19">
     <h4>OpenAI CFO signals new capital raise, public-market optionality six weeks after $122B round</h4>
     <p>CFO Sarah Friar said on Bloomberg TV that OpenAI may raise additional capital, citing a "vertical wall of demand" against tight 2026 compute supply. Also said public markets could become an attractive future avenue as they are "significantly bigger" than private capital, leaving an eventual IPO route open. <a href="https://www.bloomberg.com/news/articles/2026-05-15/openai-may-raise-more-money-as-compute-crunch-deepens-cfo-says">Bloomberg</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a20">
     <h4>OpenAI weighs formal legal action against Apple over Siri / ChatGPT integration</h4>
     <p>OpenAI lawyers are reportedly working with outside counsel on options including a formal breach-of-contract notice, citing Apple's minimal promotion of ChatGPT within Siri and Settings and low subscription conversion. Apple is concurrently sounding out Gemini and Anthropic for future Siri integrations. The two-year partnership is openly fraying. <a href="https://fortune.com/2026/05/15/openai-legal-action-apple-siri-chatgpt-integration/">Fortune</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a21">
     <h4>xAI retires eight legacy Grok API models, redirects traffic to grok-4.3</h4>
     <p>Same day as the Grok Build CLI launch, eight legacy models including grok-4-fast, grok-4-0709, grok-3, grok-code-fast-1, and grok-imagine-image-pro were retired at 12:00 PT, with traffic redirected to grok-4.3. Clear consolidation move ahead of summer enterprise push. <a href="https://docs.x.ai/developers/migration/may-15-retirement">Migration notice</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Google I/O 2026 keynote set for May 19 with new Gemini model expected</h4>
     <p>Multiple reports confirm Google will announce a new Gemini model at I/O on May 19, positioned roughly in the class of GPT-5.5 rather than a frontier push. Setup story this weekend, not an announcement yet, but the immediate competitive context for the next 72 hours. <a href="https://sources.news/p/google-about-to-release-new-gemini">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Altman concludes defense testimony in Musk v. OpenAI trial</h4>
     <p>Altman wrapped his defense testimony May 15 in the federal Oakland trial brought by Elon Musk over OpenAI's nonprofit-to-capped-profit conversion. Closing arguments next. The trial outcome could constrain OpenAI's corporate structure and governance, with material implications for the $852B valuation. <a href="https://www.theringer.com/2026/05/15/tech/sam-altman-defense-testimony-elon-musk-trial">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Meta, DeepSeek, Mistral, Qwen, Apple: quiet day</h4>
     <p><span class="quiet">No material 24-hour signal from Meta, DeepSeek, Mistral AI, Alibaba Qwen, ByteDance Doubao, Cohere, Perplexity, AI21, Reka, Inflection, Character.ai, Apple Intelligence, or Amazon Nova / Bedrock. China and EU labs notably silent.</span></p>
   </div>
@@ -307,22 +307,22 @@
 <div class="bucket">
   <div class="eyebrow">AI business</div>
 
-  <div class="item">
+  <div class="item" id="a25">
     <h4>GridCARE closes $64M Series A led by Sutter Hill for AI grid-power acceleration</h4>
     <p>Oversubscribed at a meaningful valuation step-up to commercialize a physics-based AI platform that unlocks underutilized grid capacity for AI factories. Sutter Hill Ventures led, with National Grid Partners, Future Energy Ventures, Emerson Collective, Stanford University, and existing investors participating. The company says it has already unlocked over $10 billion in economic value for data center developers and is engaged on projects covering more than 2 GW of new AI compute capacity. <a href="https://www.businesswire.com/news/home/20260514546216/en/GridCARE-Raises-%2464-Million-Series-A-from-Leading-AI-and-Energy-Investors-to-Create-a-New-Category-Power-Acceleration-for-AI">Press release</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a26">
     <h4>DRAM ETF hits record as memory becomes "biggest bottleneck" in the AI buildup</h4>
     <p>CNBC reports the DRAM ETF reaching a record high on May 15 as analysts flag memory as the single largest constraint in the 2026 AI capex cycle. Memory is now projected to consume roughly 30% of hyperscaler AI data center spending in CY26, up from about 8% in CY23-24, with DRAM ASPs expected to more than double in 2026. Big Four hyperscalers tracking toward roughly $725B combined capex in 2026. <a href="https://www.cnbc.com/2026/05/15/biggest-bottleneck-in-the-ai-buildup-fuels-dram-etf-to-record.html">CNBC</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Runway reframes ambitions to compete with Google on world models</h4>
     <p>TechCrunch detailed Runway's pivot from filmmaking tools to going head-to-head with Google on general-purpose world models, following its $315M Series E at a $5.3B valuation. Co-founder confirmed Runway added approximately $40M in ARR in Q2 2026, signaling that generative video is converting into recurring enterprise revenue at scale. <a href="https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/">TechCrunch</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a28">
     <h4>M&amp;A and executive moves: quiet 24-hour window</h4>
     <p><span class="quiet">No verified Tier 1 AI acquisition or senior executive appointment was announced inside the window. The Anthropic / Blackstone / Goldman / Hellman &amp; Friedman $1.5B enterprise AI services venture (May 4) and the OpenAI / Tomoro acquisition (May 11) are flagged only as priors with no fresh activity.</span></p>
   </div>
@@ -332,27 +332,27 @@
 <div class="bucket">
   <div class="eyebrow">Open source &amp; research</div>
 
-  <div class="item">
+  <div class="item" id="a29">
     <h4>HiDream-O1-Image-Dev-2604 open-weights model debuts at #8 in Artificial Analysis arena</h4>
     <p>HiDream-ai released the open-weights HiDream-O1-Image-Dev-2604 text-to-image model along with its prompt refiner on May 14. The release debuted at #8 in the Artificial Analysis Text-to-Image Arena, making it one of the highest-ranked open-weight image models out of the gate. <a href="https://huggingface.co/HiDream-ai/HiDream-O1-Image">Model card</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a30">
     <h4>vLLM ships KV-Offload + HMA integration and Blackwell TOKENSPEED_MLA backend</h4>
     <p>A vLLM release landed within the 24h window adding scheduler-side sliding-window groups for the Hybrid Memory Allocator, speculative decoding that respects reasoning/thinking budgets (correct spec-decode for reasoning models), and a new TOKENSPEED_MLA attention backend for Blackwell GPUs. The build now requires a C++20-compatible compiler to track PyTorch. <a href="https://github.com/vllm-project/vllm/releases">Releases</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a31">
     <h4>HuggingFace Daily Papers (2026-05-15) top entries</h4>
     <p>The May 15 daily papers feed surfaced submissions from Tsinghua ML Group, NVIDIA, HKUST NLP, Xi'an Jiaotong, and UIUC, with the top-voted paper accumulating 134 upvotes within the day. Volume and institutional spread indicate a moderately active day rather than a quiet one. <a href="https://huggingface.co/papers/date/2026-05-15">Daily papers</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a32">
     <h4>MeMo: framework for memory-augmented LLMs as continual-learning alternative</h4>
     <p>MeMo augments any LLM with up-to-date or domain-specific knowledge through a trained memory model, avoiding retraining and mitigating catastrophic forgetting. Appeared on both cs.CL and cs.AI recent listings. Useful as a continual-learning alternative for production LLM stacks where retraining is impractical. <a href="https://arxiv.org/list/cs.CL/recent">arXiv cs.CL</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a33">
     <h4>PolitNuggets: multilingual agentic synthesis benchmark over 400 global elites</h4>
     <p>New multilingual benchmark for agentic information synthesis built around constructing political biographies for 400 global elites, covering more than 10,000 political facts. A real-world test for long-horizon retrieval-plus-synthesis pipelines that standard QA benchmarks underrepresent. <a href="https://arxiv.org/list/cs.AI/recent">arXiv cs.AI</a>.</p>
   </div>
@@ -361,15 +361,15 @@
 
 <h2>Upcoming (next 7 days)</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Google I/O 2026 keynote — Tuesday May 19</h4>
     <p>New Gemini model expected, reportedly positioned roughly in the GPT-5.5 class rather than a frontier push. The main competitor reference point for the coming week. <a href="https://sources.news/p/google-about-to-release-new-gemini">Preview</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Musk v. OpenAI closing arguments — week of May 18</h4>
     <p>Closing arguments follow Sam Altman's defense testimony, with verdict timing TBD. Outcome could constrain OpenAI's corporate structure. <a href="https://www.theringer.com/2026/05/15/tech/sam-altman-defense-testimony-elon-musk-trial">Coverage</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Anthropic Agent SDK billing cutover — June 15</h4>
     <p>30 days out: subscription-authenticated Agent SDK / Claude Code workloads move to a separate $200 per month credit pool metered at API list prices. <a href="https://thenewstack.io/anthropic-agent-sdk-credits/">Details</a>.</p>
   </div>
@@ -377,11 +377,11 @@
 
 <h2>Rumors &amp; early signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a37">
     <h4>Apple sounding out Gemini and Anthropic for future Siri integrations</h4>
     <p>Reported alongside the OpenAI legal-action story. If true, signals a likely pivot away from OpenAI for the next Apple Intelligence wave. Tier 2, unverified beyond the Fortune / Bloomberg sourcing.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a38">
     <h4>OpenAI IPO optionality language from CFO</h4>
     <p>"Public markets are significantly bigger" framing in Friar's Bloomberg TV interview is the most direct IPO hint yet. Not a filing, not a process, but the optionality is being signaled.</p>
   </div>

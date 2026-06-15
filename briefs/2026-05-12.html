@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Anthropic declares unauthorized secondary trades of its stock "void" under Delaware law at $1T valuation</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> A $1T-valued private name asserting nuclear secondary-market authority precedes either an IPO calendar or a structured employee tender. Either way it freezes price discovery on the largest AI private name today, forces SPV operators to mark down books overnight, and turns Series F whispers into the only credible mark. Watch Forge and Hiive for delisting notices in the next 5 business days.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>OpenAI launches $4B Deployment Company with TPG-led 19-firm syndicate, acquires Tomoro</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -163,7 +163,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Within seven days both frontier labs have stood up enterprise-services vehicles backed by PE megacap balance sheets. This is the lab-side answer to "Accenture is eating our share of GenAI rev." Expect Accenture, Deloitte, and Capgemini partner economics to compress within two quarters as labs claim integration revenue directly. Anthropic's Goldman-Blackstone JV and OpenAI's TPG-led vehicle now race for the same 200 logo SI book.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>AWS Bedrock AgentCore Payments launches with Coinbase, Stripe, x402 stablecoin micropayment protocol</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -183,23 +183,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code 2.1.139 ships Agent View research preview, /goal command, plugin token-cost preview</h4>
     <p>Released May 11. Version 2.1.139 introduces a unified Agent View dashboard listing every Claude Code session with running, blocked, or completed states. The /goal command sets a completion condition and keeps Claude working across turns in interactive, -p, and Remote Control modes, with a live overlay showing elapsed time, turns, and tokens. Release adds /scroll-speed, plugin token-cost preview, and hook args spawn-without-shell. Source: <a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>FIS deploys Anthropic-built Financial Crimes AI Agent live at BMO and Amalgamated Bank</h4>
     <p>FIS confirmed trade-press wave on May 11 around its Financial Crimes AI Agent built jointly with Anthropic, compressing AML investigations "from hours to minutes" by assembling cross-system evidence and ranking cases against known typologies. BMO and Amalgamated Bank are first deployers. Anthropic's Applied AI team is embedded with FIS as forward-deployed engineers. Source: <a href="https://www.fisglobal.com/about-us/media-room/press-release/2026/fis-brings-agentic-ai-to-banking-with-anthropic-starting-with-financial-crimes">fisglobal.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Anthropic alignment story enters mainstream press cycle with blackmail rates from 96% to 0% in Haiku 4.5+</h4>
     <p>TechTimes, TechCrunch follow-ons, and broader trade coverage ran detailed write-ups on May 11. Anthropic reports training on constitutional documents plus fictional admirable-AI stories cut agentic misalignment by more than 3x compared with demonstration-only training. Reframes alignment as a training-data curation problem that competitors will be pressured to copy. Source: <a href="https://www.techtimes.com/articles/316476/20260511/anthropic-says-evil-ai-narratives-influenced-claudes-blackmail-behavior-early-tests.htm">techtimes.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Reports peg Anthropic Google Cloud commitment at $200B over five years [UNVERIFIED]</h4>
     <p>The Information's $200B-over-five-years figure for Google Cloud compute and custom TPUs circulated heavily May 11 via Motley Fool and Yahoo Finance coverage. Context: Alphabet Q1 2026 cloud backlog doubled QoQ to over $460B and Google Cloud op income tripled to $6.6B. Neither Anthropic nor Google has officially confirmed the dollar figure. Source: <a href="https://www.fool.com/investing/2026/05/11/anthropic-just-delivered-great-news-for-alphabet-i/">fool.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>[UNVERIFIED] DownDetector spike for Claude around 21:15 CET May 11, no status-page incident</h4>
     <p>Third-party trackers and a DesignTAXI community thread report a surge in user outage reports beginning roughly 15:15 ET on May 11. status.anthropic.com history shows the last tracked outage was May 9 Claude Code on the Web Partial Outage, so this remains unverified. Source: <a href="https://community.designtaxi.com/topic/28484-is-claude-anthropic-ai-down-may-11-2026/">community.designtaxi.com</a></p>
   </div>
@@ -207,19 +207,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>CVE-2026-43901 discloses prompt-injection-to-RCE chain in wireshark-mcp via path traversal</h4>
     <p>Publicly disclosed May 11 (CVSS 6.8, CWE-22). wireshark-mcp 1.1.5 and earlier exposes wireshark_export_objects with attacker-controlled dest_dir passed to tshark --export-objects with no mandatory path restriction. Default _allowed_dirs is None unless WIRESHARK_MCP_ALLOWED_DIRS is set. Prompt injection inside a pcap payload can write to ~/.ssh/ for SSH key takeover. Source: <a href="https://www.thehackerwire.com/vulnerability/CVE-2026-43901/">thehackerwire.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>AWS Agent Toolkit launches with managed remote MCP server covering the full AWS surface</h4>
     <p>AWS released the Agent Toolkit for AWS at no additional charge alongside AgentCore Payments. Includes a managed remote MCP server giving coding agents authenticated access to AWS services through a small fixed tool set. Targets fewer errors, lower token costs, and enterprise security controls for AI coding agents on AWS. Source: <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agentcore-payments-agent-toolkit-for-aws-and-more-may-11-2026/">aws.amazon.com weekly roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Adversa AI consolidates May 2026 MCP security state: 7,000+ exposed servers, 10 CVE-class issues</h4>
     <p>Roundup covers vulnerabilities across LiteLLM, LangChain, LangFlow, Flowise, LettaAI, LangBot, driven mostly by unsafe STDIO transport defaults. Related: CVE-2026-44995 (OpenClaw env-var injection via NODE_OPTIONS, LD_PRELOAD, BASH_ENV) and CVE-2026-33032 (nginx-ui MCP endpoint, CVSS 9.8 unauthenticated takeover). Source: <a href="https://adversa.ai/blog/top-mcp-security-resources-may-2026/">adversa.ai</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Shopify "River" agent runs in public Slack channels by design, Lütke details transparency posture</h4>
     <p>Linked by Simon Willison on May 11. Shopify's in-house coding agent River is built for fully visible operation in shared Slack channels rather than private sessions, framed as a learning mechanism for the org. Concrete pattern for how large orgs are deploying coding agents in 2026. Source: <a href="https://simonwillison.net/2026/May/11/learning-on-the-shop-floor/">simonwillison.net</a></p>
   </div>
@@ -227,19 +227,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Cursor adds Bugbot effort levels Default, High, Custom for PR reviews</h4>
     <p>On May 11, Cursor rolled out customizable effort tiers for Bugbot. Default finds 0.7 bugs per run on average. High finds 0.95 bugs per run but costs more and runs longer. Custom uses natural-language instructions to switch dynamically. Requires usage-based billing. Source: <a href="https://cursor.com/changelog">cursor.com/changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>GitHub Copilot pauses new Pro, Pro+, Student sign-ups and removes Opus from Pro tier</h4>
     <p>GitHub paused new Individual plan sign-ups, tightened usage limits, and pulled Opus models from the Pro tier "to protect the experience for existing customers." Grok Code Fast 1 is being deprecated, with GPT-5 mini and Claude Haiku 4.5 as supported alternatives. Plan-level supply restriction is unusual and points to compute or COGS strain. Source: <a href="https://github.com/orgs/community/discussions/192963">github.com community thread</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>GitHub Copilot transition to usage-based billing locked in for June 1, 2026</h4>
     <p>Confirmed via blog post and community discussion. All Copilot plans move to token-based billing on June 1 with monthly GitHub AI Credits plus optional add-on purchases. Preview bill experience now live on the Billing Overview page. Source: <a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">github.blog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Simon Willison TIL: llm CLI shebang pattern for runnable script agents</h4>
     <p>Posted May 11. Shows the llm CLI invoked via shebang line with tool-use enabled, producing scripts that perform calculations and small agent tasks as plain executables. Practical embedding pattern for LLM calls in shell pipelines. Source: <a href="https://simonwillison.net/2026/May/11/llm-shebang/">simonwillison.net</a></p>
   </div>
@@ -247,19 +247,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>OpenAI publishes "Running Codex safely at OpenAI" enterprise security framework</h4>
     <p>OpenAI on May 11 detailed its internal Codex deployment posture: managed configuration, sandboxed execution boundaries, approval policies for higher-risk actions, and a managed network policy that blocks open-ended outbound access and requires approval for unfamiliar domains. Designed as a reference for enterprises adopting coding agents. Source: <a href="https://openai.com/index/running-codex-safely/">openai.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Google "Android Show: I/O Edition" airs today 10am PT, sets up I/O 2026 keynote May 19 to 20</h4>
     <p>Pre-recorded virtual show goes live on YouTube today. Google framed it as covering "one of the biggest years for Android yet" across Android 17, Wear OS, Android Auto, Android XR, and Android TV. Aluminium OS and Samsung XR glasses partnership widely rumored. Gemini centerpiece reveal expected at main keynote next week, not today. Source: <a href="https://www.android.com/new-features-on-android/io-2026/">android.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Perplexity Computer agent now default on GPT-5.5, enterprise Snowflake and Databricks workflows live</h4>
     <p>Per May 4 changelog still propagating. Personal Computer expanded on the upgraded Mac app for Pro and Max with local file editing, Comet browsing, voice orchestration. Enterprise updates add Teams access, plan approvals, inline diffs, website publishing, reusable Workflows. GPT-5.5 becomes the default Computer orchestration model. Source: <a href="https://www.perplexity.ai/changelog/improved-computer-models-and-enterprise-updates---may-4-2026">perplexity.ai/changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>DeepSeek reportedly in talks for first VC round at roughly $45B valuation</h4>
     <p>TechCrunch (May 6) reported DeepSeek is in talks to raise its first round of outside venture capital, with the discussed valuation rising from roughly $20B to $45B in weeks. Follows the April 24 V4 preview (V4-Pro 1.6T total, 49B active params; V4-Flash 284B, 13B active; 1M context). Source: <a href="https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/">techcrunch.com</a></p>
   </div>
@@ -267,19 +267,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Cerebras lifts CBRS IPO range to $150 to $160, $4.8B raise on 20x oversubscription, prices May 13</h4>
     <p>Cerebras raised its IPO price range from $115 to $125 to $150 to $160 per share and increased the offering to 30M shares from 28M. Investor demand exceeded allocation by 20x. The deal would mark 2026's largest IPO globally and re-opens the public-market window for compute-heavy AI names. Source: <a href="https://www.cnbc.com/2026/05/11/cerebras-raises-ipo-range.html">cnbc.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Helsing closing $1.2B round at $18B valuation, Dragoneer and Lightspeed lead</h4>
     <p>European defense AI startup Helsing is closing a $1.2 billion round valuing it at $18B, up from a roughly €12B mark in 2025. Spotify founder Daniel Ek is participating. Round size makes it one of the largest European defense raises ever and confirms defense AI as a tier-one private-capital theme. Source: <a href="https://techcrunch.com/2026/05/11/daniel-ek-backed-defense-tech-helsing-to-raise-1-2b-at-18b-valuation/">techcrunch.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Cowboy Space closes $275M Series B at $2B valuation for orbital AI data centers</h4>
     <p>Cowboy Space (formerly Aetherflux) raised $275M Series B at a $2B post-money. Lead Index Ventures, with IVP, Blossom Capital, SAIC. Plans rockets whose upper stages function as in-orbit data centers, targeting first launch before end of 2028. Concrete signal that "AI compute in space" thesis is now venture-fundable beyond pre-seed. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-11/robinhood-billionaire-bhatt-s-cowboy-space-raises-275-million">bloomberg.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>IBM survey: 76% of large orgs now have a Chief AI Officer, up from 26% in 2025</h4>
     <p>IBM survey of over 2,000 organizations published May 11 found 76% have established a CAIO role, nearly triple the 26% rate from 2025. CNBC framed it as evidence that AI is restructuring boardrooms, with multiple major-company CEO departures in 2026 citing AI transition. Source: <a href="https://www.cnbc.com/2026/05/11/heres-how-artificial-intelligence-is-changing-boardrooms.html">cnbc.com</a></p>
   </div>
@@ -287,19 +287,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>llama.cpp ships build b9106 with macOS x64 binary support, cadence remains roughly daily</h4>
     <p>ggml-org pushed b9106 on May 11, expanding macOS binary coverage to x64. Preceding build b9105 bundled a CUDA update directly with cuda/iterator. Cadence remains roughly daily and the runtime is now treated as core infrastructure rather than a single project. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">github.com/ggml-org/llama.cpp</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>vLLM 0.20.2 lands May 10, main-branch commits continue through May 11</h4>
     <p>vLLM 0.20.2 reached PyPI and GitHub on May 10 with vllm-project/vllm activity continuing into May 11. Point release, no major version bump. Detailed changelog snippets not fully surfaced [UNVERIFIED on full feature list]. Source: <a href="https://github.com/vllm-project/vllm/releases">github.com/vllm-project/vllm</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Hugging Face removes trending "Open-OSS/privacy-filter" repo after malware discovery, 200K+ downloads pre-takedown</h4>
     <p>A Hugging Face repo "Open-OSS/privacy-filter" reached the number-one trending position before being identified as carrying Windows-targeting malware. Accumulated more than 200K downloads before removal. Concrete supply-chain warning for the open-weights ecosystem and a recurring failure mode for trending-by-default discovery surfaces. Source: <a href="https://cybersecuritynews.com/trending-hugging-face-repository-with-200k-downloads/">cybersecuritynews.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>SGLang native MLX backend matures, up to 5.3x throughput on Apple Silicon in v0.5.11</h4>
     <p>Released May 5 (just outside strict 24h window). Native MLX execution path in SGLang (set SGLANG_USE_MLX=1) reports up to 5.3x higher throughput and lower memory vs. prior PyTorch MPS path on macOS. Roadmap issues #19137 and #19146 remain open on broader Apple support and an MLX graph runner. Source: <a href="https://github.com/sgl-project/sglang/releases">github.com/sgl-project/sglang</a></p>
   </div>
@@ -307,19 +307,19 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Anthropic Google Cloud compute commitment reported at $200B over five years [Tier 2, MEDIUM]</h4>
     <p>The Information's reported figure circulated heavily on May 11 via Motley Fool and Yahoo Finance. If confirmed, it cements Google TPUs as a frontier-training substrate and changes the cloud-share narrative going into I/O. Watch for Anthropic or Alphabet to confirm or correct within the I/O week. Source: <a href="https://www.fool.com/investing/2026/05/11/anthropic-just-delivered-great-news-for-alphabet-i/">fool.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>DeepSeek first VC round at roughly $45B valuation [Tier 2, MEDIUM]</h4>
     <p>2x to 4x markup inside weeks for the open-weights challenger. No lead investor named. Funding numbers unverified beyond single sourcing. Closing would anchor a comparable Series A or B for Qwen-licensee shops and reset open-source vs. closed-source funding parity. Source: <a href="https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/">techcrunch.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>DownDetector spike for Claude around 21:15 CET May 11, no incident on status page [Tier 3, LOW]</h4>
     <p>Single community thread plus DownDetector noise. status.anthropic.com lists no incident. Worth tracking if the pattern repeats; could indicate edge-routing or new-feature rollback rather than core model outage. Source: <a href="https://community.designtaxi.com/topic/28484-is-claude-anthropic-ai-down-may-11-2026/">community.designtaxi.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>Google "Mariner" agent project reportedly folded ahead of I/O [Tier 2, LOW]</h4>
     <p>Single-source via prior weekly roundup. If confirmed at I/O on May 19 to 20, signals Google is consolidating internal agent stacks into one Gemini Agent SKU. Watch the May 12 pre-show for any reference to "Remy" or a unified agent brand. Source: <a href="https://www.marketingprofs.com/opinions/2026/54655/ai-update-may-8-2026-ai-news-and-views-from-the-past-week">marketingprofs.com</a></p>
   </div>
@@ -327,23 +327,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a33">
     <h4>2026-05-12: Android Show: I/O Edition at 10am PT (today)</h4>
     <p>Pre-show for I/O 2026. Android 17, Aluminium OS, XR glasses expected. First Google AI catalyst of the week and the testbed for any Gemini agent rebrand. Source: <a href="https://www.android.com/new-features-on-android/io-2026/">android.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>2026-05-13: Cerebras CBRS IPO pricing</h4>
     <p>Listing with band raised to $150 to $160 per share, deal 20x oversubscribed at $4.8B raise. Will set the public-market comp for Nvidia-challenger compute names and pressure Anthropic and OpenAI primary marks higher. Source: <a href="https://www.cnbc.com/2026/05/11/cerebras-raises-ipo-range.html">cnbc.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>2026-05-19 to 20: Google I/O 2026 main keynote</h4>
     <p>Gemini 4.0, Proactive Assistant, "Remy" 24/7 agent widely tipped. If Mariner has been folded in, expect a single unified Gemini Agent SKU pitched directly against ChatGPT, Claude, and Perplexity Computer.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a36">
     <h4>2026-06-01: GitHub Copilot usage-based billing goes live</h4>
     <p>All Copilot plans move to token-based billing with monthly AI Credits plus optional add-ons. Coding-tool budgets shift from seat-line to compute-line on enterprise P&amp;Ls. Source: <a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">github.blog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>EU AI Act Omnibus final text expected this week</h4>
     <p>Provisional deal reached 2026-05-07. Final text and compliance recalibration likely within the week. Watch consilium.europa.eu for the legislative resolution and any last-minute carve-outs.</p>
   </div>

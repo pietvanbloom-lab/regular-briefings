@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Google I/O 2026: Information Agents launch in Search, Gemini 3.5 Flash becomes new default across all products</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Persistent background agents in a consumer search product with 900M monthly active users is a distribution unlock no other AI lab can currently match. Anthropic, OpenAI, and Perplexity all offer reactive agents; Google is now shipping proactive ones at search scale. Watch for competitors rushing scheduled-task or monitoring-agent features in the next 30 days.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>Cognition raises $1B at $26B valuation: Devin now authors 89% of its own codebase, $492M ARR confirmed</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> The 89% self-authoring figure is the first concrete recursive self-improvement metric from a production coding agent. Combined with named financial and defense customers at $492M ARR, this is the strongest public signal yet that AI coding agents have crossed into enterprise-critical infrastructure. Anthropic's Claude Code and xAI's new Grok Build now face a funded, benchmark-validated competitor with a valuation that implies imminent IPO positioning.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>NVIDIA open-sources Nemotron 3 family and Ising quantum error-correction models on May 27</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -182,23 +182,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Fujitsu signs strategic partnership with Anthropic, deploying Claude to approximately 100,000 employees (May 27)</h4>
     <p>Fujitsu announced a formal partnership combining Claude with Fujitsu's mission-critical systems expertise, targeting Japanese enterprise transformation. All Fujitsu Group employees will use Claude for productivity. Source: <a href="https://www.prnewswire.com/news-releases/fujitsu-expands-ai-strategy-through-collaborations-with-openai-and-anthropic-302783257.html">PR Newswire, May 27</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude Code v2.1.152: /code-review --fix, MessageDisplay hooks, /reload-skills, 16 bug fixes (33 total changes)</h4>
     <p>The /code-review --fix command applies review findings directly to the working tree in one step. MessageDisplay hook lets operators transform assistant output before rendering. Bedrock/Vertex model picker failures and MCP pagination issues are among the 16 fixes. Source: <a href="https://github.com/anthropics/claude-code/releases">GitHub releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Claude Opus 4.7: two elevated-error incidents on May 27, both resolved within 40 minutes</h4>
     <p>First incident ran 06:01 to 06:40 UTC; second investigated at 09:11 UTC, fix monitoring by 09:41 UTC. No incidents on May 28. Source: <a href="https://status.anthropic.com/">status.anthropic.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Allianz SE global partnership with Anthropic: Claude as core of internal AI platform (three workstreams)</h4>
     <p>Workstreams cover broad employee access, custom agentic workflows for claims and operations, and auditable AI systems across Allianz's insurance verticals. First major insurance-sector agentic deal at this scope. Source: <a href="https://mlq.ai/news/allianz-and-anthropic-announce-global-partnership-to-deploy-ai-across-insurance-operations/">MLQ.ai</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>HSBC analysts project Microsoft-Anthropic collaboration could yield $43B annual revenue by 2030</h4>
     <p>Analyst projection, not a new deal announcement. Sets a reference point for how sell-side views the Anthropic partnership economics. Confidence: MEDIUM. Source: <a href="https://www.gurufocus.com/news/8885183/microsofts-msft-partnership-with-anthropic-could-yield-43b-revenue-boost">GuruFocus</a></p>
   </div>
@@ -206,19 +206,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>MCP 2026-07-28 specification RC locked May 21: stateless transport layer, MCP Apps extension, Tasks extension</h4>
     <p>Largest protocol revision since launch. Stateless transport removes session coupling at the transport layer. MCP Apps ships sandboxed HTML UI over JSON-RPC via the ui:// scheme. Tasks extension adds async tool calls with tasks/get, tasks/update, and tasks/cancel. Final publish date July 28. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">blog.modelcontextprotocol.io</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Google Antigravity 2.0: standalone desktop application for managing cohorts of autonomous agents (Google I/O May 27)</h4>
     <p>Antigravity moves beyond IDE-plugin scope to a dedicated desktop hub for developing and deploying agent groups. First Tier 1 vendor to ship a dedicated agent-management desktop layer. Source: <a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/">blog.google / Sundar Pichai IO 2026</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Microsoft Conductor open-sourced May 14: deterministic orchestration layer, AutoGen moved to maintenance mode</h4>
     <p>Microsoft's active multi-agent framework investment shifts from AutoGen (now maintenance) to Conductor, which is positioned as a production-grade deterministic orchestration layer. Source: <a href="https://opensource.microsoft.com/blog/2026/05/14/conductor-deterministic-orchestration-for-multi-agent-ai-workflows/">opensource.microsoft.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>Salesforce Summer 26: Multi-Agent Orchestration as headline Agentforce feature, live June 15</h4>
     <p>Emphasis on audit trails, scoped permissions, and human-in-the-loop governance. Signals enterprise orchestration is moving from experiment to compliance-grade requirement. Confidence: MEDIUM (via aggregator). Source: <a href="https://suprmind.ai/hub/insights/multi-agent-ai-news-week-of-may-19-25-2026-enterprise-orchestration-platforms/">suprmind.ai</a></p>
   </div>
@@ -226,19 +226,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>xAI Grok Build expands to all SuperGrok and X Premium+ subscribers (official announcement May 27)</h4>
     <p>grok-build-0.1 is xAI's first purpose-built agentic coding model with 2M context, running in Kilo IDE or CLI. No separate sign-up required. Direct entrant into the Claude Code and Cursor market segment. Source: <a href="https://www.engadget.com/2173482/xai-coding-agent-grok-build/">Engadget</a> / <a href="https://www.androidheadlines.com/2026/05/xai-grok-build-agentic-ai-coding-tool-launch-beta.html">Android Headlines</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>GitHub Copilot: enterprise model rules and Memory deletion controls both ship on May 26</h4>
     <p>Enterprise owners can now assign specific models to specific organizations rather than a single enterprise-wide setting. Memory management moves out of early preview with repo-level off-switch and /memory CLI commands across all paid Copilot plans. Source: <a href="https://github.blog/changelog/2026-05-26-target-copilot-models-to-organizations-with-model-rules/">GitHub Changelog, May 26</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Cognition / Devin: $1B round confirmed May 27, 89% of codebase self-authored (up from 13% December 2025)</h4>
     <p>See Top 3 for full detail. Coding-tools angle: Devin is now in the enterprise procurement conversation alongside Claude Code and Copilot. Source: <a href="https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/">TechCrunch</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Cursor 3.3: parallel builds, integrated PR review tab, PR splitting via subagents (May 7, still active in market)</h4>
     <p>Background agentic builds run simultaneously across independent tasks. Bugbot moves to usage-based billing with no seat fees. Predates the 24h window but contextually active. Source: <a href="https://cursor.com/changelog">cursor.com/changelog</a></p>
   </div>
@@ -246,23 +246,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>xAI Grok Custom Skills launched May 26 across grok.com, iOS, and Android: reusable task workflows defined in natural language</h4>
     <p>Users define a skill once, Grok applies it automatically in future sessions. Runs on Grok 4.3. Direct competitive pressure on Claude Skills and custom GPTs. Source: <a href="https://www.infoq.com/news/2026/05/xai-grok-skills/">InfoQ</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Gemini 3 Pro in preview, 900M monthly active Gemini users (Google I/O, confirmed May 27)</h4>
     <p>Gemini 3 Pro described as Google's strongest multimodal and agentic model; Gemini 3 Deep Think reasoning mode introduced alongside. Monthly active users doubled year-on-year. Source: <a href="https://blog.google/products/gemini/gemini-3/">blog.google / Gemini 3</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Microsoft Copilot Studio: computer-using agents reach general availability</h4>
     <p>Agents that interact directly with desktop UIs and websites to automate processes move from preview to GA. Also ships: redesigned Workflows and Work IQ extensibility. Source: <a href="https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-and-improved-computer-using-agents-a-new-workflows-experience-and-real-time-voice-experiences/">Microsoft Copilot Studio blog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Microsoft confirms Ask Copilot integrating into Windows 11 taskbar and Start menu, mid-2026 launch</h4>
     <p>Users can query Microsoft 365 Copilot and background agents without leaving their workflow. Copilot Calendar Agent (plain-English calendar rules) and Planner integration also shipping this month. Source: <a href="https://www.windowslatest.com/2026/05/27/microsoft-confirms-ask-copilot-is-coming-to-the-windows-11-taskbar-in-mid-2026/">Windows Latest, May 27</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>DeepSeek V4-Pro 75% discount made permanent May 22: $0.435/M input tokens, down from $1.74/M</h4>
     <p>No new model release in the 24h window. API alias retirement dates: deepseek-chat and deepseek-reasoner retire July 24, 2026. Source: <a href="https://api-docs.deepseek.com/updates">api-docs.deepseek.com</a></p>
   </div>
@@ -270,23 +270,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>KPMG deploys Claude to 276,000 employees across 138 countries via KPMG Digital Gateway (May 19)</h4>
     <p>Largest professional services AI deployment by headcount confirmed to date. Covers all territories under the KPMG Digital Gateway branding. Source: <a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026">BuildFastWithAI</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Cohere acquires Aleph Alpha at $20B combined valuation: transatlantic sovereign AI challenger with dual HQ</h4>
     <p>Schwarz Group (German retail) committed $600M to Cohere's upcoming Series E. Governments of Canada and Germany both backing the deal. Targets the sovereign AI segment outside US hyperscaler orbit. Source: <a href="https://techcrunch.com/2026/04/24/cohere-acquires-merges-with-german-based-startup-to-create-a-transatlantic-ai-powerhouse/">TechCrunch</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Nvidia anchors IREN with $3.4B managed GPU cloud contract plus warrants for 5GW buildout (announced May 7)</h4>
     <p>Five-year contract, warrants for 30M IREN shares at $70. IREN deploys Nvidia DSX-aligned AI factories globally, anchored by a 2GW campus in Sweetwater, West Texas. Source: <a href="https://www.globenewswire.com/news-release/2026/05/07/3290674/0/en/NVIDIA-and-IREN-Announce-Strategic-Partnership-to-Accelerate-Deployment-of-up-to-5-Gigawatts-of-AI-Infrastructure.html">GlobeNewswire</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Trump AI executive order postponed: White House pulls back amid tech-ally pressure and China competition framing</h4>
     <p>Landmark AI executive order delayed with no new signing date. Creates continued ambiguity on US federal AI procurement, liability standards, and export controls. Confidence: HIGH. Source: <a href="https://www.axios.com/2026/05/21/trump-ai-executive-order-postponed-why">Axios</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Cerebras IPO (CBRS, May 14): $5.55B raised, +68% first-day pop, $95B market cap</h4>
     <p>Largest tech IPO since Uber's 2019 debut. Now in aftermarket phase; sets the public-market valuation anchor for AI hardware competitors. Source: <a href="https://www.cnbc.com/2026/05/14/cerebras-cbrs-stock-trade-nasdaq-ipo.html">CNBC</a></p>
   </div>
@@ -294,19 +294,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>NVIDIA Nemotron 3 and Ising open-sourced May 27: see Top 3 for full detail</h4>
     <p>Nemotron 3 covers Nano/Super/Ultra with domain-specific agentic, ASR, RAG, and safety variants. Ising targets quantum error correction. Source: <a href="https://blogs.nvidia.com/blog/open-models-data-tools-accelerate-ai/">NVIDIA Blog, May 27</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>HiDream-O1-Image-Dev (8B, MIT): pixel-native image generation drops the VAE stack, arxiv paper 2605.11061</h4>
     <p>Pixel-level Unified Transformer (UiT) architecture works on raw pixels without a VAE, supporting text-to-image, editing, and personalization up to 2048x2048. Ranked #8 on Artificial Analysis Text to Image Arena, highest-ranked open-weights model at launch. Source: <a href="https://huggingface.co/HiDream-ai/HiDream-O1-Image-Dev">Hugging Face</a> / <a href="https://arxiv.org/html/2605.11061v1">arxiv 2605.11061</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Hugging Face transformers v5.8.0: adds DeepSeek V4, EXAONE 4.5, Granite 4.1 Vision, Gemma 4 Assistant support</h4>
     <p>Also ships huggingface-hub with "Copy to Bucket" for Hub-to-Bucket transfers at terabyte scale via Xet server-side transfers. Source: <a href="https://github.com/huggingface/transformers/releases">transformers GitHub</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>arxiv cs.AI May 27 batch: MUSE-Autoskill (self-evolving agents), MedGuideX (clinical decision from executable guidelines), MobileExplorer (on-device mobile GUI agents)</h4>
     <p>Agent-focused papers dominate the May 27 submission batch. MedGuideX internalizes clinical decision logic directly into LLMs; MobileExplorer targets inference acceleration for mobile GUI agents. Source: <a href="https://arxiv.org/list/cs.AI/recent">arxiv cs.AI recent</a></p>
   </div>
@@ -314,15 +314,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Mistral Workflows in public preview: durable execution on Temporal for production agentic pipelines [Tier 2, MEDIUM confidence]</h4>
     <p>Mistral released Workflows in public preview using Temporal's durable execution engine, extended with streaming, multi-tenancy, and observability for AI workloads. Exact May date not pinned to 27-28 specifically, but active this week. If confirmed, signals Mistral moving from model vendor to platform layer. Source: <a href="https://mistral.ai/news">mistral.ai/news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>Anthropic Korea office imminent: KiYoung Choi named representative director May 26 [MEDIUM, outside window by one day]</h4>
     <p>Anthropic appointed KiYoung Choi as Korea representative director. Seoul office opening appears imminent. Part of broader APAC expansion following Fujitsu Japan partnership. Source: <a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>Qwen3.7-Max: #1 Chinese model on Intelligence Index v4, API-only for now, open weights expected June-July [Tier 1 source, MEDIUM on timing]</h4>
     <p>Alibaba's Qwen3.7-Max scores 56.6 on Intelligence Index v4 and 50.8% on Terminal-Bench Hard. Not open-weight yet; API via Alibaba Cloud only. Open-weight release window is June to July 2026. Source: <a href="https://qwen.ai/blog?id=qwen3.7">Qwen blog</a></p>
   </div>
@@ -330,23 +330,23 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Salesforce Summer 26 goes live June 15</h4>
     <p>Multi-Agent Orchestration as headline Agentforce feature. Watch for enterprise customer announcements at launch.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>EU AI Act Omnibus VII final text publication</h4>
     <p>Political deal reached May 7. Final text expected within weeks; compliance teams should watch transparency rules taking effect August 2026.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Qwen3.7-Max open-weight release window: June to July 2026</h4>
     <p>Currently API-only at Alibaba Cloud. Open weights would create immediate deployment pressure on the open-source leaderboards.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>NVIDIA Rubin platform: cloud deployments H2 2026 across AWS, Google, Azure, OCI, CoreWeave</h4>
     <p>Up to 10x claimed inference token cost reduction vs. Blackwell. First instances expected in the second half of 2026.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a38">
     <h4>Microsoft Ask Copilot taskbar integration: mid-2026 launch confirmed May 27</h4>
     <p>Watch for beta rollout announcement in June; signals Copilot moving from opt-in to ambient Windows OS layer.</p>
   </div>

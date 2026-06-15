@@ -36,6 +36,9 @@
     '.bx-tog{background:var(--panel);border:1px solid var(--line);color:var(--text);width:32px;height:28px;' +
     'border-radius:7px;cursor:pointer;font-size:13px;}' +
     '.bx-tog:hover{border-color:var(--accent);}' +
+    '.card,.item{scroll-margin-top:64px;}' +
+    '@keyframes bxflash{0%{box-shadow:0 0 0 2px var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);}100%{box-shadow:none;background:transparent;}}' +
+    '.bx-flash{animation:bxflash 2.2s ease;border-radius:6px;}' +
     '@media(max-width:640px){.bx-nav{display:none;}}';
   document.head.appendChild(css);
 
@@ -70,6 +73,18 @@
     '<button class="bx-tog" id="bx-tog" title="Toggle light and dark">◑</button>' +
     "</div>";
   document.body.insertBefore(bar, document.body.firstChild);
+
+  // If arriving via a deep link (#aN), re-scroll past the sticky bar and flash the target.
+  if (location.hash && /^#a\d+$/.test(location.hash)) {
+    var tgt = document.querySelector(location.hash);
+    if (tgt) {
+      setTimeout(function () {
+        tgt.scrollIntoView({ block: "start" });
+        tgt.classList.add("bx-flash");
+        setTimeout(function () { tgt.classList.remove("bx-flash"); }, 2300);
+      }, 60);
+    }
+  }
 
   document.getElementById("bx-tog").onclick = function () {
     var h = document.documentElement;

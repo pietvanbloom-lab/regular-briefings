@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>US government orders Anthropic to disable Fable 5 and Mythos 5 worldwide; both models pulled for all users</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -149,7 +149,7 @@
       <div class="why"><strong>Why it matters:</strong> First government-forced takedown of a publicly deployed frontier model. The chilling precedent is the story: if a narrow jailbreak claim can pull a commercially shipped model in 90 minutes, every lab now prices in deployment recall risk, and Anthropic naming GPT-5.5's equivalent capability signals it will not absorb that risk alone.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a2">
       <h3>SharonAI signs six-year Nvidia compute deal worth up to $4.88B, shares jump about 25 percent</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -161,7 +161,7 @@
       <div class="why"><strong>Why it matters:</strong> Nvidia is again the anchor tenant of its own demand, structuring revenue-share and credit support to stand up a mid-cap neocloud. Watch for copycat GB300 DSX deals from other small-caps: this is the template Nvidia is using to seed capacity outside the hyperscalers while keeping the chips moving.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>SpaceX completes record IPO, closes at $161 up 19 percent, sets the tone for the AI listing pipeline</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -180,15 +180,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>New angle: Amazon's urgent report to the White House triggered the takedown, with a roughly 90-minute deadline</h4>
     <p>Axios traces the chain: an urgent Amazon report about a Mythos jailbreak claim set off a White House scramble, and Anthropic was given about 90 minutes to pull the models, citing a national security threat with no further detail. Source: <a href="https://www.axios.com/2026/06/13/anthropic-amazon-white-house">Axios</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Status incidents logged overnight tied to the shutdown</h4>
     <p>status.claude.com history shows access to Mythos 5 and Fable 5 suspended for about 30 minutes from 12:53 AM, plus elevated errors on Claude Opus 4.8 at 2:03 AM, since resolved. The operational footprint of the takedown. Source: <a href="https://status.claude.com/history">status.claude.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Two June 15 deadlines now imminent: API model retirements and Agent SDK billing split</h4>
     <p>On June 15 the API retires claude-sonnet-4-20250514 and claude-opus-4-20250514, and Agent SDK, Claude Code, claude -p, and GitHub Actions usage moves off subscription quota into a separate monthly Agent SDK credit pool ($20 to $200 by plan, billed at API list rates). Action-relevant tomorrow. Source: <a href="https://releasebot.io/updates/anthropic">releasebot.io</a></p>
   </div>
@@ -196,15 +196,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Quiet day for agentic and MCP. No major spec release, SDK GA, or framework launch landed in the window.</h4>
     <p class="quiet">Most surfaced material was evergreen overview content or events dated earlier in June. Two window-anchored items below.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>MCP Dev Summit Mumbai opens June 14, first of six regional MCP summits in the 2026 program</h4>
     <p>The first Linux Foundation and Agentic AI Foundation regional MCP Dev Summit runs June 14-15 in Mumbai, with maintainer talks on production MCP auth, governance, and edge-native MCP tooling in Rust. It anchors a six-city track ahead of MCPCon Europe (Amsterdam, Sept 17-18) and North America (San Jose, Oct 22-23). Source: <a href="https://events.linuxfoundation.org/mcp-dev-summit-mumbai/">events.linuxfoundation.org</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>MCP SDK v2 alpha cadence continues toward a locked spec, Python beta targeted 2026-06-30</h4>
     <p>The MCP Python SDK keeps publishing 2.0.0 alpha pre-releases, with a v2 beta targeted June 30 and stable v2 around July 27. The Go SDK began its June 30 cycle adding a ClientCredentialsHandler for the OAuth client-credentials grant. Continuation of the breaking-change track flagged this week. Source: <a href="https://github.com/modelcontextprotocol/python-sdk">github.com/modelcontextprotocol/python-sdk</a></p>
   </div>
@@ -212,15 +212,15 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Claude Code 2.1.176 adds conversation-language session titles and footer link badges</h4>
     <p>The release generates session titles in the language of your conversation, adds a footerLinksRegexes setting for regex-matched link badges, improves Bedrock credential caching, and fixes availableModels enforcement, auto mode, and hook conditions. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>GitHub Copilot code review gains org runner controls and content-exclusion support</h4>
     <p>Copilot code review added organization runner controls, Copilot content-exclusion support, and removal of the character limit on repository custom instructions, making review behavior easier to tailor at repo and org level. Source: <a href="https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/">github.blog changelog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>OpenCode v1.17.5 ships external-browser OAuth for Snowflake Cortex and MCP session recovery</h4>
     <p>The open-source terminal coding agent added external-browser OAuth for the Snowflake Cortex provider, project copy and move-session flows, recovery of expired MCP sessions, and TUI fixes. Source: <a href="https://www.gradually.ai/en/changelogs/opencode/">gradually.ai changelog</a></p>
   </div>
@@ -228,19 +228,19 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>OpenAI retires the GPT-5.2 family from ChatGPT, effective June 12</h4>
     <p>GPT-5.2 Instant, Thinking, and Pro are no longer selectable in ChatGPT as of June 12; existing 5.2 conversations auto-migrate to the matching GPT-5.5 model. A housekeeping move completing the 5.5 transition, not a new capability. Source: <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">help.openai.com release notes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>xAI Grok V9-Medium enters its mid-June public-release window [watch item]</h4>
     <p>The 1.5T-parameter model, roughly 3x the current v8-small production model and trained on Cursor developer-session data to chase Claude's coding lead, finished training June 5 and targets a mid-June public release. No general-availability post yet, so the ship is still pending. Source: <a href="https://www.techloy.com/xai-says-grok-v9-medium-is-almost-here-should-claude-and-chatgpt-be-worried/">Techloy</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>xAI routes Grok V9 into the Tesla fleet and X at the same time</h4>
     <p>xAI began pushing its largest model directly into connected Teslas and X accounts simultaneously, the clearest demonstration yet of an owned-distribution flywheel that app and cloud-dependent rivals cannot easily match. A distribution story, not a model story. Source: <a href="https://www.techtimes.com/articles/318165/20260610/grok-v9-rolls-tesla-cars-x-why-musks-distribution-flywheel-worries-ai-rivals.htm">TechTimes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Perplexity reportedly extends its Computer agent into Microsoft Office apps and adds Opus 4.8 for Max [UNVERIFIED]</h4>
     <p>Reporting indicates Perplexity pushed its Computer agent into Word, Excel, PowerPoint, and Outlook, added a Mac app path, and gave Max subscribers Claude Opus 4.8 access. Exact in-window date not pinned to June 13. Source: <a href="https://blog.mean.ceo/perplexity-news-june-2026/">mean.ceo blog</a></p>
   </div>
@@ -248,11 +248,11 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Week's biggest rounds skew to infra: NinjaOne $400M+ at $12.3B, Iceye $520M at $12B+</h4>
     <p>Crunchbase's June 6-12 tally shows enterprise software and infra leading over pure AI labs: NinjaOne raised a $400M+ Series C extension at a $12.3B valuation, and Earth-observation operator Iceye landed a $520M Series F at a $12B+ valuation. Source: <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-databricks-psiquantum/">Crunchbase News</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>TCS becomes an Anthropic Global Premier Partner, commits to train 50,000 staff on Claude</h4>
     <p>Tata Consultancy Services joined Anthropic's Claude Partner Network as a Global Premier Partner, committing to train 50,000 staff and stand up a dedicated AI business unit targeting regulated sectors. Broke June 11, at the edge of the window. Source: <a href="https://techcrunch.com/2026/06/11/anthropic-taps-tcs-to-scale-its-enterprise-ai-deployments/">TechCrunch</a></p>
   </div>
@@ -260,15 +260,15 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>vLLM v0.23.0 ships, hardens DeepSeek-V4 and expands Model Runner V2 to Llama and Mistral</h4>
     <p>vLLM cut v0.23.0 with 408 commits from 200 contributors: another DeepSeek-V4 optimization pass (TRTLLM-gen attention kernel, EPLB for the Mega-MoE), Model Runner V2 now default for Llama and Mistral dense models, plus Gemma 4 MTP and a maturing experimental Rust frontend. Source: <a href="https://github.com/vllm-project/vllm/releases/tag/v0.23.0">github.com/vllm-project/vllm</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Hugging Face transformers v5.12.0 adds MiniMax-M3-VL and PP-OCRv6 support</h4>
     <p>transformers v5.12.0 lands native support for MiniMax-M3-VL, the vision-language member of the M3 family, plus official PP-OCRv6 weights. The upstream library catching up to this week's M3 weight drop. Source: <a href="https://github.com/huggingface/transformers/releases/tag/v5.12.0">github.com/huggingface/transformers</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Tooling races to support MiniMax M3 open weights: 428B MoE, 1M context, new sparse attention</h4>
     <p>M3 launched June 1 with weights promised within ten days; those weights plus the technical report have now landed on Hugging Face this week, driving the vLLM recipe and transformers M3-VL support. A roughly 428B-parameter MoE with MiniMax Sparse Attention, 1M-token context, and a self-reported 59 percent on SWE-Bench Pro. Benchmark is MiniMax's own. Source: <a href="https://the-decoder.com/minimax-m3-open-weight-model-with-a-million-token-context-challenges-proprietary-leaders/">the-decoder</a></p>
   </div>
@@ -276,11 +276,11 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a22">
     <h4>xAI Grok V9-Medium imminent, trained on Cursor session data [Tier 1, MEDIUM]</h4>
     <p>Training finished June 5, mid-June public-release window now open. If it ships in the next days and the Cursor-trained coding claims hold, it is the first direct challenge to Claude's coding lead from a model with Musk-owned distribution into Tesla and X. Source: <a href="https://www.techloy.com/xai-says-grok-v9-medium-is-almost-here-should-claude-and-chatgpt-be-worried/">Techloy</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>MCP 2026 spec release candidate reportedly locked, final spec targeted late July [Tier 3, LOW]</h4>
     <p>Search surfaced an RC described as stateless protocol core, an Extensions framework, Tasks, MCP Apps, and authorization hardening, with the final spec dated 2026-07-28. Could not confirm as live in-window news. Source: <a href="https://blog.modelcontextprotocol.io/">blog.modelcontextprotocol.io</a></p>
   </div>
@@ -288,19 +288,19 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a24">
     <h4>June 15: Anthropic API model retirements and Agent SDK billing split take effect</h4>
     <p>claude-sonnet-4-20250514 and claude-opus-4-20250514 retire, and Agent SDK and Claude Code usage moves to a separate monthly credit pool. Pin and re-budget before tomorrow.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Resolution of the Fable 5 and Mythos 5 takedown</h4>
     <p>Watch anthropic.com/news for whether the order is rescinded, narrowed, or formalized, plus any White House or Commerce statement clarifying the cited threat.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>xAI Grok V9-Medium public release</h4>
     <p>Mid-June window is open. Watch x.ai/news and Musk's X for the general-availability post and any coding benchmarks versus Claude.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>MCP Dev Summit Mumbai, June 14-15</h4>
     <p>First of the 2026 regional summits. Maintainer sessions on production MCP auth and governance may surface early v2 spec detail ahead of the June 30 Python beta.</p>
   </div>

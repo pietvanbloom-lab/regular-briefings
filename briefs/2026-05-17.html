@@ -138,7 +138,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
@@ -150,7 +150,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First time a Big 4 firm has named a standalone business unit branded on a single AI vendor's stack. The forward question is whether Deloitte (already long on Microsoft / OpenAI), EY, and KPMG match the move within 90 days. Watch for Deloitte to either deepen the Microsoft alliance or quietly add a Claude practice, and for Accenture to repackage its $1.5B GenAI business around a similar vendor-named unit. The deal also gives Anthropic a 30,000-strong enterprise-deployment muscle ahead of the June 15 Agent SDK billing cutover.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <div class="tags">
         <span class="tag t1">Tier 1</span>
         <span class="tag high">High confidence</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> Sovereign-AI distribution is a new go-to-market channel, not just a PR moment. Small digitally mature states (Estonia, Iceland, Singapore, UAE, Luxembourg) are the obvious next templates and will likely move within 60 to 120 days. The bigger second-order effect: any government willing to subsidize ChatGPT Plus is implicitly setting it as a public utility, which raises both regulatory exposure and Anthropic / Google's incentive to offer their own sovereign tier. Watch for Anthropic Claude Government / Gemini Public Sector counter-deals in Q3.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <div class="tags">
         <span class="tag t3">Tier 3</span>
         <span class="tag high">High confidence</span>
@@ -182,32 +182,32 @@
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
 
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Claude Code v2.1.136 ships gateway-aware model picker, project purge, workload identity env var</h4>
     <p>The v2.1.128 through v2.1.136 batch landed in the days leading into May 16, with v2.1.136 the latest tag. Notable additions: `/model` picker now reads from the gateway `/v1/models` endpoint when `ANTHROPIC_BASE_URL` is set, a new `claude project purge [path]` command, `ANTHROPIC_WORKSPACE_ID` env var for workload identity federation, `claude agents --cwd <path>` scoping, and a "Summarize up to here" rewind option. Fixes background side-queries that were sending an unavailable Haiku model ID on Bedrock, Vertex, and Foundry, plus Windows `claude daemon status` and `/doctor` errors. <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.136">Release notes</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Salesforce CEO commits roughly $300M of Anthropic token spend in 2026, almost entirely on coding</h4>
     <p>On the All-In podcast released late on May 15 and widely picked up Saturday May 16, Marc Benioff said Salesforce will spend roughly $300M on Anthropic tokens this year, "almost entirely on coding," and previewed a Slack-embedded coding agent. He called for an "intermediary router" so only frontier-grade prompts hit Claude. Salesforce already holds roughly a 1% stake in Anthropic via prior investment. <a href="https://www.benzinga.com/markets/tech/26/05/52622251/salesforce-ceo-marc-benioff-goes-all-in-on-awesome-anthropic-with-300-million-spend">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Bartz v. Anthropic $1.5B authors settlement paused, 25+ opt-out plaintiffs file new suit</h4>
     <p>At the May 14 fairness hearing in N.D. Cal., Judge Araceli Martinez-Olguin again declined to grant final approval, asking for more detail on lawyers' fees and lead-plaintiff service payments before signing off. Claims rate ran at 91.3% across the roughly 480,000-work class. Separately, 25+ opt-outs including Dave Eggers and Vendela Vida filed a new California complaint May 14. Coverage carried through May 15 to 16 (Reuters, Bloomberg Law, Publishers Weekly). <a href="https://www.publishersweekly.com/pw/by-topic/digital/copyright/article/100208-anthropic-settlement-hearing-comes-into-focus.html">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Anthropic API: brief multi-model degraded window on May 16 (18:08 to 18:24 UTC)</h4>
     <p>status.anthropic.com logged an incident beginning 2026-05-16 18:08 UTC affecting requests across multiple Claude models. Fix deployed by 18:24 UTC, monitored, and resolved. Roughly 16-minute degraded window, no public root cause yet. Routine sub-30-minute incident, noted against the broader 2026 compute-capacity narrative. <a href="https://status.claude.com/">Status page</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Agent SDK billing cutover countdown: 29 days to June 15 split-credit model</h4>
     <p>Through the May 16 to 17 window the June 15 cutover hardened into formal developer guidance and IDE-vendor responses (Zed posted explainer May 15). From June 15, `claude -p`, Claude Code via ACP, Claude Code GitHub Actions, and any third-party Agent SDK app draw from a separate monthly credit pool ($20 Pro, $100 Max 5x, $200 Max 20x), billed at full API rates with no rollover. Interactive terminal Claude Code stays inside the subscription pool. Modeled effective price impact: 12x to 175x for heavy SDK workloads. <a href="https://thenewstack.io/anthropic-agent-sdk-credits/">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Anthropic exec X feeds and Alignment Science blog: quiet weekend</h4>
     <p><span class="quiet">No major in-window posts from Dario Amodei, Daniela Amodei, Mike Krieger, Alex Albert, Karina Nguyen, Jared Kaplan, Sam McCandlish, or Tom Brown. Alignment Science blog last drops: "Teaching Claude Why" and "Model Spec Midtraining" (earlier in May). HuggingFace anthropic org: no new artifacts in window. Sonnet 4 / Opus 4 May-2025 builds remain scheduled for June 15 retirement per existing notice.</span></p>
   </div>
@@ -217,27 +217,27 @@
 <div class="bucket">
   <div class="eyebrow">Agentic AI &amp; MCP</div>
 
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Cline open-sources @cline/sdk, ships native subagents and Telegram / WhatsApp / Slack connector channels</h4>
     <p>Cline released @cline/sdk, the open-source runtime powering its CLI, VS Code, and JetBrains extensions, rebuilt as a portable agent runtime. The SDK ships native agent teams and subagents (handoff notes and progress tracking with no separate orchestrator), checkpointing, web search, scheduled cron jobs, MCP connectors, and experimental connector channels that surface agents into Telegram, WhatsApp, and Slack natively. Backed by $32M Series A (Emergence Capital) and 5M+ installs. Direct shot at LangGraph and the OpenAI Agents SDK for teams that want a pre-built harness rather than a framework. <a href="https://www.testingcatalog.com/cline-releases-open-source-agent-runtime-sdk-for-coding-agents/">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a11">
     <h4>xAI Grok Build CLI public beta expansion continues, Musk personally widens access</h4>
     <p>Two days after the May 14 launch, Grok Build was still in active public-beta ramp through May 16 to 17, with Elon Musk posting open calls for testers. The CLI runs on Grok 4.3 beta in a 16-agent Heavy architecture, spawns up to 8 concurrent agents for planning, doc search and parallel code writing, includes a "Plan Mode" requiring human approval before file or shell mutations, and ships with a 2M-token context window. Pricing: $99 per month introductory for six months, then $299 per month on the new SuperHeavy tier. macOS and Linux native, Windows via WSL2. <a href="https://x.ai/news/grok-build-cli">Announcement</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a12">
     <h4>SWE-bench Verified vs SWE-bench Pro divergence widens, procurement signal shifts</h4>
     <p>The May 16 SWE-bench Verified leaderboard snapshot shows Claude Mythos Preview at 93.9%, Claude Opus 4.7 Adaptive at 87.6%, GPT-5.5 at 88.7%, and GPT-5.3 Codex at 85%, with open-weight tier (MiniMax M2.5, Kimi K2.6, DeepSeek V4 Pro Max) clustered around 80%. Pro tells a different story: Claude Mythos Preview leads at 77.8% and Opus 4.7 Adaptive at 64.3%, vs GPT-5.5 at 58.6%. Public-Pro caps top models near 23% vs 70%+ on Verified, validating last month's Berkeley RDI finding that eight major agent benchmarks can be exploited to near-perfect scores without solving tasks. <a href="https://benchlm.ai/benchmarks/swePro">Leaderboard</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a13">
     <h4>modelcontextprotocol/sdk-typescript pushes commits on May 16</h4>
     <p>The official MCP TypeScript SDK shipped commits on May 16 per modelcontextprotocol GitHub org activity. No headline spec bump (2025-11-25 remains current), but the SDK churn signals the maintainer group is executing on post-Linux-Foundation handoff. Ecosystem reportedly crossed 14,000+ public servers earlier in May; 2026 roadmap priorities (Streamable HTTP scale, enterprise auth, Tasks primitive, server discoverability) remain the active workstreams. <a href="https://github.com/modelcontextprotocol">MCP org</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Notion Developer Platform: External Agent API and Workers continue rollout</h4>
     <p>Notion's May 13 Developer Platform launch continued landing through the weekend. Workers run server-side agent execution inside Notion's runtime, the External Agent API lets third-party agents act on Notion workspaces with scoped tokens, and database sync is exposed. Material because Notion has been one of the most-requested MCP server targets. This API is the foundation any official Notion MCP server will sit on. <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Coverage</a>.</p>
   </div>
@@ -247,27 +247,27 @@
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
 
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Replit ships Agent 4 to iPhone in first iOS update in four months</h4>
     <p>Amjad Masad announced on May 15 that Replit "worked things out with Apple" and shipped its first iPhone update in four months, bringing Agent 4 to mobile with parallel agents, team collaboration via merge flows, and cross-workspace project viewing. Notable as a product milestone (Agent 4 reaches mobile) and as a signal that Apple's stance on third-party AI coding apps may be softening ahead of WWDC. Coverage cycled through May 16 to 17. <a href="https://appleinsider.com/articles/26/05/15/apples-treatment-of-ai-coding-apps-could-be-shifting-with-replit-update">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Windsurf bundles Devin Review for all IDE subscribers, Claude Opus 4.7 fast mode standard</h4>
     <p>Windsurf made Devin Review and Quick Review available to every IDE subscriber (2-week free trial for self-serve, enterprise via Cognition platform agreement), and made Claude Opus 4.7 fast mode (full Opus intelligence at roughly 2.5x higher output speed) standard. The bundling collapses Devin (autonomous) and Windsurf (IDE) into one offering, with implications for Cursor / Cognition pricing pressure heading into the rumored $25B round. <a href="https://windsurf.com/changelog">Changelog</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Zed publishes formal response on Claude Agent SDK billing changes</h4>
     <p>Zed published a May 15 blog post addressing the Claude subscription and Agent SDK billing changes, signaling friction in how third-party editors consume Anthropic capacity. Follows Zed's May 13 release adding more reliable Agent edits, Git Graph remote support, improved macOS text rendering, and the May 14 Zeta2.1 efficiency post. The wider read: IDE vendors are starting to publicly negotiate model-provider economics through their changelog. <a href="https://zed.dev/blog">Zed blog</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a18">
     <h4>GitHub Copilot Desktop App and JetBrains CLI agent continue rollout</h4>
     <p>Following the May 14 technical preview of the standalone Copilot desktop app for Windows, macOS, and Linux (with per-session git work trees) and the May 13 Copilot CLI agent landing inside JetBrains IDEs (unified sessions view, ask-question tool in agent mode, global .agent.md support), both rolled out further through the weekend. Pro and Pro+ early access first, Business and Enterprise through the week. <a href="https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/">Changelog</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Cursor, JetBrains Junie, OpenAI Codex, Aider, VS Code: quiet day</h4>
     <p><span class="quiet">No new in-window releases. Cursor 3.4 (May 13) remains current, status page clean May 16. JetBrains Junie shipped routine patch releases (1701/1702/1703.1) May 14. OpenAI Codex latest is Codex-Spark research preview from earlier in week. Aider no release activity. VS Code on its post-weekly cadence.</span></p>
   </div>
@@ -277,32 +277,32 @@
 <div class="bucket">
   <div class="eyebrow">Competitor moves</div>
 
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Google DeepMind: Gemini Omni leak intensifies pre-I/O, Android Show reveals "Gemini Intelligence" layer</h4>
     <p>TestingCatalog-sourced UI string "Powered by Omni" continues to circulate ahead of Tuesday's I/O keynote. Speculation centers on whether Omni is a Veo rebrand, a separate Gemini-trained video model, or a unified omni-model spanning image and video. Companion leak: "Gemini 3.2 Flash" (possibly renamed 3.5 Flash) targeting lower latency and price. The pre-event Android Show already revealed "Gemini Intelligence" as the Android-level intelligence layer and the "Googlebook" premium laptop line. <a href="https://chromeunboxed.com/an-impressive-new-gemini-omni-video-model-just-leaked-ahead-of-google-i-o/">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a21">
     <h4>OpenAI CFO Sarah Friar signals additional capital raise and IPO optionality</h4>
     <p>In a Bloomberg TV interview Friday May 15 (cycling Saturday), CFO Sarah Friar said OpenAI may raise more capital even after the recent $122B private round, citing a "vertical wall of demand" and "not a lot of compute in 2026." She framed public markets as "significantly bigger" than private, leaving an IPO route open. Reignites the reported CFO / CEO IPO-timing tension (Friar reportedly favoring 2027, Altman 2026). <a href="https://www.bloomberg.com/news/articles/2026-05-15/openai-may-raise-more-money-as-compute-crunch-deepens-cfo-says">Bloomberg</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Musk v. Altman trial: jury deliberations begin Monday May 18</h4>
     <p>Closing arguments concluded May 14 in Oakland federal court (Judge Yvonne Gonzalez Rogers). The nine-person advisory jury (6F / 3M) begins deliberations Monday, the day before Google I/O. Judge Rogers makes the final liability call. Musk skipped closing arguments for a Beijing trip; his lawyer apologized. The verdict could constrain OpenAI's corporate structure and the Altman / Brockman roles, material implications for the $852B valuation. <a href="https://www.technologyreview.com/2026/05/15/1137357/musk-v-altman-week-3/">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Apple multi-model Siri 2.0: Google Gemini default, Anthropic Claude offered as choice</h4>
     <p>Bloomberg reporting cycling through May 16 confirms Apple's Siri 2.0 will let users pick a third-party model backend (Google Gemini and Anthropic Claude named) with a custom voice per backend. Reinforces the reported roughly $1B per year Gemini Foundation Models deal as the default. Apple expected to preview formally at WWDC in June. <a href="https://www.tomsguide.com/ai/apple-intelligence/siri-2-0-could-finally-reach-your-iphone-next-month">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a24">
     <h4>xAI: Grok Build live, May 15 legacy API retirement now in effect</h4>
     <p>Two-part xAI move bracketing the window: (a) Grok Build CLI live for SuperGrok Heavy, still onboarding through May 16; (b) the previously announced May 15 12:00 PT retirement of legacy Grok API models took effect during the window, consolidating traffic on grok-4.3. Also May 15: Grok integration into Nous Research's open-source Hermes agent went live. <a href="https://docs.x.ai/developers/migration/may-15-retirement">Migration notice</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a25">
     <h4>Meta, Mistral, DeepSeek, Qwen, Cohere, Perplexity: pre-I/O quiet</h4>
     <p><span class="quiet">No material 24-hour signal from Meta AI / Llama (pre-Connect cycle), Mistral AI (last major: Medium 3.5 April 29), DeepSeek (V4 already shipped April), Alibaba Qwen, ByteDance Doubao, Cohere, AI21, Reka, Inflection, Character.ai, Tencent Hunyuan, or Moonshot Kimi. Western frontier labs visibly clearing the runway for Google's Tuesday keynote.</span></p>
   </div>
@@ -312,27 +312,27 @@
 <div class="bucket">
   <div class="eyebrow">AI business</div>
 
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Recursive Superintelligence emerges from stealth with $650M, investor list undisclosed</h4>
     <p>Crunchbase News reported Recursive Superintelligence exited stealth on May 14 with $650M raised, no investor list yet disclosed. Sits in the late-week funding cluster alongside Panthalassa ($140M Series B led by Peter Thiel for ocean-wave-powered AI inference compute) and DeepInfra ($107M Series B led by Georges Harik and 500 Global for cloud AI inference). The Recursive Superintelligence label and undisclosed investor list both invite scrutiny. <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-sierra-astrani-anagram-therapeutics/">Crunchbase News</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Wirestock closes $23M Series A for licensed multimodal AI training data</h4>
     <p>Wirestock announced May 15 a $23M Series A led by Nava Ventures with Sheryl Sandberg's SBVP, Formula VC, and I2BF participating (total raised roughly $26M). The company runs a 700,000-creator network supplying licensed images, video, design, and 3D training data to frontier AI labs. Funds go to enterprise tooling for lab dataset collaboration and to research / engineering / product hiring. Below the $50M Tier 1 funding threshold but a thematic marker: licensed-data plays are continuing to attract capital amid copyright-litigation overhang. <a href="https://techcrunch.com/2026/05/14/wirestock-raises-23m-to-supply-multi-modal-data-to-ai-labs/">TechCrunch</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a28">
     <h4>OpenAI ChatGPT Personal Finance launches with Plaid integration across 12,000+ institutions</h4>
     <p>OpenAI launched the ChatGPT Personal Finance preview May 15 to Pro users in the US (web + iOS), connecting to 12,000+ institutions via Plaid (Schwab, Fidelity, Chase, Robinhood, Capital One). ChatGPT can read balances and transactions but cannot move money, trade, or pay bills. Intuit support coming next. Direct shot at Rocket Money, Monarch, and Copilot Money, and a meaningful precedent for "agentic" finance products built on bank API distribution. <a href="https://openai.com/index/personal-finance-chatgpt/">Source</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a29">
     <h4>OpenAI reportedly preparing legal action against Apple over Siri integration</h4>
     <p>TechCrunch, Bloomberg, and 9to5Mac (May 14, cycling through May 16) reported OpenAI outside counsel is drafting options ranging from a breach-of-contract notice to a full lawsuit. Cited grievances: minimal Siri / Settings surface, low subscription conversion, revenue "nowhere close to projections." Sits against Apple's reported roughly $1B per year Gemini deal to power Siri 2.0. Public partnership-fray. <a href="https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple/">Coverage</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a30">
     <h4>M&amp;A and senior exec moves: quiet 24-hour window</h4>
     <p><span class="quiet">No fresh AI M&amp;A above $100M and no new senior exec hire or exit at OpenAI / Anthropic / xAI / Meta / Cognition / Cursor / Windsurf / Replit announced inside the window. Standing context: Anthropic continues to offer 9-figure researcher packages and OpenAI is hiring toward 8,000 headcount. SpaceX / Cursor $60B option (April 21) and OpenAI / Tomoro acquisition (May 11) remain reference deals.</span></p>
   </div>
@@ -342,27 +342,27 @@
 <div class="bucket">
   <div class="eyebrow">Open source &amp; research</div>
 
-  <div class="item">
+  <div class="item" id="a31">
     <h4>vLLM v0.18.0 lands gRPC serving, GPU-less render command, NGram GPU speculative decoding</h4>
     <p>vLLM v0.18.0 (445 commits, 213 contributors, 61 new) shipped in the days leading into the window with three notable additions: gRPC serving via `--grpc`, a `vllm launch render` command for GPU-less multimodal preprocessing, and NGram speculative decoding ported to GPU and made compatible with the async scheduler. Known issue: degraded accuracy serving Qwen 3.5 with FP8 KV cache on B200, under investigation. Headline inference-stack release shaping serving choices for the post-Qwen-3.5 / DeepSeek V4 wave. <a href="https://github.com/vllm-project/vllm/releases/tag/v0.18.0">Release</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a32">
     <h4>llama.cpp ships b9189 with Qwen 3.5 linear-attention speedups</h4>
     <p>ggml-org pushed builds b9174 through b9189 of llama.cpp on May 16, continuing the May cadence of MCP client tool-calling, autoparser structured output, and incremental speedups for Qwen 3.5 and linear-attention architectures merged earlier in the month. Cross-platform binaries (macOS x64/ARM, Linux, Windows, Android) shipped with the build. No headline flag in this build, but the cadence keeps llama.cpp current with the post-DeepSeek-V4 sparse-MoE wave. <a href="https://github.com/ggml-org/llama.cpp/releases">Releases</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a33">
     <h4>SGLang scale: 400,000+ GPUs in production, trillion-token daily throughput claimed</h4>
     <p>LMSYS-hosted SGLang confirmed in May framing that production deployments now span 400,000+ GPUs worldwide generating trillions of tokens per day, with named adopters including xAI, AMD, NVIDIA, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, and AWS. RadixAttention benchmarks on H100s continue to show roughly 29% higher total throughput than tuned vLLM and up to 6.4x on prefix-heavy RAG / multi-turn workloads. No new tag in window; the adoption curve itself is the story. <a href="https://github.com/sgl-project/sglang/releases">Releases</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Trending arXiv: first systematic study of 2,303 AGENTS.md / CLAUDE.md / .cursorrules files</h4>
     <p>A large-scale empirical study (originally posted May 4, sustained trending May 14 to 16) analyzed 2,303 agent context files across 1,925 GitHub repositories to characterize structure, maintenance, and content patterns used to steer agentic coding tools. First systematic measurement of how the industry is actually configuring Claude Code, Cursor, and Codex agents in production. Useful prior for anyone building agentic dev tools. <a href="https://huggingface.co/papers">HF Papers</a>.</p>
   </div>
 
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Open-weights landscape stable: no new flagship drop in the window</h4>
     <p><span class="quiet">Quiet day for flagship open-weights releases. The frontier set (DeepSeek V4-Pro/Flash from April 24, Qwen 3.6-27B dense and Qwen-Scope SAEs from late April / early May, Mistral Medium 3.5 from April 29, Gemma 4, Llama 4 Scout / Maverick) is unchanged. Llama 4 Behemoth weights remain unshipped. No DeepSeek, Qwen, Meta, Mistral, or Google announcement crossed in the window. Inference-stack work (vLLM, llama.cpp, SGLang) carried the day.</span> <a href="https://llm-stats.com/llm-updates">Tracker</a>.</p>
   </div>
@@ -371,19 +371,19 @@
 
 <h2>Upcoming (next 7 days)</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Musk v. Altman jury deliberations begin Monday May 18</h4>
     <p>Nine-person advisory jury starts deliberations Monday; Judge Yvonne Gonzalez Rogers makes the final liability call. Verdict timing TBD but a mid-week ruling is plausible. Outcome could constrain OpenAI's corporate structure and the Altman / Brockman roles. <a href="https://www.technologyreview.com/2026/05/15/1137357/musk-v-altman-week-3/">Trial coverage</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>Google I/O 2026 keynote Tuesday May 19</h4>
     <p>New Gemini model expected, with "Gemini Omni" video model leaks pointing to a multi-modal push and a possible "Gemini 3.5 Flash" rebrand. Android Show already revealed "Gemini Intelligence" and the "Googlebook" laptop line. <a href="https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/">Preview</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a38">
     <h4>Code w/ Claude London May 20 to 21</h4>
     <p>Anthropic developer-focused event window opens Wednesday. Live demos and likely product reveals are the next concrete Anthropic-side news moment after the PwC announcement. <a href="https://www.anthropic.com/events">Events</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a39">
     <h4>Anthropic Agent SDK billing cutover June 15</h4>
     <p>29 days out: subscription-authenticated Agent SDK / Claude Code workloads via ACP move to a separate $200 per month credit pool metered at API list prices. <a href="https://thenewstack.io/anthropic-agent-sdk-credits/">Details</a>.</p>
   </div>
@@ -391,15 +391,15 @@
 
 <h2>Rumors &amp; early signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a40">
     <h4>Apple multi-model Siri choice would weaken OpenAI even before WWDC preview</h4>
     <p>If Bloomberg's multi-model framing holds (Gemini default, Claude offered), the OpenAI / Apple relationship is being formally restructured rather than expanded. Cross-reference with the OpenAI legal-action prep story for likely escalation path. Watch for an Apple-side leak in the next 10 days. <a href="https://www.tomsguide.com/ai/apple-intelligence/siri-2-0-could-finally-reach-your-iphone-next-month">Source</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a41">
     <h4>Recursive Superintelligence stealth exit at $650M: name plus undisclosed cap table is unusual</h4>
     <p>Stealth exits at $650M with no investor list are rare in the AI funding cycle. Either a sovereign / strategic-only cap table (Saudi PIF, Mubadala, ADQ pattern) or a Magnificent Seven balance-sheet bet. The "Recursive Superintelligence" naming is itself a positioning signal. <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-sierra-astrani-anagram-therapeutics/">Crunchbase News</a>.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a42">
     <h4>Mythos / Project Glasswing: no new in-window Anthropic-side update</h4>
     <p>No fresh Anthropic-side disclosure on Mythos or Glasswing landed in the May 16 to 17 window. Last verifiable activity: Mythos Preview blog (early May), Verizon joining Glasswing (early May), CNBC piece May 11 on EU access dispute. Code w/ Claude London May 20 to 21 is the natural next data point.</p>
   </div>

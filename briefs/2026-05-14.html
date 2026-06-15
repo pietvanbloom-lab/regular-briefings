@@ -137,7 +137,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card">
+    <div class="card" id="a1">
       <h3>Cerebras prices IPO at $185, raises $5.55B at ~$56B valuation, CBRS trades 2026-05-14</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -149,7 +149,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> The print is a $56B comp for inference-first silicon, a 5x revaluation of the AI hardware peer set inside one week, and the public-market clearing event that pulls Groq, SambaNova, Tenstorrent, and possibly Fractile into the IPO queue before year-end. Watch the first-day pop and the institutional flip ratio: those two numbers reset the cost of capital for the entire Nvidia-challenger cohort and signal whether the inference-compute thesis is a sustainable rerating or a one-week window.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>OpenAI Deployment Company launches with $4B from TPG-led syndicate, acquires Tomoro</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> OpenAI is building a Palantir-style services business under a separately capitalized vehicle. That is a structural admission that frontier-model APIs alone do not capture enterprise value, and it puts OpenAI head-to-head with Accenture, Deloitte, and Anthropic's own Forward Deployed motion. The PE-led structure (rather than the OpenAI balance sheet) also pre-stages a different exit path for services revenue, and reframes Anthropic's Claude for Legal, Claude for Small Business, and Claude on AWS as a same-week defensive line on the deployment layer.</div>
     </div>
 
-    <div class="card">
+    <div class="card" id="a3">
       <h3>Anthropic launches Claude for Small Business with 15 prebuilt skills and 10-city free training tour</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -181,23 +181,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Anthropic talks for $30B+ at $900B+ pre-money valuation re-reported, late-May close still flagged</h4>
     <p>Bloomberg's 2026-05-12 scoop continued to propagate on 2026-05-13 with revenue context: annualized run rate moved from $9B to over $44B by May 2026, IPO as soon as October referenced as a possible alternative. Investor names still undisclosed. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation">bloomberg.com Anthropic round</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Claude for Legal day-2: 12 plugins, 20+ MCP connectors, Freshfields rollout at thousands of users</h4>
     <p>Open-source plugin suite reached 882 stars and 165 forks in first 24 hours. Connector set expanded reporting includes Westlaw and Thomson Reuters CoCounsel, DocuSign, Box, Ironclad, iManage, NetDocuments, LexisNexis, Everlaw, Harvey. Freshfields confirmed firm-wide deployment. Source: <a href="https://www.thomsonreuters.com/en/press-releases/2026/may/thomson-reuters-and-anthropic-expand-partnership-to-connect-claude-with-cocounsel-legal">thomsonreuters.com CoCounsel partnership</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Opus 4.7 Fast Mode enters research preview, 2.5x output tokens/sec at 6x standard rate</h4>
     <p>Same weights, faster inference config. Waitlist-gated on API and Claude Code. Stacks with prompt caching and data-residency multipliers. Not on Batch API, Priority Tier, or Claude Platform on AWS at launch. Source: <a href="https://platform.claude.com/docs/en/build-with-claude/fast-mode">platform.claude.com Fast Mode docs</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Claude Code v2.1.140 adds Agent view, /goal command, /scroll-speed</h4>
     <p>Agent view (research preview) lists sessions by state (running, blocked, done). /goal persists across turns until completion condition is met across interactive, -p, and Remote Control modes with live elapsed/turns/tokens overlay. /scroll-speed tunes wheel sensitivity. Case-insensitive subagent_type matching and settings hot-reload fix on symlinks land in the same release. Source: <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">claude-code CHANGELOG</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Brief Opus 4.7 elevated-errors incident, investigated 11:48 UTC, resolved by ~11:25 PT</h4>
     <p>Short Tier 1 ops blip on 2026-05-13, no follow-on impact reported. Second model-tier incident in 48 hours after the 2026-05-12 Sonnet 4.6 and Haiku 4.5 four-hour incident. Source: <a href="https://status.anthropic.com/history">status.anthropic.com history</a></p>
   </div>
@@ -205,23 +205,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>SAP Sapphire 2026: Autonomous Suite with 50+ Joule Assistants orchestrating 200+ agents, Claude as primary reasoning engine</h4>
     <p>SAP positions its Business AI Platform around an Autonomous Enterprise pattern: 50+ domain-specific Joule Assistants coordinating 200+ specialized agents across finance, supply chain, procurement, HCM, CX. Claude becomes primary reasoning backbone. Google Cloud and Microsoft included for bidirectional A2A interoperability, NVIDIA OpenShell for secure runtime, Mistral and Cohere as sovereign-model options. Source: <a href="https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/">news.sap.com Autonomous Enterprise</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Parloa formalizes SAP partnership and takes SAP strategic investment for voice agent CX</h4>
     <p>Parloa voice agents combine with SAP Service Cloud agents to give customer-facing AI continuity across voice and digital channels. SAP took a strategic stake on the back of Parloa's January Series D ($350M at $3B). Solution will ship as SAP Endorsed App on the SAP Store. Source: <a href="https://www.parloa.com/parloa-in-the-press/parloa-sap-partnership/">parloa.com SAP partnership</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Workable launches MCP Server with 38 tools, free across all subscription tiers</h4>
     <p>Read and write access to recruiting data (jobs, candidates, pipeline stages, offers, requisitions, employees, time tracking, time-off, calendar) via 38 MCP tools. Compatible with Claude and ChatGPT. HR-vertical MCP coverage was previously thin. Source: <a href="https://www.globenewswire.com/news-release/2026/05/13/3293876/0/en/Workable-Launches-MCP-Server-for-AI-Powered-Recruiting-and-HR-Workflows.html">globenewswire.com Workable MCP</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>MCP Registry hardens against CVE-2026-44428 token-minting flaw, v1.7.6+ patch</h4>
     <p>Pre-patch flaw let a compromised registry deployment mint valid registry JWTs on peer deployments and inherit publish permissions for the victim GitHub-owner namespace via shared OIDC audience. Repo activity 2026-05-12 and 2026-05-13 reflects ongoing hardening after the 2026-05-08 disclosure. Source: <a href="https://advisories.gitlab.com/golang/github.com/modelcontextprotocol/registry/CVE-2026-44428/">gitlab.com CVE-2026-44428</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>LangGraph adds DeltaChannel (beta), TimeoutPolicy, error_handler, and graceful shutdown</h4>
     <p>DeltaChannel stores only step deltas on long-running threads to cut checkpoint overhead. TimeoutPolicy adds wall-clock and idle limits surfacing NodeTimeoutError. Cooperative request_drain() shutdown. DeepAgents ships CodeInterpreterMiddleware experimental using scoped QuickJS runtime. Source: <a href="https://github.com/langchain-ai/langgraph/releases">langgraph releases</a></p>
   </div>
@@ -229,19 +229,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>Claude Code agent view, /goal, /scroll-speed land in 2026-05-13 release (cross-referenced above)</h4>
     <p>Agent view is the headline feature: session-level state visibility for parallel agent workloads. /goal persists across turns until a completion condition is met, in interactive, -p, and Remote Control modes, with live elapsed/turns/tokens overlay. Source: <a href="https://github.com/anthropics/claude-code/releases">claude-code releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>GitHub Copilot CLI v1.0.47-0 pre-release adds vim-style /diff navigation and resumes for unpushed cloud-agent branches</h4>
     <p>j/k keys for up/down inside /diff. --resume now supports Copilot cloud agent sessions where the remote agent has not yet pushed changes to its branch. Companion stable v1.0.46 (2026-05-12) added a deprecation warning for old CLI versions losing premium-model access and fixed PowerShell startup with the .NET global tool shim. Source: <a href="https://github.com/github/copilot-cli/releases">copilot-cli releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Agent Client Protocol cross-editor momentum: main repo + TS SDK active, JetBrains Junie-in-VS positions ACP as default integration layer</h4>
     <p>ACP main repo and TS SDK both updated 2026-05-11. JetBrains ReSharper 2026.2 EAP 1 frames Junie running inside Visual Studio as a first step toward full ACP support in ReSharper. Implication: any ACP-compliant agent will eventually be usable from VS through this integration. Source: <a href="https://blog.jetbrains.com/dotnet/2026/05/11/the-resharper-2026-2-eap-any-ai-agent-in-visual-studio/">blog.jetbrains.com ReSharper EAP</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>Quiet: Cursor, Windsurf, Aider, Cline, Continue.dev, Sourcegraph Amp, CodeRabbit, Greptile, Qodo, Replit Agent, Devin</h4>
     <p class="quiet">No primary-source releases inside the 2026-05-13 to 2026-05-14 window from the rest of the coding-agent field. SWE-Bench Verified and Aider Polyglot leaderboards unchanged.</p>
   </div>
@@ -249,23 +249,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Google ships Gemini Intelligence on Android with cross-app agentic actions</h4>
     <p>At the Android Show I/O Edition (2026-05-12 to 2026-05-13), Google detailed an on-device proactive agent that reads screen context and automates tasks across apps: build shopping carts from notes, book reservations, pull from Gmail. Also powers Gemini in Chrome with "auto browse." Rolls out on select Samsung and Pixel devices this summer ahead of Apple's WWDC26. Source: <a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">blog.google Gemini Intelligence</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>xAI pushes Grok into Wall Street via Musk-linked firms (Morgan Stanley, Apollo, Valor)</h4>
     <p>Bloomberg reports xAI has recruited Morgan Stanley, Apollo Global Management, and Valor Equity Partners to test Grok internally. Sources caveat that adoption is shallow: financiers are "rarely using the chatbot for work" despite enterprise sign-ups. Timed to SpaceX's planned IPO. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-13/musk-s-xai-races-to-get-wall-street-firms-to-use-grok-chatbot">bloomberg.com xAI Wall Street</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Microsoft Azure Foundry Copilot pushes into industrial AI with ARUM, Cemex, Beca, Obeikan</h4>
     <p>Microsoft published an industrial-AI feature on 2026-05-13 showing four manufacturing customers on Azure Foundry plus Copilot. Roadmap teases late-2026 domain-specific models fine-tuned on OPC-UA telemetry and a multimodal Copilot preview (camera, thermal, audio spectrograms) with ARUM and Cemex as design partners. Source: <a href="https://windowsnews.ai/article/microsoft-showcases-industrial-ai-advancement-azure-foundry-copilot-empowers-factories-with-generati.418107">windowsnews.ai industrial AI feature</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>xAI Grok Imagine adds Quality Mode and Custom Voices [UNVERIFIED exact 2026-05-13 release date]</h4>
     <p>Quality Mode tier on the Grok Imagine API targets realism, text rendering, and editorial control for enterprise image workflows. Custom Voices lets users clone a voice from a few seconds of audio across Grok TTS and Voice Agent APIs. Appears in the May 2026 release notes batch but specific 2026-05-13 timestamp not yet verified against primary xAI sources. Source: <a href="https://releasebot.io/updates/xai">releasebot.io xAI updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Quiet: Meta, Mistral, DeepSeek, Qwen/Alibaba, Cohere, Perplexity, Apple</h4>
     <p class="quiet">No first-party news on 2026-05-13 from these labs. Apple WWDC 2026 is 8 to 12 June and remains the next material catalyst.</p>
   </div>
@@ -273,23 +273,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Anduril closes $5B Series H led by Thrive Capital and a16z, total funding $11.4B</h4>
     <p>Defense-AI company Anduril raised $5B on 2026-05-13, lifting total funding to $11.4B. 2025 revenue reportedly doubled to $2.2B. Mega-check appetite for defense tech continues; Thrive and a16z get deeper ownership ahead of any IPO path. Source: <a href="https://techstartups.com/2026/05/13/top-startup-and-tech-funding-news-may-13-2025/">techstartups.com funding roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Fractile raises $220M Series B for AI inference silicon</h4>
     <p>Accel, Founders Fund, Conviction, Factorial Funds, and Gigascale among named investors. Inference workloads now drive the bulk of AI compute spend. Round reflects investor rotation from training-only bets into inference economics, and arrives on the same day as the Cerebras pricing. Source: <a href="https://techstartups.com/2026/05/13/top-startup-and-tech-funding-news-may-13-2025/">techstartups.com funding roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>BranchLab raises $26M Series A led by McKesson Ventures for pharma AI commercialization</h4>
     <p>FCA Venture Partners, Sanofi Ventures, AIX Ventures participate. Total funding now $35M. Use of proceeds: privacy-first AI for pharmaceutical commercialization workflows. Vertical SaaS with healthcare-grade privacy constraints. Source: <a href="https://techstartups.com/2026/05/13/top-startup-and-tech-funding-news-may-13-2025/">techstartups.com funding roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Forus reaches unicorn status with Thrive, General Catalyst, Accel, Bain Capital Ventures, Redpoint [UNVERIFIED round size]</h4>
     <p>Healthcare-access platform linking doctors, pharmacies, payers, and biopharma. Reportedly in use across all 50 states. Round size and primary-vs-secondary split not yet disclosed. Source: <a href="https://techstartups.com/2026/05/13/top-startup-and-tech-funding-news-may-13-2025/">techstartups.com funding roundup</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Nvidia Q1 FY27 earnings 2026-05-20: $78B revenue guide, options pricing ~10% implied move</h4>
     <p>Guide implies 73 to 80 percent YoY growth. Jensen Huang has flagged at least $1T Blackwell and Rubin opportunity through 2027. The print is the next material AI public-market catalyst after Cerebras debuts today. Source: <a href="https://www.fool.com/investing/2026/05/13/prediction-nvidia-stock-will-soar-on-may-20/">fool.com Nvidia preview</a></p>
   </div>
@@ -297,23 +297,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>llama.cpp build b9134 (macOS x64) ships, b9133 enables reasoning-model prefill continuation</h4>
     <p>b9133 introduced server and webui support for continuing generation on reasoning models by removing a throw that previously blocked assistant prefill, and orchestrates thinking-tags around prefilled messages. Earlier b9093 (same window) added the sarvam_moe architecture for sarvamai/sarvam-30b. llama-cpp-python 0.3.23 (2026-05-11) tracks these upstream additions. Source: <a href="https://github.com/ggml-org/llama.cpp/releases">llama.cpp releases</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>DeepMind publishes context-aware AI pointer research with Gemini-powered interaction demos</h4>
     <p>Four interaction principles plus experimental demos of a Gemini-powered AI mouse pointer that captures visual and semantic context around the cursor. Lets users point and speak in shorthand instead of switching to a chat window. Conceptual companion to the Gemini Intelligence Android push. Source: <a href="https://deepmind.google/blog/ai-pointer/">deepmind.google AI Pointer</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>Apollo Research May 2026 update: shift from scheming evals to "Science of Scheming", DC office opens June</h4>
     <p>Apollo reframes its agenda away from scheming evals as primary output toward a research program on whether and how scheming will arise in future systems. DC office opening 2026-06 will focus on situational awareness, loss-of-control work, and US national-security / government procurement engagement. Source: <a href="https://www.apolloresearch.ai/blog/apollo-update-may-2026/">apolloresearch.ai May update</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>Anthropic Natural Language Autoencoders work continues to propagate, Claude internal-state translation visualizer cited</h4>
     <p>Fraser-Taliente, Kantamneni, Ong and collaborators trained Claude to translate its internal state into natural language. Companion attention-head visualizer plus the 2026-05-07 claim that NLAs surfaced Claude recognizing a safety eval as a "constructed scenario designed to manipulate me" continued circulating through 2026-05-13. No new circuits post landed on 2026-05-13 itself. Source: <a href="https://transformer-circuits.pub/">transformer-circuits.pub</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>Quiet: no new frontier open-weight release in window, no vLLM/SGLang/MLX/exllamav2/TensorRT-LLM tagged release</h4>
     <p class="quiet">The recent open-weight cohort (Qwen 3.5, DeepSeek V4, Llama 4, Gemma 4, Mistral Medium 3.5, Kimi K2.6, GLM-5.1) all shipped between 2026-04-07 and 2026-04-29. Inference-engine release tags are quiet inside the 24h window (nightly builds not individually verified).</p>
   </div>
@@ -321,15 +321,15 @@
 
 <h2>Rumors and Early Signals</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a33">
     <h4>Anthropic IPO as early as October 2026 [Tier 2, MEDIUM]</h4>
     <p>Surfaces alongside the $30B / $900B round chatter on 2026-05-13. Single banking-press relay so far; no Anthropic or banker quote. If real, would compress the Anthropic-vs-OpenAI public-market race into Q4 2026. Source: <a href="https://www.banklesstimes.com/articles/2026/05/13/record-breaking-unicorn-anthropic-may-outpace-openai-to-1t/">banklesstimes.com Anthropic $1T</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>xAI Grok Imagine Quality Mode and Custom Voices on enterprise API [Tier 2, MEDIUM]</h4>
     <p>Surfaces in May 2026 xAI release-notes batch via aggregator; exact 2026-05-13 timestamp not confirmed against primary xAI sources. If real, marks xAI's first hard push into enterprise media-production workflows. Source: <a href="https://releasebot.io/updates/xai">releasebot.io xAI updates</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>RoboMemArena embodied-memory benchmark on arXiv [Tier 3, MEDIUM]</h4>
     <p>Long-horizon real-world tasks plus multimodal annotations as a stress test for memory mechanisms in robotic LLM agents. Adjacent to the May wave of agent-memory papers ("From Storage to Experience," 2026-05-07). Pre-broader-citation. Source: <a href="https://arxiv.org/list/cs.AI/current">arxiv.org cs.AI</a></p>
   </div>
@@ -337,27 +337,27 @@
 
 <h2>Upcoming, next 7 days</h2>
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Cerebras CBRS opens trading 2026-05-14 on Nasdaq</h4>
     <p>First-day pop and institutional flip ratio reset the AI-silicon comp. Watch for index-fund inclusion timeline.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>Anthropic $30B / $900B+ round close window through end of May</h4>
     <p>Bloomberg's late-May timeline holds. Watch for term-sheet leaks, named lead investor, and any IPO timing confirmation against the banklesstimes October claim.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a38">
     <h4>Nvidia Q1 FY27 earnings 2026-05-20</h4>
     <p>Options pricing ~10% implied move. First post-Cerebras-IPO read on hyperscaler AI capex. Material into Anthropic round close and SAP / Anthropic enterprise rollouts.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a39">
     <h4>SAP Sapphire 2026 continues this week</h4>
     <p>Watch for additional partner expansions on the Joule Assistants and Autonomous Suite, plus any deeper Claude pricing or co-sell terms.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a40">
     <h4>EU AI Act formal adoption before 2026-08-02 deadline</h4>
     <p>Council and Parliament's 2026-05-07 provisional deal pushes national regulatory sandboxes to August 2027 and shortens the AI-generated content transparency window to 3 months (new deadline 2026-12-02). Watch for the final adoption vote and the non-consensual sexual/intimate AI content ban language.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a41">
     <h4>Apple WWDC 2026: 2026-06-08 to 2026-06-12</h4>
     <p>Pre-WWDC blackout continues. Next material competitor catalyst after Nvidia earnings.</p>
   </div>

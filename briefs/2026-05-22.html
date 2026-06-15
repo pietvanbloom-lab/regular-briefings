@@ -136,7 +136,7 @@
   <div class="eyebrow" style="margin-bottom:10px;">Top 3 today</div>
   <div class="top3">
 
-    <div class="card early">
+    <div class="card early" id="a1">
       <h3>Anthropic projects first operating profit: 559M USD on 10.9B USD Q2 revenue</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -149,7 +149,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First frontier lab to print operating profit at this scale. Recasts the "AI labs burn cash forever" narrative used by sceptics and short sellers, and gives Anthropic pricing power in enterprise negotiations because they no longer need to discount for cash burn. Watch for follow-on raises at higher valuations from OpenAI and xAI within 60 days, plus tighter pricing across Pro and Max tiers.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a2">
       <h3>Sam Altman offers every YC startup 2M USD in OpenAI tokens for uncapped SAFE equity</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -162,7 +162,7 @@
       <div class="why"><strong>Why this matters before others see it:</strong> First time inference credits are weaponized as equity capture at YC scale. Two second order effects to watch: (1) Anthropic and Google will copy with their own credit-for-equity programs targeting accelerator cohorts within 30 days, (2) YC founders building on OpenAI now carry a structural switching cost that locks the wider Combinator class into one model family, which thins out the multi-model agent layer earlier than expected.</div>
     </div>
 
-    <div class="card early">
+    <div class="card early" id="a3">
       <h3>Anthropic in early talks to rent Microsoft Maia 200 AI chips for Claude inference</h3>
       <div class="tags">
         <span class="tag t1">Tier 1</span>
@@ -182,27 +182,27 @@
 
 <div class="bucket">
   <div class="eyebrow">Anthropic / Claude</div>
-  <div class="item">
+  <div class="item" id="a4">
     <h4>Anthropic projects 559M USD first operating profit on 10.9B USD Q2 revenue (see Top 3)</h4>
     <p>Investor financing documents project Q2 2026 revenue up 130 percent QoQ and the first quarterly operating profit at frontier lab scale, validating the 900B USD valuation talk circulating since April. Source: <a href="https://winbuzzer.com/2026/05/21/anthropic-targets-first-profit-as-revenue-hits-109b-xcxwbn/">winbuzzer.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a5">
     <h4>Anthropic in early talks to rent Microsoft Maia 200 AI chips (see Top 3)</h4>
     <p>The Information original, Bloomberg and CNBC confirmation: early-stage compute discussions, no deal yet. If signed, Anthropic runs Claude inference on Nvidia, Trainium, TPU, and Maia in parallel. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-21/anthropic-in-talks-to-use-microsoft-ai-chips-information-says">bloomberg.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a6">
     <h4>Claude.ai elevated errors incident: Opus 4.7 and Sonnet 4.6 success rates degraded overnight</h4>
     <p>Two-stage outage starting 2026-05-21 20:24 UTC, partially fixed by 06:17 UTC May 22, still being resolved at 06:32 UTC. API also affected after the initial Claude.ai degradation. Source: <a href="https://status.anthropic.com/">status.anthropic.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a7">
     <h4>Krieger signals product consolidation: Claude.ai, Cowork, and Claude Code converge on a single harness</h4>
     <p>In a Sources.news interview, Anthropic CPO Mike Krieger publicly called the three-product split "a broken abstraction we need to fix" and signalled a harness-first strategy rather than separate products. Source: <a href="https://sources.news/p/anthropic-mike-krieger-interview-future-claude-ai">sources.news / Krieger interview</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a8">
     <h4>Claude Platform on AWS goes live with native AWS IAM and billing</h4>
     <p>Claude API runs on Anthropic-managed infrastructure inside AWS with IAM auth and AWS billing, exposing Messages, Files, Batches, and Managed Agents APIs to AWS-native enterprise buyers without provider switching. Source: <a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com release notes</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a9">
     <h4>Claude Code v2.1.146 ships /code-review (rename), Windows PowerShell fix, MCP pagination fix</h4>
     <p>Anthropic renamed /simplify to /code-review with effort tiers, fixed a Windows PowerShell regression, an MCP pagination bug, and AskUserQuestion suppression in auto mode. ANTHROPIC_WORKSPACE_ID env var enables workload identity federation. Source: <a href="https://code.claude.com/docs/en/changelog">code.claude.com changelog</a></p>
   </div>
@@ -210,23 +210,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Agentic AI and MCP</div>
-  <div class="item">
+  <div class="item" id="a10">
     <h4>Microsoft Purview ships Claude connector, Agent 365 adds shadow agent detection for Claude Code and OpenClaw</h4>
     <p>May 2026 security update extends Microsoft's enterprise governance plane to third-party agent fleets. Purview now indexes Claude conversations, Agent 365 flags unsanctioned Claude Code and OpenClaw usage. Source: <a href="https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/">microsoft.com security blog</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a11">
     <h4>Trust3 AI launches MCP Security control plane: identity-aware firewall for agent JSON-RPC</h4>
     <p>Single-purpose token issuance, content firewall for agent instructions, per-connection audit trails. Positions MCP as a new enterprise security boundary, not just a developer protocol. Source: <a href="https://www.helpnetsecurity.com/2026/05/20/trust3-mcp-security/">helpnetsecurity.com / Trust3 MCP</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a12">
     <h4>JetBrains TeamCity 2026.1 ships native MCP endpoint at /app/mcp</h4>
     <p>First major CI/CD vendor with a built-in MCP endpoint. Exposes build-log fetch, REST GET, and personal-run trigger as MCP tools, so Claude Code, Codex, and Junie agents can diagnose and re-trigger failed builds end to end. Source: <a href="https://blog.jetbrains.com/teamcity/2026/05/teamcity-20261/">blog.jetbrains.com / TeamCity 2026.1</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a13">
     <h4>Show HN: mcp-recorder brings VCR-style record and replay to MCP JSON-RPC</h4>
     <p>Lightweight proxy records and replays JSON-RPC 2.0 MCP exchanges with no live server. Targets CI flake elimination and protocol-drift detection. HN traction May 21. Source: <a href="https://news.ycombinator.com/item?id=47274100">news.ycombinator.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a14">
     <h4>MCP 2026 Roadmap firms up: stateless Streamable HTTP plus .well-known Server Cards</h4>
     <p>Transports working group targeting stateless session creation and resumption, plus a standardized .well-known Server Card so registries can discover capabilities without live handshakes. Spec aim is June. Source: <a href="https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/">blog.modelcontextprotocol.io / 2026 roadmap</a></p>
   </div>
@@ -234,19 +234,19 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Coding Tools</div>
-  <div class="item">
+  <div class="item" id="a15">
     <h4>Cursor publishes "What we have learned building cloud agents" research post</h4>
     <p>Josh Ma details lessons from running cloud agents on dedicated VMs, framing the work as building an OS layer rather than porting local agents to servers. Signals a Cursor cloud product roadmap shift. Source: <a href="https://cursor.com/blog/cloud-agent-lessons">cursor.com / cloud agent lessons</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a16">
     <h4>Replit Enterprise opens to self-serve purchase with SSO and SCIM</h4>
     <p>From May 21, any organization can buy Replit Enterprise directly online, configure SSO and SCIM, invite teams, and ship production apps. Removes the sales-led friction that previously gated enterprise tier. Source: <a href="https://replit.com/enterprise">replit.com/enterprise</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a17">
     <h4>SWE-bench Verified leaderboard: Claude Mythos Preview leads at 93.9 percent [UNVERIFIED model name]</h4>
     <p>Leaderboard snapshot shows an unannounced "Claude Mythos Preview" entry at 93.9 percent, ahead of Claude Opus 4.7 Adaptive at 87.6 percent and GPT-5.3 Codex at 85 percent. Model name not confirmed by Anthropic. Source: <a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats.com / SWE-bench verified</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a18">
     <h4>Vercel ships anomaly alerts in CLI via "vercel alerts"</h4>
     <p>CLI access to anomaly alerts so teams list project and team-wide alerts without leaving terminal. Tightens the AI build-and-deploy loop for Vercel-hosted agent apps. Source: <a href="https://vercel.com/changelog">vercel.com/changelog</a></p>
   </div>
@@ -254,31 +254,31 @@
 
 <div class="bucket">
   <div class="eyebrow">Competitor Moves</div>
-  <div class="item">
+  <div class="item" id="a19">
     <h4>Sam Altman offers every YC startup 2M USD in OpenAI tokens for uncapped SAFE equity (see Top 3)</h4>
     <p>OpenAI commits 2M USD in API tokens to roughly 169 YC spring and summer 2026 startups in exchange for uncapped SAFE equity. Founders warn of vendor lock-in. Source: <a href="https://techcrunch.com/2026/05/20/sam-altman-makes-mic-drop-offer-to-every-y-combinator-startup/">techcrunch.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a20">
     <h4>Google opens Managed Agents in Gemini API to preview (Antigravity as a service)</h4>
     <p>Single API call provisions a remote Linux sandbox with the Antigravity harness running Gemini 3.5 Flash. Stateful sessions, file persistence, no orchestration code required. Direct shot at Claude Managed Agents announced May 20. Source: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/">blog.google / Managed Agents Gemini API</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a21">
     <h4>Alibaba Qwen 3.7 Max enters top 5 globally on Artificial Analysis Index at 56.6</h4>
     <p>Highest placement for a Chinese model. Hits 92.4 on GPQA Diamond (edges Claude Opus 4.6 at 91.3), 1M token context. Weights still not on HuggingFace. Source: <a href="https://officechai.com/ai/qwen-3-7-max-benchmarks/">officechai.com / Qwen 3.7 Max benchmarks</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a22">
     <h4>Perplexity Comet for iOS adds phone-number actions, iPad sidebar polish, Finance Deep Dive as full tab</h4>
     <p>Eight feature update includes Call, FaceTime, Message detection from text plus stability fixes. Doubles down on agentic browser thesis on mobile. Source: <a href="https://9to5mac.com/2026/05/21/perplexitys-comet-ai-browser-for-ios-upgraded-with-8-major-improvements/">9to5mac.com / Comet iOS upgrade</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a23">
     <h4>Google Antigravity 2.0 CLI plus subagent primitives surface at I/O Day 2 developer keynote</h4>
     <p>Detail follow-up to May 20 launch: CLI, subagent orchestration, terminal sandboxing, credential masking, hardened Git policies. Positions Antigravity as direct Claude Code competitor stack. Source: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/">blog.google / I/O 2026 developer highlights</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a24">
     <h4>Project Genie 3 world model rolls out globally to AI Ultra subscribers with Street View integration</h4>
     <p>Genie 3 now generates 60-second 720p / 24fps interactive scenes from any Google Maps Street View location, globally for Ultra users. Raises stakes for video and simulation competitors. Source: <a href="https://www.engadget.com/2176797/project-genie-adds-google-street-view-integration-and-goes-live-for-global-ai-ultra-users/">engadget.com / Genie Street View global</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a25">
     <h4>xAI commits to daily Grok Build release notes, OpenCode opens to SuperGrok and X Premium</h4>
     <p>Musk confirms daily release cadence. OpenCode coding agent opens to SuperGrok and X Premium subscribers, accelerating xAI shipping rhythm vs weekly competitors. Source: <a href="https://releasebot.io/updates/xai">releasebot.io / xAI release notes May 2026</a></p>
   </div>
@@ -286,23 +286,23 @@
 
 <div class="bucket">
   <div class="eyebrow">AI Business</div>
-  <div class="item">
+  <div class="item" id="a26">
     <h4>Anthropic Blackstone Hellman and Friedman consulting JV makes first acquisition: Fractional AI</h4>
     <p>The 1.5B USD AI-native services joint venture (also backed by Goldman, General Atlantic, Apollo, GIC, Sequoia) absorbs Fractional AI's applied engineering team and ends Fractional's 11-month OpenAI partnership. Source: <a href="https://www.bloomberg.com/news/articles/2026-05-21/anthropic-s-new-consulting-venture-makes-its-first-acquisition">bloomberg.com / Anthropic consulting acquisition</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a27">
     <h4>Hark raises 700M USD Series A at 6B USD valuation for "universal" AI interface</h4>
     <p>Brett Adcock's stealth AI lab (his third venture after Figure and Archer) brings Nvidia, AMD, Intel, Qualcomm, Salesforce, ARK and Greycroft into a Parkway-led mega-round. Product still undisclosed. Source: <a href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/">techcrunch.com / Hark 700M</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a28">
     <h4>Bloom Energy lands up to 2.6B USD fuel-cell deal with Nebius for AI data center power</h4>
     <p>Solid-oxide fuel cells deliver 328MW installed capacity across three 10-year phases at Nebius US AI data centers. NBIS jumped 17 percent on the news. Source: <a href="https://techstartups.com/2026/05/21/bloom-energy-lands-2-6-billion-ai-infrastructure-deal-with-nebius-to-tackle-data-center-power-shortages/">techstartups.com / Bloom Energy Nebius</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a29">
     <h4>Socket hits 1B USD valuation on 60M USD Series C, AI-era software supply chain security</h4>
     <p>Thrive and a16z led. Customer roster includes Anthropic, xAI, Cursor, Replit, Figma. Raise targets the surge of AI-generated code flooding open-source dependency trees. Source: <a href="https://www.securityweek.com/socket-raises-60-million-at-1-billion-valuation/">securityweek.com / Socket Series C</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a30">
     <h4>Farther raises 150M USD Series D led by General Atlantic for AI wealth management</h4>
     <p>Intelligent Wealth Platform now at 23B USD in recruited assets. Total raised crosses 272M USD as AI-native RIA tooling pulls late-stage growth capital. Source: <a href="https://www.generalatlantic.com/media-article/farther-raises-150-million-series-d-led-by-general-atlantic-to-scale-intelligent-wealth-management/">generalatlantic.com / Farther Series D</a></p>
   </div>
@@ -310,23 +310,23 @@
 
 <div class="bucket">
   <div class="eyebrow">Open Source and Research</div>
-  <div class="item">
+  <div class="item" id="a31">
     <h4>EnvFactory: scaling tool-use agents via executable environments synthesis plus robust RL</h4>
     <p>LARK-AI-Lab autonomously synthesizes stateful executable tool environments and multi-turn trajectories for agentic RL, claiming superior tool-use training with far fewer real API calls. Trending on HF Papers. Source: <a href="https://arxiv.org/abs/2605.18703">arxiv.org / 2605.18703</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a32">
     <h4>"Code as Agent Harness" survey positions code as the operational substrate for agent loops</h4>
     <p>Roadmap survey across single and multi-agent systems: code as substrate for reasoning, action, environment modeling, and verification. Picked up on Cool Papers and HF in the window. Source: <a href="https://arxiv.org/abs/2605.18747">arxiv.org / 2605.18747</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a33">
     <h4>LongLive-2.0: NVIDIA ships first NVFP4 training and inference stack for long video generation</h4>
     <p>NVlabs hits 45.7 FPS on Blackwell with 2.15x training and 1.84x inference speedups for AR long-video diffusion. Weights Efficient-Large-Model/LongLive-2.0-5B trending on HF. Source: <a href="https://huggingface.co/papers/2605.18739">huggingface.co/papers/2605.18739</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a34">
     <h4>Mega-ASR: compound-data plus progressive acoustic-to-semantic optimization from NUS</h4>
     <p>Boosts real-world ASR robustness via compound-data construction and a progressive acoustic-to-semantic optimization curriculum. Trending HF paper in window. Source: <a href="https://huggingface.co/papers/trending">huggingface.co/papers/trending</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a35">
     <h4>Mathematical reasoning in LLMs: structured survey of 120 papers from a unified taxonomy</h4>
     <p>Review introduces unified taxonomy of math datasets, training strategies and evaluation protocols for LLM mathematical reasoning. Circulating on HF Papers May 21. Source: <a href="https://arxiv.org/abs/2605.19723">arxiv.org / 2605.19723</a></p>
   </div>
@@ -335,15 +335,15 @@
 <h2>Upcoming (next 7 days)</h2>
 
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a36">
     <h4>Google I/O 2026 closes on-demand sessions May 22</h4>
     <p>Day 3 is on-demand only. Track late-drop sessions for sleeper announcements that did not make the main keynote on May 19 or developer keynote May 21.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a37">
     <h4>MCP June spec window: stateless Streamable HTTP plus .well-known Server Cards</h4>
     <p>Watch modelcontextprotocol/specification for RFC drops over the next two weeks per the working-group blog.</p>
   </div>
-  <div class="item">
+  <div class="item" id="a38">
     <h4>OpenAI YC tokenmaxxing program close: late May to early June</h4>
     <p>Watch for Anthropic and Google copycat credit-for-equity announcements within 30 days. Tracking Y Combinator alumni networks for backlash or acceptance signals.</p>
   </div>
@@ -352,15 +352,15 @@
 <h2>Rumors and Early Signals</h2>
 
 <div class="bucket">
-  <div class="item">
+  <div class="item" id="a39">
     <h4>"Claude Mythos Preview" appears on SWE-bench Verified leaderboard at 93.9 percent [UNVERIFIED]</h4>
     <p>Unannounced Anthropic model name on a public leaderboard, ahead of Opus 4.7 Adaptive at 87.6 percent. No anthropic.com confirmation, not in claude.com release notes. Likely codename leak from external eval pipeline. Source: <a href="https://llm-stats.com/benchmarks/swe-bench-verified">llm-stats.com</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a40">
     <h4>Codegraph local tool-call optimizer claims 94 percent API call reduction [UNVERIFIED]</h4>
     <p>Community-shared local indexing repo trending on r/LocalLLaMA in the window. Claims to slash Claude, Cursor, Codex, and OpenCode tool-call volume by 94 percent. Benchmarks not independently reproduced. Source: <a href="https://gummysearch.com/r/LocalLLaMA/">gummysearch.com / r/LocalLLaMA stats</a></p>
   </div>
-  <div class="item">
+  <div class="item" id="a41">
     <h4>Krieger interview signals Claude.ai, Cowork, Claude Code product merger</h4>
     <p>Anthropic CPO publicly framed the three-product split as a broken abstraction. Reads as preparation for a single unified Claude product surface. Watch for messaging changes on claude.com in next 30 days. Source: <a href="https://sources.news/p/anthropic-mike-krieger-interview-future-claude-ai">sources.news</a></p>
   </div>
