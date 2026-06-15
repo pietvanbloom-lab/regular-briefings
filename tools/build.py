@@ -67,6 +67,7 @@ def parse_brief(path):
 
     buckets = []
     item_headlines = []
+    article_records = []
     total_items = 0
     for bm in re.finditer(r'<div class="bucket">(.*?)(?=<div class="bucket">|<h2|<div class="footer|\Z)', raw, re.S):
         b = bm.group(1)
@@ -77,7 +78,11 @@ def parse_brief(path):
         for it in items:
             h4 = re.search(r"<h4[^>]*>(.*?)</h4>", it, re.S)
             if h4:
-                hs.append(strip_tags(h4.group(1))); item_headlines.append(strip_tags(h4.group(1)))
+                hl = strip_tags(h4.group(1))
+                hs.append(hl); item_headlines.append(hl)
+                href = re.search(r'href="(https?://[^"]+)"', it)
+                article_records.append({"h": hl, "u": href.group(1) if href else "", "bucket": name,
+                                        "topics": topic_hits(hl + " " + name)})
         buckets.append({"name": name, "count": len(hs)})
         total_items += len(hs)
 
@@ -88,6 +93,9 @@ def parse_brief(path):
         bmap[b["name"]] += b["count"]
     buckets = [{"name": n, "count": bmap[n]} for n in order]
 
+    for t in top3:
+        article_records.append({"h": t["headline"], "u": "", "bucket": t.get("topic") or "Top 3",
+                                "topics": topic_hits(t["headline"] + " " + (t.get("topic") or "")), "lead": True})
     headlines = [t["headline"] for t in top3] + item_headlines
     tcounts = Counter()
     for h in headlines:
@@ -99,6 +107,7 @@ def parse_brief(path):
         "earlySignals": len(re.findall(r'class="tag early"', raw)),
         "topics": sorted(tcounts, key=lambda k: -tcounts[k]),
         "topicCounts": dict(tcounts),
+        "articles": article_records,
     }
 
 def iso_week(d):
@@ -130,6 +139,29 @@ def main():
         trend = "up" if delta > 1 else ("down" if delta < -1 else "flat")
         hottest.append({"topic": t, "stories": c, "recent": rv[t], "trend": trend})
 
+    # Flat article list (newest first) with date + file, for the topic drawer.
+    articles = []
+    for b in briefs:
+        for a in b.get("articles", []):
+            articles.append({"h": a["h"], "u": a.get("u", ""), "topics": a.get("topics", []),
+                             "date": b["date"], "file": b["file"], "lead": a.get("lead", False)})
+    articles.sort(key=lambda a: a["date"], reverse=True)
+
+    # Per-topic insights: busiest week + share, keyed by topic label.
+    wt = defaultdict(lambda: defaultdict(int))
+    for b in briefs:
+        wk = iso_week(b["date"])
+        for t, c in b.get("topicCounts", {}).items():
+            wt[t][wk] += c
+    insights = {}
+    for h in hottest:
+        t = h["topic"]
+        weeks = wt[t]
+        bw = max(weeks.items(), key=lambda kv: kv[1]) if weeks else (None, 0)
+        insights[t] = {"stories": h["stories"], "recent": h["recent"], "trend": h["trend"],
+                       "busiestWeek": bw[0], "busiestCount": bw[1],
+                       "share": round(h["stories"] / total_signals * 100) if total_signals else 0}
+
     week_counts = defaultdict(int); month_counts = defaultdict(int)
     week_briefs = defaultdict(int); month_briefs = defaultdict(int)
     for b in briefs:
@@ -159,7 +191,8 @@ def main():
             "lastDate": briefs[-1]["date"] if briefs else None,
             "avgPerBrief": round(total_signals / len(briefs), 1) if briefs else 0,
         },
-        "hottest": hottest, "weekly": weekly, "monthly": monthly,
+        "hottest": hottest, "topicInsights": insights, "articles": articles,
+        "weekly": weekly, "monthly": monthly,
         "topStoriesByWeek": top_stories(iso_week), "topStoriesByMonth": top_stories(month),
         "briefs": [{
             "date": b["date"], "file": b["file"], "totalItems": b["totalItems"], "early": b["earlySignals"],
