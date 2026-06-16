@@ -1,78 +1,78 @@
 {
-  "generated": "2026-06-15T22:34:26Z",
+  "generated": "2026-06-16T04:14:49Z",
   "summary": {
-    "totalBriefs": 33,
-    "totalSignals": 1184,
-    "totalEarly": 63,
+    "totalBriefs": 34,
+    "totalSignals": 1217,
+    "totalEarly": 65,
     "firstDate": "2026-05-09",
-    "lastDate": "2026-06-15",
-    "avgPerBrief": 35.9
+    "lastDate": "2026-06-16",
+    "avgPerBrief": 35.8
   },
   "hottest": [
     {
       "topic": "Anthropic",
-      "stories": 315,
-      "recent": 63,
+      "stories": 322,
+      "recent": 64,
       "trend": "up"
     },
     {
       "topic": "MCP / Agents",
-      "stories": 281,
-      "recent": 49,
-      "trend": "down"
+      "stories": 290,
+      "recent": 54,
+      "trend": "flat"
     },
     {
       "topic": "Funding / M&A",
-      "stories": 185,
-      "recent": 30,
+      "stories": 190,
+      "recent": 32,
       "trend": "flat"
     },
     {
       "topic": "Google / DeepMind",
-      "stories": 117,
-      "recent": 22,
+      "stories": 119,
+      "recent": 21,
       "trend": "up"
     },
     {
       "topic": "OpenAI",
-      "stories": 101,
-      "recent": 15,
+      "stories": 102,
+      "recent": 13,
       "trend": "down"
     },
     {
       "topic": "Coding tools",
-      "stories": 96,
-      "recent": 16,
+      "stories": 100,
+      "recent": 18,
       "trend": "down"
     },
     {
       "topic": "Microsoft",
-      "stories": 93,
-      "recent": 11,
-      "trend": "down"
-    },
-    {
-      "topic": "Open source",
-      "stories": 61,
+      "stories": 94,
       "recent": 12,
       "trend": "down"
     },
     {
       "topic": "xAI / Grok",
-      "stories": 60,
-      "recent": 19,
+      "stories": 63,
+      "recent": 20,
       "trend": "up"
+    },
+    {
+      "topic": "Open source",
+      "stories": 61,
+      "recent": 9,
+      "trend": "down"
     },
     {
       "topic": "Meta",
       "stories": 40,
-      "recent": 8,
-      "trend": "up"
+      "recent": 5,
+      "trend": "down"
     },
     {
       "topic": "Regulation",
-      "stories": 35,
-      "recent": 8,
+      "stories": 36,
+      "recent": 7,
       "trend": "up"
     },
     {
@@ -84,88 +84,88 @@
   ],
   "topicInsights": {
     "Anthropic": {
-      "stories": 315,
-      "recent": 63,
+      "stories": 322,
+      "recent": 64,
       "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 79,
-      "share": 27
+      "share": 26
     },
     "MCP / Agents": {
-      "stories": 281,
-      "recent": 49,
-      "trend": "down",
+      "stories": 290,
+      "recent": 54,
+      "trend": "flat",
       "busiestWeek": "2026-W20",
       "busiestCount": 65,
       "share": 24
     },
     "Funding / M&A": {
-      "stories": 185,
-      "recent": 30,
+      "stories": 190,
+      "recent": 32,
       "trend": "flat",
       "busiestWeek": "2026-W20",
       "busiestCount": 55,
       "share": 16
     },
     "Google / DeepMind": {
-      "stories": 117,
-      "recent": 22,
+      "stories": 119,
+      "recent": 21,
       "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 37,
       "share": 10
     },
     "OpenAI": {
-      "stories": 101,
-      "recent": 15,
+      "stories": 102,
+      "recent": 13,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 31,
-      "share": 9
+      "share": 8
     },
     "Coding tools": {
-      "stories": 96,
-      "recent": 16,
+      "stories": 100,
+      "recent": 18,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 25,
       "share": 8
     },
     "Microsoft": {
-      "stories": 93,
-      "recent": 11,
+      "stories": 94,
+      "recent": 12,
       "trend": "down",
       "busiestWeek": "2026-W23",
       "busiestCount": 24,
       "share": 8
     },
-    "Open source": {
-      "stories": 61,
-      "recent": 12,
-      "trend": "down",
-      "busiestWeek": "2026-W23",
-      "busiestCount": 22,
-      "share": 5
-    },
     "xAI / Grok": {
-      "stories": 60,
-      "recent": 19,
+      "stories": 63,
+      "recent": 20,
       "trend": "up",
       "busiestWeek": "2026-W24",
       "busiestCount": 14,
       "share": 5
     },
+    "Open source": {
+      "stories": 61,
+      "recent": 9,
+      "trend": "down",
+      "busiestWeek": "2026-W23",
+      "busiestCount": 22,
+      "share": 5
+    },
     "Meta": {
       "stories": 40,
-      "recent": 8,
-      "trend": "up",
+      "recent": 5,
+      "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 12,
       "share": 3
     },
     "Regulation": {
-      "stories": 35,
-      "recent": 8,
+      "stories": 36,
+      "recent": 7,
       "trend": "up",
       "busiestWeek": "2026-W22",
       "busiestCount": 9,
@@ -181,6 +181,378 @@
     }
   },
   "articles": [
+    {
+      "h": "Mythos 5 and Fable 5 restoration push goes to Washington on June 15 (see Top 3)",
+      "u": "https://www.anthropic.com/news/fable-mythos-access",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a4"
+    },
+    {
+      "h": "Claude Code v2.1.178 (June 15) adds parameter-level permission rules and nested skills loading",
+      "u": "https://code.claude.com/docs/en/changelog",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a5"
+    },
+    {
+      "h": "Anthropic statement holds: complying with the directive while working to restore access, no date",
+      "u": "https://www.anthropic.com/news/fable-mythos-access",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a6"
+    },
+    {
+      "h": "Agent security funding lands: Arcade 60M USD Series A for an action and authorization runtime (see Top 3)",
+      "u": "https://www.businesswire.com/news/home/20260615229631/en/Arcade-Raises-$60M-to-Become-the-Secure-Action-Layer-Behind-Every-Production-AI-Agent",
+      "topics": [
+        "MCP / Agents",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a7"
+    },
+    {
+      "h": "MCP 2026-07-28 spec stays in its release candidate, SDK validation window is open now",
+      "u": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a8"
+    },
+    {
+      "h": "Otherwise quiet for net-new agent frameworks and MCP servers",
+      "u": "",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a9"
+    },
+    {
+      "h": "Claude Code v2.1.178 (June 15): parameter-level permissions, nested skills (see Anthropic bucket)",
+      "u": "https://code.claude.com/docs/en/changelog",
+      "topics": [
+        "Anthropic",
+        "Coding tools"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a10"
+    },
+    {
+      "h": "GitHub Copilot usage metrics now blend server-side telemetry, raising reported active-user counts",
+      "u": "https://github.blog/changelog/2026-06-15-copilot-usage-metrics-now-include-more-of-your-active-users",
+      "topics": [
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a11"
+    },
+    {
+      "h": "Cursor, Cline, Aider, Replit, Devin, JetBrains AI quiet in the window",
+      "u": "",
+      "topics": [
+        "Coding tools"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a12"
+    },
+    {
+      "h": "ByteDance weighs a third domestic AI-chip supplier for Doubao inference (see Top 3)",
+      "u": "https://finance.yahoo.com/sectors/technology/articles/exclusive-bytedance-talks-chinas-iluvatar-031307014.html",
+      "topics": [
+        "Chips / Compute"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a13"
+    },
+    {
+      "h": "Mistral AI reportedly raising about 3B euro at a roughly 20B euro valuation",
+      "u": "https://finance.yahoo.com/sectors/technology/articles/mistral-ai-weighs-funding-23bn-091700112.html",
+      "topics": [
+        "Mistral",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a14"
+    },
+    {
+      "h": "xAI Grok V9-Medium still inside its mid-June release watch window, not confirmed shipped",
+      "u": "https://docs.x.ai/developers/release-notes",
+      "topics": [
+        "xAI / Grok"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a15"
+    },
+    {
+      "h": "No verified net-new flagship from OpenAI or Google in the window",
+      "u": "",
+      "topics": [
+        "OpenAI",
+        "Google / DeepMind"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a16"
+    },
+    {
+      "h": "IREN closes its Spain data-center acquisition, adding about 490MW of grid-connected AI power in Europe",
+      "u": "https://www.globenewswire.com/news-release/2026/06/15/3311680/0/en/IREN-Completes-Acquisition-of-Nostrum-Group-Expanding-AI-Cloud-Platform-to-Europe.html",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a17"
+    },
+    {
+      "h": "Arcade 60M USD Series A for an agent action layer (see Top 3)",
+      "u": "https://www.businesswire.com/news/home/20260615229631/en/Arcade-Raises-$60M-to-Become-the-Secure-Action-Layer-Behind-Every-Production-AI-Agent",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a18"
+    },
+    {
+      "h": "A10 Networks acquires TrojAI to build out model and agent security",
+      "u": "https://www.gurufocus.com/news/8916358/a10-networks-aten-acquires-trojai-to-enhance-ai-security",
+      "topics": [
+        "MCP / Agents",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a19"
+    },
+    {
+      "h": "Salesforce folds in Fin to deepen CRM AI [terms unconfirmed]",
+      "u": "https://www.gurufocus.com/news/8916850/salesforce-crm-boosting-ai-adoption-through-fin-acquisition",
+      "topics": [],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a20"
+    },
+    {
+      "h": "arXiv 2606.13705: editing a single neuron can break repetition loops in Gemma 4",
+      "u": "https://arxiv.org/abs/2606.13705",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a21"
+    },
+    {
+      "h": "arXiv 2606.13995: Dialogue SWE-Bench measures coding agents in multi-turn settings",
+      "u": "https://arxiv.org/abs/2606.13995",
+      "topics": [
+        "MCP / Agents",
+        "Coding tools",
+        "Open source"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a22"
+    },
+    {
+      "h": "arXiv 2606.13316: ReSum teaches models to compress their own reasoning with RL",
+      "u": "https://arxiv.org/abs/2606.13316",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a23"
+    },
+    {
+      "h": "arXiv 2606.13686: a safety benchmark for web agents facing deceptive e-commerce interfaces",
+      "u": "https://arxiv.org/abs/2606.13686",
+      "topics": [
+        "MCP / Agents",
+        "Open source"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a24"
+    },
+    {
+      "h": "Jackrong ships Qwopus3.6-27B coder and v2 with multi-token-prediction decoding [vendor benchmarks]",
+      "u": "https://huggingface.co/Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
+      "topics": [
+        "Anthropic",
+        "Coding tools",
+        "Open source"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a25"
+    },
+    {
+      "h": "xAI Grok V9-Medium, 1.5T params, reportedly trained on Cursor session data [Tier 2/3, LOW on date]",
+      "u": "https://docs.x.ai/developers/release-notes",
+      "topics": [
+        "xAI / Grok",
+        "Coding tools"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a26"
+    },
+    {
+      "h": "Mistral AI round at about 20B euro still in early talks [Tier 3, MEDIUM]",
+      "u": "https://finance.yahoo.com/sectors/technology/articles/mistral-ai-weighs-funding-23bn-091700112.html",
+      "topics": [
+        "Mistral"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a27"
+    },
+    {
+      "h": "Salesforce and Fin deal terms unconfirmed [Tier 3, MEDIUM]",
+      "u": "https://www.gurufocus.com/news/8916850/salesforce-crm-boosting-ai-adoption-through-fin-acquisition",
+      "topics": [],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a28"
+    },
+    {
+      "h": "Mythos 5 and Fable 5 restoration watch, no date set",
+      "u": "",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a29"
+    },
+    {
+      "h": "June 15 to 25: xAI Grok V9-Medium public-release window",
+      "u": "",
+      "topics": [
+        "xAI / Grok"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a30"
+    },
+    {
+      "h": "June, slated: Google Gemini 3.5 Pro general availability",
+      "u": "",
+      "topics": [
+        "Google / DeepMind"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a31"
+    },
+    {
+      "h": "June 30: Colorado AI Act takes effect",
+      "u": "",
+      "topics": [],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a32"
+    },
+    {
+      "h": "June 30: MCP Python SDK v2 beta target, July 28 final spec",
+      "u": "",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": false,
+      "aid": "a33"
+    },
+    {
+      "h": "Anthropic sends senior staff to the White House on June 15 to reverse the Mythos 5 and Fable 5 suspension, reporting ties the trigger to an Amazon warning",
+      "u": "",
+      "topics": [
+        "Anthropic",
+        "Amazon / AWS",
+        "Regulation"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": true,
+      "aid": "a1"
+    },
+    {
+      "h": "Arcade raises 60M USD for an agent authorization layer the same day A10 buys TrojAI, agent security is consolidating into its own stack",
+      "u": "",
+      "topics": [
+        "MCP / Agents",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": true,
+      "aid": "a2"
+    },
+    {
+      "h": "ByteDance in talks to add Iluvatar CoreX as a third domestic AI-chip supplier, about 50,000 inference GPUs this year for Doubao",
+      "u": "",
+      "topics": [
+        "Chips / Compute"
+      ],
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "lead": true,
+      "aid": "a3"
+    },
     {
       "h": "Fable 5 and Mythos 5 stay globally suspended, no restoration date, Anthropic calls the trigger a misunderstanding",
       "u": "https://www.anthropic.com/news/fable-mythos-access",
@@ -13719,8 +14091,8 @@
     },
     {
       "period": "2026-W25",
-      "signals": 34,
-      "briefs": 1
+      "signals": 67,
+      "briefs": 2
     }
   ],
   "monthly": [
@@ -13731,8 +14103,8 @@
     },
     {
       "period": "2026-06",
-      "signals": 416,
-      "briefs": 13
+      "signals": 449,
+      "briefs": 14
     }
   ],
   "topStoriesByWeek": {
@@ -14120,6 +14492,26 @@
         "aid": "a1"
       },
       {
+        "headline": "Anthropic sends senior staff to the White House on June 15 to reverse the Mythos 5 and Fable 5 suspension, reporting ties the trigger to an Amazon warning",
+        "topic": "Anthropic",
+        "why": "Why it matters: The fight has moved from whether a model is safe to who holds the kill switch. If a rival investor's security claim can pull a shipped frontier model and the lab has to lobby in person to restore it, every frontier deployment now carries a political recall risk priced by competitors and agencies, not just by the lab. Watch whether restoration comes with conditions, since those conditions become the template for the next suspension.",
+        "date": "2026-06-16",
+        "rank": 1,
+        "early": false,
+        "file": "briefs/2026-06-16.html",
+        "aid": "a1"
+      },
+      {
+        "headline": "Arcade raises 60M USD for an agent authorization layer the same day A10 buys TrojAI, agent security is consolidating into its own stack",
+        "topic": "Early signal",
+        "why": "Why it matters: The agent control plane is forming as a distinct layer before the agents themselves are standardized, the same sequence identity and access management followed for SaaS. Expect the platform owners (Anthropic, OpenAI, the clouds) to either acquire or ship native action gating within a few quarters, which compresses the window for independent startups like Arcade. If you are deploying agents, the buy-versus-wait decision on an auth layer is now live.",
+        "date": "2026-06-16",
+        "rank": 2,
+        "early": true,
+        "file": "briefs/2026-06-16.html",
+        "aid": "a2"
+      },
+      {
         "headline": "Claude Opus 4 and Sonnet 4 original API snapshots retire today, pinned integrations start erroring",
         "topic": "API",
         "why": "Why it matters: Production systems that hardcoded the May 2025 snapshots fail closed today, not gracefully. Pairing this with the Agent SDK billing cutover means June 15 is a double break point for Claude API integrators, the kind of dependency exposure that surfaces only when both land at once.",
@@ -14137,6 +14529,16 @@
         "rank": 3,
         "early": true,
         "file": "briefs/2026-06-15.html",
+        "aid": "a3"
+      },
+      {
+        "headline": "ByteDance in talks to add Iluvatar CoreX as a third domestic AI-chip supplier, about 50,000 inference GPUs this year for Doubao",
+        "topic": "Early signal",
+        "why": "Why it matters: Chinese labs are solving inference supply at home faster than training. If Doubao runs at scale on non-Nvidia silicon, the export-control lever weakens specifically for inference, where most production token volume lives, and Nvidia's addressable China inference market erodes regardless of what Washington allows next. Watch for a second large Chinese buyer signing with a domestic inference vendor, that confirms the shift from one-off to trend.",
+        "date": "2026-06-16",
+        "rank": 3,
+        "early": true,
+        "file": "briefs/2026-06-16.html",
         "aid": "a3"
       }
     ]
@@ -14268,6 +14670,33 @@
     ]
   },
   "briefs": [
+    {
+      "date": "2026-06-16",
+      "file": "briefs/2026-06-16.html",
+      "totalItems": 33,
+      "early": 2,
+      "topics": [
+        "MCP / Agents",
+        "Anthropic",
+        "Funding / M&A",
+        "Coding tools",
+        "xAI / Grok",
+        "Chips / Compute",
+        "Mistral",
+        "Google / DeepMind",
+        "Amazon / AWS",
+        "Regulation",
+        "Microsoft",
+        "OpenAI"
+      ],
+      "lead": "Anthropic sends senior staff to the White House on June 15 to reverse the Mythos 5 and Fable 5 suspension, reporting ties the trigger to an Amazon warning",
+      "leadTopic": "Anthropic",
+      "top3": [
+        "Anthropic sends senior staff to the White House on June 15 to reverse the Mythos 5 and Fable 5 suspension, reporting ties the trigger to an Amazon warning",
+        "Arcade raises 60M USD for an agent authorization layer the same day A10 buys TrojAI, agent security is consolidating into its own stack",
+        "ByteDance in talks to add Iluvatar CoreX as a third domestic AI-chip supplier, about 50,000 inference GPUs this year for Doubao"
+      ]
+    },
     {
       "date": "2026-06-15",
       "file": "briefs/2026-06-15.html",
