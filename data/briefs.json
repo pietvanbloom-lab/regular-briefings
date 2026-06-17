@@ -1,146 +1,146 @@
 {
-  "generated": "2026-06-16T04:14:49Z",
+  "generated": "2026-06-17T04:16:06Z",
   "summary": {
-    "totalBriefs": 34,
-    "totalSignals": 1217,
-    "totalEarly": 65,
+    "totalBriefs": 35,
+    "totalSignals": 1248,
+    "totalEarly": 67,
     "firstDate": "2026-05-09",
-    "lastDate": "2026-06-16",
-    "avgPerBrief": 35.8
+    "lastDate": "2026-06-17",
+    "avgPerBrief": 35.7
   },
   "hottest": [
     {
       "topic": "Anthropic",
-      "stories": 322,
-      "recent": 64,
+      "stories": 326,
+      "recent": 60,
       "trend": "up"
     },
     {
       "topic": "MCP / Agents",
-      "stories": 290,
-      "recent": 54,
-      "trend": "flat"
+      "stories": 299,
+      "recent": 59,
+      "trend": "up"
     },
     {
       "topic": "Funding / M&A",
-      "stories": 190,
-      "recent": 32,
-      "trend": "flat"
+      "stories": 193,
+      "recent": 28,
+      "trend": "down"
     },
     {
       "topic": "Google / DeepMind",
       "stories": 119,
-      "recent": 21,
-      "trend": "up"
-    },
-    {
-      "topic": "OpenAI",
-      "stories": 102,
-      "recent": 13,
+      "recent": 14,
       "trend": "down"
     },
     {
       "topic": "Coding tools",
-      "stories": 100,
-      "recent": 18,
+      "stories": 108,
+      "recent": 24,
+      "trend": "up"
+    },
+    {
+      "topic": "OpenAI",
+      "stories": 105,
+      "recent": 14,
       "trend": "down"
     },
     {
       "topic": "Microsoft",
-      "stories": 94,
-      "recent": 12,
+      "stories": 98,
+      "recent": 16,
       "trend": "down"
     },
     {
       "topic": "xAI / Grok",
-      "stories": 63,
+      "stories": 65,
       "recent": 20,
       "trend": "up"
     },
     {
       "topic": "Open source",
-      "stories": 61,
-      "recent": 9,
+      "stories": 65,
+      "recent": 11,
       "trend": "down"
     },
     {
       "topic": "Meta",
-      "stories": 40,
+      "stories": 41,
       "recent": 5,
       "trend": "down"
     },
     {
       "topic": "Regulation",
-      "stories": 36,
-      "recent": 7,
+      "stories": 37,
+      "recent": 8,
       "trend": "up"
     },
     {
       "topic": "Nvidia",
-      "stories": 31,
+      "stories": 32,
       "recent": 3,
       "trend": "down"
     }
   ],
   "topicInsights": {
     "Anthropic": {
-      "stories": 322,
-      "recent": 64,
+      "stories": 326,
+      "recent": 60,
       "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 79,
       "share": 26
     },
     "MCP / Agents": {
-      "stories": 290,
-      "recent": 54,
-      "trend": "flat",
+      "stories": 299,
+      "recent": 59,
+      "trend": "up",
       "busiestWeek": "2026-W20",
       "busiestCount": 65,
       "share": 24
     },
     "Funding / M&A": {
-      "stories": 190,
-      "recent": 32,
-      "trend": "flat",
+      "stories": 193,
+      "recent": 28,
+      "trend": "down",
       "busiestWeek": "2026-W20",
       "busiestCount": 55,
-      "share": 16
+      "share": 15
     },
     "Google / DeepMind": {
       "stories": 119,
-      "recent": 21,
-      "trend": "up",
+      "recent": 14,
+      "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 37,
       "share": 10
     },
+    "Coding tools": {
+      "stories": 108,
+      "recent": 24,
+      "trend": "up",
+      "busiestWeek": "2026-W21",
+      "busiestCount": 25,
+      "share": 9
+    },
     "OpenAI": {
-      "stories": 102,
-      "recent": 13,
+      "stories": 105,
+      "recent": 14,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 31,
       "share": 8
     },
-    "Coding tools": {
-      "stories": 100,
-      "recent": 18,
-      "trend": "down",
-      "busiestWeek": "2026-W21",
-      "busiestCount": 25,
-      "share": 8
-    },
     "Microsoft": {
-      "stories": 94,
-      "recent": 12,
+      "stories": 98,
+      "recent": 16,
       "trend": "down",
       "busiestWeek": "2026-W23",
       "busiestCount": 24,
       "share": 8
     },
     "xAI / Grok": {
-      "stories": 63,
+      "stories": 65,
       "recent": 20,
       "trend": "up",
       "busiestWeek": "2026-W24",
@@ -148,15 +148,15 @@
       "share": 5
     },
     "Open source": {
-      "stories": 61,
-      "recent": 9,
+      "stories": 65,
+      "recent": 11,
       "trend": "down",
       "busiestWeek": "2026-W23",
       "busiestCount": 22,
       "share": 5
     },
     "Meta": {
-      "stories": 40,
+      "stories": 41,
       "recent": 5,
       "trend": "down",
       "busiestWeek": "2026-W21",
@@ -164,15 +164,15 @@
       "share": 3
     },
     "Regulation": {
-      "stories": 36,
-      "recent": 7,
+      "stories": 37,
+      "recent": 8,
       "trend": "up",
       "busiestWeek": "2026-W22",
       "busiestCount": 9,
       "share": 3
     },
     "Nvidia": {
-      "stories": 31,
+      "stories": 32,
       "recent": 3,
       "trend": "down",
       "busiestWeek": "2026-W20",
@@ -181,6 +181,359 @@
     }
   },
   "articles": [
+    {
+      "h": "Anthropic research: in agentic coding, domain expertise beats coding background and session value rose about 27 percent",
+      "u": "https://www.anthropic.com/research/claude-code-expertise",
+      "topics": [
+        "Anthropic",
+        "MCP / Agents",
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a4"
+    },
+    {
+      "h": "Fable 5 and Mythos 5 export ban: engineers met Commerce on June 16 as the cyber-experts open letter crossed 100 signatures",
+      "u": "https://www.bloomberg.com/news/articles/2026-06-16/read-the-lutnick-letter-that-led-anthropic-to-disable-mythos",
+      "topics": [
+        "Anthropic",
+        "Regulation"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a5"
+    },
+    {
+      "h": "Claude Code reportedly adds nested sub-agents and a safe mode [release-tracker sourced]",
+      "u": "https://releasebot.io/updates/anthropic/claude-code",
+      "topics": [
+        "Anthropic",
+        "MCP / Agents"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a6"
+    },
+    {
+      "h": "Microsoft Work IQ APIs hit GA with a remote MCP server and A2A support (see Top 3)",
+      "u": "https://devblogs.microsoft.com/microsoft365dev/work-iq-production-ready-intelligence-for-every-agent/",
+      "topics": [
+        "MCP / Agents",
+        "Microsoft"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a7"
+    },
+    {
+      "h": "Nexxen opens its nexAI adtech platform to external agents via MCP and Agent-to-Agent",
+      "u": "https://www.exchangewire.com/blog/2026/06/16/nexxen-launches-mcp-agent-to-agent-based-ai-integrations-to-platform/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a8"
+    },
+    {
+      "h": "MCP official Go and TypeScript SDKs updated June 16 ahead of the July 28 spec",
+      "u": "https://github.com/modelcontextprotocol",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a9"
+    },
+    {
+      "h": "OX Security MCP STDIO command-execution advisory resurfaces with a June 16 dateline [original disclosure April]",
+      "u": "https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a10"
+    },
+    {
+      "h": "SpaceX to acquire Cursor maker Anysphere for about 60B USD all stock (see Top 3)",
+      "u": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/",
+      "topics": [
+        "Coding tools",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a11"
+    },
+    {
+      "h": "Cursor announces \"Origin,\" an agent-native Git hosting forge positioned against GitHub",
+      "u": "https://x.com/cursor_ai/status/2067012220832329782",
+      "topics": [
+        "MCP / Agents",
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a12"
+    },
+    {
+      "h": "GitHub Copilot CLI ships v1.0.63 [tracker sourced]",
+      "u": "https://www.havoptic.com/tools/github-copilot",
+      "topics": [
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a13"
+    },
+    {
+      "h": "xAI Grok V9-Medium begins public release, trained on Cursor data (see Top 3)",
+      "u": "https://www.techtimes.com/articles/318495/20260616/grok-v9-medium-arrives-spacex-seals-cursor-developers-face-model-choice-risk.htm",
+      "topics": [
+        "xAI / Grok",
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a14"
+    },
+    {
+      "h": "Meta superintelligence org morale cracks as Zuckerberg admits restructuring \"mistakes\"",
+      "u": "https://www.entrepreneur.com/business-news/mark-zuckerberg-admits-meta-made-mistakes",
+      "topics": [
+        "Meta"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a15"
+    },
+    {
+      "h": "FT audit finds Mistral's Le Chat repeating Russian disinformation",
+      "u": "https://cryptobriefing.com/mistral-le-chat-russian-disinformation-audit/",
+      "topics": [
+        "Mistral"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a16"
+    },
+    {
+      "h": "OpenAI GPT-5.6 framed as a \"meaningful\" leap but still unreleased",
+      "u": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a17"
+    },
+    {
+      "h": "Coherent and Nvidia break ground on a Sherman, Texas indium phosphide fab, plus up to 50M USD CHIPS letter of intent",
+      "u": "https://blogs.nvidia.com/blog/coherent-texas-ai-optical/",
+      "topics": [
+        "Nvidia",
+        "Chips / Compute"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a18"
+    },
+    {
+      "h": "ContraVault AI raises a 3.1M USD pre-Series A for AI procurement and bid intelligence",
+      "u": "https://entrackr.com/snippets/contravault-ai-raises-31-mn-in-pre-series-a-round-led-by-chiratae-ventures-12043985",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a19"
+    },
+    {
+      "h": "Microsoft ships seven first-party MAI models across Azure, Copilot, and VS Code [aggregator sourced]",
+      "u": "https://llm-stats.com/llm-updates",
+      "topics": [
+        "Microsoft"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a20"
+    },
+    {
+      "h": "GLM 5.2 open weights expected to land this week under an MIT license",
+      "u": "https://huggingface.co/zai-org/GLM-5.2",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a21"
+    },
+    {
+      "h": "SWE-bench Verified leaderboard credibility flagged as Claude Fable 5 leads at 95.0 percent",
+      "u": "https://www.digitalapplied.com/blog/swe-bench-verified-june-2026-benchmark-vs-scaffolding-analysis",
+      "topics": [
+        "Anthropic",
+        "Open source"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a22"
+    },
+    {
+      "h": "Chinese open-weight models hold five of the top ten HuggingFace trending slots",
+      "u": "https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a23"
+    },
+    {
+      "h": "OpenAI GPT-5.6 imminent, no confirmed date [Tier 2, MEDIUM]",
+      "u": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a24"
+    },
+    {
+      "h": "GLM 5.2 open-weights drop timing unverified [Tier 1/2, MEDIUM]",
+      "u": "https://huggingface.co/zai-org/GLM-5.2",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a25"
+    },
+    {
+      "h": "Cursor Origin product details unverified until the fall launch [Tier 1 announce, details LOW]",
+      "u": "https://x.com/cursor_ai/status/2067012220832329782",
+      "topics": [
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a26"
+    },
+    {
+      "h": "SpaceX and Cursor merger integration watch, Q3 2026 close",
+      "u": "",
+      "topics": [
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a27"
+    },
+    {
+      "h": "OpenAI GPT-5.6 launch window, markets favor June 22 to 28",
+      "u": "",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a28"
+    },
+    {
+      "h": "GLM 5.2 open weights, week of June 16 to 22",
+      "u": "",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a29"
+    },
+    {
+      "h": "June 30: Colorado AI Act takes effect",
+      "u": "",
+      "topics": [],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a30"
+    },
+    {
+      "h": "June 30 beta target, July 28 final: MCP stateless-core spec",
+      "u": "",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": false,
+      "aid": "a31"
+    },
+    {
+      "h": "SpaceX signs a binding 60B USD all-stock merger to buy Cursor maker Anysphere, days after Cursor's IPO",
+      "u": "",
+      "topics": [
+        "Coding tools",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": true,
+      "aid": "a1"
+    },
+    {
+      "h": "xAI begins public release of Grok V9-Medium on June 16, a 1.5T-param coding model trained on Cursor developer workflows",
+      "u": "",
+      "topics": [
+        "xAI / Grok",
+        "Coding tools"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": true,
+      "aid": "a2"
+    },
+    {
+      "h": "Microsoft Work IQ APIs reach general availability on June 16, the M365 agent intelligence layer starts metering and ships a remote MCP server",
+      "u": "",
+      "topics": [
+        "MCP / Agents",
+        "Microsoft"
+      ],
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "lead": true,
+      "aid": "a3"
+    },
     {
       "h": "Mythos 5 and Fable 5 restoration push goes to Washington on June 15 (see Top 3)",
       "u": "https://www.anthropic.com/news/fable-mythos-access",
@@ -14091,8 +14444,8 @@
     },
     {
       "period": "2026-W25",
-      "signals": 67,
-      "briefs": 2
+      "signals": 98,
+      "briefs": 3
     }
   ],
   "monthly": [
@@ -14103,8 +14456,8 @@
     },
     {
       "period": "2026-06",
-      "signals": 449,
-      "briefs": 14
+      "signals": 480,
+      "briefs": 15
     }
   ],
   "topStoriesByWeek": {
@@ -14502,6 +14855,16 @@
         "aid": "a1"
       },
       {
+        "headline": "SpaceX signs a binding 60B USD all-stock merger to buy Cursor maker Anysphere, days after Cursor's IPO",
+        "topic": "M&A",
+        "why": "Why it matters: A rocket company now owns the most-used AI editor and a frontier model lab under one roof, a vertical integration of distribution, developer data, and model training that no other coding tool can match. Cursor is also one of the largest external buyers of Claude and GPT inference, so its new owner gains a seat to redirect that demand toward Grok over time. Watch the post-close model-access terms in Cursor, that is where the conflict between owning xAI and reselling rival models gets decided.",
+        "date": "2026-06-17",
+        "rank": 1,
+        "early": false,
+        "file": "briefs/2026-06-17.html",
+        "aid": "a1"
+      },
+      {
         "headline": "Arcade raises 60M USD for an agent authorization layer the same day A10 buys TrojAI, agent security is consolidating into its own stack",
         "topic": "Early signal",
         "why": "Why it matters: The agent control plane is forming as a distinct layer before the agents themselves are standardized, the same sequence identity and access management followed for SaaS. Expect the platform owners (Anthropic, OpenAI, the clouds) to either acquire or ship native action gating within a few quarters, which compresses the window for independent startups like Arcade. If you are deploying agents, the buy-versus-wait decision on an auth layer is now live.",
@@ -14509,6 +14872,16 @@
         "rank": 2,
         "early": true,
         "file": "briefs/2026-06-16.html",
+        "aid": "a2"
+      },
+      {
+        "headline": "xAI begins public release of Grok V9-Medium on June 16, a 1.5T-param coding model trained on Cursor developer workflows",
+        "topic": "Early signal",
+        "why": "Why it matters: The training data tells the story: xAI sharpened a coding model on the exact editor SpaceX just bought, so the loop of editor, usage data, and house model is now closed inside one owner. If Grok V9-Medium lands near Claude on real coding tasks, Anthropic loses its clearest single moat (frontier coding) to a rival that controls a top distribution surface. Watch independent SWE-bench and harness results over the next two weeks, the vendor framing leads the verified numbers.",
+        "date": "2026-06-17",
+        "rank": 2,
+        "early": true,
+        "file": "briefs/2026-06-17.html",
         "aid": "a2"
       },
       {
@@ -14520,26 +14893,6 @@
         "early": false,
         "file": "briefs/2026-06-15.html",
         "aid": "a2"
-      },
-      {
-        "headline": "Open-weight coding models now drop faster than stable inference tooling can absorb them",
-        "topic": "Early signal",
-        "why": "Why it matters: The bottleneck for open-weight adoption is shifting from model quality to inference-engine readiness. Teams that can compile from PRs or run nightlies get a multi-week head start on frontier open weights, a widening gap between tooling-fluent shops and everyone waiting for a stable tag.",
-        "date": "2026-06-15",
-        "rank": 3,
-        "early": true,
-        "file": "briefs/2026-06-15.html",
-        "aid": "a3"
-      },
-      {
-        "headline": "ByteDance in talks to add Iluvatar CoreX as a third domestic AI-chip supplier, about 50,000 inference GPUs this year for Doubao",
-        "topic": "Early signal",
-        "why": "Why it matters: Chinese labs are solving inference supply at home faster than training. If Doubao runs at scale on non-Nvidia silicon, the export-control lever weakens specifically for inference, where most production token volume lives, and Nvidia's addressable China inference market erodes regardless of what Washington allows next. Watch for a second large Chinese buyer signing with a domestic inference vendor, that confirms the shift from one-off to trend.",
-        "date": "2026-06-16",
-        "rank": 3,
-        "early": true,
-        "file": "briefs/2026-06-16.html",
-        "aid": "a3"
       }
     ]
   },
@@ -14670,6 +15023,34 @@
     ]
   },
   "briefs": [
+    {
+      "date": "2026-06-17",
+      "file": "briefs/2026-06-17.html",
+      "totalItems": 31,
+      "early": 2,
+      "topics": [
+        "MCP / Agents",
+        "Coding tools",
+        "Microsoft",
+        "Anthropic",
+        "Open source",
+        "Funding / M&A",
+        "OpenAI",
+        "xAI / Grok",
+        "Regulation",
+        "Meta",
+        "Mistral",
+        "Nvidia",
+        "Chips / Compute"
+      ],
+      "lead": "SpaceX signs a binding 60B USD all-stock merger to buy Cursor maker Anysphere, days after Cursor's IPO",
+      "leadTopic": "M&A",
+      "top3": [
+        "SpaceX signs a binding 60B USD all-stock merger to buy Cursor maker Anysphere, days after Cursor's IPO",
+        "xAI begins public release of Grok V9-Medium on June 16, a 1.5T-param coding model trained on Cursor developer workflows",
+        "Microsoft Work IQ APIs reach general availability on June 16, the M365 agent intelligence layer starts metering and ships a remote MCP server"
+      ]
+    },
     {
       "date": "2026-06-16",
       "file": "briefs/2026-06-16.html",
