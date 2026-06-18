@@ -1,67 +1,67 @@
 {
-  "generated": "2026-06-17T04:16:06Z",
+  "generated": "2026-06-18T04:16:20Z",
   "summary": {
-    "totalBriefs": 35,
-    "totalSignals": 1248,
-    "totalEarly": 67,
+    "totalBriefs": 36,
+    "totalSignals": 1281,
+    "totalEarly": 69,
     "firstDate": "2026-05-09",
-    "lastDate": "2026-06-17",
-    "avgPerBrief": 35.7
+    "lastDate": "2026-06-18",
+    "avgPerBrief": 35.6
   },
   "hottest": [
     {
       "topic": "Anthropic",
-      "stories": 326,
-      "recent": 60,
-      "trend": "up"
+      "stories": 329,
+      "recent": 48,
+      "trend": "down"
     },
     {
       "topic": "MCP / Agents",
-      "stories": 299,
-      "recent": 59,
+      "stories": 306,
+      "recent": 58,
       "trend": "up"
     },
     {
       "topic": "Funding / M&A",
-      "stories": 193,
+      "stories": 196,
       "recent": 28,
-      "trend": "down"
+      "trend": "flat"
     },
     {
       "topic": "Google / DeepMind",
-      "stories": 119,
-      "recent": 14,
-      "trend": "down"
-    },
-    {
-      "topic": "Coding tools",
-      "stories": 108,
-      "recent": 24,
-      "trend": "up"
-    },
-    {
-      "topic": "OpenAI",
-      "stories": 105,
-      "recent": 14,
-      "trend": "down"
-    },
-    {
-      "topic": "Microsoft",
-      "stories": 98,
+      "stories": 124,
       "recent": 16,
       "trend": "down"
     },
     {
-      "topic": "xAI / Grok",
-      "stories": 65,
-      "recent": 20,
+      "topic": "Coding tools",
+      "stories": 110,
+      "recent": 22,
+      "trend": "up"
+    },
+    {
+      "topic": "OpenAI",
+      "stories": 110,
+      "recent": 17,
+      "trend": "down"
+    },
+    {
+      "topic": "Microsoft",
+      "stories": 103,
+      "recent": 17,
       "trend": "up"
     },
     {
       "topic": "Open source",
-      "stories": 65,
-      "recent": 11,
+      "stories": 69,
+      "recent": 15,
       "trend": "down"
+    },
+    {
+      "topic": "xAI / Grok",
+      "stories": 66,
+      "recent": 20,
+      "trend": "up"
     },
     {
       "topic": "Meta",
@@ -84,75 +84,75 @@
   ],
   "topicInsights": {
     "Anthropic": {
-      "stories": 326,
-      "recent": 60,
-      "trend": "up",
+      "stories": 329,
+      "recent": 48,
+      "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 79,
       "share": 26
     },
     "MCP / Agents": {
-      "stories": 299,
-      "recent": 59,
+      "stories": 306,
+      "recent": 58,
       "trend": "up",
       "busiestWeek": "2026-W20",
       "busiestCount": 65,
       "share": 24
     },
     "Funding / M&A": {
-      "stories": 193,
+      "stories": 196,
       "recent": 28,
-      "trend": "down",
+      "trend": "flat",
       "busiestWeek": "2026-W20",
       "busiestCount": 55,
       "share": 15
     },
     "Google / DeepMind": {
-      "stories": 119,
-      "recent": 14,
+      "stories": 124,
+      "recent": 16,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 37,
       "share": 10
     },
     "Coding tools": {
-      "stories": 108,
-      "recent": 24,
+      "stories": 110,
+      "recent": 22,
       "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 25,
       "share": 9
     },
     "OpenAI": {
-      "stories": 105,
-      "recent": 14,
+      "stories": 110,
+      "recent": 17,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 31,
-      "share": 8
+      "share": 9
     },
     "Microsoft": {
-      "stories": 98,
-      "recent": 16,
-      "trend": "down",
+      "stories": 103,
+      "recent": 17,
+      "trend": "up",
       "busiestWeek": "2026-W23",
       "busiestCount": 24,
       "share": 8
     },
+    "Open source": {
+      "stories": 69,
+      "recent": 15,
+      "trend": "down",
+      "busiestWeek": "2026-W23",
+      "busiestCount": 22,
+      "share": 5
+    },
     "xAI / Grok": {
-      "stories": 65,
+      "stories": 66,
       "recent": 20,
       "trend": "up",
       "busiestWeek": "2026-W24",
       "busiestCount": 14,
-      "share": 5
-    },
-    "Open source": {
-      "stories": 65,
-      "recent": 11,
-      "trend": "down",
-      "busiestWeek": "2026-W23",
-      "busiestCount": 22,
       "share": 5
     },
     "Meta": {
@@ -177,10 +177,381 @@
       "trend": "down",
       "busiestWeek": "2026-W20",
       "busiestCount": 9,
-      "share": 3
+      "share": 2
     }
   },
   "articles": [
+    {
+      "h": "Claude Code 2.1.179 ships on June 17, preserves partial responses on mid-stream connection drops and fixes subagent transcript and focus bugs",
+      "u": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "topics": [
+        "Anthropic",
+        "MCP / Agents"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a4"
+    },
+    {
+      "h": "Fable 5 and Mythos 5 remain suspended as of June 17 to 18, no restoration date, the 48-hour return claim is an unverified social post",
+      "u": "https://www.anthropic.com/news/fable-mythos-access",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a5"
+    },
+    {
+      "h": "Agentic Resource Discovery (ARD) open spec launches across five vendors (see Top 3)",
+      "u": "https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a6"
+    },
+    {
+      "h": "GitHub ships Agent Finder for Copilot on June 17, the first production ARD implementation",
+      "u": "https://github.blog/changelog/2026-06-17-agent-finder-for-github-copilot-now-available/",
+      "topics": [
+        "MCP / Agents",
+        "Microsoft"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a7"
+    },
+    {
+      "h": "Google publishes A2UI plus MCP Apps integration patterns for agentic UIs on June 17",
+      "u": "https://developers.googleblog.com/a2ui-and-mcp-apps/",
+      "topics": [
+        "Google / DeepMind",
+        "MCP / Agents"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a8"
+    },
+    {
+      "h": "Official MCP SDKs quiet in the window, no new release June 17 to 18",
+      "u": "https://github.com/modelcontextprotocol",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a9"
+    },
+    {
+      "h": "GitHub Copilot desktop app reaches general availability on June 17 across macOS, Windows, and Linux",
+      "u": "https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/",
+      "topics": [
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a10"
+    },
+    {
+      "h": "Copilot Chat Auto model selection goes GA for all plans on June 17, billed at a 10 percent discount",
+      "u": "https://github.blog/changelog/2026-06-17-auto-mode-in-copilot-chat-available-for-all-users/",
+      "topics": [
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a11"
+    },
+    {
+      "h": "GitHub reopens Copilot individual plan sign-ups on June 17 with incremental upgrade billing",
+      "u": "https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/",
+      "topics": [
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a12"
+    },
+    {
+      "h": "Google shuts off Gemini Code Assist for individuals and consumer tiers on June 18, steering users to Antigravity",
+      "u": "https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals",
+      "topics": [
+        "Google / DeepMind",
+        "Coding tools"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a13"
+    },
+    {
+      "h": "xAI releases Grok Imagine Video 1.5 on June 17, tops the Image-to-Video Arena and undercuts Sora 2 Pro by about 86 percent",
+      "u": "https://x.ai/news/grok-imagine-video-1-5",
+      "topics": [
+        "xAI / Grok"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a14"
+    },
+    {
+      "h": "OpenAI deployment-simulation safety research published (see Top 3)",
+      "u": "https://openai.com/index/deployment-simulation/",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a15"
+    },
+    {
+      "h": "Google completes the Gemini 2.5 Flash and Pro deprecation on June 17",
+      "u": "https://ai.google.dev/gemini-api/docs/changelog",
+      "topics": [
+        "Google / DeepMind"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a16"
+    },
+    {
+      "h": "OpenAI GPT-5.6 still unreleased as of June 18, markets favor a June 22 to 28 launch",
+      "u": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a17"
+    },
+    {
+      "h": "Odyssey raises 310M USD Series B at a 1.45B USD valuation for AI world models",
+      "u": "https://theaiinsider.tech/2026/06/18/world-models-startup-odyssey-raises-310m-in-series-b-funding-valued-at-1-45b/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a18"
+    },
+    {
+      "h": "XDOF exits stealth on June 17 with 70M USD for robot training-data infrastructure",
+      "u": "https://techcrunch.com/2026/06/17/collecting-robot-training-data-is-dirty-unglamorous-work-some-ai-labs-are-already-paying-xdof-to-do-it/",
+      "topics": [
+        "Robotics"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a19"
+    },
+    {
+      "h": "Flux raises 5M USD seed for code-first engineering intelligence",
+      "u": "https://theaiinsider.tech/2026/06/17/flux-announces-5m-in-funding-to-give-engineering-leaders-ground-truth-visibility-in-the-age-of-ai/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a20"
+    },
+    {
+      "h": "SpaceX discloses the 60B USD Anysphere (Cursor) merger in a June 17 SEC 8-K",
+      "u": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/",
+      "topics": [
+        "Coding tools"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a21"
+    },
+    {
+      "h": "Maritime Robotics raises 28M EUR to expand autonomous sea-drone systems",
+      "u": "https://theaiinsider.tech/2026/06/18/maritime-robotics-raises-e28m-in-funding-to-expand-its-autonomous-sea-drone-systems/",
+      "topics": [
+        "Funding / M&A",
+        "Robotics"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a22"
+    },
+    {
+      "h": "GLM-5.2 MIT open weights go live with first official benchmarks (see Top 3)",
+      "u": "https://huggingface.co/zai-org/GLM-5.2",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a23"
+    },
+    {
+      "h": "Chinese open-weight models keep five of the top ten Hugging Face trending slots, DeepSeek V4.1 Flash at number one",
+      "u": "https://huggingface.co/models?sort=trending",
+      "topics": [
+        "DeepSeek",
+        "Open source"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a24"
+    },
+    {
+      "h": "Quiet day for standout research papers in the window",
+      "u": "https://huggingface.co/papers/date/2026-06-17",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a25"
+    },
+    {
+      "h": "OpenAI GPT-5.6 imminent, no confirmed date [Tier 2/3, MEDIUM]",
+      "u": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a26"
+    },
+    {
+      "h": "Fable 5 and Mythos 5 48-hour return claim unverified [Tier 3, LOW]",
+      "u": "https://www.anthropic.com/news/fable-mythos-access",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a27"
+    },
+    {
+      "h": "Capital rotating into physical AI and world models [Tier 2, MEDIUM]",
+      "u": "https://techcrunch.com/2026/06/17/collecting-robot-training-data-is-dirty-unglamorous-work-some-ai-labs-are-already-paying-xdof-to-do-it/",
+      "topics": [],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a28"
+    },
+    {
+      "h": "OpenAI GPT-5.6 launch window, markets favor June 22 to 28",
+      "u": "",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a29"
+    },
+    {
+      "h": "Gemini Code Assist for individuals fully sunset, effective June 18",
+      "u": "",
+      "topics": [
+        "Google / DeepMind"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a30"
+    },
+    {
+      "h": "SpaceX and Cursor merger integration watch, Q3 2026 close",
+      "u": "",
+      "topics": [
+        "Coding tools"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a31"
+    },
+    {
+      "h": "June 30: Colorado AI Act takes effect",
+      "u": "",
+      "topics": [],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a32"
+    },
+    {
+      "h": "June 30 beta target, July 28 final: MCP stateless-core spec",
+      "u": "",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": false,
+      "aid": "a33"
+    },
+    {
+      "h": "Google, Microsoft, GitHub, GoDaddy, and Hugging Face launch the Agentic Resource Discovery (ARD) spec on June 17, an open standard for finding and verifying agents, MCP servers, and tools",
+      "u": "",
+      "topics": [
+        "Google / DeepMind",
+        "MCP / Agents",
+        "Microsoft",
+        "Open source"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": true,
+      "aid": "a1"
+    },
+    {
+      "h": "Z.ai puts GLM-5.2 MIT-licensed open weights live on Hugging Face on June 17, now the top open model you can download with Code Arena rank 2",
+      "u": "",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": true,
+      "aid": "a2"
+    },
+    {
+      "h": "OpenAI publishes a deployment-simulation method on June 16 to 17 that replays about 1.3M past conversations to predict model misbehavior before release",
+      "u": "",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "lead": true,
+      "aid": "a3"
+    },
     {
       "h": "Anthropic research: in agentic coding, domain expertise beats coding background and session value rose about 27 percent",
       "u": "https://www.anthropic.com/research/claude-code-expertise",
@@ -14444,8 +14815,8 @@
     },
     {
       "period": "2026-W25",
-      "signals": 98,
-      "briefs": 3
+      "signals": 131,
+      "briefs": 4
     }
   ],
   "monthly": [
@@ -14456,8 +14827,8 @@
     },
     {
       "period": "2026-06",
-      "signals": 480,
-      "briefs": 15
+      "signals": 513,
+      "briefs": 16
     }
   ],
   "topStoriesByWeek": {
@@ -14835,6 +15206,16 @@
     ],
     "2026-W25": [
       {
+        "headline": "Google, Microsoft, GitHub, GoDaddy, and Hugging Face launch the Agentic Resource Discovery (ARD) spec on June 17, an open standard for finding and verifying agents, MCP servers, and tools",
+        "topic": "Early signal",
+        "why": "Why it matters: The agent stack just got its discovery-and-trust layer, and five rivals agreed on it at once. An agent could already speak MCP but had no trusted way to find which servers, skills, or agents exist beyond its own config, so ARD turns discovery from hand-wiring into search with domain ownership as the trust anchor. GitHub shipped the first client the same day via Agent Finder in Copilot. Watch whether Anthropic, the MCP steward, endorses or works around ARD before the July 28 stateless-core spec, that choice decides whether agent discovery converges or splinters.",
+        "date": "2026-06-18",
+        "rank": 1,
+        "early": true,
+        "file": "briefs/2026-06-18.html",
+        "aid": "a1"
+      },
+      {
         "headline": "Claude Agent SDK billing split goes live today: automated workloads leave Pro and Max pools onto a separate metered credit",
         "topic": "Anthropic",
         "why": "Why it matters: Any team running scheduled or CI-driven Claude agents on a subscription seat can hit a hard stop mid-job today without warning. This is the first time Anthropic has carved automated agent usage into its own meter, a template other labs will copy as agent traffic outgrows human-seat pricing.",
@@ -14882,16 +15263,6 @@
         "rank": 2,
         "early": true,
         "file": "briefs/2026-06-17.html",
-        "aid": "a2"
-      },
-      {
-        "headline": "Claude Opus 4 and Sonnet 4 original API snapshots retire today, pinned integrations start erroring",
-        "topic": "API",
-        "why": "Why it matters: Production systems that hardcoded the May 2025 snapshots fail closed today, not gracefully. Pairing this with the Agent SDK billing cutover means June 15 is a double break point for Claude API integrators, the kind of dependency exposure that surfaces only when both land at once.",
-        "date": "2026-06-15",
-        "rank": 2,
-        "early": false,
-        "file": "briefs/2026-06-15.html",
         "aid": "a2"
       }
     ]
@@ -15001,6 +15372,16 @@
         "aid": "a1"
       },
       {
+        "headline": "Google, Microsoft, GitHub, GoDaddy, and Hugging Face launch the Agentic Resource Discovery (ARD) spec on June 17, an open standard for finding and verifying agents, MCP servers, and tools",
+        "topic": "Early signal",
+        "why": "Why it matters: The agent stack just got its discovery-and-trust layer, and five rivals agreed on it at once. An agent could already speak MCP but had no trusted way to find which servers, skills, or agents exist beyond its own config, so ARD turns discovery from hand-wiring into search with domain ownership as the trust anchor. GitHub shipped the first client the same day via Agent Finder in Copilot. Watch whether Anthropic, the MCP steward, endorses or works around ARD before the July 28 stateless-core spec, that choice decides whether agent discovery converges or splinters.",
+        "date": "2026-06-18",
+        "rank": 1,
+        "early": true,
+        "file": "briefs/2026-06-18.html",
+        "aid": "a1"
+      },
+      {
         "headline": "Anthropic confidentially files a draft S-1 with the SEC, opening the path to an IPO at a roughly $965B valuation",
         "topic": "AI Business",
         "why": "Why this matters before others see it: This is the most concrete step yet toward a public listing for the highest-valued AI lab, and it changes the disclosure regime around frontier AI economics. Once the S-1 goes public, the market gets its first audited look at gross margin, inference cost structure, and customer concentration for a pure-play frontier lab, numbers that until now have only leaked. The second-order effect is competitive pressure: reporting says OpenAI is readying its own confidential filing, so the fall could bring a dual AI-lab IPO race that forces both to compete on financial transparency, not just benchmarks. Watch for the public S-1 unredaction, the implied compute and capex commitments, and how the disclosed margin profile reprices private AI rounds.",
@@ -15009,20 +15390,36 @@
         "early": false,
         "file": "briefs/2026-06-02.html",
         "aid": "a1"
-      },
-      {
-        "headline": "NVIDIA Nemotron 3 Ultra weights go live on HuggingFace: 550B total, 55B active, now the top US open-weights model",
-        "topic": "Open Source",
-        "why": "Why this matters before others see it: The US open-weights lead now sits with a chip vendor, not a model lab, and the pitch is speed per unit intelligence for long-running agents, not raw score. Expect agent builders to benchmark Nemotron against Kimi K2.6 on cost-to-serve within two weeks, and watch whether labs respond by shipping their own open weights.",
-        "date": "2026-06-05",
-        "rank": 1,
-        "early": false,
-        "file": "briefs/2026-06-05.html",
-        "aid": "a1"
       }
     ]
   },
   "briefs": [
+    {
+      "date": "2026-06-18",
+      "file": "briefs/2026-06-18.html",
+      "totalItems": 33,
+      "early": 2,
+      "topics": [
+        "MCP / Agents",
+        "Google / DeepMind",
+        "Microsoft",
+        "OpenAI",
+        "Open source",
+        "Anthropic",
+        "Funding / M&A",
+        "Robotics",
+        "Coding tools",
+        "xAI / Grok",
+        "DeepSeek"
+      ],
+      "lead": "Google, Microsoft, GitHub, GoDaddy, and Hugging Face launch the Agentic Resource Discovery (ARD) spec on June 17, an open standard for finding and verifying agents, MCP servers, and tools",
+      "leadTopic": "Early signal",
+      "top3": [
+        "Google, Microsoft, GitHub, GoDaddy, and Hugging Face launch the Agentic Resource Discovery (ARD) spec on June 17, an open standard for finding and verifying agents, MCP servers, and tools",
+        "Z.ai puts GLM-5.2 MIT-licensed open weights live on Hugging Face on June 17, now the top open model you can download with Code Arena rank 2",
+        "OpenAI publishes a deployment-simulation method on June 16 to 17 that replays about 1.3M past conversations to predict model misbehavior before release"
+      ]
+    },
     {
       "date": "2026-06-17",
       "file": "briefs/2026-06-17.html",
