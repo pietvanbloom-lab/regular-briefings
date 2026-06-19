@@ -1,146 +1,146 @@
 {
-  "generated": "2026-06-18T04:16:20Z",
+  "generated": "2026-06-19T04:19:16Z",
   "summary": {
-    "totalBriefs": 36,
-    "totalSignals": 1281,
-    "totalEarly": 69,
+    "totalBriefs": 37,
+    "totalSignals": 1320,
+    "totalEarly": 72,
     "firstDate": "2026-05-09",
-    "lastDate": "2026-06-18",
-    "avgPerBrief": 35.6
+    "lastDate": "2026-06-19",
+    "avgPerBrief": 35.7
   },
   "hottest": [
     {
       "topic": "Anthropic",
-      "stories": 329,
-      "recent": 48,
+      "stories": 336,
+      "recent": 45,
       "trend": "down"
     },
     {
       "topic": "MCP / Agents",
-      "stories": 306,
-      "recent": 58,
+      "stories": 315,
+      "recent": 57,
       "trend": "up"
     },
     {
       "topic": "Funding / M&A",
-      "stories": 196,
+      "stories": 200,
       "recent": 28,
-      "trend": "flat"
+      "trend": "down"
     },
     {
       "topic": "Google / DeepMind",
-      "stories": 124,
-      "recent": 16,
+      "stories": 126,
+      "recent": 15,
       "trend": "down"
-    },
-    {
-      "topic": "Coding tools",
-      "stories": 110,
-      "recent": 22,
-      "trend": "up"
     },
     {
       "topic": "OpenAI",
-      "stories": 110,
-      "recent": 17,
-      "trend": "down"
+      "stories": 115,
+      "recent": 20,
+      "trend": "flat"
+    },
+    {
+      "topic": "Coding tools",
+      "stories": 111,
+      "recent": 20,
+      "trend": "flat"
     },
     {
       "topic": "Microsoft",
-      "stories": 103,
-      "recent": 17,
+      "stories": 107,
+      "recent": 19,
       "trend": "up"
     },
     {
       "topic": "Open source",
-      "stories": 69,
+      "stories": 71,
       "recent": 15,
       "trend": "down"
     },
     {
       "topic": "xAI / Grok",
       "stories": 66,
-      "recent": 20,
-      "trend": "up"
+      "recent": 16,
+      "trend": "flat"
     },
     {
       "topic": "Meta",
       "stories": 41,
-      "recent": 5,
+      "recent": 4,
       "trend": "down"
     },
     {
       "topic": "Regulation",
       "stories": 37,
-      "recent": 8,
+      "recent": 7,
       "trend": "up"
     },
     {
       "topic": "Nvidia",
-      "stories": 32,
-      "recent": 3,
-      "trend": "down"
+      "stories": 34,
+      "recent": 4,
+      "trend": "flat"
     }
   ],
   "topicInsights": {
     "Anthropic": {
-      "stories": 329,
-      "recent": 48,
+      "stories": 336,
+      "recent": 45,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 79,
-      "share": 26
+      "share": 25
     },
     "MCP / Agents": {
-      "stories": 306,
-      "recent": 58,
+      "stories": 315,
+      "recent": 57,
       "trend": "up",
       "busiestWeek": "2026-W20",
       "busiestCount": 65,
       "share": 24
     },
     "Funding / M&A": {
-      "stories": 196,
+      "stories": 200,
       "recent": 28,
-      "trend": "flat",
+      "trend": "down",
       "busiestWeek": "2026-W20",
       "busiestCount": 55,
       "share": 15
     },
     "Google / DeepMind": {
-      "stories": 124,
-      "recent": 16,
+      "stories": 126,
+      "recent": 15,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 37,
       "share": 10
     },
-    "Coding tools": {
-      "stories": 110,
-      "recent": 22,
-      "trend": "up",
-      "busiestWeek": "2026-W21",
-      "busiestCount": 25,
-      "share": 9
-    },
     "OpenAI": {
-      "stories": 110,
-      "recent": 17,
-      "trend": "down",
+      "stories": 115,
+      "recent": 20,
+      "trend": "flat",
       "busiestWeek": "2026-W21",
       "busiestCount": 31,
       "share": 9
     },
+    "Coding tools": {
+      "stories": 111,
+      "recent": 20,
+      "trend": "flat",
+      "busiestWeek": "2026-W21",
+      "busiestCount": 25,
+      "share": 8
+    },
     "Microsoft": {
-      "stories": 103,
-      "recent": 17,
+      "stories": 107,
+      "recent": 19,
       "trend": "up",
       "busiestWeek": "2026-W23",
       "busiestCount": 24,
       "share": 8
     },
     "Open source": {
-      "stories": 69,
+      "stories": 71,
       "recent": 15,
       "trend": "down",
       "busiestWeek": "2026-W23",
@@ -149,15 +149,15 @@
     },
     "xAI / Grok": {
       "stories": 66,
-      "recent": 20,
-      "trend": "up",
+      "recent": 16,
+      "trend": "flat",
       "busiestWeek": "2026-W24",
       "busiestCount": 14,
       "share": 5
     },
     "Meta": {
       "stories": 41,
-      "recent": 5,
+      "recent": 4,
       "trend": "down",
       "busiestWeek": "2026-W21",
       "busiestCount": 12,
@@ -165,22 +165,458 @@
     },
     "Regulation": {
       "stories": 37,
-      "recent": 8,
+      "recent": 7,
       "trend": "up",
       "busiestWeek": "2026-W22",
       "busiestCount": 9,
       "share": 3
     },
     "Nvidia": {
-      "stories": 32,
-      "recent": 3,
-      "trend": "down",
+      "stories": 34,
+      "recent": 4,
+      "trend": "flat",
       "busiestWeek": "2026-W20",
       "busiestCount": 9,
-      "share": 2
+      "share": 3
     }
   },
   "articles": [
+    {
+      "h": "Claude Code 2.1.181 adds a /config key=value command and fixes a data-integrity bug that produced zero-byte files on synced drives",
+      "u": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a4"
+    },
+    {
+      "h": "Claude hit a global outage on June 18 affecting chat, web, and Claude Code, with duration disputed across sources",
+      "u": "https://status.claude.com/history",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a5"
+    },
+    {
+      "h": "JPMorgan removes Claude from its approved-LLM list for Hong Kong staff, following Goldman Sachs",
+      "u": "https://www.semafor.com/article/06/18/2026/jpmorgan-restricts-anthropic-in-hong-kong",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a6"
+    },
+    {
+      "h": "No new primary Anthropic announcement in the window",
+      "u": "https://www.anthropic.com/news",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a7"
+    },
+    {
+      "h": "ARD coverage shifts to the trust-and-verification angle on June 18, one day after the launch",
+      "u": "https://www.helpnetsecurity.com/2026/06/18/google-agentic-resource-discovery/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a8"
+    },
+    {
+      "h": "Snowflake adds ARD support to Cortex Agents, auto-registering them for cross-client discovery",
+      "u": "https://www.snowflake.com/en/blog/agentic-resource-discovery-specification/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a9"
+    },
+    {
+      "h": "Official MCP SDKs quiet, next milestone is the July 28 stateless-core spec",
+      "u": "https://github.com/modelcontextprotocol",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a10"
+    },
+    {
+      "h": "Google sunsets the consumer Gemini CLI and Code Assist on June 18, redirecting developers to the new Antigravity CLI",
+      "u": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "topics": [
+        "Google / DeepMind",
+        "Coding tools"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a11"
+    },
+    {
+      "h": "Cursor expands Automations on June 18 with an /automate skill, Slack and GitHub triggers, and computer use in cloud agents",
+      "u": "https://cursor.com/changelog/06-18-26",
+      "topics": [
+        "MCP / Agents",
+        "Coding tools"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a12"
+    },
+    {
+      "h": "GitHub Copilot puts Microsoft's MAI-Code-1-Flash on more surfaces and will drop Opus 4.6 (fast) on June 29",
+      "u": "https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces",
+      "topics": [
+        "Anthropic",
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a13"
+    },
+    {
+      "h": "GitHub Copilot code review now reads AGENTS.md and can be requested on draft pull requests",
+      "u": "https://github.blog/changelog/2026-06-18-copilot-code-review-agents-md-support-and-ui-improvements",
+      "topics": [
+        "MCP / Agents",
+        "Microsoft",
+        "Coding tools"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a14"
+    },
+    {
+      "h": "Zed adds automatic agent context compaction with a manual /compact command",
+      "u": "https://github.com/zed-industries/zed/releases",
+      "topics": [
+        "MCP / Agents",
+        "Coding tools"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a15"
+    },
+    {
+      "h": "Alibaba Qwen-Robot Suite launches (see Top 3)",
+      "u": "https://qwen.ai/blog?id=qwen-robotsuite",
+      "topics": [
+        "Robotics"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a16"
+    },
+    {
+      "h": "Microsoft's China AI business tops 1B USD a year, led by ByteDance running OpenAI models on Azure",
+      "u": "https://www.bloomberg.com/news/articles/2026-06-17/microsoft-s-china-ai-business-grows-on-openai-model-sales",
+      "topics": [
+        "OpenAI",
+        "Microsoft"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a17"
+    },
+    {
+      "h": "Midjourney announces a Medical division and a full-body ultrasound scanner, its first hardware",
+      "u": "https://www.bloomberg.com/news/articles/2026-06-18/ai-startup-midjourney-pivots-to-health-with-ultrasound-machine",
+      "topics": [],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a18"
+    },
+    {
+      "h": "OpenAI GPT-5.6 still unreleased as of June 19, markets favor a June 22 to 28 launch",
+      "u": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a19"
+    },
+    {
+      "h": "Dream raises 260M USD at a 3B USD valuation for sovereign AI cybersecurity",
+      "u": "https://www.prnewswire.com/news-releases/dream-raises-260m-and-reveals-its-sovereign-ai-for-nations-302804252.html",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a20"
+    },
+    {
+      "h": "Gradial raises 65M USD Series C at a 675M USD valuation for agentic enterprise marketing",
+      "u": "https://www.axios.com/2026/06/18/gradial-ai-agents-marketing",
+      "topics": [
+        "MCP / Agents",
+        "Funding / M&A"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a21"
+    },
+    {
+      "h": "Telepatia raises 33M USD Series A led by a16z for an AI clinical platform in Latin America",
+      "u": "https://a16z.com/announcement/investing-in-telepatia/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a22"
+    },
+    {
+      "h": "Frontier Health raises 16M USD seed led by Atomico for NHS administrative AI",
+      "u": "https://thenextweb.com/news/frontier-health-16m-seed-atomico-nhs-admin-ai-juno",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a23"
+    },
+    {
+      "h": "Bell and Cohere sign a sovereign-AI compute deal (see Top 3)",
+      "u": "https://www.prnewswire.com/news-releases/bell-ai-fabric-cohere-hypertec-and-buzz-hpc-announce-landmark-deal-to-advance-sovereign-ai-in-canada-804262049.html",
+      "topics": [
+        "Chips / Compute"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a24"
+    },
+    {
+      "h": "LoopCoder-V2 open weights and the looped test-time-compute finding (see Top 3)",
+      "u": "https://huggingface.co/papers/2606.18023",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a25"
+    },
+    {
+      "h": "NVIDIA proposes ZPPO, putting the teacher in the prompt rather than the gradient for distillation",
+      "u": "https://huggingface.co/papers/2606.18216",
+      "topics": [
+        "Nvidia",
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a26"
+    },
+    {
+      "h": "GameCraft-Bench tests agents building playable games end-to-end in Godot, and the best scores only 41.46 percent",
+      "u": "https://huggingface.co/papers/2606.17861",
+      "topics": [
+        "MCP / Agents",
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a27"
+    },
+    {
+      "h": "OpenAI releases LifeSciBench, a 750-task life-science research benchmark where the best model clears only 36.1 percent",
+      "u": "https://www.marktechpost.com/2026/06/17/openai-releases-lifescibench-a-750-task-benchmark-grading-ai-models-on-real-life-science-research-with-expert-written-rubric/",
+      "topics": [
+        "OpenAI",
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a28"
+    },
+    {
+      "h": "EgoCS-400K open dataset targets world models with 10,000 hours of first-person gameplay",
+      "u": "https://huggingface.co/papers/2606.18180",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a29"
+    },
+    {
+      "h": "Leaderboard housekeeping: Kimi K2.7 Code added to the Agent Arena, muse-spark removed from the Code board",
+      "u": "https://arena.ai/blog/leaderboard-changelog/",
+      "topics": [
+        "MCP / Agents",
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a30"
+    },
+    {
+      "h": "OpenAI GPT-5.6 imminent, no confirmed date [Tier 2/3, MEDIUM]",
+      "u": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a31"
+    },
+    {
+      "h": "Sovereign-AI compute build-outs accelerating as a response to US export curbs [Tier 2, MEDIUM]",
+      "u": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/06/18/bell-cohere-sign-deal-to-operate-models-using-bell-ai-fabric-infrastructure/",
+      "topics": [],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a32"
+    },
+    {
+      "h": "Frontier labs moving into embodied and physical AI [Tier 2, MEDIUM]",
+      "u": "https://theaiinsider.tech/2026/06/18/alibaba-releases-qwen-for-robotics-with-suite-for-navigation-manipulation-and-world-modeling/",
+      "topics": [],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a33"
+    },
+    {
+      "h": "Claude outage duration unconfirmed [Tier 3, LOW]",
+      "u": "https://status.claude.com/history",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a34"
+    },
+    {
+      "h": "OpenAI GPT-5.6 launch window, markets favor June 22 to 28",
+      "u": "",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a35"
+    },
+    {
+      "h": "June 29: GitHub Copilot removes Opus 4.6 (fast)",
+      "u": "",
+      "topics": [
+        "Anthropic",
+        "Microsoft"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a36"
+    },
+    {
+      "h": "June 30: Colorado AI Act takes effect",
+      "u": "",
+      "topics": [],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a37"
+    },
+    {
+      "h": "July 17: full shutdown of Gemini Code Assist for GitHub",
+      "u": "",
+      "topics": [
+        "Google / DeepMind"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a38"
+    },
+    {
+      "h": "July 28: MCP stateless-core spec release candidate",
+      "u": "",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": false,
+      "aid": "a39"
+    },
+    {
+      "h": "Alibaba Qwen ships the Qwen-Robot Suite on June 18, its first robotics foundation-model stack with separate models for navigation, manipulation, and world prediction",
+      "u": "",
+      "topics": [
+        "Robotics"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": true,
+      "aid": "a1"
+    },
+    {
+      "h": "Bell and Cohere sign a Canadian sovereign-AI compute deal on June 18, with BUZZ HPC booking a roughly 220M USD three-year GPU contract at Bell's Merritt site",
+      "u": "",
+      "topics": [
+        "Nvidia",
+        "Chips / Compute"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": true,
+      "aid": "a2"
+    },
+    {
+      "h": "LoopCoder-V2, a 7B open-weights coder, lifts SWE-bench Verified from 43.0 to 64.4 by looping shared Transformer blocks instead of adding parameters",
+      "u": "",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "lead": true,
+      "aid": "a3"
+    },
     {
       "h": "Claude Code 2.1.179 ships on June 17, preserves partial responses on mid-stream connection drops and fixes subagent transcript and focus bugs",
       "u": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
@@ -14815,8 +15251,8 @@
     },
     {
       "period": "2026-W25",
-      "signals": 131,
-      "briefs": 4
+      "signals": 170,
+      "briefs": 5
     }
   ],
   "monthly": [
@@ -14827,8 +15263,8 @@
     },
     {
       "period": "2026-06",
-      "signals": 513,
-      "briefs": 16
+      "signals": 552,
+      "briefs": 17
     }
   ],
   "topStoriesByWeek": {
@@ -15216,6 +15652,16 @@
         "aid": "a1"
       },
       {
+        "headline": "Alibaba Qwen ships the Qwen-Robot Suite on June 18, its first robotics foundation-model stack with separate models for navigation, manipulation, and world prediction",
+        "topic": "Early signal",
+        "why": "Why it matters: A frontier LLM lab just packaged robotics as a downloadable model stack, the same playbook that commoditized chat and coding. Splitting navigation, manipulation, and a world model into composable pieces lowers the entry cost for builders who do not have a robotics research team. Watch whether Alibaba open-weights any of the three, which would do for embodied AI what GLM-5.2 did for coding, and whether US labs answer with their own physical-AI stacks rather than ceding the layer.",
+        "date": "2026-06-19",
+        "rank": 1,
+        "early": true,
+        "file": "briefs/2026-06-19.html",
+        "aid": "a1"
+      },
+      {
         "headline": "Claude Agent SDK billing split goes live today: automated workloads leave Pro and Max pools onto a separate metered credit",
         "topic": "Anthropic",
         "why": "Why it matters: Any team running scheduled or CI-driven Claude agents on a subscription seat can hit a hard stop mid-job today without warning. This is the first time Anthropic has carved automated agent usage into its own meter, a template other labs will copy as agent traffic outgrows human-seat pricing.",
@@ -15253,16 +15699,6 @@
         "rank": 2,
         "early": true,
         "file": "briefs/2026-06-16.html",
-        "aid": "a2"
-      },
-      {
-        "headline": "xAI begins public release of Grok V9-Medium on June 16, a 1.5T-param coding model trained on Cursor developer workflows",
-        "topic": "Early signal",
-        "why": "Why it matters: The training data tells the story: xAI sharpened a coding model on the exact editor SpaceX just bought, so the loop of editor, usage data, and house model is now closed inside one owner. If Grok V9-Medium lands near Claude on real coding tasks, Anthropic loses its clearest single moat (frontier coding) to a rival that controls a top distribution surface. Watch independent SWE-bench and harness results over the next two weeks, the vendor framing leads the verified numbers.",
-        "date": "2026-06-17",
-        "rank": 2,
-        "early": true,
-        "file": "briefs/2026-06-17.html",
         "aid": "a2"
       }
     ]
@@ -15382,18 +15818,44 @@
         "aid": "a1"
       },
       {
-        "headline": "Anthropic confidentially files a draft S-1 with the SEC, opening the path to an IPO at a roughly $965B valuation",
-        "topic": "AI Business",
-        "why": "Why this matters before others see it: This is the most concrete step yet toward a public listing for the highest-valued AI lab, and it changes the disclosure regime around frontier AI economics. Once the S-1 goes public, the market gets its first audited look at gross margin, inference cost structure, and customer concentration for a pure-play frontier lab, numbers that until now have only leaked. The second-order effect is competitive pressure: reporting says OpenAI is readying its own confidential filing, so the fall could bring a dual AI-lab IPO race that forces both to compete on financial transparency, not just benchmarks. Watch for the public S-1 unredaction, the implied compute and capex commitments, and how the disclosed margin profile reprices private AI rounds.",
-        "date": "2026-06-02",
+        "headline": "Alibaba Qwen ships the Qwen-Robot Suite on June 18, its first robotics foundation-model stack with separate models for navigation, manipulation, and world prediction",
+        "topic": "Early signal",
+        "why": "Why it matters: A frontier LLM lab just packaged robotics as a downloadable model stack, the same playbook that commoditized chat and coding. Splitting navigation, manipulation, and a world model into composable pieces lowers the entry cost for builders who do not have a robotics research team. Watch whether Alibaba open-weights any of the three, which would do for embodied AI what GLM-5.2 did for coding, and whether US labs answer with their own physical-AI stacks rather than ceding the layer.",
+        "date": "2026-06-19",
         "rank": 1,
-        "early": false,
-        "file": "briefs/2026-06-02.html",
+        "early": true,
+        "file": "briefs/2026-06-19.html",
         "aid": "a1"
       }
     ]
   },
   "briefs": [
+    {
+      "date": "2026-06-19",
+      "file": "briefs/2026-06-19.html",
+      "totalItems": 39,
+      "early": 3,
+      "topics": [
+        "MCP / Agents",
+        "Anthropic",
+        "OpenAI",
+        "Microsoft",
+        "Funding / M&A",
+        "Robotics",
+        "Nvidia",
+        "Chips / Compute",
+        "Open source",
+        "Google / DeepMind",
+        "Coding tools"
+      ],
+      "lead": "Alibaba Qwen ships the Qwen-Robot Suite on June 18, its first robotics foundation-model stack with separate models for navigation, manipulation, and world prediction",
+      "leadTopic": "Early signal",
+      "top3": [
+        "Alibaba Qwen ships the Qwen-Robot Suite on June 18, its first robotics foundation-model stack with separate models for navigation, manipulation, and world prediction",
+        "Bell and Cohere sign a Canadian sovereign-AI compute deal on June 18, with BUZZ HPC booking a roughly 220M USD three-year GPU contract at Bell's Merritt site",
+        "LoopCoder-V2, a 7B open-weights coder, lifts SWE-bench Verified from 43.0 to 64.4 by looping shared Transformer blocks instead of adding parameters"
+      ]
+    },
     {
       "date": "2026-06-18",
       "file": "briefs/2026-06-18.html",
