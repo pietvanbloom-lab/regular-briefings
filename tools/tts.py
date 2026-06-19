@@ -14,7 +14,7 @@ continues without audio.
 import sys, os, re, json, base64, html as htmlmod, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VOICE = "en-US-Chirp3-HD-Charon"   # swap to taste, e.g. -Kore, -Aoede, -Puck, -Leda
+VOICE = "en-US-Chirp3-HD-Aoede"   # swap to taste, e.g. -Kore, -Aoede, -Puck, -Leda
 LANG = "en-US"
 SITE = "https://pietvanbloom-lab.github.io/regular-briefings"
 MAX_BYTES = 4500                    # stay under the 5000-byte synth request limit
