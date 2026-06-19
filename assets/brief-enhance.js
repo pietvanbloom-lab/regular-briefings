@@ -110,43 +110,40 @@
   }
 })();
 
-/* Audio-aware source links + sticky mini-player.
-   Keeps the brief's audio playing when a source link is followed, and keeps the
-   player reachable while scrolling. Safe no-op on briefs without an audio player. */
+/* Source links open in a new tab so the brief (and its audio) stays open, plus a
+   clearly visible sticky mini-player. Safe no-op on briefs without an audio player. */
 (function () {
   "use strict";
-  var audio = document.querySelector(".listen audio");
 
-  // Sticky mini-player: keep the audio control visible under the top bar.
-  if (audio) {
-    var st = document.createElement("style");
-    st.textContent =
-      ".listen{position:sticky;z-index:50;top:var(--bx-bar-h,46px);" +
-      "box-shadow:0 6px 18px -10px rgba(0,0,0,.55);}";
-    document.head.appendChild(st);
-    var setOffset = function () {
-      var bar = document.querySelector(".bx-bar");
-      var h = bar ? Math.round(bar.getBoundingClientRect().height) : 46;
-      document.documentElement.style.setProperty("--bx-bar-h", (h - 1) + "px");
-    };
-    setOffset();
-    window.addEventListener("resize", setOffset);
-  }
-
-  // While audio is playing, open external links in a new tab so the brief tab
-  // (and its audio) keeps running. Normal navigation otherwise.
-  function playing() { return audio && !audio.paused && !audio.ended; }
-  document.addEventListener("click", function (e) {
-    if (e.defaultPrevented || e.button !== 0) return;
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    var a = e.target.closest && e.target.closest("a[href]");
-    if (!a) return;
-    var href = a.getAttribute("href") || "";
-    if (!/^https?:\/\//i.test(href)) return;          // external links only
-    if (a.target === "_blank") return;                // already opens a new tab
-    try { if (new URL(href).host === location.host) return; } catch (err) { return; }
-    if (!playing()) return;                           // only intervene while listening
-    e.preventDefault();
-    window.open(href, "_blank", "noopener");
+  // 1) External source links always open in a new tab (keeps this page and its audio alive).
+  document.querySelectorAll(".wrap a[href^='http']").forEach(function (a) {
+    try { if (new URL(a.href).host === location.host) return; } catch (e) { return; }
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
   });
+
+  // 2) Sticky mini-player with a visible pinned state.
+  var listen = document.querySelector(".listen");
+  if (!listen) return;
+  var style = document.createElement("style");
+  style.textContent =
+    ".listen{position:sticky;z-index:55;top:var(--bx-bar-h,46px);transition:box-shadow .2s ease,border-color .2s ease,padding .2s ease;}" +
+    ".listen.stuck{box-shadow:0 10px 24px -10px rgba(0,0,0,.75);border-color:var(--accent2);padding-top:9px;padding-bottom:9px;}";
+  document.head.appendChild(style);
+
+  function setOffset() {
+    var bar = document.querySelector(".bx-bar");
+    var h = bar ? Math.round(bar.getBoundingClientRect().height) : 46;
+    document.documentElement.style.setProperty("--bx-bar-h", h + "px");
+  }
+  function barH() {
+    return parseInt(getComputedStyle(document.documentElement).getPropertyValue("--bx-bar-h"), 10) || 46;
+  }
+  function onScroll() {
+    listen.classList.toggle("stuck", listen.getBoundingClientRect().top <= barH() + 1);
+  }
+  setOffset();
+  onScroll();
+  window.addEventListener("resize", function () { setOffset(); onScroll(); }, { passive: true });
+  window.addEventListener("scroll", onScroll, { passive: true });
 })();
