@@ -313,11 +313,51 @@ def compute_analytics(articles, last7_dates, prior7_dates):
     for a in articles:
         a.pop("_kw", None); a.pop("_rkw", None)
 
+    # ---- "what moved this week" digest (rolling last-7-briefs window) ----
+    recent_n = sum(1 for a in articles if a["date"] in last7_dates)
+    prior_n = sum(1 for a in articles if a["date"] in prior7_dates)
+    rd = sorted(last7_dates)
+    span = (f"{rd[0]} to {rd[-1]}" if rd else "")
+    def fmt(ms):
+        return ", ".join(f"{m['name']} ({'+' if m['delta'] > 0 else ''}{m['delta']})" for m in ms[:3])
+    fresh = [n for n in narratives if n["status"] in ("emerging", "hot")][:2]
+    fresh_txt = "; ".join(f"{n['label']} ({n['size']} stories, {n['status']})" for n in fresh)
+    vol_delta = recent_n - prior_n
+    vol_line = f"{recent_n} signals (" + ("+" if vol_delta >= 0 else "") + f"{vol_delta} vs prior week)"
+    lines = ["What moved this week (last 7 briefs" + (f", {span}" if span else "") + ")"]
+    if risers: lines.append("Rising: " + fmt(risers))
+    if faders: lines.append("Cooling: " + fmt(faders))
+    if fresh_txt: lines.append("New / hot threads: " + fresh_txt)
+    lines.append("Volume: " + vol_line)
+    digest_text = "\n".join(lines)
+    HUB = "https://pietvanbloom-lab.github.io/regular-briefings/archive.html"
+    def esc(s):
+        return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+    rows = []
+    if risers: rows.append(('Rising', '#2e7d32', fmt(risers)))
+    if faders: rows.append(('Cooling', '#c62828', fmt(faders)))
+    if fresh_txt: rows.append(('New / hot threads', '#8a6d1f', fresh_txt))
+    rows.append(('Volume', '#555', vol_line))
+    row_html = "".join(
+        f'<tr><td style="padding:3px 10px 3px 0;color:{c};font-weight:600;white-space:nowrap;vertical-align:top">{lab}</td>'
+        f'<td style="padding:3px 0;color:#222">{esc(v)}</td></tr>' for lab, c, v in rows)
+    digest_html = (
+        '<div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;'
+        'border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6">'
+        '<div style="font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px">What moved this week</div>'
+        f'<div style="font-size:12px;color:#888;margin-bottom:8px">Last 7 briefs{(", " + esc(span)) if span else ""}</div>'
+        f'<table style="border-collapse:collapse;font-size:13px;line-height:1.5">{row_html}</table>'
+        f'<div style="margin-top:10px"><a href="{HUB}#movers" style="color:#b3741f;font-size:12px;text-decoration:none">'
+        'See the full analytics hub &rarr;</a></div></div>')
+    weekly_digest = {"text": digest_text, "html": digest_html,
+                     "span": span, "recent": recent_n, "prior": prior_n}
+
     return {"movers": {"risers": risers, "faders": faders},
             "entityInsights": entity_insights,
             "narratives": narratives,
             "earlyPayoff": early_payoff,
-            "network": network}
+            "network": network,
+            "weeklyDigest": weekly_digest}
 
 ID_TAG = re.compile(r'<div class="(?:card|item)[^"]*"')
 def assign_ids(raw):
@@ -514,7 +554,7 @@ def main():
         "hottest": hottest, "topicInsights": insights, "articles": articles,
         "movers": analytics["movers"], "entityInsights": analytics["entityInsights"],
         "narratives": analytics["narratives"], "earlyPayoff": analytics["earlyPayoff"],
-        "network": analytics["network"],
+        "network": analytics["network"], "weeklyDigest": analytics["weeklyDigest"],
         "weekly": weekly, "monthly": monthly,
         "topStoriesByWeek": top_stories(iso_week), "topStoriesByMonth": top_stories(month),
         "briefs": [{
@@ -526,6 +566,11 @@ def main():
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(data, open(OUT, "w"), indent=2, ensure_ascii=False)
+    # Hosted "what moved this week" artifacts for the daily email step to fetch.
+    wd = analytics.get("weeklyDigest", {})
+    datadir = os.path.dirname(OUT)
+    open(os.path.join(datadir, "weekly-digest.txt"), "w", encoding="utf-8").write(wd.get("text", ""))
+    open(os.path.join(datadir, "weekly-digest.html"), "w", encoding="utf-8").write(wd.get("html", ""))
     # Re-inject inline data block into index.html so the portal works on file:// and HTTP.
     try:
         idx = open(HUB, encoding="utf-8").read()

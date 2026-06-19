@@ -1,0 +1,5 @@
+What moved this week (last 7 briefs, 2026-06-12 to 2026-06-19)
+Rising: GPT-5 (+9), GitHub (+9), Cursor (+8)
+Cooling: Claude (-15), Apple (-10), Codex (-7)
+New / hot threads: MCP: stateless, july, final (20 stories, hot); Hugging Face: face, hugging, huggingface (23 stories, hot)
+Volume: 227 signals (-13 vs prior week)
