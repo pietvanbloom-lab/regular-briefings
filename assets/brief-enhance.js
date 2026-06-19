@@ -109,3 +109,44 @@
     }).catch(function () {});
   }
 })();
+
+/* Audio-aware source links + sticky mini-player.
+   Keeps the brief's audio playing when a source link is followed, and keeps the
+   player reachable while scrolling. Safe no-op on briefs without an audio player. */
+(function () {
+  "use strict";
+  var audio = document.querySelector(".listen audio");
+
+  // Sticky mini-player: keep the audio control visible under the top bar.
+  if (audio) {
+    var st = document.createElement("style");
+    st.textContent =
+      ".listen{position:sticky;z-index:50;top:var(--bx-bar-h,46px);" +
+      "box-shadow:0 6px 18px -10px rgba(0,0,0,.55);}";
+    document.head.appendChild(st);
+    var setOffset = function () {
+      var bar = document.querySelector(".bx-bar");
+      var h = bar ? Math.round(bar.getBoundingClientRect().height) : 46;
+      document.documentElement.style.setProperty("--bx-bar-h", (h - 1) + "px");
+    };
+    setOffset();
+    window.addEventListener("resize", setOffset);
+  }
+
+  // While audio is playing, open external links in a new tab so the brief tab
+  // (and its audio) keeps running. Normal navigation otherwise.
+  function playing() { return audio && !audio.paused && !audio.ended; }
+  document.addEventListener("click", function (e) {
+    if (e.defaultPrevented || e.button !== 0) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    if (!/^https?:\/\//i.test(href)) return;          // external links only
+    if (a.target === "_blank") return;                // already opens a new tab
+    try { if (new URL(href).host === location.host) return; } catch (err) { return; }
+    if (!playing()) return;                           // only intervene while listening
+    e.preventDefault();
+    window.open(href, "_blank", "noopener");
+  });
+})();
