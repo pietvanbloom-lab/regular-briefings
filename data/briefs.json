@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20T04:19:55Z",
+  "generated": "2026-06-20T04:21:11Z",
   "summary": {
     "totalBriefs": 38,
     "totalSignals": 1352,
@@ -22031,7 +22031,7 @@
       ]
     },
     {
-      "label": "Hugging Face: hugging, face, huggingface",
+      "label": "Hugging Face: face, hugging, huggingface",
       "entities": [
         "Hugging Face"
       ],
@@ -22194,7 +22194,7 @@
       ]
     },
     {
-      "label": "Meta + Mistral: qwen, alibaba, person",
+      "label": "Meta + Mistral: qwen, alibaba, layoff",
       "entities": [
         "Meta",
         "Mistral"
@@ -22323,7 +22323,7 @@
       ]
     },
     {
-      "label": "Anthropic: credit, take, effect",
+      "label": "Anthropic: credit, effect, take",
       "entities": [
         "Anthropic"
       ],
@@ -22390,7 +22390,7 @@
       ]
     },
     {
-      "label": "Cursor: anysphere, merger, stock",
+      "label": "Cursor: anysphere, merger, maker",
       "entities": [
         "Cursor"
       ],
@@ -22447,7 +22447,7 @@
       ]
     },
     {
-      "label": "Claude: bench, leaderboard, siri",
+      "label": "Claude: leaderboard, bench, siri",
       "entities": [
         "Claude"
       ],
@@ -22537,7 +22537,7 @@
       ]
     },
     {
-      "label": "MCP + Claude: connectors, okta, live",
+      "label": "MCP + Claude: connectors, managed, live",
       "entities": [
         "MCP",
         "Claude"
@@ -22567,7 +22567,7 @@
       ]
     },
     {
-      "label": "Cohere: sovereign, sign, bell",
+      "label": "Cohere: sovereign, compute, deal",
       "entities": [
         "Cohere"
       ],
@@ -22596,7 +22596,7 @@
       ]
     },
     {
-      "label": "ByteDance: doubao, supplier, domestic",
+      "label": "ByteDance: doubao, chip, third",
       "entities": [
         "ByteDance"
       ],
@@ -22624,7 +22624,7 @@
       ]
     },
     {
-      "label": "ChatGPT + OpenAI: effective, family, retires",
+      "label": "ChatGPT + OpenAI: family, effective, retires",
       "entities": [
         "ChatGPT",
         "OpenAI"
@@ -22696,7 +22696,7 @@
       ]
     },
     {
-      "label": "Copilot + GitHub: sign, individual, rest",
+      "label": "Copilot + GitHub: individual, sign, rest",
       "entities": [
         "Copilot",
         "GitHub"
@@ -22729,7 +22729,7 @@
       ]
     },
     {
-      "label": "Grok + xAI: imagine, quality, image",
+      "label": "Grok + xAI: imagine, quality, video",
       "entities": [
         "Grok",
         "xAI"
@@ -22762,7 +22762,7 @@
       ]
     },
     {
-      "label": "GitHub + Copilot: desktop, technical, linux",
+      "label": "GitHub + Copilot: desktop, technical, macos",
       "entities": [
         "GitHub",
         "Copilot"
@@ -22793,7 +22793,7 @@
       ]
     },
     {
-      "label": "Gemini: vertex, limited, timing",
+      "label": "Gemini: limited, vertex, timing",
       "entities": [
         "Gemini"
       ],
@@ -22822,7 +22822,7 @@
       ]
     },
     {
-      "label": "Claude Code + Claude: subagent, fixes, connection",
+      "label": "Claude Code + Claude: subagent, fixes, bugs",
       "entities": [
         "Claude Code",
         "Claude"
@@ -22879,7 +22879,7 @@
       ]
     },
     {
-      "label": "Nvidia + Google: compute, signs, deal",
+      "label": "Nvidia + Google: compute, deal, signs",
       "entities": [
         "Nvidia",
         "Google"
@@ -22990,7 +22990,7 @@
       ]
     },
     {
-      "label": "Anthropic: 900b, close, follow",
+      "label": "Anthropic: close, 900b, follow",
       "entities": [
         "Anthropic"
       ],
@@ -23172,7 +23172,7 @@
       ]
     },
     {
-      "label": "Claude: glasswing, project, hitachi",
+      "label": "Claude: project, glasswing, joins",
       "entities": [
         "Claude"
       ],
@@ -23234,7 +23234,7 @@
       ]
     },
     {
-      "label": "Cursor: bugbot, based, usage",
+      "label": "Cursor: bugbot, usage, based",
       "entities": [
         "Cursor"
       ],
@@ -23360,7 +23360,7 @@
       ]
     },
     {
-      "label": "OpenAI + Codex: plugin, sharing, control",
+      "label": "OpenAI + Codex: sharing, plugin, control",
       "entities": [
         "OpenAI",
         "Codex"
@@ -23391,7 +23391,7 @@
       ]
     },
     {
-      "label": "Claude + MCP: self, hosted, managed",
+      "label": "Claude + MCP: managed, hosted, self",
       "entities": [
         "Claude",
         "MCP"
@@ -23422,7 +23422,7 @@
       ]
     },
     {
-      "label": "Llama: cadence, daily, macos",
+      "label": "Llama: daily, cadence, macos",
       "entities": [
         "Llama"
       ],
@@ -23601,7 +23601,7 @@
       ]
     },
     {
-      "label": "DeepSeek: price, through, permanent",
+      "label": "DeepSeek: price, permanent, through",
       "entities": [
         "DeepSeek"
       ],
@@ -23689,7 +23689,7 @@
       ]
     },
     {
-      "label": "Notion: external, platform, developer",
+      "label": "Notion: external, developer, platform",
       "entities": [
         "Notion"
       ],
@@ -23718,7 +23718,7 @@
       ]
     },
     {
-      "label": "Grok + Elon Musk: finished, training, musk",
+      "label": "Grok + Elon Musk: training, finished, weeks",
       "entities": [
         "Grok",
         "Elon Musk"
@@ -23747,7 +23747,7 @@
       ]
     },
     {
-      "label": "Claude + Anthropic: bedrock, generally, class",
+      "label": "Claude + Anthropic: generally, bedrock, rollout",
       "entities": [
         "Claude",
         "Anthropic"
@@ -23776,7 +23776,7 @@
       ]
     },
     {
-      "label": "Anthropic: dollar, raise, listing",
+      "label": "Anthropic: raise, dollar, possible",
       "entities": [
         "Anthropic"
       ],
@@ -23804,7 +23804,7 @@
       ]
     },
     {
-      "label": "OpenAI + GPT-5: vetted, cyber, office",
+      "label": "OpenAI + GPT-5: vetted, defenders, cyber",
       "entities": [
         "OpenAI",
         "GPT-5"
@@ -23861,7 +23861,7 @@
       ]
     },
     {
-      "label": "Cohere: command, apache, sparse",
+      "label": "Cohere: command, apache, 218b",
       "entities": [
         "Cohere"
       ],
@@ -23889,7 +23889,7 @@
       ]
     },
     {
-      "label": "Gemini: interactions, schema, legacy",
+      "label": "Gemini: schema, legacy, interactions",
       "entities": [
         "Gemini"
       ],
@@ -23917,7 +23917,7 @@
       ]
     },
     {
-      "label": "Grok + xAI: supergrok, premium, subscribers",
+      "label": "Grok + xAI: supergrok, premium, expands",
       "entities": [
         "Grok",
         "xAI"
@@ -23974,7 +23974,7 @@
       ]
     },
     {
-      "label": "Claude Code + Claude: direct, antigravity, bucket",
+      "label": "Claude Code + Claude: antigravity, direct, bucket",
       "entities": [
         "Claude Code",
         "Claude"
@@ -24003,7 +24003,7 @@
       ]
     },
     {
-      "label": "LangChain: langgraph, deltachannel, node",
+      "label": "LangChain: langgraph, checkpoints, deltachannel",
       "entities": [
         "LangChain"
       ],
@@ -24031,7 +24031,7 @@
       ]
     },
     {
-      "label": "OpenAI: capital, signals, 122b",
+      "label": "OpenAI: signals, capital, 122b",
       "entities": [
         "OpenAI"
       ],
@@ -24088,7 +24088,7 @@
       ]
     },
     {
-      "label": "xAI + Grok: retirement, legacy, live",
+      "label": "xAI + Grok: legacy, retirement, effect",
       "entities": [
         "xAI",
         "Grok"
@@ -24117,7 +24117,7 @@
       ]
     },
     {
-      "label": "Anthropic + Claude: autoencoders, natural, language",
+      "label": "Anthropic + Claude: language, autoencoders, natural",
       "entities": [
         "Anthropic",
         "Claude"
@@ -24146,7 +24146,7 @@
       ]
     },
     {
-      "label": "Google: mariner, project, ahead",
+      "label": "Google: project, mariner, ahead",
       "entities": [
         "Google"
       ],
@@ -25527,8 +25527,8 @@
     ]
   },
   "weeklyDigest": {
-    "text": "What moved this week (last 7 briefs, 2026-06-14 to 2026-06-20)\nRising: MCP (+16), GPT-5 (+13), Cursor (+11)\nCooling: Claude (-19), Apple (-8), Anthropic (-7)\nNew / hot threads: MCP: stateless, july, candidate (21 stories, hot); Hugging Face: hugging, face, huggingface (23 stories, hot)\nVolume: 229 signals (+0 vs prior week)",
-    "html": "<div style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6\"><div style=\"font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px\">What moved this week</div><div style=\"font-size:12px;color:#888;margin-bottom:8px\">Last 7 briefs, 2026-06-14 to 2026-06-20</div><table style=\"border-collapse:collapse;font-size:13px;line-height:1.5\"><tr><td style=\"padding:3px 10px 3px 0;color:#2e7d32;font-weight:600;white-space:nowrap;vertical-align:top\">Rising</td><td style=\"padding:3px 0;color:#222\">MCP (+16), GPT-5 (+13), Cursor (+11)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#c62828;font-weight:600;white-space:nowrap;vertical-align:top\">Cooling</td><td style=\"padding:3px 0;color:#222\">Claude (-19), Apple (-8), Anthropic (-7)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#8a6d1f;font-weight:600;white-space:nowrap;vertical-align:top\">New / hot threads</td><td style=\"padding:3px 0;color:#222\">MCP: stateless, july, candidate (21 stories, hot); Hugging Face: hugging, face, huggingface (23 stories, hot)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#555;font-weight:600;white-space:nowrap;vertical-align:top\">Volume</td><td style=\"padding:3px 0;color:#222\">229 signals (+0 vs prior week)</td></tr></table><div style=\"margin-top:10px\"><a href=\"https://pietvanbloom-lab.github.io/regular-briefings/archive.html#movers\" style=\"color:#b3741f;font-size:12px;text-decoration:none\">See the full analytics hub &rarr;</a></div></div>",
+    "text": "What moved this week (last 7 briefs, 2026-06-14 to 2026-06-20)\nRising: MCP (+16), GPT-5 (+13), Cursor (+11)\nCooling: Claude (-19), Apple (-8), Anthropic (-7)\nNew / hot threads: MCP: stateless, july, candidate (21 stories, hot); Hugging Face: face, hugging, huggingface (23 stories, hot)\nVolume: 229 signals (+0 vs prior week)",
+    "html": "<div style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6\"><div style=\"font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px\">What moved this week</div><div style=\"font-size:12px;color:#888;margin-bottom:8px\">Last 7 briefs, 2026-06-14 to 2026-06-20</div><table style=\"border-collapse:collapse;font-size:13px;line-height:1.5\"><tr><td style=\"padding:3px 10px 3px 0;color:#2e7d32;font-weight:600;white-space:nowrap;vertical-align:top\">Rising</td><td style=\"padding:3px 0;color:#222\">MCP (+16), GPT-5 (+13), Cursor (+11)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#c62828;font-weight:600;white-space:nowrap;vertical-align:top\">Cooling</td><td style=\"padding:3px 0;color:#222\">Claude (-19), Apple (-8), Anthropic (-7)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#8a6d1f;font-weight:600;white-space:nowrap;vertical-align:top\">New / hot threads</td><td style=\"padding:3px 0;color:#222\">MCP: stateless, july, candidate (21 stories, hot); Hugging Face: face, hugging, huggingface (23 stories, hot)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#555;font-weight:600;white-space:nowrap;vertical-align:top\">Volume</td><td style=\"padding:3px 0;color:#222\">229 signals (+0 vs prior week)</td></tr></table><div style=\"margin-top:10px\"><a href=\"https://pietvanbloom-lab.github.io/regular-briefings/archive.html#movers\" style=\"color:#b3741f;font-size:12px;text-decoration:none\">See the full analytics hub &rarr;</a></div></div>",
     "span": "2026-06-14 to 2026-06-20",
     "recent": 229,
     "prior": 229
