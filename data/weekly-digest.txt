@@ -1,5 +1,5 @@
 What moved this week (last 7 briefs, 2026-07-11 to 2026-07-20)
 Rising: TSMC (+9), AMD (+7), Moonshot AI (+5)
 Cooling: GPT-5 (-18), Anthropic (-8), Microsoft (-5)
-New / hot threads: TSMC: record, call, capex (7 stories, emerging); DeepSeek + Gemini: date, target (4 stories, hot)
+New / hot threads: TSMC: record, call, posts (7 stories, emerging); DeepSeek + Gemini: target, date (4 stories, hot)
 Volume: 164 signals (+8 vs prior week)

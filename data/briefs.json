@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20T07:34:39Z",
+  "generated": "2026-07-20T07:34:58Z",
   "summary": {
     "totalBriefs": 61,
     "totalSignals": 1938,
@@ -30634,7 +30634,7 @@
   },
   "narratives": [
     {
-      "label": "TSMC: record, call, capex",
+      "label": "TSMC: record, call, posts",
       "entities": [
         "TSMC"
       ],
@@ -30667,7 +30667,7 @@
       ]
     },
     {
-      "label": "DeepSeek + Gemini: date, target",
+      "label": "DeepSeek + Gemini: target, date",
       "entities": [
         "DeepSeek",
         "Gemini"
@@ -30742,7 +30742,7 @@
       ]
     },
     {
-      "label": "Mistral + DeepSeek: watch, calendar, timing",
+      "label": "Mistral + DeepSeek: calendar, timing, watch",
       "entities": [
         "Mistral",
         "DeepSeek"
@@ -30816,7 +30816,7 @@
       ]
     },
     {
-      "label": "MCP: managed, authorization, connectors",
+      "label": "MCP: authorization, managed, connectors",
       "entities": [
         "MCP"
       ],
@@ -30909,7 +30909,7 @@
       ]
     },
     {
-      "label": "Claude + Microsoft: turns, default, cloud",
+      "label": "Claude + Microsoft: turns, default, desktop",
       "entities": [
         "Claude",
         "Microsoft"
@@ -30940,7 +30940,7 @@
       ]
     },
     {
-      "label": "Claude Code + Claude: background, session, sessions",
+      "label": "Claude Code + Claude: background, sessions, session",
       "entities": [
         "Claude Code",
         "Claude"
@@ -30970,7 +30970,7 @@
       ]
     },
     {
-      "label": "Google + Gemini: target, rebuilt, deadline",
+      "label": "Google + Gemini: rebuilt, target, without",
       "entities": [
         "Google",
         "Gemini"
@@ -31000,7 +31000,7 @@
       ]
     },
     {
-      "label": "Google DeepMind + Google: deepmind, architecture, shazeer",
+      "label": "Google DeepMind + Google: deepmind, architecture, noam",
       "entities": [
         "Google DeepMind",
         "Google"
@@ -31030,7 +31030,7 @@
       ]
     },
     {
-      "label": "Anthropic: ends, extension, included",
+      "label": "Anthropic: included, ends, extension",
       "entities": [
         "Anthropic"
       ],
@@ -31261,7 +31261,7 @@
       ]
     },
     {
-      "label": "Devin + Windsurf: cognition, aider, replit",
+      "label": "Devin + Windsurf: cognition, replit, aider",
       "entities": [
         "Devin",
         "Windsurf"
@@ -31350,7 +31350,7 @@
       ]
     },
     {
-      "label": "Cerebras: cbrs, prices, lifts",
+      "label": "Cerebras: cbrs, prices, range",
       "entities": [
         "Cerebras"
       ],
@@ -31546,7 +31546,7 @@
       ]
     },
     {
-      "label": "Llama: vllm, deprecations, kimi",
+      "label": "Llama: vllm, kimi, deprecations",
       "entities": [
         "Llama"
       ],
@@ -31618,7 +31618,7 @@
       ]
     },
     {
-      "label": "OpenAI + GPT-5: favor, markets, unreleased",
+      "label": "OpenAI + GPT-5: markets, favor, unreleased",
       "entities": [
         "OpenAI",
         "GPT-5"
@@ -31896,7 +31896,7 @@
       ]
     },
     {
-      "label": "Copilot + GitHub: individual, sign, cloud",
+      "label": "Copilot + GitHub: sign, individual, rest",
       "entities": [
         "Copilot",
         "GitHub"
@@ -31930,7 +31930,7 @@
       ]
     },
     {
-      "label": "OpenAI + Codex: remote, pairing, plugin",
+      "label": "OpenAI + Codex: remote, pairing, sharing",
       "entities": [
         "OpenAI",
         "Codex"
@@ -31963,7 +31963,7 @@
       ]
     },
     {
-      "label": "Claude: glasswing, project, hitachi",
+      "label": "Claude: glasswing, project, joins",
       "entities": [
         "Claude"
       ],
@@ -32027,7 +32027,7 @@
       ]
     },
     {
-      "label": "Cursor: bugbot, based, usage",
+      "label": "Cursor: bugbot, usage, based",
       "entities": [
         "Cursor"
       ],
@@ -32091,7 +32091,7 @@
       ]
     },
     {
-      "label": "Meta + Llama: person, layoff, wednesday",
+      "label": "Meta + Llama: layoff, person, wednesday",
       "entities": [
         "Meta",
         "Llama"
@@ -32124,7 +32124,7 @@
       ]
     },
     {
-      "label": "Gemini + Google: limited, vertex, unconfirmed",
+      "label": "Gemini + Google: vertex, limited, statement",
       "entities": [
         "Gemini",
         "Google"
@@ -32187,7 +32187,7 @@
       ]
     },
     {
-      "label": "OpenAI + GPT-5: imminent, date, confirmed",
+      "label": "OpenAI + GPT-5: imminent, confirmed, date",
       "entities": [
         "OpenAI",
         "GPT-5"
@@ -32314,7 +32314,7 @@
       ]
     },
     {
-      "label": "Anthropic: blacklist, circuit, ruling",
+      "label": "Anthropic: circuit, blacklist, weeks",
       "entities": [
         "Anthropic"
       ],
@@ -32436,7 +32436,7 @@
       ]
     },
     {
-      "label": "Google DeepMind + Gemini: deepmind, publishes, scores",
+      "label": "Google DeepMind + Gemini: deepmind, scores, publishes",
       "entities": [
         "Google DeepMind",
         "Gemini"
@@ -32467,7 +32467,7 @@
       ]
     },
     {
-      "label": "OpenAI + ChatGPT: dreaming, memory, shipping",
+      "label": "OpenAI + ChatGPT: memory, dreaming, shipping",
       "entities": [
         "OpenAI",
         "ChatGPT"
@@ -32558,7 +32558,7 @@
       ]
     },
     {
-      "label": "OpenAI + ChatGPT: finance, personal, plaid",
+      "label": "OpenAI + ChatGPT: personal, finance, plaid",
       "entities": [
         "OpenAI",
         "ChatGPT"
@@ -32620,7 +32620,7 @@
       ]
     },
     {
-      "label": "Notion: external, platform, developer",
+      "label": "Notion: external, developer, platform",
       "entities": [
         "Notion"
       ],
@@ -32650,7 +32650,7 @@
       ]
     },
     {
-      "label": "MCP: stable, python, specification",
+      "label": "MCP: python, specification, stable",
       "entities": [
         "MCP"
       ],
@@ -32679,7 +32679,7 @@
       ]
     },
     {
-      "label": "DeepSeek: peak, hour, dated",
+      "label": "DeepSeek: hour, peak, dated",
       "entities": [
         "DeepSeek"
       ],
@@ -32737,7 +32737,7 @@
       ]
     },
     {
-      "label": "MCP: commit, activity, shows",
+      "label": "MCP: activity, commit, shows",
       "entities": [
         "MCP"
       ],
@@ -32796,7 +32796,7 @@
       ]
     },
     {
-      "label": "Claude Code + Claude: nested, skills, parameter",
+      "label": "Claude Code + Claude: nested, skills, level",
       "entities": [
         "Claude Code",
         "Claude"
@@ -32856,7 +32856,7 @@
       ]
     },
     {
-      "label": "Cursor + GitHub: triggers, slack, computer",
+      "label": "Cursor + GitHub: triggers, automate, slack",
       "entities": [
         "Cursor",
         "GitHub"
@@ -32886,7 +32886,7 @@
       ]
     },
     {
-      "label": "MCP: official, sdks, core",
+      "label": "MCP: official, sdks, milestone",
       "entities": [
         "MCP"
       ],
@@ -32945,7 +32945,7 @@
       ]
     },
     {
-      "label": "Cursor: anysphere, merger, stock",
+      "label": "Cursor: anysphere, merger, maker",
       "entities": [
         "Cursor"
       ],
@@ -32974,7 +32974,7 @@
       ]
     },
     {
-      "label": "MCP: command, stdio, advisory",
+      "label": "MCP: stdio, advisory, command",
       "entities": [
         "MCP"
       ],
@@ -33003,7 +33003,7 @@
       ]
     },
     {
-      "label": "ByteDance: doubao, third, supplier",
+      "label": "ByteDance: doubao, inference, third",
       "entities": [
         "ByteDance"
       ],
@@ -33032,7 +33032,7 @@
       ]
     },
     {
-      "label": "xAI + Cursor: session, trained, imminent",
+      "label": "xAI + Cursor: trained, session, imminent",
       "entities": [
         "xAI",
         "Cursor"
@@ -33062,7 +33062,7 @@
       ]
     },
     {
-      "label": "Nvidia + Google: signs, deal, through",
+      "label": "Nvidia + Google: signs, deal, 920m",
       "entities": [
         "Nvidia",
         "Google"
@@ -33092,7 +33092,7 @@
       ]
     },
     {
-      "label": "Grok + Elon Musk: training, finished, weeks",
+      "label": "Grok + Elon Musk: finished, training, weeks",
       "entities": [
         "Grok",
         "Elon Musk"
@@ -33180,7 +33180,7 @@
       ]
     },
     {
-      "label": "Gemini: legacy, schema, interactions",
+      "label": "Gemini: interactions, schema, legacy",
       "entities": [
         "Gemini"
       ],
@@ -33209,7 +33209,7 @@
       ]
     },
     {
-      "label": "Grok + xAI: supergrok, premium, subscribers",
+      "label": "Grok + xAI: premium, supergrok, subscribers",
       "entities": [
         "Grok",
         "xAI"
@@ -33239,7 +33239,7 @@
       ]
     },
     {
-      "label": "MCP: inspector, push, sdks",
+      "label": "MCP: inspector, push, same",
       "entities": [
         "MCP"
       ],
@@ -33327,7 +33327,7 @@
       ]
     },
     {
-      "label": "OpenAI: capital, signals, friar",
+      "label": "OpenAI: signals, capital, friar",
       "entities": [
         "OpenAI"
       ],
@@ -33416,7 +33416,7 @@
       ]
     },
     {
-      "label": "Anthropic + Claude: language, natural, autoencoders",
+      "label": "Anthropic + Claude: autoencoders, language, natural",
       "entities": [
         "Anthropic",
         "Claude"
@@ -33446,7 +33446,7 @@
       ]
     },
     {
-      "label": "Google: mariner, project, ahead",
+      "label": "Google: project, mariner, ahead",
       "entities": [
         "Google"
       ],
@@ -34842,8 +34842,8 @@
     ]
   },
   "weeklyDigest": {
-    "text": "What moved this week (last 7 briefs, 2026-07-11 to 2026-07-20)\nRising: TSMC (+9), AMD (+7), Moonshot AI (+5)\nCooling: GPT-5 (-18), Anthropic (-8), Microsoft (-5)\nNew / hot threads: TSMC: record, call, capex (7 stories, emerging); DeepSeek + Gemini: date, target (4 stories, hot)\nVolume: 164 signals (+8 vs prior week)",
-    "html": "<div style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6\"><div style=\"font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px\">What moved this week</div><div style=\"font-size:12px;color:#888;margin-bottom:8px\">Last 7 briefs, 2026-07-11 to 2026-07-20</div><table style=\"border-collapse:collapse;font-size:13px;line-height:1.5\"><tr><td style=\"padding:3px 10px 3px 0;color:#2e7d32;font-weight:600;white-space:nowrap;vertical-align:top\">Rising</td><td style=\"padding:3px 0;color:#222\">TSMC (+9), AMD (+7), Moonshot AI (+5)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#c62828;font-weight:600;white-space:nowrap;vertical-align:top\">Cooling</td><td style=\"padding:3px 0;color:#222\">GPT-5 (-18), Anthropic (-8), Microsoft (-5)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#8a6d1f;font-weight:600;white-space:nowrap;vertical-align:top\">New / hot threads</td><td style=\"padding:3px 0;color:#222\">TSMC: record, call, capex (7 stories, emerging); DeepSeek + Gemini: date, target (4 stories, hot)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#555;font-weight:600;white-space:nowrap;vertical-align:top\">Volume</td><td style=\"padding:3px 0;color:#222\">164 signals (+8 vs prior week)</td></tr></table><div style=\"margin-top:10px\"><a href=\"https://pietvanbloom-lab.github.io/regular-briefings/archive.html#movers\" style=\"color:#b3741f;font-size:12px;text-decoration:none\">See the full analytics hub &rarr;</a></div></div>",
+    "text": "What moved this week (last 7 briefs, 2026-07-11 to 2026-07-20)\nRising: TSMC (+9), AMD (+7), Moonshot AI (+5)\nCooling: GPT-5 (-18), Anthropic (-8), Microsoft (-5)\nNew / hot threads: TSMC: record, call, posts (7 stories, emerging); DeepSeek + Gemini: target, date (4 stories, hot)\nVolume: 164 signals (+8 vs prior week)",
+    "html": "<div style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6\"><div style=\"font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px\">What moved this week</div><div style=\"font-size:12px;color:#888;margin-bottom:8px\">Last 7 briefs, 2026-07-11 to 2026-07-20</div><table style=\"border-collapse:collapse;font-size:13px;line-height:1.5\"><tr><td style=\"padding:3px 10px 3px 0;color:#2e7d32;font-weight:600;white-space:nowrap;vertical-align:top\">Rising</td><td style=\"padding:3px 0;color:#222\">TSMC (+9), AMD (+7), Moonshot AI (+5)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#c62828;font-weight:600;white-space:nowrap;vertical-align:top\">Cooling</td><td style=\"padding:3px 0;color:#222\">GPT-5 (-18), Anthropic (-8), Microsoft (-5)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#8a6d1f;font-weight:600;white-space:nowrap;vertical-align:top\">New / hot threads</td><td style=\"padding:3px 0;color:#222\">TSMC: record, call, posts (7 stories, emerging); DeepSeek + Gemini: target, date (4 stories, hot)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#555;font-weight:600;white-space:nowrap;vertical-align:top\">Volume</td><td style=\"padding:3px 0;color:#222\">164 signals (+8 vs prior week)</td></tr></table><div style=\"margin-top:10px\"><a href=\"https://pietvanbloom-lab.github.io/regular-briefings/archive.html#movers\" style=\"color:#b3741f;font-size:12px;text-decoration:none\">See the full analytics hub &rarr;</a></div></div>",
     "span": "2026-07-11 to 2026-07-20",
     "recent": 164,
     "prior": 156
