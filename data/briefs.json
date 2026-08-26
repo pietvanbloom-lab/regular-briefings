@@ -1,48 +1,48 @@
 {
-  "generated": "2026-08-20T04:23:00Z",
+  "generated": "2026-08-26T19:47:44Z",
   "summary": {
-    "totalBriefs": 73,
-    "totalSignals": 2324,
-    "totalEarly": 92,
+    "totalBriefs": 74,
+    "totalSignals": 2363,
+    "totalEarly": 96,
     "firstDate": "2026-05-09",
-    "lastDate": "2026-08-20",
-    "avgPerBrief": 31.8
+    "lastDate": "2026-08-26",
+    "avgPerBrief": 31.9
   },
   "hottest": [
     {
       "topic": "Anthropic",
-      "stories": 498,
-      "recent": 27,
-      "trend": "down"
+      "stories": 504,
+      "recent": 33,
+      "trend": "flat"
     },
     {
       "topic": "MCP / Agents",
-      "stories": 489,
-      "recent": 26,
-      "trend": "down"
+      "stories": 493,
+      "recent": 30,
+      "trend": "flat"
     },
     {
       "topic": "Funding / M&A",
-      "stories": 280,
-      "recent": 11,
-      "trend": "down"
+      "stories": 293,
+      "recent": 24,
+      "trend": "up"
     },
     {
       "topic": "OpenAI",
-      "stories": 239,
-      "recent": 26,
+      "stories": 243,
+      "recent": 29,
       "trend": "up"
     },
     {
       "topic": "Google / DeepMind",
-      "stories": 204,
-      "recent": 10,
-      "trend": "flat"
+      "stories": 205,
+      "recent": 11,
+      "trend": "up"
     },
     {
       "topic": "Coding tools",
-      "stories": 170,
-      "recent": 12,
+      "stories": 171,
+      "recent": 13,
       "trend": "up"
     },
     {
@@ -53,9 +53,15 @@
     },
     {
       "topic": "Open source",
-      "stories": 125,
-      "recent": 14,
-      "trend": "down"
+      "stories": 128,
+      "recent": 17,
+      "trend": "flat"
+    },
+    {
+      "topic": "Chips / Compute",
+      "stories": 92,
+      "recent": 17,
+      "trend": "up"
     },
     {
       "topic": "xAI / Grok",
@@ -64,15 +70,9 @@
       "trend": "flat"
     },
     {
-      "topic": "Chips / Compute",
-      "stories": 89,
-      "recent": 14,
-      "trend": "up"
-    },
-    {
       "topic": "Regulation",
-      "stories": 73,
-      "recent": 4,
+      "stories": 74,
+      "recent": 5,
       "trend": "down"
     },
     {
@@ -84,48 +84,48 @@
   ],
   "topicInsights": {
     "Anthropic": {
-      "stories": 498,
-      "recent": 27,
-      "trend": "down",
+      "stories": 504,
+      "recent": 33,
+      "trend": "flat",
       "busiestWeek": "2026-W21",
       "busiestCount": 79,
       "share": 21
     },
     "MCP / Agents": {
-      "stories": 489,
-      "recent": 26,
-      "trend": "down",
+      "stories": 493,
+      "recent": 30,
+      "trend": "flat",
       "busiestWeek": "2026-W20",
       "busiestCount": 65,
       "share": 21
     },
     "Funding / M&A": {
-      "stories": 280,
-      "recent": 11,
-      "trend": "down",
+      "stories": 293,
+      "recent": 24,
+      "trend": "up",
       "busiestWeek": "2026-W20",
       "busiestCount": 55,
       "share": 12
     },
     "OpenAI": {
-      "stories": 239,
-      "recent": 26,
+      "stories": 243,
+      "recent": 29,
       "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 31,
       "share": 10
     },
     "Google / DeepMind": {
-      "stories": 204,
-      "recent": 10,
-      "trend": "flat",
+      "stories": 205,
+      "recent": 11,
+      "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 37,
       "share": 9
     },
     "Coding tools": {
-      "stories": 170,
-      "recent": 12,
+      "stories": 171,
+      "recent": 13,
       "trend": "up",
       "busiestWeek": "2026-W21",
       "busiestCount": 25,
@@ -140,12 +140,20 @@
       "share": 6
     },
     "Open source": {
-      "stories": 125,
-      "recent": 14,
-      "trend": "down",
+      "stories": 128,
+      "recent": 17,
+      "trend": "flat",
       "busiestWeek": "2026-W23",
       "busiestCount": 22,
       "share": 5
+    },
+    "Chips / Compute": {
+      "stories": 92,
+      "recent": 17,
+      "trend": "up",
+      "busiestWeek": "2026-W26",
+      "busiestCount": 10,
+      "share": 4
     },
     "xAI / Grok": {
       "stories": 92,
@@ -155,17 +163,9 @@
       "busiestCount": 14,
       "share": 4
     },
-    "Chips / Compute": {
-      "stories": 89,
-      "recent": 14,
-      "trend": "up",
-      "busiestWeek": "2026-W26",
-      "busiestCount": 10,
-      "share": 4
-    },
     "Regulation": {
-      "stories": 73,
-      "recent": 4,
+      "stories": 74,
+      "recent": 5,
       "trend": "down",
       "busiestWeek": "2026-W22",
       "busiestCount": 9,
@@ -181,6 +181,560 @@
     }
   },
   "articles": [
+    {
+      "h": "Nvidia in talks to invest in Perplexity at a valuation above $30 billion, August 24",
+      "u": "https://techstartups.com/2026/08/24/nvidia-in-talks-to-invest-in-perplexity-at-30-billion-valuation-as-revenue-tops-750-million/",
+      "topics": [
+        "Nvidia",
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a4",
+      "ents": [
+        "Perplexity",
+        "Nvidia"
+      ]
+    },
+    {
+      "h": "Hugging Face is reportedly exploring a sale at $13 billion or more, August 24",
+      "u": "https://techstartups.com/2026/08/24/top-tech-news-today-august-24-2026-alibaba-amazon-hugging-face-nvidia-xpeng-more/",
+      "topics": [
+        "Funding / M&A",
+        "Open source"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a5",
+      "ents": [
+        "Hugging Face"
+      ]
+    },
+    {
+      "h": "OpenAI reinstated a 5-hour usage cap on Codex and ChatGPT Work for Plus subscribers, effective August 25",
+      "u": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "topics": [
+        "OpenAI",
+        "Coding tools"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a6",
+      "ents": [
+        "OpenAI",
+        "ChatGPT",
+        "Codex"
+      ]
+    },
+    {
+      "h": "Alibaba launched Wan3.0 video generation and announced a share placement of about $10 billion for AI infrastructure, August 24",
+      "u": "https://technode.com/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a7",
+      "ents": [
+        "Alibaba"
+      ]
+    },
+    {
+      "h": "The data centre buildout kept consuming the electrical supply chain, August 24",
+      "u": "https://techstartups.com/2026/08/24/top-tech-news-today-august-24-2026-alibaba-amazon-hugging-face-nvidia-xpeng-more/",
+      "topics": [
+        "Chips / Compute"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a8",
+      "ents": []
+    },
+    {
+      "h": "Taiwan indicted nine people over alleged illegal export of Nvidia AI servers to China, August 24",
+      "u": "https://www.reuters.com/",
+      "topics": [
+        "Nvidia"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a9",
+      "ents": [
+        "Nvidia"
+      ]
+    },
+    {
+      "h": "XPeng's robotics unit raised more than $900 million at a valuation above $6.3 billion, August 24",
+      "u": "https://thenextweb.com/",
+      "topics": [
+        "Funding / M&A",
+        "Robotics"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a10",
+      "ents": []
+    },
+    {
+      "h": "Claude had a further service disruption on August 24 [UNVERIFIED]",
+      "u": "https://www.aidapted.ro/en/articles/ai-news-of-the-day-august-24-2026/",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a11",
+      "ents": [
+        "Claude"
+      ]
+    },
+    {
+      "h": "A $5 million grant programme for independent wellbeing evaluations, August 25",
+      "u": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a12",
+      "ents": []
+    },
+    {
+      "h": "Anthropic expected to put its total addressable market above $30 trillion to investors [Tier 2]",
+      "u": "https://www.wsj.com/tech/ai/anthropic-expected-to-tell-investors-it-sees-over-30-trillion-in-potential-revenue-a611efea",
+      "topics": [
+        "Anthropic",
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a13",
+      "ents": [
+        "Anthropic"
+      ]
+    },
+    {
+      "h": "OpenAI o3 retires from ChatGPT on August 26",
+      "u": "https://help.openai.com/en/articles/9624314-model-release-notes",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a14",
+      "ents": [
+        "OpenAI",
+        "o3",
+        "ChatGPT"
+      ]
+    },
+    {
+      "h": "Mistral and HUMAIN announced a Saudi AI partnership in the hundreds of millions of euros, August 25",
+      "u": "https://techafricanews.com/2026/08/25/mistral-humain-hundreds-millions-euro-ai-partnership-saudi-arabia/",
+      "topics": [
+        "Mistral"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a15",
+      "ents": [
+        "Mistral"
+      ]
+    },
+    {
+      "h": "Google launched Gemini Enterprise for Legal, August 25",
+      "u": "https://www.reuters.com/business/google-expands-gemini-ai-platform-law-firms-lawyers-2026-08-25/",
+      "topics": [
+        "Google / DeepMind"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a16",
+      "ents": [
+        "Google",
+        "Gemini"
+      ]
+    },
+    {
+      "h": "German broker Scalable Capital opened its investment platform to ChatGPT and Claude, August 25",
+      "u": "https://www.reuters.com/business/finance/german-broker-scalable-opens-investment-platform-major-ai-chatbots-2026-08-25/",
+      "topics": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a17",
+      "ents": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    {
+      "h": "Mexican startup Primero raised a $12 million seed to wire agents into Latin American legacy systems, August 25",
+      "u": "https://finance.yahoo.com/technology/ai/articles/mexicos-primero-raises-12-million-140354120.html",
+      "topics": [
+        "MCP / Agents",
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a18",
+      "ents": []
+    },
+    {
+      "h": "Quiet day in the 24h window",
+      "u": "https://openai.com/products/release-notes/",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a19",
+      "ents": []
+    },
+    {
+      "h": "Chinese AI chipmaker Enflame set a September 2 subscription date for a roughly $892 million Shanghai STAR Market IPO, August 25",
+      "u": "https://www.reuters.com/world/asia-pacific/ai-chipmaker-enflame-sets-subscription-date-near-900-million-shanghai-ipo-2026-08-25/",
+      "topics": [
+        "Funding / M&A",
+        "Chips / Compute"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a20",
+      "ents": []
+    },
+    {
+      "h": "Apple refreshed Mac mini and Mac Studio with local AI workloads as the pitch, August 25",
+      "u": "https://www.investing.com/news/stock-market-news/apple-launches-faster-mac-mini-mac-studio-to-tap-ai-boom-4875687",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a21",
+      "ents": [
+        "Apple"
+      ]
+    },
+    {
+      "h": "Bucharest entered the Savills Power and Place Index at number 21",
+      "u": "https://www.romania-insider.com/bucharest-ranking-potential-ai-data-center-development-2026",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a22",
+      "ents": []
+    },
+    {
+      "h": "Emerald AI raised a $150 million oversubscribed Series A at a $1.05 billion valuation, August 25",
+      "u": "https://techstartups.com/2026/08/25/venture-capital-startup-funding-roundup-august-25-2026-aramco-ventures-ark-invest-salesforce-ventures-samsung-ventures-siemens-more/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a23",
+      "ents": []
+    },
+    {
+      "h": "Stability AI raised a $76 million Series B, August 25",
+      "u": "https://techstartups.com/2026/08/25/venture-capital-startup-funding-roundup-august-25-2026-aramco-ventures-ark-invest-salesforce-ventures-samsung-ventures-siemens-more/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a24",
+      "ents": [
+        "Stability AI"
+      ]
+    },
+    {
+      "h": "The open-weight frontier as it stands entering this window",
+      "u": "https://llm-stats.com/leaderboards/open-llm-leaderboard",
+      "topics": [
+        "Open source"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a25",
+      "ents": []
+    },
+    {
+      "h": "MCP SDK adoption crossed a billion downloads",
+      "u": "https://thenewstack.io/model-context-protocol-roadmap-2026/",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a26",
+      "ents": [
+        "MCP"
+      ]
+    },
+    {
+      "h": "Early signal Nvidia is becoming a model company, not only a chip company",
+      "u": "",
+      "topics": [
+        "Nvidia",
+        "Chips / Compute"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": true,
+      "aid": "a27",
+      "ents": [
+        "Nvidia"
+      ]
+    },
+    {
+      "h": "Early signal Agents are being handed transaction authority in regulated sectors before the identity plumbing exists",
+      "u": "",
+      "topics": [
+        "MCP / Agents",
+        "Regulation"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": true,
+      "aid": "a28",
+      "ents": []
+    },
+    {
+      "h": "Early signal Neutral AI infrastructure is going up for sale",
+      "u": "",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": true,
+      "aid": "a29",
+      "ents": []
+    },
+    {
+      "h": "Early signal The AI capex bill is reaching consumer prices",
+      "u": "",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": true,
+      "aid": "a30",
+      "ents": []
+    },
+    {
+      "h": "August 26, today, after US close: Nvidia Q2 FY2027 earnings",
+      "u": "https://finance.yahoo.com/markets/stocks/article/nvidias-q2-earnings-are-on-deck-heres-what-to-watch-112502189.html",
+      "topics": [
+        "Nvidia"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a31",
+      "ents": [
+        "Nvidia"
+      ]
+    },
+    {
+      "h": "August 26: OpenAI o3 retired from ChatGPT",
+      "u": "",
+      "topics": [
+        "OpenAI"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a32",
+      "ents": [
+        "OpenAI",
+        "o3",
+        "ChatGPT"
+      ]
+    },
+    {
+      "h": "August 31: Claude Sonnet 5 API introductory pricing ends",
+      "u": "https://spectrumailab.com/blog/ai-coding-tools-pricing-compared-2026",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a33",
+      "ents": [
+        "Claude"
+      ]
+    },
+    {
+      "h": "September 2: Enflame IPO subscription opens on the Shanghai STAR Market",
+      "u": "https://www.reuters.com/world/asia-pacific/ai-chipmaker-enflame-sets-subscription-date-near-900-million-shanghai-ipo-2026-08-25/",
+      "topics": [
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a34",
+      "ents": []
+    },
+    {
+      "h": "September 21: Anthropic wellbeing evaluation grant applications close",
+      "u": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "topics": [
+        "Anthropic",
+        "Funding / M&A"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a35",
+      "ents": [
+        "Anthropic"
+      ]
+    },
+    {
+      "h": "Standing dates already in force",
+      "u": "https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a36",
+      "ents": []
+    },
+    {
+      "h": "Primary and first-party",
+      "u": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a37",
+      "ents": []
+    },
+    {
+      "h": "Reporting",
+      "u": "https://www.wsj.com/tech/ai/nvidia-is-spending-6-billion-to-build-a-powerful-u-s-alternative-to-chinese-ai-c51c38cc",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a38",
+      "ents": []
+    },
+    {
+      "h": "Method and caveats",
+      "u": "",
+      "topics": [],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": false,
+      "early": false,
+      "aid": "a39",
+      "ents": []
+    },
+    {
+      "h": "The agent protocol layer consolidated under one foundation and then published its next roadmap: agent identity and progressive tool discovery are the priorities",
+      "u": "",
+      "topics": [
+        "MCP / Agents"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": true,
+      "early": false,
+      "aid": "a1",
+      "ents": []
+    },
+    {
+      "h": "Nvidia is committing about $6 billion to Poolside, moving upstream from selling training hardware into building open-weight models itself",
+      "u": "",
+      "topics": [
+        "Nvidia",
+        "Funding / M&A",
+        "Open source"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": true,
+      "early": false,
+      "aid": "a2",
+      "ents": [
+        "Nvidia"
+      ]
+    },
+    {
+      "h": "Anthropic merged Claude's chat and Cowork memory into one store, and published the list of categories it refuses to remember",
+      "u": "",
+      "topics": [
+        "Anthropic"
+      ],
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "lead": true,
+      "early": false,
+      "aid": "a3",
+      "ents": [
+        "Anthropic",
+        "Claude"
+      ]
+    },
     {
       "h": "What the missing August 19 edition would have led with",
       "u": "https://openai.com/index/chatgpt-for-teens/",
@@ -34759,43 +35313,63 @@
   "movers": {
     "risers": [
       {
-        "name": "Claude Code",
-        "cat": "product",
-        "total": 94,
-        "recent": 9,
-        "prior": 5,
-        "delta": 4,
-        "growth": 0.8,
-        "first": "2026-05-09",
-        "spark": [
-          1,
-          3,
-          4,
-          4,
-          0,
-          3,
-          3,
-          3
-        ]
-      },
-      {
         "name": "OpenAI",
         "cat": "lab",
-        "total": 199,
-        "recent": 23,
+        "total": 202,
+        "recent": 25,
         "prior": 19,
-        "delta": 4,
-        "growth": 0.21,
+        "delta": 6,
+        "growth": 0.32,
         "first": "2026-05-10",
         "spark": [
-          10,
           13,
           8,
           10,
           9,
           7,
           7,
-          8
+          8,
+          3
+        ]
+      },
+      {
+        "name": "Claude Code",
+        "cat": "product",
+        "total": 94,
+        "recent": 9,
+        "prior": 4,
+        "delta": 5,
+        "growth": 1.25,
+        "first": "2026-05-09",
+        "spark": [
+          3,
+          4,
+          4,
+          0,
+          3,
+          3,
+          3,
+          0
+        ]
+      },
+      {
+        "name": "ChatGPT",
+        "cat": "product",
+        "total": 37,
+        "recent": 6,
+        "prior": 3,
+        "delta": 3,
+        "growth": 1.0,
+        "first": "2026-05-10",
+        "spark": [
+          2,
+          2,
+          3,
+          0,
+          0,
+          2,
+          0,
+          4
         ]
       },
       {
@@ -34808,14 +35382,14 @@
         "growth": 2.0,
         "first": "2026-05-09",
         "spark": [
-          0,
           1,
           1,
           0,
           0,
           0,
           1,
-          1
+          1,
+          0
         ]
       },
       {
@@ -34828,12 +35402,12 @@
         "growth": 2.0,
         "first": "2026-05-09",
         "spark": [
-          2,
           4,
           2,
           0,
           0,
           2,
+          0,
           0,
           0
         ]
@@ -34848,12 +35422,12 @@
         "growth": 2.0,
         "first": "2026-05-14",
         "spark": [
-          0,
           1,
           0,
           0,
           0,
           2,
+          0,
           0,
           0
         ]
@@ -34868,14 +35442,14 @@
         "growth": 1.0,
         "first": "2026-05-09",
         "spark": [
-          5,
           4,
           1,
           1,
           1,
           3,
           0,
-          1
+          1,
+          0
         ]
       },
       {
@@ -34888,74 +35462,54 @@
         "growth": 1.0,
         "first": "2026-05-12",
         "spark": [
-          10,
           15,
           0,
           1,
           1,
           1,
           2,
-          1
-        ]
-      },
-      {
-        "name": "Dario Amodei",
-        "cat": "person",
-        "total": 5,
-        "recent": 1,
-        "prior": 0,
-        "delta": 1,
-        "growth": 1.0,
-        "first": "2026-05-09",
-        "spark": [
-          0,
-          0,
-          0,
-          0,
-          0,
           1,
-          0,
           0
         ]
       },
       {
-        "name": "Cohere",
-        "cat": "lab",
+        "name": "Claude",
+        "cat": "model",
+        "total": 259,
+        "recent": 19,
+        "prior": 17,
+        "delta": 2,
+        "growth": 0.12,
+        "first": "2026-05-09",
+        "spark": [
+          12,
+          7,
+          15,
+          2,
+          4,
+          5,
+          6,
+          4
+        ]
+      },
+      {
+        "name": "Perplexity",
+        "cat": "app",
         "total": 14,
         "recent": 1,
         "prior": 0,
         "delta": 1,
         "growth": 1.0,
-        "first": "2026-05-14",
-        "spark": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0
-        ]
-      },
-      {
-        "name": "Cursor",
-        "cat": "app",
-        "total": 64,
-        "recent": 4,
-        "prior": 3,
-        "delta": 1,
-        "growth": 0.33,
         "first": "2026-05-09",
         "spark": [
-          2,
-          2,
-          1,
-          2,
-          1,
-          1,
           0,
-          3
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
         ]
       }
     ],
@@ -34965,17 +35519,17 @@
         "cat": "lab",
         "total": 29,
         "recent": 3,
-        "prior": 14,
-        "delta": -11,
-        "growth": -0.79,
+        "prior": 13,
+        "delta": -10,
+        "growth": -0.77,
         "first": "2026-05-16",
         "spark": [
-          0,
           1,
           4,
           12,
           1,
           3,
+          0,
           0,
           0
         ]
@@ -34983,41 +35537,21 @@
       {
         "name": "MCP",
         "cat": "protocol",
-        "total": 193,
-        "recent": 9,
-        "prior": 20,
-        "delta": -11,
-        "growth": -0.55,
+        "total": 194,
+        "recent": 10,
+        "prior": 18,
+        "delta": -8,
+        "growth": -0.44,
         "first": "2026-05-09",
         "spark": [
-          14,
           13,
           10,
           14,
           4,
           7,
           2,
-          0
-        ]
-      },
-      {
-        "name": "Anthropic",
-        "cat": "lab",
-        "total": 245,
-        "recent": 13,
-        "prior": 22,
-        "delta": -9,
-        "growth": -0.41,
-        "first": "2026-05-09",
-        "spark": [
-          17,
-          18,
-          7,
-          18,
-          4,
-          7,
-          4,
-          2
+          0,
+          1
         ]
       },
       {
@@ -35025,19 +35559,19 @@
         "cat": "chips",
         "total": 24,
         "recent": 3,
-        "prior": 11,
-        "delta": -8,
-        "growth": -0.73,
+        "prior": 10,
+        "delta": -7,
+        "growth": -0.7,
         "first": "2026-05-26",
         "spark": [
-          0,
           3,
           6,
           10,
           0,
           2,
           0,
-          1
+          1,
+          0
         ]
       },
       {
@@ -35050,34 +35584,34 @@
         "growth": -0.7,
         "first": "2026-05-09",
         "spark": [
-          3,
           4,
           0,
           8,
           2,
           3,
           0,
+          0,
           0
         ]
       },
       {
-        "name": "Google",
-        "cat": "bigtech",
-        "total": 124,
-        "recent": 7,
-        "prior": 12,
-        "delta": -5,
-        "growth": -0.42,
+        "name": "Anthropic",
+        "cat": "lab",
+        "total": 248,
+        "recent": 16,
+        "prior": 22,
+        "delta": -6,
+        "growth": -0.27,
         "first": "2026-05-09",
         "spark": [
-          4,
-          6,
+          18,
+          7,
+          18,
           4,
           7,
-          3,
+          4,
           2,
-          1,
-          4
+          3
         ]
       },
       {
@@ -35091,52 +35625,72 @@
         "first": "2026-06-05",
         "spark": [
           0,
-          0,
           1,
           5,
           0,
           0,
           1,
+          0,
           0
         ]
       },
       {
         "name": "Alibaba",
         "cat": "bigtech",
-        "total": 35,
-        "recent": 2,
+        "total": 36,
+        "recent": 3,
         "prior": 6,
-        "delta": -4,
-        "growth": -0.67,
+        "delta": -3,
+        "growth": -0.5,
         "first": "2026-05-10",
         "spark": [
-          2,
           2,
           0,
           5,
           1,
           1,
           1,
+          0,
+          1
+        ]
+      },
+      {
+        "name": "Amazon",
+        "cat": "bigtech",
+        "total": 34,
+        "recent": 4,
+        "prior": 7,
+        "delta": -3,
+        "growth": -0.43,
+        "first": "2026-05-10",
+        "spark": [
+          1,
+          0,
+          3,
+          4,
+          4,
+          0,
+          0,
           0
         ]
       },
       {
         "name": "Hugging Face",
         "cat": "infra",
-        "total": 31,
-        "recent": 2,
+        "total": 32,
+        "recent": 3,
         "prior": 5,
-        "delta": -3,
-        "growth": -0.6,
+        "delta": -2,
+        "growth": -0.4,
         "first": "2026-05-10",
         "spark": [
-          0,
           1,
           0,
           2,
           3,
           1,
           0,
+          1,
           1
         ]
       },
@@ -35145,24 +35699,276 @@
         "cat": "lab",
         "total": 61,
         "recent": 4,
-        "prior": 7,
-        "delta": -3,
-        "growth": -0.43,
+        "prior": 6,
+        "delta": -2,
+        "growth": -0.33,
         "first": "2026-05-10",
         "spark": [
-          7,
           5,
           6,
           6,
           0,
           1,
           2,
-          1
+          1,
+          0
         ]
       }
     ]
   },
   "entityInsights": {
+    "Perplexity": {
+      "total": 14,
+      "recent": 1,
+      "cat": "app",
+      "first": "2026-05-09",
+      "spark": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "share": 0.6,
+      "busiestWeek": "2026-W20"
+    },
+    "Nvidia": {
+      "total": 52,
+      "recent": 8,
+      "cat": "chips",
+      "first": "2026-05-09",
+      "spark": [
+        1,
+        2,
+        4,
+        3,
+        2,
+        1,
+        0,
+        5
+      ],
+      "share": 2.2,
+      "busiestWeek": "2026-W20"
+    },
+    "Hugging Face": {
+      "total": 32,
+      "recent": 3,
+      "cat": "infra",
+      "first": "2026-05-10",
+      "spark": [
+        1,
+        0,
+        2,
+        3,
+        1,
+        0,
+        1,
+        1
+      ],
+      "share": 1.4,
+      "busiestWeek": "2026-W25"
+    },
+    "OpenAI": {
+      "total": 202,
+      "recent": 25,
+      "cat": "lab",
+      "first": "2026-05-10",
+      "spark": [
+        13,
+        8,
+        10,
+        9,
+        7,
+        7,
+        8,
+        3
+      ],
+      "share": 8.5,
+      "busiestWeek": "2026-W25"
+    },
+    "ChatGPT": {
+      "total": 37,
+      "recent": 6,
+      "cat": "product",
+      "first": "2026-05-10",
+      "spark": [
+        2,
+        2,
+        3,
+        0,
+        0,
+        2,
+        0,
+        4
+      ],
+      "share": 1.6,
+      "busiestWeek": "2026-W21"
+    },
+    "Codex": {
+      "total": 51,
+      "recent": 4,
+      "cat": "product",
+      "first": "2026-05-10",
+      "spark": [
+        1,
+        0,
+        2,
+        2,
+        3,
+        0,
+        0,
+        1
+      ],
+      "share": 2.2,
+      "busiestWeek": "2026-W21"
+    },
+    "Alibaba": {
+      "total": 36,
+      "recent": 3,
+      "cat": "bigtech",
+      "first": "2026-05-10",
+      "spark": [
+        2,
+        0,
+        5,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "share": 1.5,
+      "busiestWeek": "2026-W26"
+    },
+    "Claude": {
+      "total": 259,
+      "recent": 19,
+      "cat": "model",
+      "first": "2026-05-09",
+      "spark": [
+        12,
+        7,
+        15,
+        2,
+        4,
+        5,
+        6,
+        4
+      ],
+      "share": 11.0,
+      "busiestWeek": "2026-W21"
+    },
+    "Anthropic": {
+      "total": 248,
+      "recent": 16,
+      "cat": "lab",
+      "first": "2026-05-09",
+      "spark": [
+        18,
+        7,
+        18,
+        4,
+        7,
+        4,
+        2,
+        3
+      ],
+      "share": 10.5,
+      "busiestWeek": "2026-W21"
+    },
+    "Mistral": {
+      "total": 30,
+      "recent": 3,
+      "cat": "lab",
+      "first": "2026-05-10",
+      "spark": [
+        3,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "share": 1.3,
+      "busiestWeek": "2026-W22"
+    },
+    "Google": {
+      "total": 125,
+      "recent": 8,
+      "cat": "bigtech",
+      "first": "2026-05-09",
+      "spark": [
+        6,
+        4,
+        7,
+        3,
+        2,
+        1,
+        4,
+        1
+      ],
+      "share": 5.3,
+      "busiestWeek": "2026-W20"
+    },
+    "Gemini": {
+      "total": 130,
+      "recent": 5,
+      "cat": "model",
+      "first": "2026-05-14",
+      "spark": [
+        15,
+        10,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "share": 5.5,
+      "busiestWeek": "2026-W21"
+    },
+    "Apple": {
+      "total": 36,
+      "recent": 4,
+      "cat": "bigtech",
+      "first": "2026-05-09",
+      "spark": [
+        0,
+        1,
+        3,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "share": 1.5,
+      "busiestWeek": "2026-W20"
+    },
+    "MCP": {
+      "total": 194,
+      "recent": 10,
+      "cat": "protocol",
+      "first": "2026-05-09",
+      "spark": [
+        13,
+        10,
+        14,
+        4,
+        7,
+        2,
+        0,
+        1
+      ],
+      "share": 8.2,
+      "busiestWeek": "2026-W25"
+    },
     "Cursor": {
       "total": 64,
       "recent": 4,
@@ -35170,15 +35976,15 @@
       "first": "2026-05-09",
       "spark": [
         2,
-        2,
         1,
         2,
         1,
         1,
         0,
-        3
+        3,
+        0
       ],
-      "share": 2.8,
+      "share": 2.7,
       "busiestWeek": "2026-W25"
     },
     "GitHub": {
@@ -35187,14 +35993,14 @@
       "cat": "app",
       "first": "2026-05-09",
       "spark": [
-        5,
         4,
         1,
         1,
         1,
         3,
         0,
-        1
+        1,
+        0
       ],
       "share": 3.5,
       "busiestWeek": "2026-W25"
@@ -35205,53 +36011,17 @@
       "cat": "product",
       "first": "2026-05-09",
       "spark": [
-        8,
         5,
         1,
         2,
         1,
         2,
         0,
-        1
+        1,
+        0
       ],
-      "share": 3.9,
+      "share": 3.8,
       "busiestWeek": "2026-W20"
-    },
-    "Anthropic": {
-      "total": 245,
-      "recent": 13,
-      "cat": "lab",
-      "first": "2026-05-09",
-      "spark": [
-        17,
-        18,
-        7,
-        18,
-        4,
-        7,
-        4,
-        2
-      ],
-      "share": 10.5,
-      "busiestWeek": "2026-W21"
-    },
-    "OpenAI": {
-      "total": 199,
-      "recent": 23,
-      "cat": "lab",
-      "first": "2026-05-10",
-      "spark": [
-        10,
-        13,
-        8,
-        10,
-        9,
-        7,
-        7,
-        8
-      ],
-      "share": 8.6,
-      "busiestWeek": "2026-W25"
     },
     "Claude Code": {
       "total": 94,
@@ -35259,70 +36029,16 @@
       "cat": "product",
       "first": "2026-05-09",
       "spark": [
-        1,
         3,
         4,
         4,
         0,
         3,
         3,
-        3
+        3,
+        0
       ],
       "share": 4.0,
-      "busiestWeek": "2026-W21"
-    },
-    "Claude": {
-      "total": 255,
-      "recent": 15,
-      "cat": "model",
-      "first": "2026-05-09",
-      "spark": [
-        10,
-        12,
-        7,
-        15,
-        2,
-        4,
-        5,
-        6
-      ],
-      "share": 11.0,
-      "busiestWeek": "2026-W21"
-    },
-    "Google": {
-      "total": 124,
-      "recent": 7,
-      "cat": "bigtech",
-      "first": "2026-05-09",
-      "spark": [
-        4,
-        6,
-        4,
-        7,
-        3,
-        2,
-        1,
-        4
-      ],
-      "share": 5.3,
-      "busiestWeek": "2026-W20"
-    },
-    "Gemini": {
-      "total": 129,
-      "recent": 4,
-      "cat": "model",
-      "first": "2026-05-14",
-      "spark": [
-        11,
-        15,
-        10,
-        3,
-        2,
-        2,
-        1,
-        1
-      ],
-      "share": 5.6,
       "busiestWeek": "2026-W21"
     },
     "AMD": {
@@ -35331,14 +36047,14 @@
       "cat": "chips",
       "first": "2026-05-26",
       "spark": [
-        0,
         3,
         6,
         10,
         0,
         2,
         0,
-        1
+        1,
+        0
       ],
       "share": 1.0,
       "busiestWeek": "2026-W30"
@@ -35349,35 +36065,17 @@
       "cat": "chips",
       "first": "2026-05-09",
       "spark": [
-        0,
         1,
         1,
         0,
         0,
         0,
         1,
-        1
+        1,
+        0
       ],
       "share": 0.9,
       "busiestWeek": "2026-W20"
-    },
-    "Hugging Face": {
-      "total": 31,
-      "recent": 2,
-      "cat": "infra",
-      "first": "2026-05-10",
-      "spark": [
-        0,
-        1,
-        0,
-        2,
-        3,
-        1,
-        0,
-        1
-      ],
-      "share": 1.3,
-      "busiestWeek": "2026-W25"
     },
     "GPT-5": {
       "total": 71,
@@ -35385,16 +36083,16 @@
       "cat": "model",
       "first": "2026-05-12",
       "spark": [
-        10,
         15,
         0,
         1,
         1,
         1,
         2,
-        1
+        1,
+        0
       ],
-      "share": 3.1,
+      "share": 3.0,
       "busiestWeek": "2026-W25"
     },
     "DeepSeek": {
@@ -35403,89 +36101,17 @@
       "cat": "lab",
       "first": "2026-05-10",
       "spark": [
-        7,
         5,
         6,
         6,
         0,
         1,
         2,
-        1
+        1,
+        0
       ],
       "share": 2.6,
       "busiestWeek": "2026-W20"
-    },
-    "Apple": {
-      "total": 35,
-      "recent": 3,
-      "cat": "bigtech",
-      "first": "2026-05-09",
-      "spark": [
-        0,
-        0,
-        1,
-        3,
-        0,
-        1,
-        2,
-        0
-      ],
-      "share": 1.5,
-      "busiestWeek": "2026-W20"
-    },
-    "Alibaba": {
-      "total": 35,
-      "recent": 2,
-      "cat": "bigtech",
-      "first": "2026-05-10",
-      "spark": [
-        2,
-        2,
-        0,
-        5,
-        1,
-        1,
-        1,
-        0
-      ],
-      "share": 1.5,
-      "busiestWeek": "2026-W26"
-    },
-    "MCP": {
-      "total": 193,
-      "recent": 9,
-      "cat": "protocol",
-      "first": "2026-05-09",
-      "spark": [
-        14,
-        13,
-        10,
-        14,
-        4,
-        7,
-        2,
-        0
-      ],
-      "share": 8.3,
-      "busiestWeek": "2026-W25"
-    },
-    "ChatGPT": {
-      "total": 33,
-      "recent": 2,
-      "cat": "product",
-      "first": "2026-05-10",
-      "spark": [
-        1,
-        2,
-        2,
-        3,
-        0,
-        0,
-        2,
-        0
-      ],
-      "share": 1.4,
-      "busiestWeek": "2026-W21"
     },
     "Meta": {
       "total": 49,
@@ -35493,13 +36119,13 @@
       "cat": "bigtech",
       "first": "2026-05-10",
       "spark": [
-        3,
         6,
         3,
         4,
         2,
         4,
         2,
+        0,
         0
       ],
       "share": 2.1,
@@ -35512,34 +36138,16 @@
       "first": "2026-07-13",
       "spark": [
         0,
-        0,
         9,
         1,
         0,
         0,
         1,
+        0,
         0
       ],
       "share": 0.5,
       "busiestWeek": "2026-W29"
-    },
-    "Nvidia": {
-      "total": 47,
-      "recent": 4,
-      "cat": "chips",
-      "first": "2026-05-09",
-      "spark": [
-        0,
-        1,
-        2,
-        4,
-        3,
-        2,
-        1,
-        0
-      ],
-      "share": 2.0,
-      "busiestWeek": "2026-W20"
     },
     "Intel": {
       "total": 8,
@@ -35548,12 +36156,12 @@
       "first": "2026-06-05",
       "spark": [
         0,
-        0,
         1,
         5,
         0,
         0,
         1,
+        0,
         0
       ],
       "share": 0.3,
@@ -35565,16 +36173,16 @@
       "cat": "lab",
       "first": "2026-05-09",
       "spark": [
-        2,
         4,
         2,
         0,
         0,
         2,
         0,
+        0,
         0
       ],
-      "share": 3.0,
+      "share": 2.9,
       "busiestWeek": "2026-W24"
     },
     "Elon Musk": {
@@ -35583,12 +36191,12 @@
       "cat": "person",
       "first": "2026-05-14",
       "spark": [
-        0,
         1,
         0,
         0,
         0,
         2,
+        0,
         0,
         0
       ],
@@ -35601,12 +36209,12 @@
       "cat": "model",
       "first": "2026-05-09",
       "spark": [
-        6,
         5,
         5,
         0,
         1,
         1,
+        0,
         0,
         0
       ],
@@ -35615,39 +36223,21 @@
     },
     "Amazon": {
       "total": 34,
-      "recent": 5,
+      "recent": 4,
       "cat": "bigtech",
       "first": "2026-05-10",
       "spark": [
-        0,
         1,
         0,
         3,
         4,
         4,
         0,
+        0,
         0
       ],
-      "share": 1.5,
+      "share": 1.4,
       "busiestWeek": "2026-W20"
-    },
-    "Codex": {
-      "total": 50,
-      "recent": 3,
-      "cat": "product",
-      "first": "2026-05-10",
-      "spark": [
-        3,
-        1,
-        0,
-        2,
-        2,
-        3,
-        0,
-        0
-      ],
-      "share": 2.2,
-      "busiestWeek": "2026-W21"
     },
     "Microsoft": {
       "total": 76,
@@ -35655,35 +36245,17 @@
       "cat": "bigtech",
       "first": "2026-05-09",
       "spark": [
-        3,
         4,
         0,
         8,
         2,
         3,
         0,
+        0,
         0
       ],
-      "share": 3.3,
+      "share": 3.2,
       "busiestWeek": "2026-W23"
-    },
-    "Mistral": {
-      "total": 29,
-      "recent": 2,
-      "cat": "lab",
-      "first": "2026-05-10",
-      "spark": [
-        1,
-        3,
-        1,
-        2,
-        0,
-        2,
-        0,
-        0
-      ],
-      "share": 1.2,
-      "busiestWeek": "2026-W22"
     },
     "Google DeepMind": {
       "total": 23,
@@ -35691,12 +36263,12 @@
       "cat": "lab",
       "first": "2026-05-13",
       "spark": [
-        0,
         1,
         0,
         0,
         2,
         2,
+        0,
         0,
         0
       ],
@@ -35713,8 +36285,8 @@
         0,
         0,
         0,
-        0,
         1,
+        0,
         0,
         0
       ],
@@ -35731,8 +36303,8 @@
         0,
         0,
         0,
-        0,
         1,
+        0,
         0,
         0
       ],
@@ -35745,12 +36317,12 @@
       "cat": "lab",
       "first": "2026-05-16",
       "spark": [
-        0,
         1,
         4,
         12,
         1,
         3,
+        0,
         0,
         0
       ],
@@ -35763,12 +36335,12 @@
       "cat": "infra",
       "first": "2026-05-28",
       "spark": [
-        0,
         3,
         0,
         0,
         1,
         1,
+        0,
         0,
         0
       ],
@@ -35781,11 +36353,11 @@
       "cat": "app",
       "first": "2026-05-10",
       "spark": [
-        0,
         1,
         0,
         0,
         1,
+        0,
         0,
         0,
         0
@@ -35802,8 +36374,8 @@
         0,
         0,
         0,
-        0,
         1,
+        0,
         0,
         0,
         0
@@ -35819,8 +36391,8 @@
       "spark": [
         0,
         0,
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -35835,8 +36407,8 @@
       "cat": "bigtech",
       "first": "2026-05-26",
       "spark": [
-        0,
         2,
+        0,
         0,
         0,
         0,
@@ -35853,8 +36425,8 @@
       "cat": "product",
       "first": "2026-05-13",
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -35871,8 +36443,8 @@
       "cat": "model",
       "first": "2026-05-09",
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -35882,24 +36454,6 @@
       ],
       "share": 0.9,
       "busiestWeek": "2026-W21"
-    },
-    "Perplexity": {
-      "total": 13,
-      "recent": 0,
-      "cat": "app",
-      "first": "2026-05-09",
-      "spark": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "share": 0.6,
-      "busiestWeek": "2026-W20"
     },
     "Snowflake": {
       "total": 4,
@@ -36030,88 +36584,118 @@
   },
   "narratives": [
     {
-      "label": "Hugging Face: hugging, face, qwen",
+      "label": "Hugging Face: face, hugging, qwen",
       "entities": [
         "Hugging Face"
       ],
-      "size": 59,
+      "size": 60,
       "status": "ongoing",
       "span": [
         "2026-05-10",
-        "2026-08-20"
+        "2026-08-26"
       ],
       "peakWeek": "2026-W25",
-      "recent": 8,
+      "recent": 9,
       "spark": [
-        2,
         3,
         0,
         6,
         3,
         3,
         2,
-        3
+        3,
+        1
       ],
       "m": [
-        22,
-        30,
-        55,
-        62,
-        117,
-        132,
-        210,
-        225,
-        261,
-        262,
-        270,
-        315,
-        325,
-        329,
-        347,
-        355,
-        376,
-        553,
-        642,
-        661,
-        701,
-        795,
-        809,
-        833,
-        838,
-        857,
-        859,
-        883,
-        1016,
-        1040,
-        1063,
-        1073,
-        1074,
-        1095,
-        1161,
-        1162,
-        1190,
-        1259,
-        1415,
-        1427,
-        1455,
-        1462,
-        1489,
+        1,
+        61,
+        69,
+        94,
+        101,
+        156,
+        171,
+        249,
+        264,
+        300,
+        301,
+        309,
+        354,
+        364,
+        368,
+        386,
+        394,
+        415,
+        592,
+        681,
+        700,
+        740,
+        834,
+        848,
+        872,
+        877,
+        896,
+        898,
+        922,
+        1055,
+        1079,
+        1102,
+        1112,
+        1113,
+        1134,
+        1200,
+        1201,
+        1229,
+        1298,
+        1454,
+        1466,
+        1494,
+        1501,
         1528,
-        1619,
-        1669,
-        1679,
-        1683,
-        1745,
-        1766,
-        1787,
-        1799,
-        1891,
-        1937,
-        2009,
-        2057,
-        2125,
-        2209,
-        2280
+        1567,
+        1658,
+        1708,
+        1718,
+        1722,
+        1784,
+        1805,
+        1826,
+        1838,
+        1930,
+        1976,
+        2048,
+        2096,
+        2164,
+        2248,
+        2319
+      ]
+    },
+    {
+      "label": "Claude: introductory, ends, sonnet",
+      "entities": [
+        "Claude"
+      ],
+      "size": 3,
+      "status": "emerging",
+      "span": [
+        "2026-08-18",
+        "2026-08-26"
+      ],
+      "peakWeek": "2026-W34",
+      "recent": 3,
+      "spark": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "m": [
+        29,
+        63,
+        90
       ]
     },
     {
@@ -36120,7 +36704,7 @@
         "Claude",
         "Anthropic"
       ],
-      "size": 22,
+      "size": 21,
       "status": "hot",
       "span": [
         "2026-05-11",
@@ -36129,38 +36713,37 @@
       "peakWeek": "2026-W20",
       "recent": 1,
       "spark": [
-        0,
         1,
         0,
         0,
         0,
         0,
         1,
+        0,
         0
       ],
       "m": [
-        116,
-        580,
-        1188,
-        1201,
-        1339,
-        1391,
-        1429,
+        155,
+        619,
+        1227,
+        1240,
+        1378,
         1430,
-        1589,
-        1672,
-        1732,
-        1812,
-        1956,
-        2027,
-        2033,
-        2070,
-        2105,
-        2147,
-        2188,
-        2223,
-        2236,
-        2254
+        1468,
+        1469,
+        1628,
+        1711,
+        1771,
+        1851,
+        2066,
+        2072,
+        2109,
+        2144,
+        2186,
+        2227,
+        2262,
+        2275,
+        2293
       ]
     },
     {
@@ -36179,26 +36762,26 @@
       "recent": 1,
       "spark": [
         2,
-        2,
         0,
         0,
         0,
         0,
         0,
-        1
+        1,
+        0
       ],
       "m": [
-        4,
-        556,
-        649,
-        674,
-        806,
-        865,
-        895,
-        1372,
-        1390,
-        1613,
-        2083
+        43,
+        595,
+        688,
+        713,
+        845,
+        904,
+        934,
+        1411,
+        1429,
+        1652,
+        2122
       ]
     },
     {
@@ -36216,25 +36799,25 @@
       "peakWeek": "2026-W23",
       "recent": 1,
       "spark": [
-        0,
         1,
         0,
         0,
         0,
         1,
+        0,
         0,
         0
       ],
       "m": [
-        175,
-        566,
-        1053,
-        1221,
-        1345,
-        1408,
-        2124,
-        2137,
-        2301
+        214,
+        605,
+        1092,
+        1260,
+        1384,
+        1447,
+        2163,
+        2176,
+        2340
       ]
     },
     {
@@ -36252,23 +36835,23 @@
       "recent": 1,
       "spark": [
         0,
-        0,
         7,
         0,
         0,
         0,
         1,
+        0,
         0
       ],
       "m": [
-        93,
-        463,
-        477,
-        485,
-        509,
-        512,
-        523,
-        530
+        132,
+        502,
+        516,
+        524,
+        548,
+        551,
+        562,
+        569
       ]
     },
     {
@@ -36286,23 +36869,53 @@
       "recent": 1,
       "spark": [
         0,
-        0,
         1,
         0,
         0,
         1,
+        0,
         0,
         0
       ],
       "m": [
-        121,
-        466,
-        1529,
-        1558
+        160,
+        505,
+        1568,
+        1597
       ]
     },
     {
-      "label": "Gemini + Google: antigravity, assist, down",
+      "label": "OpenAI + ChatGPT: work, hour, desktop",
+      "entities": [
+        "OpenAI",
+        "ChatGPT"
+      ],
+      "size": 3,
+      "status": "ongoing",
+      "span": [
+        "2026-07-10",
+        "2026-08-26"
+      ],
+      "peakWeek": "2026-W35",
+      "recent": 1,
+      "spark": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "m": [
+        2,
+        435,
+        616
+      ]
+    },
+    {
+      "label": "Gemini + Google: antigravity, assist, consumer",
       "entities": [
         "Gemini",
         "Google"
@@ -36316,8 +36929,8 @@
       "peakWeek": "2026-W21",
       "recent": 0,
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -36326,25 +36939,25 @@
         0
       ],
       "m": [
-        641,
-        950,
-        1011,
-        1052,
-        1069,
-        1151,
-        1168,
-        1333,
-        1343,
-        1361,
-        1555,
-        1704,
-        1755,
-        1824,
-        1841,
-        1877,
-        1904,
-        1924,
-        1940
+        680,
+        989,
+        1050,
+        1091,
+        1108,
+        1190,
+        1207,
+        1372,
+        1382,
+        1400,
+        1594,
+        1743,
+        1794,
+        1863,
+        1880,
+        1916,
+        1943,
+        1963,
+        1979
       ]
     },
     {
@@ -36362,8 +36975,8 @@
       "peakWeek": "2026-W22",
       "recent": 0,
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -36372,24 +36985,24 @@
         0
       ],
       "m": [
-        557,
-        987,
-        1115,
-        1403,
-        1432,
-        1480,
-        1535,
-        1591,
-        1625,
-        1665,
-        1690,
-        1703,
-        1743,
-        2000,
-        2003,
-        2043,
-        2120,
-        2161
+        596,
+        1026,
+        1154,
+        1442,
+        1471,
+        1519,
+        1574,
+        1630,
+        1664,
+        1704,
+        1729,
+        1742,
+        1782,
+        2039,
+        2042,
+        2082,
+        2159,
+        2200
       ]
     },
     {
@@ -36407,9 +37020,9 @@
       "peakWeek": "2026-W27",
       "recent": 0,
       "spark": [
-        4,
         0,
         2,
+        0,
         0,
         0,
         0,
@@ -36417,27 +37030,27 @@
         0
       ],
       "m": [
-        528,
-        536,
-        694,
-        721,
-        744,
-        769,
-        1315,
-        1335,
-        1499,
-        1518,
-        1523,
-        1525,
-        1595,
-        1610,
-        1750,
-        1761,
-        1767
+        567,
+        575,
+        733,
+        760,
+        783,
+        808,
+        1354,
+        1374,
+        1538,
+        1557,
+        1562,
+        1564,
+        1634,
+        1649,
+        1789,
+        1800,
+        1806
       ]
     },
     {
-      "label": "Moonshot AI: moonshot, kimi, house",
+      "label": "Moonshot AI: moonshot, kimi, white",
       "entities": [
         "Moonshot AI"
       ],
@@ -36451,34 +37064,34 @@
       "recent": 0,
       "spark": [
         0,
-        0,
         1,
         3,
         1,
         0,
         0,
+        0,
         0
       ],
       "m": [
-        236,
-        285,
-        306,
-        317,
-        462,
-        1137,
-        1174,
-        1519,
-        1694,
-        1918,
-        1949,
-        2037,
-        2110,
-        2117,
-        2186
+        275,
+        324,
+        345,
+        356,
+        501,
+        1176,
+        1213,
+        1558,
+        1733,
+        1957,
+        1988,
+        2076,
+        2149,
+        2156,
+        2225
       ]
     },
     {
-      "label": "Cerebras: cbrs, prices, range",
+      "label": "Cerebras: cbrs, prices, lifts",
       "entities": [
         "Cerebras"
       ],
@@ -36491,8 +37104,8 @@
       "peakWeek": "2026-W20",
       "recent": 0,
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -36501,21 +37114,21 @@
         0
       ],
       "m": [
-        562,
-        1676,
-        2101,
-        2104,
-        2139,
-        2145,
+        601,
+        1715,
+        2140,
+        2143,
         2178,
         2184,
-        2203,
-        2216,
-        2249,
-        2253,
-        2283,
-        2289,
-        2308
+        2217,
+        2223,
+        2242,
+        2255,
+        2288,
+        2292,
+        2322,
+        2328,
+        2347
       ]
     },
     {
@@ -36532,30 +37145,30 @@
       "peakWeek": "2026-W22",
       "recent": 0,
       "spark": [
-        0,
         2,
         0,
         2,
+        0,
         0,
         0,
         0,
         0
       ],
       "m": [
-        332,
-        363,
-        594,
-        608,
-        843,
-        932,
-        968,
-        1000,
+        371,
+        402,
+        633,
+        647,
+        882,
+        971,
+        1007,
         1039,
-        1468,
-        1586,
-        1612,
-        1621,
-        1659
+        1078,
+        1507,
+        1625,
+        1651,
+        1660,
+        1698
       ]
     },
     {
@@ -36582,23 +37195,23 @@
         0
       ],
       "m": [
-        1204,
-        1234,
-        1309,
-        1366,
-        1434,
-        1656,
-        1772,
-        1814,
-        1866,
-        1909,
-        2190,
-        2213,
-        2257
+        1243,
+        1273,
+        1348,
+        1405,
+        1473,
+        1695,
+        1811,
+        1853,
+        1905,
+        1948,
+        2229,
+        2252,
+        2296
       ]
     },
     {
-      "label": "Llama: vllm, kimi, deprecations",
+      "label": "Llama: vllm, deprecations, kimi",
       "entities": [
         "Llama"
       ],
@@ -36611,8 +37224,8 @@
       "peakWeek": "2026-W25",
       "recent": 0,
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -36621,16 +37234,16 @@
         0
       ],
       "m": [
-        654,
-        1160,
-        1163,
-        1189,
-        1216,
-        1934,
-        1935,
-        2171,
-        2255,
-        2279
+        693,
+        1199,
+        1202,
+        1228,
+        1255,
+        1973,
+        1974,
+        2210,
+        2294,
+        2318
       ]
     },
     {
@@ -36657,15 +37270,15 @@
         0
       ],
       "m": [
-        870,
-        1186,
-        1445,
-        1747,
-        1788,
-        2201,
-        2235,
-        2269,
-        2303
+        909,
+        1225,
+        1484,
+        1786,
+        1827,
+        2240,
+        2274,
+        2308,
+        2342
       ]
     },
     {
@@ -36693,15 +37306,15 @@
         0
       ],
       "m": [
-        940,
-        964,
-        978,
-        996,
-        1019,
+        979,
+        1003,
+        1017,
         1035,
-        1056,
-        1068,
-        1100
+        1058,
+        1074,
+        1095,
+        1107,
+        1139
       ]
     },
     {
@@ -36728,15 +37341,15 @@
         0
       ],
       "m": [
-        1943,
-        1968,
-        1981,
-        2004,
-        2021,
+        1982,
+        2007,
+        2020,
+        2043,
         2060,
-        2121,
-        2200,
-        2233
+        2099,
+        2160,
+        2239,
+        2272
       ]
     },
     {
@@ -36753,24 +37366,24 @@
       "peakWeek": "2026-W27",
       "recent": 0,
       "spark": [
-        3,
         2,
         1,
         1,
         0,
         0,
         0,
+        0,
         0
       ],
       "m": [
-        330,
-        519,
-        538,
-        628,
-        711,
-        735,
-        758,
-        1111
+        369,
+        558,
+        577,
+        667,
+        750,
+        774,
+        797,
+        1150
       ]
     },
     {
@@ -36797,18 +37410,18 @@
         0
       ],
       "m": [
-        1144,
-        1178,
-        1197,
-        1310,
-        1327,
-        1341,
-        1357,
-        1465
+        1183,
+        1217,
+        1236,
+        1349,
+        1366,
+        1380,
+        1396,
+        1504
       ]
     },
     {
-      "label": "Anthropic: credit, effect, take",
+      "label": "Anthropic: credit, take, effect",
       "entities": [
         "Anthropic"
       ],
@@ -36831,14 +37444,14 @@
         0
       ],
       "m": [
-        1166,
-        1171,
-        1194,
-        1332,
-        1360,
-        1387,
+        1205,
+        1210,
+        1233,
+        1371,
+        1399,
         1426,
-        1428
+        1465,
+        1467
       ]
     },
     {
@@ -36866,13 +37479,13 @@
         0
       ],
       "m": [
-        1314,
-        1334,
-        1461,
-        2007,
-        2024,
-        2085,
-        2097
+        1353,
+        1373,
+        1500,
+        2046,
+        2063,
+        2124,
+        2136
       ]
     },
     {
@@ -36900,13 +37513,13 @@
         0
       ],
       "m": [
-        1936,
-        1976,
+        1975,
         2015,
-        2092,
-        2208,
-        2243,
-        2278
+        2054,
+        2131,
+        2247,
+        2282,
+        2317
       ]
     },
     {
@@ -36925,24 +37538,24 @@
       "spark": [
         0,
         0,
-        0,
         1,
+        0,
         0,
         0,
         0,
         0
       ],
       "m": [
-        393,
-        871,
-        972,
-        1002,
-        2108,
-        2185
+        432,
+        910,
+        1011,
+        1041,
+        2147,
+        2224
       ]
     },
     {
-      "label": "OpenAI + Codex: remote, pairing, sharing",
+      "label": "OpenAI + Codex: remote, pairing, plugin",
       "entities": [
         "OpenAI",
         "Codex"
@@ -36956,7 +37569,7 @@
       "peakWeek": "2026-W23",
       "recent": 0,
       "spark": [
-        1,
+        0,
         0,
         0,
         0,
@@ -36966,16 +37579,16 @@
         0
       ],
       "m": [
-        761,
-        1346,
-        1401,
-        1442,
-        1922,
-        2267
+        800,
+        1385,
+        1440,
+        1481,
+        1961,
+        2306
       ]
     },
     {
-      "label": "Claude: glasswing, project, hitachi",
+      "label": "Claude: project, glasswing, hitachi",
       "entities": [
         "Claude"
       ],
@@ -36998,16 +37611,16 @@
         0
       ],
       "m": [
-        1307,
-        1336,
-        1582,
-        1618,
-        1726,
-        2026
+        1346,
+        1375,
+        1621,
+        1657,
+        1765,
+        2065
       ]
     },
     {
-      "label": "Apple: wwdc, keynote, ahead",
+      "label": "Apple: keynote, wwdc, announces",
       "entities": [
         "Apple"
       ],
@@ -37030,12 +37643,12 @@
         0
       ],
       "m": [
-        1356,
-        1384,
+        1395,
         1423,
-        1463,
-        1830,
-        1855
+        1462,
+        1502,
+        1869,
+        1894
       ]
     },
     {
@@ -37062,12 +37675,12 @@
         0
       ],
       "m": [
-        1464,
-        1593,
-        1624,
-        1700,
-        2078,
-        2195
+        1503,
+        1632,
+        1663,
+        1739,
+        2117,
+        2234
       ]
     },
     {
@@ -37094,16 +37707,16 @@
         0
       ],
       "m": [
-        1811,
-        1900,
-        1907,
-        1944,
-        1952,
-        1982
+        1850,
+        1939,
+        1946,
+        1983,
+        1991,
+        2021
       ]
     },
     {
-      "label": "Meta + Llama: layoff, person, wednesday",
+      "label": "Meta + Llama: person, layoff, wednesday",
       "entities": [
         "Meta",
         "Llama"
@@ -37127,12 +37740,12 @@
         0
       ],
       "m": [
-        1829,
-        1899,
-        1926,
-        1945,
-        1979,
-        1983
+        1868,
+        1938,
+        1965,
+        1984,
+        2018,
+        2022
       ]
     },
     {
@@ -37152,23 +37765,23 @@
       "spark": [
         0,
         0,
-        0,
         5,
+        0,
         0,
         0,
         0,
         0
       ],
       "m": [
-        300,
-        348,
-        377,
-        379,
-        414
+        339,
+        387,
+        416,
+        418,
+        453
       ]
     },
     {
-      "label": "Moonshot AI: technical, kimi",
+      "label": "Moonshot AI: kimi, technical",
       "entities": [
         "Moonshot AI"
       ],
@@ -37182,20 +37795,20 @@
       "recent": 0,
       "spark": [
         0,
-        0,
         1,
         4,
+        0,
         0,
         0,
         0,
         0
       ],
       "m": [
-        309,
-        350,
-        381,
-        416,
-        457
+        348,
+        389,
+        420,
+        455,
+        496
       ]
     },
     {
@@ -37213,8 +37826,8 @@
       "recent": 0,
       "spark": [
         0,
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -37222,15 +37835,15 @@
         0
       ],
       "m": [
-        503,
-        1908,
-        1948,
-        2149,
-        2220
+        542,
+        1947,
+        1987,
+        2188,
+        2259
       ]
     },
     {
-      "label": "Gemini + Google: limited, vertex, statement",
+      "label": "Gemini + Google: limited, vertex, timing",
       "entities": [
         "Gemini",
         "Google"
@@ -37254,11 +37867,11 @@
         0
       ],
       "m": [
-        902,
-        977,
-        1212,
-        1546,
-        1571
+        941,
+        1016,
+        1251,
+        1585,
+        1610
       ]
     },
     {
@@ -37285,15 +37898,15 @@
         0
       ],
       "m": [
-        918,
-        1024,
-        1041,
-        1673,
-        1967
+        957,
+        1063,
+        1080,
+        1712,
+        2006
       ]
     },
     {
-      "label": "OpenAI + GPT-5: date, confirmed, imminent",
+      "label": "OpenAI + GPT-5: imminent, confirmed",
       "entities": [
         "OpenAI",
         "GPT-5"
@@ -37317,15 +37930,15 @@
         0
       ],
       "m": [
-        961,
-        992,
+        1000,
         1031,
-        1065,
-        1096
+        1070,
+        1104,
+        1135
       ]
     },
     {
-      "label": "GitHub + Copilot: desktop, technical, macos",
+      "label": "GitHub + Copilot: desktop, technical, linux",
       "entities": [
         "GitHub",
         "Copilot"
@@ -37349,11 +37962,11 @@
         0
       ],
       "m": [
-        1049,
-        1479,
-        1960,
-        2067,
-        2077
+        1088,
+        1518,
+        1999,
+        2106,
+        2116
       ]
     },
     {
@@ -37381,15 +37994,15 @@
         0
       ],
       "m": [
-        1051,
-        1402,
-        1590,
-        1628,
-        2196
+        1090,
+        1441,
+        1629,
+        1667,
+        2235
       ]
     },
     {
-      "label": "Claude: verified, leaderboard, leads",
+      "label": "Claude: leaderboard, verified, leads",
       "entities": [
         "Claude"
       ],
@@ -37412,11 +38025,11 @@
         0
       ],
       "m": [
-        1094,
-        1459,
-        1783,
-        1805,
-        2264
+        1133,
+        1498,
+        1822,
+        1844,
+        2303
       ]
     },
     {
@@ -37443,15 +38056,15 @@
         0
       ],
       "m": [
-        1145,
-        1170,
-        1179,
-        1193,
-        1696
+        1184,
+        1209,
+        1218,
+        1232,
+        1735
       ]
     },
     {
-      "label": "Claude + MCP: hosted, managed, self",
+      "label": "Claude + MCP: managed, self, hosted",
       "entities": [
         "Claude",
         "MCP"
@@ -37475,15 +38088,15 @@
         0
       ],
       "m": [
-        1584,
-        1695,
-        1765,
-        1861,
-        1905
+        1623,
+        1734,
+        1804,
+        1900,
+        1944
       ]
     },
     {
-      "label": "Anthropic: blacklist, circuit, ruling",
+      "label": "Anthropic: circuit, blacklist, within",
       "entities": [
         "Anthropic"
       ],
@@ -37506,11 +38119,11 @@
         0
       ],
       "m": [
-        1848,
-        1851,
-        1864,
-        1896,
-        1901
+        1887,
+        1890,
+        1903,
+        1935,
+        1940
       ]
     },
     {
@@ -37530,49 +38143,18 @@
       "spark": [
         0,
         0,
-        0,
         1,
         0,
         0,
         0,
-        0
-      ],
-      "m": [
-        323,
-        1043,
-        2157,
-        2227
-      ]
-    },
-    {
-      "label": "DeepSeek + Gemini: date, target",
-      "entities": [
-        "DeepSeek",
-        "Gemini"
-      ],
-      "size": 4,
-      "status": "cooling",
-      "span": [
-        "2026-07-10",
-        "2026-07-14"
-      ],
-      "peakWeek": "2026-W29",
-      "recent": 0,
-      "spark": [
-        0,
-        2,
-        2,
-        0,
-        0,
-        0,
         0,
         0
       ],
       "m": [
-        510,
-        532,
-        548,
-        575
+        362,
+        1082,
+        2196,
+        2266
       ]
     },
     {
@@ -37599,14 +38181,14 @@
         0
       ],
       "m": [
-        827,
-        879,
-        894,
-        1213
+        866,
+        918,
+        933,
+        1252
       ]
     },
     {
-      "label": "Amazon + Claude: bedrock, generally, rollout",
+      "label": "Amazon + Claude: bedrock, generally, class",
       "entities": [
         "Amazon",
         "Claude"
@@ -37630,14 +38212,14 @@
         0
       ],
       "m": [
-        903,
-        1282,
-        1304,
-        1649
+        942,
+        1321,
+        1343,
+        1688
       ]
     },
     {
-      "label": "OpenAI + ChatGPT: memory, dreaming, shipping",
+      "label": "OpenAI + ChatGPT: dreaming, memory, shipping",
       "entities": [
         "OpenAI",
         "ChatGPT"
@@ -37661,10 +38243,10 @@
         0
       ],
       "m": [
-        1344,
-        1363,
-        1374,
-        1383
+        1383,
+        1402,
+        1413,
+        1422
       ]
     },
     {
@@ -37692,14 +38274,14 @@
         0
       ],
       "m": [
-        1365,
-        1389,
-        1617,
-        1652
+        1404,
+        1428,
+        1656,
+        1691
       ]
     },
     {
-      "label": "DeepSeek: price, through, permanent",
+      "label": "DeepSeek: price, permanent, through",
       "entities": [
         "DeepSeek"
       ],
@@ -37722,14 +38304,14 @@
         0
       ],
       "m": [
-        1536,
-        1554,
-        1564,
-        1928
+        1575,
+        1593,
+        1603,
+        1967
       ]
     },
     {
-      "label": "OpenAI + ChatGPT: personal, finance, plaid",
+      "label": "OpenAI + ChatGPT: finance, personal, plaid",
       "entities": [
         "OpenAI",
         "ChatGPT"
@@ -37753,14 +38335,14 @@
         0
       ],
       "m": [
-        1594,
-        1966,
-        2012,
-        2044
+        1633,
+        2005,
+        2051,
+        2083
       ]
     },
     {
-      "label": "Llama: cadence, daily, macos",
+      "label": "Llama: daily, cadence, macos",
       "entities": [
         "Llama"
       ],
@@ -37783,10 +38365,10 @@
         0
       ],
       "m": [
-        1840,
-        1889,
-        2131,
-        2207
+        1879,
+        1928,
+        2170,
+        2246
       ]
     },
     {
@@ -37813,14 +38395,14 @@
         0
       ],
       "m": [
-        1846,
-        1895,
-        1911,
-        1939
+        1885,
+        1934,
+        1950,
+        1978
       ]
     },
     {
-      "label": "Gemini + Sora: weeks, omni, within",
+      "label": "Gemini + Sora: omni, weeks, within",
       "entities": [
         "Gemini",
         "Sora"
@@ -37844,14 +38426,14 @@
         0
       ],
       "m": [
-        1849,
-        1852,
-        1897,
-        1902
+        1888,
+        1891,
+        1936,
+        1941
       ]
     },
     {
-      "label": "Claude Code + Claude: identity, workload, federation",
+      "label": "Claude Code + Claude: identity, federation, workload",
       "entities": [
         "Claude Code",
         "Claude"
@@ -37875,10 +38457,10 @@
         0
       ],
       "m": [
-        1914,
-        1988,
-        2068,
-        2071
+        1953,
+        2027,
+        2107,
+        2110
       ]
     },
     {
@@ -37905,14 +38487,14 @@
         0
       ],
       "m": [
-        1916,
-        1958,
-        1998,
-        2072
+        1955,
+        1997,
+        2037,
+        2111
       ]
     },
     {
-      "label": "Amazon: capex, samsung, 2028",
+      "label": "Amazon: capex, 2028, samsung",
       "entities": [
         "Amazon"
       ],
@@ -37928,16 +38510,16 @@
         0,
         0,
         0,
-        0,
         2,
+        0,
         0,
         0,
         0
       ],
       "m": [
-        254,
-        274,
-        1248
+        293,
+        313,
+        1287
       ]
     },
     {
@@ -37956,21 +38538,21 @@
       "spark": [
         0,
         0,
-        0,
         3,
+        0,
         0,
         0,
         0,
         0
       ],
       "m": [
-        288,
-        299,
-        326
+        327,
+        338,
+        365
       ]
     },
     {
-      "label": "Google: 2027, sets, search",
+      "label": "Google: 2027, search, sets",
       "entities": [
         "Google"
       ],
@@ -37985,21 +38567,21 @@
       "spark": [
         0,
         0,
-        0,
         2,
+        0,
         0,
         0,
         0,
         0
       ],
       "m": [
-        372,
-        402,
-        1831
+        411,
+        441,
+        1870
       ]
     },
     {
-      "label": "Claude Code + Claude: background, sessions, session",
+      "label": "Claude Code + Claude: background, session, sessions",
       "entities": [
         "Claude Code",
         "Claude"
@@ -38014,8 +38596,8 @@
       "recent": 0,
       "spark": [
         0,
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -38023,13 +38605,13 @@
         0
       ],
       "m": [
-        424,
-        1863,
-        1875
+        463,
+        1902,
+        1914
       ]
     },
     {
-      "label": "Google + Gemini: target, rebuilt, deadline",
+      "label": "Google + Gemini: rebuilt, target, misses",
       "entities": [
         "Google",
         "Gemini"
@@ -38043,9 +38625,9 @@
       "peakWeek": "2026-W28",
       "recent": 0,
       "spark": [
-        0,
         2,
         1,
+        0,
         0,
         0,
         0,
@@ -38053,13 +38635,13 @@
         0
       ],
       "m": [
-        464,
-        598,
-        619
+        503,
+        637,
+        658
       ]
     },
     {
-      "label": "Mistral + DeepSeek: calendar, timing, watch",
+      "label": "Mistral + DeepSeek: timing, watch, calendar",
       "entities": [
         "Mistral",
         "DeepSeek"
@@ -38073,9 +38655,9 @@
       "peakWeek": "2026-W28",
       "recent": 0,
       "spark": [
-        0,
         2,
         1,
+        0,
         0,
         0,
         0,
@@ -38083,9 +38665,9 @@
         0
       ],
       "m": [
-        527,
-        544,
-        568
+        566,
+        583,
+        607
       ]
     },
     {
@@ -38103,8 +38685,8 @@
       "peakWeek": "2026-W26",
       "recent": 0,
       "spark": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -38113,13 +38695,13 @@
         0
       ],
       "m": [
-        539,
-        916,
-        934
+        578,
+        955,
+        973
       ]
     },
     {
-      "label": "Anthropic: included, ends, extension",
+      "label": "Anthropic: extension, included, ends",
       "entities": [
         "Anthropic"
       ],
@@ -38132,8 +38714,8 @@
       "peakWeek": "2026-W28",
       "recent": 0,
       "spark": [
-        0,
         3,
+        0,
         0,
         0,
         0,
@@ -38142,13 +38724,13 @@
         0
       ],
       "m": [
-        546,
-        572,
-        596
+        585,
+        611,
+        635
       ]
     },
     {
-      "label": "MCP: stable, specification, python",
+      "label": "MCP: python, specification, stable",
       "entities": [
         "MCP"
       ],
@@ -38161,7 +38743,7 @@
       "peakWeek": "2026-W27",
       "recent": 0,
       "spark": [
-        3,
+        0,
         0,
         0,
         0,
@@ -38171,13 +38753,13 @@
         0
       ],
       "m": [
-        698,
-        726,
-        748
+        737,
+        765,
+        787
       ]
     },
     {
-      "label": "DeepSeek: hour, peak, dated",
+      "label": "DeepSeek: peak, hour, dated",
       "entities": [
         "DeepSeek"
       ],
@@ -38190,7 +38772,7 @@
       "peakWeek": "2026-W27",
       "recent": 0,
       "spark": [
-        3,
+        0,
         0,
         0,
         0,
@@ -38200,9 +38782,9 @@
         0
       ],
       "m": [
-        733,
-        751,
-        755
+        772,
+        790,
+        794
       ]
     },
     {
@@ -38220,7 +38802,7 @@
       "peakWeek": "2026-W23",
       "recent": 0,
       "spark": [
-        1,
+        0,
         0,
         0,
         0,
@@ -38230,13 +38812,13 @@
         0
       ],
       "m": [
-        743,
-        1481,
-        1553
+        782,
+        1520,
+        1592
       ]
     },
     {
-      "label": "MCP: activity, commit, shows",
+      "label": "MCP: commit, activity, shows",
       "entities": [
         "MCP"
       ],
@@ -38259,9 +38841,9 @@
         0
       ],
       "m": [
-        826,
-        1369,
-        1821
+        865,
+        1408,
+        1860
       ]
     },
     {
@@ -38289,13 +38871,13 @@
         0
       ],
       "m": [
-        853,
-        866,
-        885
+        892,
+        905,
+        924
       ]
     },
     {
-      "label": "Claude Code + Claude: nested, skills, level",
+      "label": "Claude Code + Claude: nested, skills, parameter",
       "entities": [
         "Claude Code",
         "Claude"
@@ -38319,13 +38901,13 @@
         0
       ],
       "m": [
-        872,
-        1108,
-        1113
+        911,
+        1147,
+        1152
       ]
     },
     {
-      "label": "Cursor + GitHub: computer, skill, triggers",
+      "label": "Cursor + GitHub: computer, automate, skill",
       "entities": [
         "Cursor",
         "GitHub"
@@ -38349,9 +38931,9 @@
         0
       ],
       "m": [
-        949,
-        983,
-        1012
+        988,
+        1022,
+        1051
       ]
     },
     {
@@ -38378,13 +38960,13 @@
         0
       ],
       "m": [
-        1010,
-        1048,
-        1081
+        1049,
+        1087,
+        1120
       ]
     },
     {
-      "label": "Cursor: anysphere, merger, stock",
+      "label": "Cursor: anysphere, merger, maker",
       "entities": [
         "Cursor"
       ],
@@ -38407,13 +38989,13 @@
         0
       ],
       "m": [
-        1060,
-        1083,
-        1104
+        1099,
+        1122,
+        1143
       ]
     },
     {
-      "label": "MCP: advisory, stdio, command",
+      "label": "MCP: command, stdio, advisory",
       "entities": [
         "MCP"
       ],
@@ -38436,13 +39018,13 @@
         0
       ],
       "m": [
-        1082,
-        2193,
-        2228
+        1121,
+        2232,
+        2267
       ]
     },
     {
-      "label": "ByteDance: doubao, domestic, inference",
+      "label": "ByteDance: doubao, domestic, supplier",
       "entities": [
         "ByteDance"
       ],
@@ -38465,13 +39047,13 @@
         0
       ],
       "m": [
-        1116,
-        1139,
-        1708
+        1155,
+        1178,
+        1747
       ]
     },
     {
-      "label": "xAI + Cursor: trained, session, imminent",
+      "label": "xAI + Cursor: session, trained, imminent",
       "entities": [
         "xAI",
         "Cursor"
@@ -38495,9 +39077,9 @@
         0
       ],
       "m": [
-        1129,
-        1164,
-        1192
+        1168,
+        1203,
+        1231
       ]
     },
     {
@@ -38525,13 +39107,13 @@
         0
       ],
       "m": [
-        1258,
-        1705,
-        1719
+        1297,
+        1744,
+        1758
       ]
     },
     {
-      "label": "Cohere: apache, command, sparse",
+      "label": "Cohere: command, apache, 218b",
       "entities": [
         "Cohere"
       ],
@@ -38554,13 +39136,13 @@
         0
       ],
       "m": [
-        1487,
-        1744,
-        1769
+        1526,
+        1783,
+        1808
       ]
     },
     {
-      "label": "Gemini: legacy, schema, interactions",
+      "label": "Gemini: legacy, interactions, schema",
       "entities": [
         "Gemini"
       ],
@@ -38583,13 +39165,13 @@
         0
       ],
       "m": [
-        1551,
-        1573,
-        1576
+        1590,
+        1612,
+        1615
       ]
     },
     {
-      "label": "Grok + xAI: supergrok, premium, subscribers",
+      "label": "Grok + xAI: supergrok, premium, expands",
       "entities": [
         "Grok",
         "xAI"
@@ -38613,9 +39195,9 @@
         0
       ],
       "m": [
-        1627,
-        1663,
-        1791
+        1666,
+        1702,
+        1830
       ]
     },
     {
@@ -38642,13 +39224,13 @@
         0
       ],
       "m": [
-        1697,
-        1868,
-        1913
+        1736,
+        1907,
+        1952
       ]
     },
     {
-      "label": "Claude Code + Claude: direct, antigravity, itself",
+      "label": "Claude Code + Claude: antigravity, direct, itself",
       "entities": [
         "Claude Code",
         "Claude"
@@ -38672,13 +39254,13 @@
         0
       ],
       "m": [
-        1869,
-        1876,
-        2232
+        1908,
+        1915,
+        2271
       ]
     },
     {
-      "label": "LangChain: langgraph, deltachannel, timeouts",
+      "label": "LangChain: langgraph, checkpoints, deltachannel",
       "entities": [
         "LangChain"
       ],
@@ -38701,13 +39283,13 @@
         0
       ],
       "m": [
-        1917,
-        2116,
-        2154
+        1956,
+        2155,
+        2193
       ]
     },
     {
-      "label": "OpenAI: capital, signals, sarah",
+      "label": "OpenAI: capital, signals, 122b",
       "entities": [
         "OpenAI"
       ],
@@ -38730,13 +39312,13 @@
         0
       ],
       "m": [
-        1972,
-        2005,
-        2045
+        2011,
+        2044,
+        2084
       ]
     },
     {
-      "label": "Sam Altman + Elon Musk: altman, musk, deliberations",
+      "label": "Sam Altman + Elon Musk: musk, altman, monday",
       "entities": [
         "Sam Altman",
         "Elon Musk"
@@ -38760,9 +39342,9 @@
         0
       ],
       "m": [
-        2006,
-        2020,
-        2049
+        2045,
+        2059,
+        2088
       ]
     },
     {
@@ -38790,13 +39372,13 @@
         0
       ],
       "m": [
-        2008,
-        2270,
-        2284
+        2047,
+        2309,
+        2323
       ]
     },
     {
-      "label": "Anthropic + Claude: language, natural, autoencoders",
+      "label": "Anthropic + Claude: autoencoders, language, natural",
       "entities": [
         "Anthropic",
         "Claude"
@@ -38820,9 +39402,9 @@
         0
       ],
       "m": [
-        2134,
-        2175,
-        2277
+        2173,
+        2214,
+        2316
       ]
     },
     {
@@ -38849,16 +39431,16 @@
         0
       ],
       "m": [
-        2214,
-        2234,
-        2245
+        2253,
+        2273,
+        2284
       ]
     }
   ],
   "earlyPayoff": {
-    "totalEarly": 85,
+    "totalEarly": 89,
     "developed": 23,
-    "hitRate": 27,
+    "hitRate": 26,
     "medianLeadDays": 3,
     "calls": [
       {
@@ -38867,7 +39449,7 @@
         "file": "briefs/2026-06-18.html",
         "aid": "a1",
         "leadDays": 1,
-        "followups": 30,
+        "followups": 31,
         "examples": [
           {
             "h": "Alibaba Qwen-Robot Suite launches (see Top 3)",
@@ -38895,7 +39477,7 @@
         "file": "briefs/2026-06-19.html",
         "aid": "a1",
         "leadDays": 5,
-        "followups": 28,
+        "followups": 29,
         "examples": [
           {
             "h": "Hugging Face transformers v5.12 adds DiffusionGemma and MiniMax-M3-VL support",
@@ -38978,15 +39560,9 @@
         "date": "2026-05-17",
         "file": "briefs/2026-05-17.html",
         "aid": "a1",
-        "leadDays": 1,
-        "followups": 13,
+        "leadDays": 4,
+        "followups": 12,
         "examples": [
-          {
-            "h": "Anthropic Claude Agent SDK ships parallel-tool-call hang fix ahead of June 15 billing split",
-            "date": "2026-05-18",
-            "file": "briefs/2026-05-18.html",
-            "aid": "a9"
-          },
           {
             "h": "KPMG x Anthropic global alliance lands across the trade press on May 20",
             "date": "2026-05-21",
@@ -38998,6 +39574,12 @@
             "date": "2026-05-23",
             "file": "briefs/2026-05-23.html",
             "aid": "a8"
+          },
+          {
+            "h": "KPMG deploys Claude to 276,000 employees across 138 countries via KPMG Digital Gateway (May 19)",
+            "date": "2026-05-28",
+            "file": "briefs/2026-05-28.html",
+            "aid": "a22"
           }
         ]
       },
@@ -39368,7 +39950,7 @@
       {
         "id": "Claude",
         "cat": "model",
-        "mentions": 255
+        "mentions": 259
       },
       {
         "id": "Claude Code",
@@ -39388,7 +39970,7 @@
       {
         "id": "Anthropic",
         "cat": "lab",
-        "mentions": 245
+        "mentions": 248
       },
       {
         "id": "Grok",
@@ -39403,22 +39985,22 @@
       {
         "id": "Gemini",
         "cat": "model",
-        "mentions": 129
+        "mentions": 130
       },
       {
         "id": "Google",
         "cat": "bigtech",
-        "mentions": 124
+        "mentions": 125
       },
       {
         "id": "Codex",
         "cat": "product",
-        "mentions": 50
+        "mentions": 51
       },
       {
         "id": "OpenAI",
         "cat": "lab",
-        "mentions": 199
+        "mentions": 202
       },
       {
         "id": "GPT-5",
@@ -39428,7 +40010,7 @@
       {
         "id": "ChatGPT",
         "cat": "product",
-        "mentions": 33
+        "mentions": 37
       },
       {
         "id": "Google DeepMind",
@@ -39438,7 +40020,7 @@
       {
         "id": "MCP",
         "cat": "protocol",
-        "mentions": 193
+        "mentions": 194
       },
       {
         "id": "Microsoft",
@@ -39453,7 +40035,7 @@
       {
         "id": "Mistral",
         "cat": "lab",
-        "mentions": 29
+        "mentions": 30
       },
       {
         "id": "Meta",
@@ -39493,7 +40075,7 @@
       {
         "id": "Apple",
         "cat": "bigtech",
-        "mentions": 35
+        "mentions": 36
       },
       {
         "id": "Amazon",
@@ -39503,7 +40085,7 @@
       {
         "id": "Alibaba",
         "cat": "bigtech",
-        "mentions": 35
+        "mentions": 36
       },
       {
         "id": "AMD",
@@ -39518,7 +40100,7 @@
       {
         "id": "Hugging Face",
         "cat": "infra",
-        "mentions": 31
+        "mentions": 32
       },
       {
         "id": "Replit",
@@ -39528,7 +40110,7 @@
       {
         "id": "Nvidia",
         "cat": "chips",
-        "mentions": 47
+        "mentions": 52
       },
       {
         "id": "Sam Altman",
@@ -39538,7 +40120,7 @@
       {
         "id": "Perplexity",
         "cat": "app",
-        "mentions": 13
+        "mentions": 14
       },
       {
         "id": "Moonshot AI",
@@ -39549,6 +40131,11 @@
         "id": "Llama",
         "cat": "model",
         "mentions": 22
+      },
+      {
+        "id": "o3",
+        "cat": "model",
+        "mentions": 3
       },
       {
         "id": "Andrej Karpathy",
@@ -39570,7 +40157,7 @@
       {
         "s": "Anthropic",
         "t": "Claude",
-        "w": 121
+        "w": 123
       },
       {
         "s": "Grok",
@@ -39580,12 +40167,12 @@
       {
         "s": "Gemini",
         "t": "Google",
-        "w": 106
+        "w": 108
       },
       {
         "s": "Codex",
         "t": "OpenAI",
-        "w": 84
+        "w": 87
       },
       {
         "s": "GPT-5",
@@ -39595,7 +40182,7 @@
       {
         "s": "ChatGPT",
         "t": "OpenAI",
-        "w": 55
+        "w": 62
       },
       {
         "s": "Anthropic",
@@ -39638,18 +40225,23 @@
         "w": 24
       },
       {
-        "s": "DeepSeek",
-        "t": "Gemini",
-        "w": 23
-      },
-      {
         "s": "MCP",
         "t": "Microsoft",
         "w": 23
       },
       {
+        "s": "ChatGPT",
+        "t": "Codex",
+        "w": 22
+      },
+      {
         "s": "Anthropic",
         "t": "Claude Code",
+        "w": 22
+      },
+      {
+        "s": "DeepSeek",
+        "t": "Gemini",
         "w": 22
       },
       {
@@ -39676,11 +40268,6 @@
         "s": "Claude",
         "t": "Cursor",
         "w": 20
-      },
-      {
-        "s": "ChatGPT",
-        "t": "Codex",
-        "w": 19
       },
       {
         "s": "Elon Musk",
@@ -40143,6 +40730,11 @@
         "w": 7
       },
       {
+        "s": "ChatGPT",
+        "t": "o3",
+        "w": 6
+      },
+      {
         "s": "Gemini",
         "t": "GitHub",
         "w": 6
@@ -40201,20 +40793,15 @@
         "s": "Claude Code",
         "t": "Google",
         "w": 6
-      },
-      {
-        "s": "Claude Code",
-        "t": "OpenAI",
-        "w": 6
       }
     ]
   },
   "weeklyDigest": {
-    "text": "What moved this week (last 7 briefs, 2026-08-01 to 2026-08-20)\nRising: Claude Code (+4), OpenAI (+4), Cerebras (+2)\nCooling: Moonshot AI (-11), MCP (-11), Anthropic (-9)\nNew / hot threads: Claude + Anthropic: staff, press, commits (22 stories, hot); OpenAI + GPT-5: cyber, vetted, partners (11 stories, hot)\nVolume: 232 signals (+29 vs prior week)",
-    "html": "<div style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6\"><div style=\"font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px\">What moved this week</div><div style=\"font-size:12px;color:#888;margin-bottom:8px\">Last 7 briefs, 2026-08-01 to 2026-08-20</div><table style=\"border-collapse:collapse;font-size:13px;line-height:1.5\"><tr><td style=\"padding:3px 10px 3px 0;color:#2e7d32;font-weight:600;white-space:nowrap;vertical-align:top\">Rising</td><td style=\"padding:3px 0;color:#222\">Claude Code (+4), OpenAI (+4), Cerebras (+2)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#c62828;font-weight:600;white-space:nowrap;vertical-align:top\">Cooling</td><td style=\"padding:3px 0;color:#222\">Moonshot AI (-11), MCP (-11), Anthropic (-9)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#8a6d1f;font-weight:600;white-space:nowrap;vertical-align:top\">New / hot threads</td><td style=\"padding:3px 0;color:#222\">Claude + Anthropic: staff, press, commits (22 stories, hot); OpenAI + GPT-5: cyber, vetted, partners (11 stories, hot)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#555;font-weight:600;white-space:nowrap;vertical-align:top\">Volume</td><td style=\"padding:3px 0;color:#222\">232 signals (+29 vs prior week)</td></tr></table><div style=\"margin-top:10px\"><a href=\"https://pietvanbloom-lab.github.io/regular-briefings/archive.html#movers\" style=\"color:#b3741f;font-size:12px;text-decoration:none\">See the full analytics hub &rarr;</a></div></div>",
-    "span": "2026-08-01 to 2026-08-20",
-    "recent": 232,
-    "prior": 203
+    "text": "What moved this week (last 7 briefs, 2026-08-03 to 2026-08-26)\nRising: OpenAI (+6), Claude Code (+5), ChatGPT (+3)\nCooling: Moonshot AI (-10), MCP (-8), AMD (-7)\nNew / hot threads: Claude: introductory, ends, sonnet (3 stories, emerging); Claude + Anthropic: staff, press, commits (21 stories, hot)\nVolume: 266 signals (+72 vs prior week)",
+    "html": "<div style=\"font-family:-apple-system,Segoe UI,Arial,sans-serif;border:1px solid #e2ded6;border-radius:10px;padding:14px 16px;margin:16px 0;background:#faf9f6\"><div style=\"font-weight:700;font-size:15px;color:#1c1e24;margin-bottom:8px\">What moved this week</div><div style=\"font-size:12px;color:#888;margin-bottom:8px\">Last 7 briefs, 2026-08-03 to 2026-08-26</div><table style=\"border-collapse:collapse;font-size:13px;line-height:1.5\"><tr><td style=\"padding:3px 10px 3px 0;color:#2e7d32;font-weight:600;white-space:nowrap;vertical-align:top\">Rising</td><td style=\"padding:3px 0;color:#222\">OpenAI (+6), Claude Code (+5), ChatGPT (+3)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#c62828;font-weight:600;white-space:nowrap;vertical-align:top\">Cooling</td><td style=\"padding:3px 0;color:#222\">Moonshot AI (-10), MCP (-8), AMD (-7)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#8a6d1f;font-weight:600;white-space:nowrap;vertical-align:top\">New / hot threads</td><td style=\"padding:3px 0;color:#222\">Claude: introductory, ends, sonnet (3 stories, emerging); Claude + Anthropic: staff, press, commits (21 stories, hot)</td></tr><tr><td style=\"padding:3px 10px 3px 0;color:#555;font-weight:600;white-space:nowrap;vertical-align:top\">Volume</td><td style=\"padding:3px 0;color:#222\">266 signals (+72 vs prior week)</td></tr></table><div style=\"margin-top:10px\"><a href=\"https://pietvanbloom-lab.github.io/regular-briefings/archive.html#movers\" style=\"color:#b3741f;font-size:12px;text-decoration:none\">See the full analytics hub &rarr;</a></div></div>",
+    "span": "2026-08-03 to 2026-08-26",
+    "recent": 266,
+    "prior": 194
   },
   "weekly": [
     {
@@ -40296,6 +40883,11 @@
       "period": "2026-W34",
       "signals": 58,
       "briefs": 2
+    },
+    {
+      "period": "2026-W35",
+      "signals": 39,
+      "briefs": 1
     }
   ],
   "monthly": [
@@ -40316,8 +40908,8 @@
     },
     {
       "period": "2026-08",
-      "signals": 232,
-      "briefs": 7
+      "signals": 271,
+      "briefs": 8
     }
   ],
   "topStoriesByWeek": {
@@ -41282,6 +41874,38 @@
         "file": "briefs/2026-08-20.html",
         "aid": "a3"
       }
+    ],
+    "2026-W35": [
+      {
+        "headline": "The agent protocol layer consolidated under one foundation and then published its next roadmap: agent identity and progressive tool discovery are the priorities",
+        "topic": "Gap window, August 20 to 22",
+        "why": "Why it matters: The interesting part is not the governance photo opportunity, it is what the roadmap admits. \"Connecting to a server with a hundred tools means the model pays for that entire surface\" is a vendor conceding that the current design does not survive contact with a real enterprise tool estate, and progressive discovery is the fix. If you are building on MCP today, tool-count bloat is now a known protocol-level problem with a named workstream, not something you have to solve alone with clever server splitting. Two falsifiable tests over the next two quarters. First, whether agent identity ships as specification rather than extension: the roadmap routes it through IETF OAuth and WIMSE work, which is slow, so an extension-only landing would signal the enterprise identity story slipped again. Second, whether A2A and MCP under one roof actually converge or merely coexist: watch whether any SEP proposes shared identity or transport primitives across both, because shared governance without shared primitives is just a logo on a slide.",
+        "date": "2026-08-26",
+        "rank": 1,
+        "early": false,
+        "file": "briefs/2026-08-26.html",
+        "aid": "a1"
+      },
+      {
+        "headline": "Nvidia is committing about $6 billion to Poolside, moving upstream from selling training hardware into building open-weight models itself",
+        "topic": "Gap day, August 24",
+        "why": "Why it matters: A supplier that funds its own customers' competitors is buying demand, not returns, and this deal takes that one layer further: Nvidia is now staffing a model team rather than only financing one. The acqui-licence structure is the detail worth copying into your mental model of the next year, because it moves intellectual property and a hundred engineers without a takeover, and therefore without the antitrust review a takeover would attract. Two falsifiable tests. First, whether a Nemotron open-weight release carrying Poolside lineage appears before the end of Q1 2027 and clears DeepSeek V4 Pro's 80.6 percent on SWE-bench Verified: below that, the $6 billion bought talent rather than a frontier. Second, whether the licence is genuinely open weight with commercial use permitted, or a restricted community licence, because \"US alternative to Chinese open models\" only holds if developers can actually use it the way they use an MIT-licensed DeepSeek.",
+        "date": "2026-08-26",
+        "rank": 2,
+        "early": false,
+        "file": "briefs/2026-08-26.html",
+        "aid": "a2"
+      },
+      {
+        "headline": "Anthropic merged Claude's chat and Cowork memory into one store, and published the list of categories it refuses to remember",
+        "topic": "In window, August 25",
+        "why": "Why it matters: A published, categorical never-store list is a more testable commitment than a privacy policy paragraph, and it is the first of its kind among the major assistants. It converts a promise into something a security team can audit by attempting to store a passport number and checking whether it appears under Topics. For anyone running Cowork against a real workspace, the practical change is that the cost of context transfer just went to zero across surfaces, which also means the blast radius of a wrong memory grew: a mistaken fact learned in chat now steers unattended cloud tasks. Two falsifiable tests. First, whether Team and Enterprise defaults flip to on within two quarters, which would show the off-by-default posture was a launch precaution rather than a governance position. Second, whether the never-store list survives contact with regulated verticals, where identity documents are the working material: either an exception appears for those workflows, or those workflows stay off Claude memory.",
+        "date": "2026-08-26",
+        "rank": 3,
+        "early": false,
+        "file": "briefs/2026-08-26.html",
+        "aid": "a3"
+      }
     ]
   },
   "topStoriesByMonth": {
@@ -41535,6 +42159,33 @@
     ]
   },
   "briefs": [
+    {
+      "date": "2026-08-26",
+      "file": "briefs/2026-08-26.html",
+      "totalItems": 39,
+      "early": 4,
+      "topics": [
+        "Funding / M&A",
+        "Anthropic",
+        "Nvidia",
+        "MCP / Agents",
+        "OpenAI",
+        "Open source",
+        "Chips / Compute",
+        "Coding tools",
+        "Robotics",
+        "Mistral",
+        "Google / DeepMind",
+        "Regulation"
+      ],
+      "lead": "The agent protocol layer consolidated under one foundation and then published its next roadmap: agent identity and progressive tool discovery are the priorities",
+      "leadTopic": "Gap window, August 20 to 22",
+      "top3": [
+        "The agent protocol layer consolidated under one foundation and then published its next roadmap: agent identity and progressive tool discovery are the priorities",
+        "Nvidia is committing about $6 billion to Poolside, moving upstream from selling training hardware into building open-weight models itself",
+        "Anthropic merged Claude's chat and Cowork memory into one store, and published the list of categories it refuses to remember"
+      ]
+    },
     {
       "date": "2026-08-20",
       "file": "briefs/2026-08-20.html",
